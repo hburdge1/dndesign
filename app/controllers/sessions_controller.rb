@@ -1,4 +1,4 @@
-class Api::V1::SessionsController < ApplicationController
+class SessionsController < ApplicationController
   skip_before_action :authorize, only: :create
 
      def create
@@ -29,7 +29,7 @@ class Api::V1::SessionsController < ApplicationController
         end
       end
       def destroy
-        session..delete :user_id
+        session.delete :user_id
         render json: {
           status: 200,
           logged_out: true
@@ -37,6 +37,6 @@ class Api::V1::SessionsController < ApplicationController
       end
 private
     def session_params
-        params.require(:user).permit(:username, :password)
+        params.permit(:username, :password)
     end
 end

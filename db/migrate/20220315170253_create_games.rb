@@ -5,6 +5,7 @@ class CreateGames < ActiveRecord::Migration[6.1]
       t.string :party_name
       t.integer :user_id
       t.integer :player_id
+      t.integer :map_id
       t.timestamps
     end
   end

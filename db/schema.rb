@@ -49,11 +49,13 @@ ActiveRecord::Schema.define(version: 2022_03_15_181354) do
     t.string "party_name"
     t.integer "user_id"
     t.integer "player_id"
+    t.integer "map_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
 
   create_table "maps", force: :cascade do |t|
+    t.integer "game_id"
     t.integer "combat_id"
     t.string "npcs", array: true
     t.string "image"
