@@ -18,9 +18,16 @@ function NavBar({ user, setUser }) {
         <Link to="/">DNDesign</Link>
       </Logo>
       <Nav>
-        <Button as={Link} to="/new">
-          
-        </Button>
+                 <Button as={Link} to="/players">
+            see my characters
+          </Button>
+          <span> </span>
+          <Button as={Link} to="/games">
+            see my campaigns
+          </Button>
+          <Button as={Link} to="/new">
+            Create a new character
+          </Button>
         <Button variant="outline" onClick={handleLogoutClick}>
           Logout
         </Button>

@@ -3,20 +3,22 @@ import { Switch, Route } from "react-router-dom";
 import NavBar from "./NavBar";
 import Login from "../pages/Login";
 import Home from "../pages/Home";
-import NewRecipe from "../pages/NewRecipe";
+import NewRecipe from "../pages/NewCharacter";
+import NewCharacter from "../pages/NewCharacter";
 
 function App() {
   const [user, setUser] = useState(null);
 
-  useEffect(() => {
-    // auto-login
-    fetch("/me").then((r) => {
-      if (r.ok) {
-        r.json().then((user) => setUser(user));
-      }
-    });
-  }, []);
+  // useEffect(() => {
+  //   // auto-login
+  //   fetch("/me").then((r) => {
+  //     if (r.ok) {
+  //       r.json().then((user) => setUser(user));
+  //     }
+  //   });
+  // }, []);
 
+  
   if (!user) return <Login onLogin={setUser} />;
 
   return (
@@ -25,7 +27,7 @@ function App() {
       <main>
         <Switch>
           <Route path="/new">
-            <NewRecipe user={user} />
+            <NewCharacter user={user} />
           </Route>
           <Route path="/">
             <Home/>

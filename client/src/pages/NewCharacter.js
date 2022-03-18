@@ -1,39 +1,35 @@
 import { useState } from "react";
+import { useEffect } from "react";
 import { useHistory } from "react-router";
 import styled from "styled-components";
+import Tabs from '../styles/Tabs'
 import ReactMarkdown from "react-markdown";
-import { Button, Error, FormField, Input, Label, Textarea } from "../styles";
+import { Error, FormField, Input, Button, Label, Textarea } from "../styles";
+import { render } from "react-dom";
 
-function NewRecipe({ user }) {
-  const [title, setTitle] = useState("My Awesome Recipe");
-  const [minutesToComplete, setMinutesToComplete] = useState("30");
-  const [instructions, setInstructions] = useState(`Here's how you make it.
-  
-## Ingredients
 
-- 1c Sugar
-- 1c Spice
-
-## Instructions
-
-**Mix** sugar and spice. _Bake_ for 30 minutes.
-  `);
+function NewCharacter({ user }) {
+  console.log('loaded this')
+  const [race, setRace] = useState("");
+  const [playerClass, setPlayerClass] = useState("");
+  const [allClasses, setAllClasses] = useState([]);
+  const [playerName, setPlayerName] = useState("");
+  const [playerBackground, setPlayerBackground]= useState('');
   const [errors, setErrors] = useState([]);
   const [isLoading, setIsLoading] = useState(false);
   const history = useHistory();
+  const baseUrl = "https://www.dnd5eapi.co/api"
 
   function handleSubmit(e) {
     e.preventDefault();
     setIsLoading(true);
-    fetch("/recipes", {
+    fetch("/players", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
       },
       body: JSON.stringify({
-        title,
-        instructions,
-        minutes_to_complete: minutesToComplete,
+
       }),
     }).then((r) => {
       setIsLoading(false);
@@ -44,38 +40,44 @@ function NewRecipe({ user }) {
       }
     });
   }
-
+    useEffect(() => {
+    fetch(baseUrl + "/classes/")
+    .then(r=>r.json())
+    .then(c => setAllClasses(c.results))
+   }, [])
   return (
-    <Wrapper>
+    <>
+    <Tabs allClasses={allClasses}/>
+     <Wrapper>
       <WrapperChild>
-        <h2>Create Recipe</h2>
+        <Tabs allClasses={allClasses}/>
         <form onSubmit={handleSubmit}>
           <FormField>
-            <Label htmlFor="title">Title</Label>
+            {/* <Label htmlFor="title">Title</Label>
             <Input
               type="text"
               id="title"
               value={title}
               onChange={(e) => setTitle(e.target.value)}
-            />
+            /> */}
           </FormField>
           <FormField>
-            <Label htmlFor="minutesToComplete">Minutes to complete</Label>
+            {/* <Label htmlFor="minutesToComplete">Minutes to complete</Label>
             <Input
               type="number"
               id="minutesToComplete"
               value={minutesToComplete}
               onChange={(e) => setMinutesToComplete(e.target.value)}
-            />
+            /> */}
           </FormField>
           <FormField>
-            <Label htmlFor="instructions">Instructions</Label>
+            {/* <Label htmlFor="instructions">Instructions</Label>
             <Textarea
               id="instructions"
               rows="10"
               value={instructions}
               onChange={(e) => setInstructions(e.target.value)}
-            />
+            /> */}
           </FormField>
           <FormField>
             <Button color="primary" type="submit">
@@ -90,15 +92,10 @@ function NewRecipe({ user }) {
         </form>
       </WrapperChild>
       <WrapperChild>
-        <h1>{title}</h1>
-        <p>
-          <em>Time to Complete: {minutesToComplete} minutes</em>
-          &nbsp;·&nbsp;
-          <cite>By {user.username}</cite>
-        </p>
-        <ReactMarkdown>{instructions}</ReactMarkdown>
+        <ReactMarkdown></ReactMarkdown>
       </WrapperChild>
     </Wrapper>
+    </>
   );
 }
 
@@ -114,4 +111,4 @@ const WrapperChild = styled.div`
   flex: 1;
 `;
 
-export default NewRecipe;
+export default NewCharacter;

@@ -11,8 +11,7 @@ function Login({ onLogin }) {
   const [isLoading, setIsLoading] = useState(false);
   const [showLogin, setShowLogin] = useState(true);
     const [passwordConfirmation, setPasswordConfirmation] = useState("");
-  const [imageUrl, setImageUrl] = useState("");
-  const [bio, setBio] = useState("");
+
     function handleSubmit(e) {
     e.preventDefault();
     setIsLoading(true);

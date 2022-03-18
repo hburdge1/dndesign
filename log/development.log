@@ -2821,3 +2821,3037 @@ Filter chain halted as :authorize rendered or redirected
 Completed 401 Unauthorized in 4ms (Views: 1.2ms | ActiveRecord: 0.3ms | Allocations: 731)
 
 
+Started GET "/me" for 127.0.0.1 at 2022-03-18 08:42:49 -0700
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by UsersController#index as */*
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:12:in `authorize'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.06ms)
+Filter chain halted as :authorize rendered or redirected
+Completed 401 Unauthorized in 15ms (Views: 1.8ms | ActiveRecord: 2.2ms | Allocations: 4151)
+
+
+Started POST "/login" for 127.0.0.1 at 2022-03-18 08:44:17 -0700
+Processing by SessionsController#create as */*
+  Parameters: {"username"=>"1a", "password"=>"[FILTERED]", "session"=>{"username"=>"1a", "password"=>"[FILTERED]"}}
+[31mUnpermitted parameter: :session[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "1a"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:5:in `create'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.03ms)
+Completed 200 OK in 18ms (Views: 0.2ms | ActiveRecord: 0.2ms | Allocations: 2626)
+
+
+Started GET "/me" for 127.0.0.1 at 2022-03-18 08:44:17 -0700
+Processing by UsersController#index as */*
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:12:in `authorize'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.03ms)
+Filter chain halted as :authorize rendered or redirected
+Completed 401 Unauthorized in 2ms (Views: 0.2ms | ActiveRecord: 0.3ms | Allocations: 752)
+
+
+Started GET "/me" for 127.0.0.1 at 2022-03-18 08:44:47 -0700
+Processing by UsersController#index as */*
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:12:in `authorize'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.04ms)
+Filter chain halted as :authorize rendered or redirected
+Completed 401 Unauthorized in 8ms (Views: 0.2ms | ActiveRecord: 0.7ms | Allocations: 752)
+
+
+Started POST "/login" for 127.0.0.1 at 2022-03-18 08:44:49 -0700
+Processing by SessionsController#create as */*
+  Parameters: {"username"=>"1a", "password"=>"[FILTERED]", "session"=>{"username"=>"1a", "password"=>"[FILTERED]"}}
+[31mUnpermitted parameter: :session[0m
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "1a"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:5:in `create'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.04ms)
+Completed 200 OK in 2ms (Views: 0.3ms | ActiveRecord: 0.7ms | Allocations: 681)
+
+
+Started GET "/me" for 127.0.0.1 at 2022-03-18 08:44:49 -0700
+Processing by UsersController#index as */*
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:12:in `authorize'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.03ms)
+Filter chain halted as :authorize rendered or redirected
+Completed 401 Unauthorized in 2ms (Views: 0.2ms | ActiveRecord: 0.2ms | Allocations: 731)
+
+
+Started GET "/me" for 127.0.0.1 at 2022-03-18 08:45:11 -0700
+Processing by UsersController#index as */*
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:12:in `authorize'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.04ms)
+Filter chain halted as :authorize rendered or redirected
+Completed 401 Unauthorized in 3ms (Views: 0.4ms | ActiveRecord: 0.8ms | Allocations: 731)
+
+
+Started POST "/login" for 127.0.0.1 at 2022-03-18 08:45:14 -0700
+Processing by SessionsController#create as */*
+  Parameters: {"username"=>"1a", "password"=>"[FILTERED]", "session"=>{"username"=>"1a", "password"=>"[FILTERED]"}}
+[31mUnpermitted parameter: :session[0m
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "1a"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:5:in `create'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.08ms)
+Completed 200 OK in 6ms (Views: 0.5ms | ActiveRecord: 0.6ms | Allocations: 662)
+
+
+Started GET "/me" for 127.0.0.1 at 2022-03-18 08:45:14 -0700
+Processing by UsersController#index as */*
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:12:in `authorize'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.04ms)
+Filter chain halted as :authorize rendered or redirected
+Completed 401 Unauthorized in 3ms (Views: 0.3ms | ActiveRecord: 0.3ms | Allocations: 731)
+
+
+Started GET "/players/babel/parser/lib/index.js" for 127.0.0.1 at 2022-03-18 08:47:41 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/players/babel/parser/lib/index.js"):
+  
+Started GET "/players/babel/parser/lib/index.js" for 127.0.0.1 at 2022-03-18 08:47:41 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/players/babel/parser/lib/index.js"):
+  
+Started GET "/players/babel/parser/lib/index.js" for 127.0.0.1 at 2022-03-18 08:50:52 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/players/babel/parser/lib/index.js"):
+  
+Started GET "/me" for 127.0.0.1 at 2022-03-18 08:51:10 -0700
+Processing by UsersController#index as */*
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:12:in `authorize'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.06ms)
+Filter chain halted as :authorize rendered or redirected
+Completed 401 Unauthorized in 15ms (Views: 0.3ms | ActiveRecord: 6.6ms | Allocations: 3990)
+
+
+Started POST "/login" for 127.0.0.1 at 2022-03-18 08:51:12 -0700
+Processing by SessionsController#create as */*
+  Parameters: {"username"=>"1a", "password"=>"[FILTERED]", "session"=>{"username"=>"1a", "password"=>"[FILTERED]"}}
+[31mUnpermitted parameter: :session[0m
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "1a"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:5:in `create'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.2ms)
+Completed 200 OK in 11ms (Views: 1.2ms | ActiveRecord: 0.7ms | Allocations: 665)
+
+
+Started GET "/me" for 127.0.0.1 at 2022-03-18 08:51:12 -0700
+Processing by UsersController#index as */*
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:12:in `authorize'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.04ms)
+Filter chain halted as :authorize rendered or redirected
+Completed 401 Unauthorized in 2ms (Views: 0.2ms | ActiveRecord: 0.2ms | Allocations: 731)
+
+
+Started GET "/players/babel/parser/lib/index.js" for 127.0.0.1 at 2022-03-18 08:52:06 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/players/babel/parser/lib/index.js"):
+  
+Started GET "/players/babel/parser/lib/index.js" for 127.0.0.1 at 2022-03-18 08:52:06 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/players/babel/parser/lib/index.js"):
+  
+Started GET "/players/babel/parser/lib/index.js" for 127.0.0.1 at 2022-03-18 08:54:44 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/players/babel/parser/lib/index.js"):
+  
+Started GET "/players/babel/parser/lib/index.js" for 127.0.0.1 at 2022-03-18 08:54:44 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/players/babel/parser/lib/index.js"):
+  
+Started GET "/players/babel/parser/lib/index.js" for 127.0.0.1 at 2022-03-18 08:54:44 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/players/babel/parser/lib/index.js"):
+  
+Started GET "/players/babel/parser/lib/index.js" for 127.0.0.1 at 2022-03-18 08:54:44 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/players/babel/parser/lib/index.js"):
+  
+Started GET "/players/babel/parser/lib/index.js" for 127.0.0.1 at 2022-03-18 08:54:44 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/players/babel/parser/lib/index.js"):
+  
+Started GET "/players/babel/parser/lib/index.js" for 127.0.0.1 at 2022-03-18 08:54:44 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/players/babel/parser/lib/index.js"):
+  
+Started GET "/players/babel/parser/lib/index.js" for 127.0.0.1 at 2022-03-18 08:54:44 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/players/babel/parser/lib/index.js"):
+  
+Started GET "/players/babel/parser/lib/index.js" for 127.0.0.1 at 2022-03-18 08:54:44 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/players/babel/parser/lib/index.js"):
+  
+Started GET "/players/babel/parser/lib/index.js" for 127.0.0.1 at 2022-03-18 08:54:44 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/players/babel/parser/lib/index.js"):
+  
+Started GET "/players/babel/parser/lib/index.js" for 127.0.0.1 at 2022-03-18 08:54:44 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/players/babel/parser/lib/index.js"):
+  
+Started GET "/players/babel/parser/lib/index.js" for 127.0.0.1 at 2022-03-18 08:54:44 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/players/babel/parser/lib/index.js"):
+  
+Started GET "/players/babel/parser/lib/index.js" for 127.0.0.1 at 2022-03-18 08:54:44 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/players/babel/parser/lib/index.js"):
+  
+Started GET "/players/babel/parser/lib/index.js" for 127.0.0.1 at 2022-03-18 08:54:44 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/players/babel/parser/lib/index.js"):
+  
+Started GET "/players/babel/parser/lib/index.js" for 127.0.0.1 at 2022-03-18 08:54:44 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/players/babel/parser/lib/index.js"):
+  
+Started GET "/me" for 127.0.0.1 at 2022-03-18 08:54:53 -0700
+Processing by UsersController#index as */*
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:12:in `authorize'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.04ms)
+Filter chain halted as :authorize rendered or redirected
+Completed 401 Unauthorized in 11ms (Views: 0.3ms | ActiveRecord: 0.6ms | Allocations: 730)
+
+
+Started POST "/login" for 127.0.0.1 at 2022-03-18 08:54:56 -0700
+Processing by SessionsController#create as */*
+  Parameters: {"username"=>"1a", "password"=>"[FILTERED]", "session"=>{"username"=>"1a", "password"=>"[FILTERED]"}}
+[31mUnpermitted parameter: :session[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "1a"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:5:in `create'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.1ms)
+Completed 200 OK in 5ms (Views: 0.6ms | ActiveRecord: 0.2ms | Allocations: 662)
+
+
+Started GET "/me" for 127.0.0.1 at 2022-03-18 08:54:56 -0700
+Processing by UsersController#index as */*
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:12:in `authorize'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.08ms)
+Filter chain halted as :authorize rendered or redirected
+Completed 401 Unauthorized in 3ms (Views: 0.6ms | ActiveRecord: 0.3ms | Allocations: 733)
+
+
+Started POST "/login" for 127.0.0.1 at 2022-03-18 08:55:46 -0700
+Processing by SessionsController#create as */*
+  Parameters: {"username"=>"1a", "password"=>"[FILTERED]", "session"=>{"username"=>"1a", "password"=>"[FILTERED]"}}
+[31mUnpermitted parameter: :session[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "1a"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:5:in `create'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.04ms)
+Completed 200 OK in 1ms (Views: 0.3ms | ActiveRecord: 0.2ms | Allocations: 661)
+
+
+Started GET "/me" for 127.0.0.1 at 2022-03-18 08:55:46 -0700
+Processing by UsersController#index as */*
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:12:in `authorize'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.03ms)
+Filter chain halted as :authorize rendered or redirected
+Completed 401 Unauthorized in 1ms (Views: 0.2ms | ActiveRecord: 0.1ms | Allocations: 731)
+
+
+Started GET "/players/babel/parser/lib/index.js" for 127.0.0.1 at 2022-03-18 08:58:59 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/players/babel/parser/lib/index.js"):
+  
+Started GET "/players/babel/parser/lib/index.js" for 127.0.0.1 at 2022-03-18 08:58:59 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/players/babel/parser/lib/index.js"):
+  
+Started GET "/players/babel/parser/lib/index.js" for 127.0.0.1 at 2022-03-18 08:58:59 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/players/babel/parser/lib/index.js"):
+  
+Started GET "/players/babel/parser/lib/index.js" for 127.0.0.1 at 2022-03-18 08:59:00 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/players/babel/parser/lib/index.js"):
+  
+Started GET "/players/babel/parser/lib/index.js" for 127.0.0.1 at 2022-03-18 08:59:00 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/players/babel/parser/lib/index.js"):
+  
+Started GET "/players/babel/parser/lib/index.js" for 127.0.0.1 at 2022-03-18 08:59:00 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/players/babel/parser/lib/index.js"):
+  
+Started POST "/login" for 127.0.0.1 at 2022-03-18 08:59:03 -0700
+Processing by SessionsController#create as */*
+  Parameters: {"username"=>"1a", "password"=>"[FILTERED]", "session"=>{"username"=>"1a", "password"=>"[FILTERED]"}}
+[31mUnpermitted parameter: :session[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "1a"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:5:in `create'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.03ms)
+Completed 200 OK in 1ms (Views: 0.2ms | ActiveRecord: 0.2ms | Allocations: 659)
+
+
+Started POST "/login" for 127.0.0.1 at 2022-03-18 08:59:15 -0700
+Processing by SessionsController#create as */*
+  Parameters: {"username"=>"1a", "password"=>"[FILTERED]", "session"=>{"username"=>"1a", "password"=>"[FILTERED]"}}
+[31mUnpermitted parameter: :session[0m
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "1a"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:5:in `create'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.1ms)
+Completed 200 OK in 4ms (Views: 0.7ms | ActiveRecord: 0.3ms | Allocations: 660)
+
+
+Started POST "/login" for 127.0.0.1 at 2022-03-18 08:59:29 -0700
+Processing by SessionsController#create as */*
+  Parameters: {"username"=>"1a", "password"=>"[FILTERED]", "session"=>{"username"=>"1a", "password"=>"[FILTERED]"}}
+[31mUnpermitted parameter: :session[0m
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "1a"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:5:in `create'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.12ms)
+Completed 200 OK in 7ms (Views: 0.8ms | ActiveRecord: 0.5ms | Allocations: 660)
+
+
+Started POST "/login" for 127.0.0.1 at 2022-03-18 09:00:02 -0700
+Processing by SessionsController#create as */*
+  Parameters: {"username"=>"1a", "password"=>"[FILTERED]", "session"=>{"username"=>"1a", "password"=>"[FILTERED]"}}
+[31mUnpermitted parameter: :session[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "1a"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:5:in `create'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.03ms)
+Completed 200 OK in 1ms (Views: 0.2ms | ActiveRecord: 0.1ms | Allocations: 660)
+
+
+Started POST "/login" for 127.0.0.1 at 2022-03-18 09:01:04 -0700
+Processing by SessionsController#create as */*
+  Parameters: {"username"=>"1a", "password"=>"[FILTERED]", "session"=>{"username"=>"1a", "password"=>"[FILTERED]"}}
+[31mUnpermitted parameter: :session[0m
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "1a"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:5:in `create'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.08ms)
+Completed 200 OK in 4ms (Views: 0.5ms | ActiveRecord: 0.3ms | Allocations: 660)
+
+
+Started GET "/players/babel/parser/lib/index.js" for 127.0.0.1 at 2022-03-18 09:03:02 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/players/babel/parser/lib/index.js"):
+  
+Started POST "/login" for 127.0.0.1 at 2022-03-18 09:03:52 -0700
+Processing by SessionsController#create as */*
+  Parameters: {"username"=>"1a", "password"=>"[FILTERED]", "session"=>{"username"=>"1a", "password"=>"[FILTERED]"}}
+[31mUnpermitted parameter: :session[0m
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "1a"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:5:in `create'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.14ms)
+Completed 200 OK in 7ms (Views: 1.6ms | ActiveRecord: 0.5ms | Allocations: 659)
+
+
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(1087325618115650655)[0m
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (6.3ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_advisory_unlock(1087325618115650655)[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists? (1.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "default"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (11.4ms)[0m  [1m[31mROLLBACK[0m
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2022-03-18 09:11:45 -0700
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started POST "/login" for 127.0.0.1 at 2022-03-18 09:11:50 -0700
+Processing by SessionsController#create as */*
+  Parameters: {"username"=>"1a", "password"=>"[FILTERED]", "session"=>{"username"=>"1a", "password"=>"[FILTERED]"}}
+[31mUnpermitted parameter: :session[0m
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "1a"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:5:in `create'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.04ms)
+Completed 200 OK in 13ms (Views: 1.0ms | ActiveRecord: 2.7ms | Allocations: 6734)
+
+
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2022-03-18 09:12:35 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2022-03-18 09:12:55 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started POST "/login" for 127.0.0.1 at 2022-03-18 09:17:48 -0700
+Processing by SessionsController#create as */*
+  Parameters: {"username"=>"1a", "password"=>"[FILTERED]", "session"=>{"username"=>"1a", "password"=>"[FILTERED]"}}
+[31mUnpermitted parameter: :session[0m
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "1a"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:5:in `create'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.06ms)
+Completed 200 OK in 32ms (Views: 0.5ms | ActiveRecord: 12.1ms | Allocations: 3894)
+
+
+Started POST "/login" for 127.0.0.1 at 2022-03-18 09:19:51 -0700
+Processing by SessionsController#create as */*
+  Parameters: {"username"=>"1a", "password"=>"[FILTERED]", "session"=>{"username"=>"1a", "password"=>"[FILTERED]"}}
+[31mUnpermitted parameter: :session[0m
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "1a"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:5:in `create'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.08ms)
+Completed 200 OK in 7ms (Views: 0.6ms | ActiveRecord: 0.4ms | Allocations: 680)
+
+
+Started GET "/players" for 127.0.0.1 at 2022-03-18 09:19:55 -0700
+  
+AbstractController::ActionNotFound (The action 'index' could not be found for PlayersController):
+  
+actionpack (6.1.5) lib/abstract_controller/base.rb:160:in `process'
+actionpack (6.1.5) lib/action_controller/metal.rb:190:in `dispatch'
+actionpack (6.1.5) lib/action_controller/metal.rb:254:in `dispatch'
+actionpack (6.1.5) lib/action_dispatch/routing/route_set.rb:50:in `dispatch'
+actionpack (6.1.5) lib/action_dispatch/routing/route_set.rb:33:in `serve'
+actionpack (6.1.5) lib/action_dispatch/journey/router.rb:50:in `block in serve'
+actionpack (6.1.5) lib/action_dispatch/journey/router.rb:32:in `each'
+actionpack (6.1.5) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (6.1.5) lib/action_dispatch/routing/route_set.rb:842:in `call'
+rack (2.2.3) lib/rack/session/abstract/id.rb:266:in `context'
+rack (2.2.3) lib/rack/session/abstract/id.rb:260:in `call'
+actionpack (6.1.5) lib/action_dispatch/middleware/cookies.rb:689:in `call'
+rack (2.2.3) lib/rack/session/abstract/id.rb:266:in `context'
+rack (2.2.3) lib/rack/session/abstract/id.rb:260:in `call'
+actionpack (6.1.5) lib/action_dispatch/middleware/cookies.rb:689:in `call'
+rack (2.2.3) lib/rack/etag.rb:27:in `call'
+rack (2.2.3) lib/rack/conditional_get.rb:27:in `call'
+rack (2.2.3) lib/rack/head.rb:12:in `call'
+activerecord (6.1.5) lib/active_record/migration.rb:601:in `call'
+actionpack (6.1.5) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (6.1.5) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (6.1.5) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (6.1.5) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.1.5) lib/action_dispatch/middleware/actionable_exceptions.rb:18:in `call'
+actionpack (6.1.5) lib/action_dispatch/middleware/debug_exceptions.rb:29:in `call'
+actionpack (6.1.5) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.1.5) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.1.5) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.1.5) lib/active_support/tagged_logging.rb:99:in `block in tagged'
+activesupport (6.1.5) lib/active_support/tagged_logging.rb:37:in `tagged'
+activesupport (6.1.5) lib/active_support/tagged_logging.rb:99:in `tagged'
+railties (6.1.5) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.1.5) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.1.5) lib/action_dispatch/middleware/request_id.rb:26:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.1.5) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.1.5) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.1.5) lib/action_dispatch/middleware/static.rb:24:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.1.5) lib/action_dispatch/middleware/host_authorization.rb:148:in `call'
+rack-cors (1.1.1) lib/rack/cors.rb:100:in `call'
+railties (6.1.5) lib/rails/engine.rb:539:in `call'
+puma (5.6.2) lib/puma/configuration.rb:252:in `call'
+puma (5.6.2) lib/puma/request.rb:77:in `block in handle_request'
+puma (5.6.2) lib/puma/thread_pool.rb:340:in `with_force_shutdown'
+puma (5.6.2) lib/puma/request.rb:76:in `handle_request'
+puma (5.6.2) lib/puma/server.rb:441:in `process_client'
+puma (5.6.2) lib/puma/thread_pool.rb:147:in `block in spawn_thread'
+Started POST "/players" for 127.0.0.1 at 2022-03-18 09:19:58 -0700
+  
+AbstractController::ActionNotFound (The action 'create' could not be found for PlayersController):
+  
+actionpack (6.1.5) lib/abstract_controller/base.rb:160:in `process'
+actionpack (6.1.5) lib/action_controller/metal.rb:190:in `dispatch'
+actionpack (6.1.5) lib/action_controller/metal.rb:254:in `dispatch'
+actionpack (6.1.5) lib/action_dispatch/routing/route_set.rb:50:in `dispatch'
+actionpack (6.1.5) lib/action_dispatch/routing/route_set.rb:33:in `serve'
+actionpack (6.1.5) lib/action_dispatch/journey/router.rb:50:in `block in serve'
+actionpack (6.1.5) lib/action_dispatch/journey/router.rb:32:in `each'
+actionpack (6.1.5) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (6.1.5) lib/action_dispatch/routing/route_set.rb:842:in `call'
+rack (2.2.3) lib/rack/session/abstract/id.rb:266:in `context'
+rack (2.2.3) lib/rack/session/abstract/id.rb:260:in `call'
+actionpack (6.1.5) lib/action_dispatch/middleware/cookies.rb:689:in `call'
+rack (2.2.3) lib/rack/session/abstract/id.rb:266:in `context'
+rack (2.2.3) lib/rack/session/abstract/id.rb:260:in `call'
+actionpack (6.1.5) lib/action_dispatch/middleware/cookies.rb:689:in `call'
+rack (2.2.3) lib/rack/etag.rb:27:in `call'
+rack (2.2.3) lib/rack/conditional_get.rb:40:in `call'
+rack (2.2.3) lib/rack/head.rb:12:in `call'
+activerecord (6.1.5) lib/active_record/migration.rb:601:in `call'
+actionpack (6.1.5) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (6.1.5) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (6.1.5) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (6.1.5) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.1.5) lib/action_dispatch/middleware/actionable_exceptions.rb:18:in `call'
+actionpack (6.1.5) lib/action_dispatch/middleware/debug_exceptions.rb:29:in `call'
+actionpack (6.1.5) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.1.5) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.1.5) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.1.5) lib/active_support/tagged_logging.rb:99:in `block in tagged'
+activesupport (6.1.5) lib/active_support/tagged_logging.rb:37:in `tagged'
+activesupport (6.1.5) lib/active_support/tagged_logging.rb:99:in `tagged'
+railties (6.1.5) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.1.5) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.1.5) lib/action_dispatch/middleware/request_id.rb:26:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.1.5) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.1.5) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.1.5) lib/action_dispatch/middleware/static.rb:24:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.1.5) lib/action_dispatch/middleware/host_authorization.rb:148:in `call'
+rack-cors (1.1.1) lib/rack/cors.rb:100:in `call'
+railties (6.1.5) lib/rails/engine.rb:539:in `call'
+puma (5.6.2) lib/puma/configuration.rb:252:in `call'
+puma (5.6.2) lib/puma/request.rb:77:in `block in handle_request'
+puma (5.6.2) lib/puma/thread_pool.rb:340:in `with_force_shutdown'
+puma (5.6.2) lib/puma/request.rb:76:in `handle_request'
+puma (5.6.2) lib/puma/server.rb:441:in `process_client'
+puma (5.6.2) lib/puma/thread_pool.rb:147:in `block in spawn_thread'
+Started POST "/login" for 127.0.0.1 at 2022-03-18 09:21:17 -0700
+Processing by SessionsController#create as */*
+  Parameters: {"username"=>"1a", "password"=>"[FILTERED]", "session"=>{"username"=>"1a", "password"=>"[FILTERED]"}}
+[31mUnpermitted parameter: :session[0m
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "1a"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:5:in `create'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.07ms)
+Completed 200 OK in 9ms (Views: 0.6ms | ActiveRecord: 1.0ms | Allocations: 662)
+
+
+Started GET "/players" for 127.0.0.1 at 2022-03-18 09:21:17 -0700
+  
+AbstractController::ActionNotFound (The action 'index' could not be found for PlayersController):
+  
+actionpack (6.1.5) lib/abstract_controller/base.rb:160:in `process'
+actionpack (6.1.5) lib/action_controller/metal.rb:190:in `dispatch'
+actionpack (6.1.5) lib/action_controller/metal.rb:254:in `dispatch'
+actionpack (6.1.5) lib/action_dispatch/routing/route_set.rb:50:in `dispatch'
+actionpack (6.1.5) lib/action_dispatch/routing/route_set.rb:33:in `serve'
+actionpack (6.1.5) lib/action_dispatch/journey/router.rb:50:in `block in serve'
+actionpack (6.1.5) lib/action_dispatch/journey/router.rb:32:in `each'
+actionpack (6.1.5) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (6.1.5) lib/action_dispatch/routing/route_set.rb:842:in `call'
+rack (2.2.3) lib/rack/session/abstract/id.rb:266:in `context'
+rack (2.2.3) lib/rack/session/abstract/id.rb:260:in `call'
+actionpack (6.1.5) lib/action_dispatch/middleware/cookies.rb:689:in `call'
+rack (2.2.3) lib/rack/session/abstract/id.rb:266:in `context'
+rack (2.2.3) lib/rack/session/abstract/id.rb:260:in `call'
+actionpack (6.1.5) lib/action_dispatch/middleware/cookies.rb:689:in `call'
+rack (2.2.3) lib/rack/etag.rb:27:in `call'
+rack (2.2.3) lib/rack/conditional_get.rb:27:in `call'
+rack (2.2.3) lib/rack/head.rb:12:in `call'
+activerecord (6.1.5) lib/active_record/migration.rb:601:in `call'
+actionpack (6.1.5) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (6.1.5) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (6.1.5) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (6.1.5) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.1.5) lib/action_dispatch/middleware/actionable_exceptions.rb:18:in `call'
+actionpack (6.1.5) lib/action_dispatch/middleware/debug_exceptions.rb:29:in `call'
+actionpack (6.1.5) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.1.5) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.1.5) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.1.5) lib/active_support/tagged_logging.rb:99:in `block in tagged'
+activesupport (6.1.5) lib/active_support/tagged_logging.rb:37:in `tagged'
+activesupport (6.1.5) lib/active_support/tagged_logging.rb:99:in `tagged'
+railties (6.1.5) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.1.5) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.1.5) lib/action_dispatch/middleware/request_id.rb:26:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.1.5) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.1.5) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.1.5) lib/action_dispatch/middleware/static.rb:24:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.1.5) lib/action_dispatch/middleware/host_authorization.rb:148:in `call'
+rack-cors (1.1.1) lib/rack/cors.rb:100:in `call'
+railties (6.1.5) lib/rails/engine.rb:539:in `call'
+puma (5.6.2) lib/puma/configuration.rb:252:in `call'
+puma (5.6.2) lib/puma/request.rb:77:in `block in handle_request'
+puma (5.6.2) lib/puma/thread_pool.rb:340:in `with_force_shutdown'
+puma (5.6.2) lib/puma/request.rb:76:in `handle_request'
+puma (5.6.2) lib/puma/server.rb:441:in `process_client'
+puma (5.6.2) lib/puma/thread_pool.rb:147:in `block in spawn_thread'
+Started POST "/login" for 127.0.0.1 at 2022-03-18 09:21:26 -0700
+Processing by SessionsController#create as */*
+  Parameters: {"username"=>"1a", "password"=>"[FILTERED]", "session"=>{"username"=>"1a", "password"=>"[FILTERED]"}}
+[31mUnpermitted parameter: :session[0m
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "1a"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:5:in `create'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.08ms)
+Completed 200 OK in 9ms (Views: 0.6ms | ActiveRecord: 0.4ms | Allocations: 659)
+
+
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2022-03-18 09:23:08 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2022-03-18 09:23:08 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2022-03-18 09:23:08 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started POST "/login" for 127.0.0.1 at 2022-03-18 09:23:11 -0700
+Processing by SessionsController#create as */*
+  Parameters: {"username"=>"1a", "password"=>"[FILTERED]", "session"=>{"username"=>"1a", "password"=>"[FILTERED]"}}
+[31mUnpermitted parameter: :session[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "1a"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:5:in `create'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.04ms)
+Completed 200 OK in 1ms (Views: 0.2ms | ActiveRecord: 0.2ms | Allocations: 679)
+
+
+Started GET "/players" for 127.0.0.1 at 2022-03-18 09:23:32 -0700
+  
+AbstractController::ActionNotFound (The action 'index' could not be found for PlayersController):
+  
+actionpack (6.1.5) lib/abstract_controller/base.rb:160:in `process'
+actionpack (6.1.5) lib/action_controller/metal.rb:190:in `dispatch'
+actionpack (6.1.5) lib/action_controller/metal.rb:254:in `dispatch'
+actionpack (6.1.5) lib/action_dispatch/routing/route_set.rb:50:in `dispatch'
+actionpack (6.1.5) lib/action_dispatch/routing/route_set.rb:33:in `serve'
+actionpack (6.1.5) lib/action_dispatch/journey/router.rb:50:in `block in serve'
+actionpack (6.1.5) lib/action_dispatch/journey/router.rb:32:in `each'
+actionpack (6.1.5) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (6.1.5) lib/action_dispatch/routing/route_set.rb:842:in `call'
+rack (2.2.3) lib/rack/session/abstract/id.rb:266:in `context'
+rack (2.2.3) lib/rack/session/abstract/id.rb:260:in `call'
+actionpack (6.1.5) lib/action_dispatch/middleware/cookies.rb:689:in `call'
+rack (2.2.3) lib/rack/session/abstract/id.rb:266:in `context'
+rack (2.2.3) lib/rack/session/abstract/id.rb:260:in `call'
+actionpack (6.1.5) lib/action_dispatch/middleware/cookies.rb:689:in `call'
+rack (2.2.3) lib/rack/etag.rb:27:in `call'
+rack (2.2.3) lib/rack/conditional_get.rb:27:in `call'
+rack (2.2.3) lib/rack/head.rb:12:in `call'
+activerecord (6.1.5) lib/active_record/migration.rb:601:in `call'
+actionpack (6.1.5) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (6.1.5) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (6.1.5) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (6.1.5) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.1.5) lib/action_dispatch/middleware/actionable_exceptions.rb:18:in `call'
+actionpack (6.1.5) lib/action_dispatch/middleware/debug_exceptions.rb:29:in `call'
+actionpack (6.1.5) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.1.5) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.1.5) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.1.5) lib/active_support/tagged_logging.rb:99:in `block in tagged'
+activesupport (6.1.5) lib/active_support/tagged_logging.rb:37:in `tagged'
+activesupport (6.1.5) lib/active_support/tagged_logging.rb:99:in `tagged'
+railties (6.1.5) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.1.5) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.1.5) lib/action_dispatch/middleware/request_id.rb:26:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.1.5) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.1.5) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.1.5) lib/action_dispatch/middleware/static.rb:24:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.1.5) lib/action_dispatch/middleware/host_authorization.rb:148:in `call'
+rack-cors (1.1.1) lib/rack/cors.rb:100:in `call'
+railties (6.1.5) lib/rails/engine.rb:539:in `call'
+puma (5.6.2) lib/puma/configuration.rb:252:in `call'
+puma (5.6.2) lib/puma/request.rb:77:in `block in handle_request'
+puma (5.6.2) lib/puma/thread_pool.rb:340:in `with_force_shutdown'
+puma (5.6.2) lib/puma/request.rb:76:in `handle_request'
+puma (5.6.2) lib/puma/server.rb:441:in `process_client'
+puma (5.6.2) lib/puma/thread_pool.rb:147:in `block in spawn_thread'
+Started GET "/players" for 127.0.0.1 at 2022-03-18 09:25:39 -0700
+  
+AbstractController::ActionNotFound (The action 'index' could not be found for PlayersController):
+  
+actionpack (6.1.5) lib/abstract_controller/base.rb:160:in `process'
+actionpack (6.1.5) lib/action_controller/metal.rb:190:in `dispatch'
+actionpack (6.1.5) lib/action_controller/metal.rb:254:in `dispatch'
+actionpack (6.1.5) lib/action_dispatch/routing/route_set.rb:50:in `dispatch'
+actionpack (6.1.5) lib/action_dispatch/routing/route_set.rb:33:in `serve'
+actionpack (6.1.5) lib/action_dispatch/journey/router.rb:50:in `block in serve'
+actionpack (6.1.5) lib/action_dispatch/journey/router.rb:32:in `each'
+actionpack (6.1.5) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (6.1.5) lib/action_dispatch/routing/route_set.rb:842:in `call'
+rack (2.2.3) lib/rack/session/abstract/id.rb:266:in `context'
+rack (2.2.3) lib/rack/session/abstract/id.rb:260:in `call'
+actionpack (6.1.5) lib/action_dispatch/middleware/cookies.rb:689:in `call'
+rack (2.2.3) lib/rack/session/abstract/id.rb:266:in `context'
+rack (2.2.3) lib/rack/session/abstract/id.rb:260:in `call'
+actionpack (6.1.5) lib/action_dispatch/middleware/cookies.rb:689:in `call'
+rack (2.2.3) lib/rack/etag.rb:27:in `call'
+rack (2.2.3) lib/rack/conditional_get.rb:27:in `call'
+rack (2.2.3) lib/rack/head.rb:12:in `call'
+activerecord (6.1.5) lib/active_record/migration.rb:601:in `call'
+actionpack (6.1.5) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (6.1.5) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (6.1.5) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (6.1.5) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.1.5) lib/action_dispatch/middleware/actionable_exceptions.rb:18:in `call'
+actionpack (6.1.5) lib/action_dispatch/middleware/debug_exceptions.rb:29:in `call'
+actionpack (6.1.5) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.1.5) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.1.5) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.1.5) lib/active_support/tagged_logging.rb:99:in `block in tagged'
+activesupport (6.1.5) lib/active_support/tagged_logging.rb:37:in `tagged'
+activesupport (6.1.5) lib/active_support/tagged_logging.rb:99:in `tagged'
+railties (6.1.5) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.1.5) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.1.5) lib/action_dispatch/middleware/request_id.rb:26:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.1.5) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.1.5) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.1.5) lib/action_dispatch/middleware/static.rb:24:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.1.5) lib/action_dispatch/middleware/host_authorization.rb:148:in `call'
+rack-cors (1.1.1) lib/rack/cors.rb:100:in `call'
+railties (6.1.5) lib/rails/engine.rb:539:in `call'
+puma (5.6.2) lib/puma/configuration.rb:252:in `call'
+puma (5.6.2) lib/puma/request.rb:77:in `block in handle_request'
+puma (5.6.2) lib/puma/thread_pool.rb:340:in `with_force_shutdown'
+puma (5.6.2) lib/puma/request.rb:76:in `handle_request'
+puma (5.6.2) lib/puma/server.rb:441:in `process_client'
+puma (5.6.2) lib/puma/thread_pool.rb:147:in `block in spawn_thread'
+Started GET "/players" for 127.0.0.1 at 2022-03-18 09:28:14 -0700
+  
+AbstractController::ActionNotFound (The action 'index' could not be found for PlayersController):
+  
+actionpack (6.1.5) lib/abstract_controller/base.rb:160:in `process'
+actionpack (6.1.5) lib/action_controller/metal.rb:190:in `dispatch'
+actionpack (6.1.5) lib/action_controller/metal.rb:254:in `dispatch'
+actionpack (6.1.5) lib/action_dispatch/routing/route_set.rb:50:in `dispatch'
+actionpack (6.1.5) lib/action_dispatch/routing/route_set.rb:33:in `serve'
+actionpack (6.1.5) lib/action_dispatch/journey/router.rb:50:in `block in serve'
+actionpack (6.1.5) lib/action_dispatch/journey/router.rb:32:in `each'
+actionpack (6.1.5) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (6.1.5) lib/action_dispatch/routing/route_set.rb:842:in `call'
+rack (2.2.3) lib/rack/session/abstract/id.rb:266:in `context'
+rack (2.2.3) lib/rack/session/abstract/id.rb:260:in `call'
+actionpack (6.1.5) lib/action_dispatch/middleware/cookies.rb:689:in `call'
+rack (2.2.3) lib/rack/session/abstract/id.rb:266:in `context'
+rack (2.2.3) lib/rack/session/abstract/id.rb:260:in `call'
+actionpack (6.1.5) lib/action_dispatch/middleware/cookies.rb:689:in `call'
+rack (2.2.3) lib/rack/etag.rb:27:in `call'
+rack (2.2.3) lib/rack/conditional_get.rb:27:in `call'
+rack (2.2.3) lib/rack/head.rb:12:in `call'
+activerecord (6.1.5) lib/active_record/migration.rb:601:in `call'
+actionpack (6.1.5) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (6.1.5) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (6.1.5) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (6.1.5) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.1.5) lib/action_dispatch/middleware/actionable_exceptions.rb:18:in `call'
+actionpack (6.1.5) lib/action_dispatch/middleware/debug_exceptions.rb:29:in `call'
+actionpack (6.1.5) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.1.5) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.1.5) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.1.5) lib/active_support/tagged_logging.rb:99:in `block in tagged'
+activesupport (6.1.5) lib/active_support/tagged_logging.rb:37:in `tagged'
+activesupport (6.1.5) lib/active_support/tagged_logging.rb:99:in `tagged'
+railties (6.1.5) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.1.5) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.1.5) lib/action_dispatch/middleware/request_id.rb:26:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.1.5) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.1.5) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.1.5) lib/action_dispatch/middleware/static.rb:24:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.1.5) lib/action_dispatch/middleware/host_authorization.rb:148:in `call'
+rack-cors (1.1.1) lib/rack/cors.rb:100:in `call'
+railties (6.1.5) lib/rails/engine.rb:539:in `call'
+puma (5.6.2) lib/puma/configuration.rb:252:in `call'
+puma (5.6.2) lib/puma/request.rb:77:in `block in handle_request'
+puma (5.6.2) lib/puma/thread_pool.rb:340:in `with_force_shutdown'
+puma (5.6.2) lib/puma/request.rb:76:in `handle_request'
+puma (5.6.2) lib/puma/server.rb:441:in `process_client'
+puma (5.6.2) lib/puma/thread_pool.rb:147:in `block in spawn_thread'
+Started GET "/players" for 127.0.0.1 at 2022-03-18 09:29:47 -0700
+  
+AbstractController::ActionNotFound (The action 'index' could not be found for PlayersController):
+  
+actionpack (6.1.5) lib/abstract_controller/base.rb:160:in `process'
+actionpack (6.1.5) lib/action_controller/metal.rb:190:in `dispatch'
+actionpack (6.1.5) lib/action_controller/metal.rb:254:in `dispatch'
+actionpack (6.1.5) lib/action_dispatch/routing/route_set.rb:50:in `dispatch'
+actionpack (6.1.5) lib/action_dispatch/routing/route_set.rb:33:in `serve'
+actionpack (6.1.5) lib/action_dispatch/journey/router.rb:50:in `block in serve'
+actionpack (6.1.5) lib/action_dispatch/journey/router.rb:32:in `each'
+actionpack (6.1.5) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (6.1.5) lib/action_dispatch/routing/route_set.rb:842:in `call'
+rack (2.2.3) lib/rack/session/abstract/id.rb:266:in `context'
+rack (2.2.3) lib/rack/session/abstract/id.rb:260:in `call'
+actionpack (6.1.5) lib/action_dispatch/middleware/cookies.rb:689:in `call'
+rack (2.2.3) lib/rack/session/abstract/id.rb:266:in `context'
+rack (2.2.3) lib/rack/session/abstract/id.rb:260:in `call'
+actionpack (6.1.5) lib/action_dispatch/middleware/cookies.rb:689:in `call'
+rack (2.2.3) lib/rack/etag.rb:27:in `call'
+rack (2.2.3) lib/rack/conditional_get.rb:27:in `call'
+rack (2.2.3) lib/rack/head.rb:12:in `call'
+activerecord (6.1.5) lib/active_record/migration.rb:601:in `call'
+actionpack (6.1.5) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (6.1.5) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (6.1.5) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (6.1.5) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.1.5) lib/action_dispatch/middleware/actionable_exceptions.rb:18:in `call'
+actionpack (6.1.5) lib/action_dispatch/middleware/debug_exceptions.rb:29:in `call'
+actionpack (6.1.5) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.1.5) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.1.5) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.1.5) lib/active_support/tagged_logging.rb:99:in `block in tagged'
+activesupport (6.1.5) lib/active_support/tagged_logging.rb:37:in `tagged'
+activesupport (6.1.5) lib/active_support/tagged_logging.rb:99:in `tagged'
+railties (6.1.5) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.1.5) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.1.5) lib/action_dispatch/middleware/request_id.rb:26:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.1.5) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.1.5) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.1.5) lib/action_dispatch/middleware/static.rb:24:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.1.5) lib/action_dispatch/middleware/host_authorization.rb:148:in `call'
+rack-cors (1.1.1) lib/rack/cors.rb:100:in `call'
+railties (6.1.5) lib/rails/engine.rb:539:in `call'
+puma (5.6.2) lib/puma/configuration.rb:252:in `call'
+puma (5.6.2) lib/puma/request.rb:77:in `block in handle_request'
+puma (5.6.2) lib/puma/thread_pool.rb:340:in `with_force_shutdown'
+puma (5.6.2) lib/puma/request.rb:76:in `handle_request'
+puma (5.6.2) lib/puma/server.rb:441:in `process_client'
+puma (5.6.2) lib/puma/thread_pool.rb:147:in `block in spawn_thread'
+Started GET "/players" for 127.0.0.1 at 2022-03-18 09:29:51 -0700
+  
+AbstractController::ActionNotFound (The action 'index' could not be found for PlayersController):
+  
+actionpack (6.1.5) lib/abstract_controller/base.rb:160:in `process'
+actionpack (6.1.5) lib/action_controller/metal.rb:190:in `dispatch'
+actionpack (6.1.5) lib/action_controller/metal.rb:254:in `dispatch'
+actionpack (6.1.5) lib/action_dispatch/routing/route_set.rb:50:in `dispatch'
+actionpack (6.1.5) lib/action_dispatch/routing/route_set.rb:33:in `serve'
+actionpack (6.1.5) lib/action_dispatch/journey/router.rb:50:in `block in serve'
+actionpack (6.1.5) lib/action_dispatch/journey/router.rb:32:in `each'
+actionpack (6.1.5) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (6.1.5) lib/action_dispatch/routing/route_set.rb:842:in `call'
+rack (2.2.3) lib/rack/session/abstract/id.rb:266:in `context'
+rack (2.2.3) lib/rack/session/abstract/id.rb:260:in `call'
+actionpack (6.1.5) lib/action_dispatch/middleware/cookies.rb:689:in `call'
+rack (2.2.3) lib/rack/session/abstract/id.rb:266:in `context'
+rack (2.2.3) lib/rack/session/abstract/id.rb:260:in `call'
+actionpack (6.1.5) lib/action_dispatch/middleware/cookies.rb:689:in `call'
+rack (2.2.3) lib/rack/etag.rb:27:in `call'
+rack (2.2.3) lib/rack/conditional_get.rb:27:in `call'
+rack (2.2.3) lib/rack/head.rb:12:in `call'
+activerecord (6.1.5) lib/active_record/migration.rb:601:in `call'
+actionpack (6.1.5) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (6.1.5) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (6.1.5) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (6.1.5) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.1.5) lib/action_dispatch/middleware/actionable_exceptions.rb:18:in `call'
+actionpack (6.1.5) lib/action_dispatch/middleware/debug_exceptions.rb:29:in `call'
+actionpack (6.1.5) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.1.5) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.1.5) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.1.5) lib/active_support/tagged_logging.rb:99:in `block in tagged'
+activesupport (6.1.5) lib/active_support/tagged_logging.rb:37:in `tagged'
+activesupport (6.1.5) lib/active_support/tagged_logging.rb:99:in `tagged'
+railties (6.1.5) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.1.5) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.1.5) lib/action_dispatch/middleware/request_id.rb:26:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.1.5) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.1.5) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.1.5) lib/action_dispatch/middleware/static.rb:24:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.1.5) lib/action_dispatch/middleware/host_authorization.rb:148:in `call'
+rack-cors (1.1.1) lib/rack/cors.rb:100:in `call'
+railties (6.1.5) lib/rails/engine.rb:539:in `call'
+puma (5.6.2) lib/puma/configuration.rb:252:in `call'
+puma (5.6.2) lib/puma/request.rb:77:in `block in handle_request'
+puma (5.6.2) lib/puma/thread_pool.rb:340:in `with_force_shutdown'
+puma (5.6.2) lib/puma/request.rb:76:in `handle_request'
+puma (5.6.2) lib/puma/server.rb:441:in `process_client'
+puma (5.6.2) lib/puma/thread_pool.rb:147:in `block in spawn_thread'
+Started GET "/players" for 127.0.0.1 at 2022-03-18 09:29:55 -0700
+  
+AbstractController::ActionNotFound (The action 'index' could not be found for PlayersController):
+  
+actionpack (6.1.5) lib/abstract_controller/base.rb:160:in `process'
+actionpack (6.1.5) lib/action_controller/metal.rb:190:in `dispatch'
+actionpack (6.1.5) lib/action_controller/metal.rb:254:in `dispatch'
+actionpack (6.1.5) lib/action_dispatch/routing/route_set.rb:50:in `dispatch'
+actionpack (6.1.5) lib/action_dispatch/routing/route_set.rb:33:in `serve'
+actionpack (6.1.5) lib/action_dispatch/journey/router.rb:50:in `block in serve'
+actionpack (6.1.5) lib/action_dispatch/journey/router.rb:32:in `each'
+actionpack (6.1.5) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (6.1.5) lib/action_dispatch/routing/route_set.rb:842:in `call'
+rack (2.2.3) lib/rack/session/abstract/id.rb:266:in `context'
+rack (2.2.3) lib/rack/session/abstract/id.rb:260:in `call'
+actionpack (6.1.5) lib/action_dispatch/middleware/cookies.rb:689:in `call'
+rack (2.2.3) lib/rack/session/abstract/id.rb:266:in `context'
+rack (2.2.3) lib/rack/session/abstract/id.rb:260:in `call'
+actionpack (6.1.5) lib/action_dispatch/middleware/cookies.rb:689:in `call'
+rack (2.2.3) lib/rack/etag.rb:27:in `call'
+rack (2.2.3) lib/rack/conditional_get.rb:27:in `call'
+rack (2.2.3) lib/rack/head.rb:12:in `call'
+activerecord (6.1.5) lib/active_record/migration.rb:601:in `call'
+actionpack (6.1.5) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (6.1.5) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (6.1.5) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (6.1.5) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.1.5) lib/action_dispatch/middleware/actionable_exceptions.rb:18:in `call'
+actionpack (6.1.5) lib/action_dispatch/middleware/debug_exceptions.rb:29:in `call'
+actionpack (6.1.5) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.1.5) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.1.5) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.1.5) lib/active_support/tagged_logging.rb:99:in `block in tagged'
+activesupport (6.1.5) lib/active_support/tagged_logging.rb:37:in `tagged'
+activesupport (6.1.5) lib/active_support/tagged_logging.rb:99:in `tagged'
+railties (6.1.5) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.1.5) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.1.5) lib/action_dispatch/middleware/request_id.rb:26:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.1.5) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.1.5) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.1.5) lib/action_dispatch/middleware/static.rb:24:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.1.5) lib/action_dispatch/middleware/host_authorization.rb:148:in `call'
+rack-cors (1.1.1) lib/rack/cors.rb:100:in `call'
+railties (6.1.5) lib/rails/engine.rb:539:in `call'
+puma (5.6.2) lib/puma/configuration.rb:252:in `call'
+puma (5.6.2) lib/puma/request.rb:77:in `block in handle_request'
+puma (5.6.2) lib/puma/thread_pool.rb:340:in `with_force_shutdown'
+puma (5.6.2) lib/puma/request.rb:76:in `handle_request'
+puma (5.6.2) lib/puma/server.rb:441:in `process_client'
+puma (5.6.2) lib/puma/thread_pool.rb:147:in `block in spawn_thread'
+Started GET "/players" for 127.0.0.1 at 2022-03-18 09:30:00 -0700
+  
+AbstractController::ActionNotFound (The action 'index' could not be found for PlayersController):
+  
+actionpack (6.1.5) lib/abstract_controller/base.rb:160:in `process'
+actionpack (6.1.5) lib/action_controller/metal.rb:190:in `dispatch'
+actionpack (6.1.5) lib/action_controller/metal.rb:254:in `dispatch'
+actionpack (6.1.5) lib/action_dispatch/routing/route_set.rb:50:in `dispatch'
+actionpack (6.1.5) lib/action_dispatch/routing/route_set.rb:33:in `serve'
+actionpack (6.1.5) lib/action_dispatch/journey/router.rb:50:in `block in serve'
+actionpack (6.1.5) lib/action_dispatch/journey/router.rb:32:in `each'
+actionpack (6.1.5) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (6.1.5) lib/action_dispatch/routing/route_set.rb:842:in `call'
+rack (2.2.3) lib/rack/session/abstract/id.rb:266:in `context'
+rack (2.2.3) lib/rack/session/abstract/id.rb:260:in `call'
+actionpack (6.1.5) lib/action_dispatch/middleware/cookies.rb:689:in `call'
+rack (2.2.3) lib/rack/session/abstract/id.rb:266:in `context'
+rack (2.2.3) lib/rack/session/abstract/id.rb:260:in `call'
+actionpack (6.1.5) lib/action_dispatch/middleware/cookies.rb:689:in `call'
+rack (2.2.3) lib/rack/etag.rb:27:in `call'
+rack (2.2.3) lib/rack/conditional_get.rb:27:in `call'
+rack (2.2.3) lib/rack/head.rb:12:in `call'
+activerecord (6.1.5) lib/active_record/migration.rb:601:in `call'
+actionpack (6.1.5) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (6.1.5) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (6.1.5) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (6.1.5) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.1.5) lib/action_dispatch/middleware/actionable_exceptions.rb:18:in `call'
+actionpack (6.1.5) lib/action_dispatch/middleware/debug_exceptions.rb:29:in `call'
+actionpack (6.1.5) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.1.5) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.1.5) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.1.5) lib/active_support/tagged_logging.rb:99:in `block in tagged'
+activesupport (6.1.5) lib/active_support/tagged_logging.rb:37:in `tagged'
+activesupport (6.1.5) lib/active_support/tagged_logging.rb:99:in `tagged'
+railties (6.1.5) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.1.5) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.1.5) lib/action_dispatch/middleware/request_id.rb:26:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.1.5) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.1.5) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.1.5) lib/action_dispatch/middleware/static.rb:24:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.1.5) lib/action_dispatch/middleware/host_authorization.rb:148:in `call'
+rack-cors (1.1.1) lib/rack/cors.rb:100:in `call'
+railties (6.1.5) lib/rails/engine.rb:539:in `call'
+puma (5.6.2) lib/puma/configuration.rb:252:in `call'
+puma (5.6.2) lib/puma/request.rb:77:in `block in handle_request'
+puma (5.6.2) lib/puma/thread_pool.rb:340:in `with_force_shutdown'
+puma (5.6.2) lib/puma/request.rb:76:in `handle_request'
+puma (5.6.2) lib/puma/server.rb:441:in `process_client'
+puma (5.6.2) lib/puma/thread_pool.rb:147:in `block in spawn_thread'
+Started GET "/players" for 127.0.0.1 at 2022-03-18 09:30:02 -0700
+  
+AbstractController::ActionNotFound (The action 'index' could not be found for PlayersController):
+  
+actionpack (6.1.5) lib/abstract_controller/base.rb:160:in `process'
+actionpack (6.1.5) lib/action_controller/metal.rb:190:in `dispatch'
+actionpack (6.1.5) lib/action_controller/metal.rb:254:in `dispatch'
+actionpack (6.1.5) lib/action_dispatch/routing/route_set.rb:50:in `dispatch'
+actionpack (6.1.5) lib/action_dispatch/routing/route_set.rb:33:in `serve'
+actionpack (6.1.5) lib/action_dispatch/journey/router.rb:50:in `block in serve'
+actionpack (6.1.5) lib/action_dispatch/journey/router.rb:32:in `each'
+actionpack (6.1.5) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (6.1.5) lib/action_dispatch/routing/route_set.rb:842:in `call'
+rack (2.2.3) lib/rack/session/abstract/id.rb:266:in `context'
+rack (2.2.3) lib/rack/session/abstract/id.rb:260:in `call'
+actionpack (6.1.5) lib/action_dispatch/middleware/cookies.rb:689:in `call'
+rack (2.2.3) lib/rack/session/abstract/id.rb:266:in `context'
+rack (2.2.3) lib/rack/session/abstract/id.rb:260:in `call'
+actionpack (6.1.5) lib/action_dispatch/middleware/cookies.rb:689:in `call'
+rack (2.2.3) lib/rack/etag.rb:27:in `call'
+rack (2.2.3) lib/rack/conditional_get.rb:27:in `call'
+rack (2.2.3) lib/rack/head.rb:12:in `call'
+activerecord (6.1.5) lib/active_record/migration.rb:601:in `call'
+actionpack (6.1.5) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (6.1.5) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (6.1.5) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (6.1.5) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.1.5) lib/action_dispatch/middleware/actionable_exceptions.rb:18:in `call'
+actionpack (6.1.5) lib/action_dispatch/middleware/debug_exceptions.rb:29:in `call'
+actionpack (6.1.5) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.1.5) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.1.5) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.1.5) lib/active_support/tagged_logging.rb:99:in `block in tagged'
+activesupport (6.1.5) lib/active_support/tagged_logging.rb:37:in `tagged'
+activesupport (6.1.5) lib/active_support/tagged_logging.rb:99:in `tagged'
+railties (6.1.5) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.1.5) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.1.5) lib/action_dispatch/middleware/request_id.rb:26:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.1.5) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.1.5) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.1.5) lib/action_dispatch/middleware/static.rb:24:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.1.5) lib/action_dispatch/middleware/host_authorization.rb:148:in `call'
+rack-cors (1.1.1) lib/rack/cors.rb:100:in `call'
+railties (6.1.5) lib/rails/engine.rb:539:in `call'
+puma (5.6.2) lib/puma/configuration.rb:252:in `call'
+puma (5.6.2) lib/puma/request.rb:77:in `block in handle_request'
+puma (5.6.2) lib/puma/thread_pool.rb:340:in `with_force_shutdown'
+puma (5.6.2) lib/puma/request.rb:76:in `handle_request'
+puma (5.6.2) lib/puma/server.rb:441:in `process_client'
+puma (5.6.2) lib/puma/thread_pool.rb:147:in `block in spawn_thread'
+Started GET "/players" for 127.0.0.1 at 2022-03-18 09:30:13 -0700
+  
+AbstractController::ActionNotFound (The action 'index' could not be found for PlayersController):
+  
+actionpack (6.1.5) lib/abstract_controller/base.rb:160:in `process'
+actionpack (6.1.5) lib/action_controller/metal.rb:190:in `dispatch'
+actionpack (6.1.5) lib/action_controller/metal.rb:254:in `dispatch'
+actionpack (6.1.5) lib/action_dispatch/routing/route_set.rb:50:in `dispatch'
+actionpack (6.1.5) lib/action_dispatch/routing/route_set.rb:33:in `serve'
+actionpack (6.1.5) lib/action_dispatch/journey/router.rb:50:in `block in serve'
+actionpack (6.1.5) lib/action_dispatch/journey/router.rb:32:in `each'
+actionpack (6.1.5) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (6.1.5) lib/action_dispatch/routing/route_set.rb:842:in `call'
+rack (2.2.3) lib/rack/session/abstract/id.rb:266:in `context'
+rack (2.2.3) lib/rack/session/abstract/id.rb:260:in `call'
+actionpack (6.1.5) lib/action_dispatch/middleware/cookies.rb:689:in `call'
+rack (2.2.3) lib/rack/session/abstract/id.rb:266:in `context'
+rack (2.2.3) lib/rack/session/abstract/id.rb:260:in `call'
+actionpack (6.1.5) lib/action_dispatch/middleware/cookies.rb:689:in `call'
+rack (2.2.3) lib/rack/etag.rb:27:in `call'
+rack (2.2.3) lib/rack/conditional_get.rb:27:in `call'
+rack (2.2.3) lib/rack/head.rb:12:in `call'
+activerecord (6.1.5) lib/active_record/migration.rb:601:in `call'
+actionpack (6.1.5) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (6.1.5) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (6.1.5) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (6.1.5) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.1.5) lib/action_dispatch/middleware/actionable_exceptions.rb:18:in `call'
+actionpack (6.1.5) lib/action_dispatch/middleware/debug_exceptions.rb:29:in `call'
+actionpack (6.1.5) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.1.5) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.1.5) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.1.5) lib/active_support/tagged_logging.rb:99:in `block in tagged'
+activesupport (6.1.5) lib/active_support/tagged_logging.rb:37:in `tagged'
+activesupport (6.1.5) lib/active_support/tagged_logging.rb:99:in `tagged'
+railties (6.1.5) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.1.5) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.1.5) lib/action_dispatch/middleware/request_id.rb:26:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.1.5) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.1.5) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.1.5) lib/action_dispatch/middleware/static.rb:24:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.1.5) lib/action_dispatch/middleware/host_authorization.rb:148:in `call'
+rack-cors (1.1.1) lib/rack/cors.rb:100:in `call'
+railties (6.1.5) lib/rails/engine.rb:539:in `call'
+puma (5.6.2) lib/puma/configuration.rb:252:in `call'
+puma (5.6.2) lib/puma/request.rb:77:in `block in handle_request'
+puma (5.6.2) lib/puma/thread_pool.rb:340:in `with_force_shutdown'
+puma (5.6.2) lib/puma/request.rb:76:in `handle_request'
+puma (5.6.2) lib/puma/server.rb:441:in `process_client'
+puma (5.6.2) lib/puma/thread_pool.rb:147:in `block in spawn_thread'
+Started GET "/players" for 127.0.0.1 at 2022-03-18 09:30:15 -0700
+  
+AbstractController::ActionNotFound (The action 'index' could not be found for PlayersController):
+  
+actionpack (6.1.5) lib/abstract_controller/base.rb:160:in `process'
+actionpack (6.1.5) lib/action_controller/metal.rb:190:in `dispatch'
+actionpack (6.1.5) lib/action_controller/metal.rb:254:in `dispatch'
+actionpack (6.1.5) lib/action_dispatch/routing/route_set.rb:50:in `dispatch'
+actionpack (6.1.5) lib/action_dispatch/routing/route_set.rb:33:in `serve'
+actionpack (6.1.5) lib/action_dispatch/journey/router.rb:50:in `block in serve'
+actionpack (6.1.5) lib/action_dispatch/journey/router.rb:32:in `each'
+actionpack (6.1.5) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (6.1.5) lib/action_dispatch/routing/route_set.rb:842:in `call'
+rack (2.2.3) lib/rack/session/abstract/id.rb:266:in `context'
+rack (2.2.3) lib/rack/session/abstract/id.rb:260:in `call'
+actionpack (6.1.5) lib/action_dispatch/middleware/cookies.rb:689:in `call'
+rack (2.2.3) lib/rack/session/abstract/id.rb:266:in `context'
+rack (2.2.3) lib/rack/session/abstract/id.rb:260:in `call'
+actionpack (6.1.5) lib/action_dispatch/middleware/cookies.rb:689:in `call'
+rack (2.2.3) lib/rack/etag.rb:27:in `call'
+rack (2.2.3) lib/rack/conditional_get.rb:27:in `call'
+rack (2.2.3) lib/rack/head.rb:12:in `call'
+activerecord (6.1.5) lib/active_record/migration.rb:601:in `call'
+actionpack (6.1.5) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (6.1.5) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (6.1.5) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (6.1.5) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.1.5) lib/action_dispatch/middleware/actionable_exceptions.rb:18:in `call'
+actionpack (6.1.5) lib/action_dispatch/middleware/debug_exceptions.rb:29:in `call'
+actionpack (6.1.5) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.1.5) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.1.5) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.1.5) lib/active_support/tagged_logging.rb:99:in `block in tagged'
+activesupport (6.1.5) lib/active_support/tagged_logging.rb:37:in `tagged'
+activesupport (6.1.5) lib/active_support/tagged_logging.rb:99:in `tagged'
+railties (6.1.5) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.1.5) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.1.5) lib/action_dispatch/middleware/request_id.rb:26:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.1.5) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.1.5) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.1.5) lib/action_dispatch/middleware/static.rb:24:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.1.5) lib/action_dispatch/middleware/host_authorization.rb:148:in `call'
+rack-cors (1.1.1) lib/rack/cors.rb:100:in `call'
+railties (6.1.5) lib/rails/engine.rb:539:in `call'
+puma (5.6.2) lib/puma/configuration.rb:252:in `call'
+puma (5.6.2) lib/puma/request.rb:77:in `block in handle_request'
+puma (5.6.2) lib/puma/thread_pool.rb:340:in `with_force_shutdown'
+puma (5.6.2) lib/puma/request.rb:76:in `handle_request'
+puma (5.6.2) lib/puma/server.rb:441:in `process_client'
+puma (5.6.2) lib/puma/thread_pool.rb:147:in `block in spawn_thread'
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2022-03-18 09:30:26 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/players" for 127.0.0.1 at 2022-03-18 09:30:26 -0700
+  
+AbstractController::ActionNotFound (The action 'index' could not be found for PlayersController):
+  
+actionpack (6.1.5) lib/abstract_controller/base.rb:160:in `process'
+actionpack (6.1.5) lib/action_controller/metal.rb:190:in `dispatch'
+actionpack (6.1.5) lib/action_controller/metal.rb:254:in `dispatch'
+actionpack (6.1.5) lib/action_dispatch/routing/route_set.rb:50:in `dispatch'
+actionpack (6.1.5) lib/action_dispatch/routing/route_set.rb:33:in `serve'
+actionpack (6.1.5) lib/action_dispatch/journey/router.rb:50:in `block in serve'
+actionpack (6.1.5) lib/action_dispatch/journey/router.rb:32:in `each'
+actionpack (6.1.5) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (6.1.5) lib/action_dispatch/routing/route_set.rb:842:in `call'
+rack (2.2.3) lib/rack/session/abstract/id.rb:266:in `context'
+rack (2.2.3) lib/rack/session/abstract/id.rb:260:in `call'
+actionpack (6.1.5) lib/action_dispatch/middleware/cookies.rb:689:in `call'
+rack (2.2.3) lib/rack/session/abstract/id.rb:266:in `context'
+rack (2.2.3) lib/rack/session/abstract/id.rb:260:in `call'
+actionpack (6.1.5) lib/action_dispatch/middleware/cookies.rb:689:in `call'
+rack (2.2.3) lib/rack/etag.rb:27:in `call'
+rack (2.2.3) lib/rack/conditional_get.rb:27:in `call'
+rack (2.2.3) lib/rack/head.rb:12:in `call'
+activerecord (6.1.5) lib/active_record/migration.rb:601:in `call'
+actionpack (6.1.5) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (6.1.5) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (6.1.5) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (6.1.5) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.1.5) lib/action_dispatch/middleware/actionable_exceptions.rb:18:in `call'
+actionpack (6.1.5) lib/action_dispatch/middleware/debug_exceptions.rb:29:in `call'
+actionpack (6.1.5) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.1.5) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.1.5) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.1.5) lib/active_support/tagged_logging.rb:99:in `block in tagged'
+activesupport (6.1.5) lib/active_support/tagged_logging.rb:37:in `tagged'
+activesupport (6.1.5) lib/active_support/tagged_logging.rb:99:in `tagged'
+railties (6.1.5) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.1.5) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.1.5) lib/action_dispatch/middleware/request_id.rb:26:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.1.5) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.1.5) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.1.5) lib/action_dispatch/middleware/static.rb:24:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.1.5) lib/action_dispatch/middleware/host_authorization.rb:148:in `call'
+rack-cors (1.1.1) lib/rack/cors.rb:100:in `call'
+railties (6.1.5) lib/rails/engine.rb:539:in `call'
+puma (5.6.2) lib/puma/configuration.rb:252:in `call'
+puma (5.6.2) lib/puma/request.rb:77:in `block in handle_request'
+puma (5.6.2) lib/puma/thread_pool.rb:340:in `with_force_shutdown'
+puma (5.6.2) lib/puma/request.rb:76:in `handle_request'
+puma (5.6.2) lib/puma/server.rb:441:in `process_client'
+puma (5.6.2) lib/puma/thread_pool.rb:147:in `block in spawn_thread'
+Started GET "/players" for 127.0.0.1 at 2022-03-18 09:30:32 -0700
+  
+AbstractController::ActionNotFound (The action 'index' could not be found for PlayersController):
+  
+actionpack (6.1.5) lib/abstract_controller/base.rb:160:in `process'
+actionpack (6.1.5) lib/action_controller/metal.rb:190:in `dispatch'
+actionpack (6.1.5) lib/action_controller/metal.rb:254:in `dispatch'
+actionpack (6.1.5) lib/action_dispatch/routing/route_set.rb:50:in `dispatch'
+actionpack (6.1.5) lib/action_dispatch/routing/route_set.rb:33:in `serve'
+actionpack (6.1.5) lib/action_dispatch/journey/router.rb:50:in `block in serve'
+actionpack (6.1.5) lib/action_dispatch/journey/router.rb:32:in `each'
+actionpack (6.1.5) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (6.1.5) lib/action_dispatch/routing/route_set.rb:842:in `call'
+rack (2.2.3) lib/rack/session/abstract/id.rb:266:in `context'
+rack (2.2.3) lib/rack/session/abstract/id.rb:260:in `call'
+actionpack (6.1.5) lib/action_dispatch/middleware/cookies.rb:689:in `call'
+rack (2.2.3) lib/rack/session/abstract/id.rb:266:in `context'
+rack (2.2.3) lib/rack/session/abstract/id.rb:260:in `call'
+actionpack (6.1.5) lib/action_dispatch/middleware/cookies.rb:689:in `call'
+rack (2.2.3) lib/rack/etag.rb:27:in `call'
+rack (2.2.3) lib/rack/conditional_get.rb:27:in `call'
+rack (2.2.3) lib/rack/head.rb:12:in `call'
+activerecord (6.1.5) lib/active_record/migration.rb:601:in `call'
+actionpack (6.1.5) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (6.1.5) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (6.1.5) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (6.1.5) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.1.5) lib/action_dispatch/middleware/actionable_exceptions.rb:18:in `call'
+actionpack (6.1.5) lib/action_dispatch/middleware/debug_exceptions.rb:29:in `call'
+actionpack (6.1.5) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.1.5) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.1.5) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.1.5) lib/active_support/tagged_logging.rb:99:in `block in tagged'
+activesupport (6.1.5) lib/active_support/tagged_logging.rb:37:in `tagged'
+activesupport (6.1.5) lib/active_support/tagged_logging.rb:99:in `tagged'
+railties (6.1.5) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.1.5) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.1.5) lib/action_dispatch/middleware/request_id.rb:26:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.1.5) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.1.5) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.1.5) lib/action_dispatch/middleware/static.rb:24:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.1.5) lib/action_dispatch/middleware/host_authorization.rb:148:in `call'
+rack-cors (1.1.1) lib/rack/cors.rb:100:in `call'
+railties (6.1.5) lib/rails/engine.rb:539:in `call'
+puma (5.6.2) lib/puma/configuration.rb:252:in `call'
+puma (5.6.2) lib/puma/request.rb:77:in `block in handle_request'
+puma (5.6.2) lib/puma/thread_pool.rb:340:in `with_force_shutdown'
+puma (5.6.2) lib/puma/request.rb:76:in `handle_request'
+puma (5.6.2) lib/puma/server.rb:441:in `process_client'
+puma (5.6.2) lib/puma/thread_pool.rb:147:in `block in spawn_thread'
+Started GET "/players" for 127.0.0.1 at 2022-03-18 09:30:34 -0700
+  
+AbstractController::ActionNotFound (The action 'index' could not be found for PlayersController):
+  
+actionpack (6.1.5) lib/abstract_controller/base.rb:160:in `process'
+actionpack (6.1.5) lib/action_controller/metal.rb:190:in `dispatch'
+actionpack (6.1.5) lib/action_controller/metal.rb:254:in `dispatch'
+actionpack (6.1.5) lib/action_dispatch/routing/route_set.rb:50:in `dispatch'
+actionpack (6.1.5) lib/action_dispatch/routing/route_set.rb:33:in `serve'
+actionpack (6.1.5) lib/action_dispatch/journey/router.rb:50:in `block in serve'
+actionpack (6.1.5) lib/action_dispatch/journey/router.rb:32:in `each'
+actionpack (6.1.5) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (6.1.5) lib/action_dispatch/routing/route_set.rb:842:in `call'
+rack (2.2.3) lib/rack/session/abstract/id.rb:266:in `context'
+rack (2.2.3) lib/rack/session/abstract/id.rb:260:in `call'
+actionpack (6.1.5) lib/action_dispatch/middleware/cookies.rb:689:in `call'
+rack (2.2.3) lib/rack/session/abstract/id.rb:266:in `context'
+rack (2.2.3) lib/rack/session/abstract/id.rb:260:in `call'
+actionpack (6.1.5) lib/action_dispatch/middleware/cookies.rb:689:in `call'
+rack (2.2.3) lib/rack/etag.rb:27:in `call'
+rack (2.2.3) lib/rack/conditional_get.rb:27:in `call'
+rack (2.2.3) lib/rack/head.rb:12:in `call'
+activerecord (6.1.5) lib/active_record/migration.rb:601:in `call'
+actionpack (6.1.5) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (6.1.5) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (6.1.5) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (6.1.5) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.1.5) lib/action_dispatch/middleware/actionable_exceptions.rb:18:in `call'
+actionpack (6.1.5) lib/action_dispatch/middleware/debug_exceptions.rb:29:in `call'
+actionpack (6.1.5) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.1.5) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.1.5) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.1.5) lib/active_support/tagged_logging.rb:99:in `block in tagged'
+activesupport (6.1.5) lib/active_support/tagged_logging.rb:37:in `tagged'
+activesupport (6.1.5) lib/active_support/tagged_logging.rb:99:in `tagged'
+railties (6.1.5) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.1.5) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.1.5) lib/action_dispatch/middleware/request_id.rb:26:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.1.5) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.1.5) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.1.5) lib/action_dispatch/middleware/static.rb:24:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.1.5) lib/action_dispatch/middleware/host_authorization.rb:148:in `call'
+rack-cors (1.1.1) lib/rack/cors.rb:100:in `call'
+railties (6.1.5) lib/rails/engine.rb:539:in `call'
+puma (5.6.2) lib/puma/configuration.rb:252:in `call'
+puma (5.6.2) lib/puma/request.rb:77:in `block in handle_request'
+puma (5.6.2) lib/puma/thread_pool.rb:340:in `with_force_shutdown'
+puma (5.6.2) lib/puma/request.rb:76:in `handle_request'
+puma (5.6.2) lib/puma/server.rb:441:in `process_client'
+puma (5.6.2) lib/puma/thread_pool.rb:147:in `block in spawn_thread'
+Started GET "/players" for 127.0.0.1 at 2022-03-18 09:30:36 -0700
+  
+AbstractController::ActionNotFound (The action 'index' could not be found for PlayersController):
+  
+actionpack (6.1.5) lib/abstract_controller/base.rb:160:in `process'
+actionpack (6.1.5) lib/action_controller/metal.rb:190:in `dispatch'
+actionpack (6.1.5) lib/action_controller/metal.rb:254:in `dispatch'
+actionpack (6.1.5) lib/action_dispatch/routing/route_set.rb:50:in `dispatch'
+actionpack (6.1.5) lib/action_dispatch/routing/route_set.rb:33:in `serve'
+actionpack (6.1.5) lib/action_dispatch/journey/router.rb:50:in `block in serve'
+actionpack (6.1.5) lib/action_dispatch/journey/router.rb:32:in `each'
+actionpack (6.1.5) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (6.1.5) lib/action_dispatch/routing/route_set.rb:842:in `call'
+rack (2.2.3) lib/rack/session/abstract/id.rb:266:in `context'
+rack (2.2.3) lib/rack/session/abstract/id.rb:260:in `call'
+actionpack (6.1.5) lib/action_dispatch/middleware/cookies.rb:689:in `call'
+rack (2.2.3) lib/rack/session/abstract/id.rb:266:in `context'
+rack (2.2.3) lib/rack/session/abstract/id.rb:260:in `call'
+actionpack (6.1.5) lib/action_dispatch/middleware/cookies.rb:689:in `call'
+rack (2.2.3) lib/rack/etag.rb:27:in `call'
+rack (2.2.3) lib/rack/conditional_get.rb:27:in `call'
+rack (2.2.3) lib/rack/head.rb:12:in `call'
+activerecord (6.1.5) lib/active_record/migration.rb:601:in `call'
+actionpack (6.1.5) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (6.1.5) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (6.1.5) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (6.1.5) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.1.5) lib/action_dispatch/middleware/actionable_exceptions.rb:18:in `call'
+actionpack (6.1.5) lib/action_dispatch/middleware/debug_exceptions.rb:29:in `call'
+actionpack (6.1.5) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.1.5) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.1.5) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.1.5) lib/active_support/tagged_logging.rb:99:in `block in tagged'
+activesupport (6.1.5) lib/active_support/tagged_logging.rb:37:in `tagged'
+activesupport (6.1.5) lib/active_support/tagged_logging.rb:99:in `tagged'
+railties (6.1.5) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.1.5) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.1.5) lib/action_dispatch/middleware/request_id.rb:26:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.1.5) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.1.5) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.1.5) lib/action_dispatch/middleware/static.rb:24:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.1.5) lib/action_dispatch/middleware/host_authorization.rb:148:in `call'
+rack-cors (1.1.1) lib/rack/cors.rb:100:in `call'
+railties (6.1.5) lib/rails/engine.rb:539:in `call'
+puma (5.6.2) lib/puma/configuration.rb:252:in `call'
+puma (5.6.2) lib/puma/request.rb:77:in `block in handle_request'
+puma (5.6.2) lib/puma/thread_pool.rb:340:in `with_force_shutdown'
+puma (5.6.2) lib/puma/request.rb:76:in `handle_request'
+puma (5.6.2) lib/puma/server.rb:441:in `process_client'
+puma (5.6.2) lib/puma/thread_pool.rb:147:in `block in spawn_thread'
+Started GET "/players" for 127.0.0.1 at 2022-03-18 09:30:38 -0700
+  
+AbstractController::ActionNotFound (The action 'index' could not be found for PlayersController):
+  
+actionpack (6.1.5) lib/abstract_controller/base.rb:160:in `process'
+actionpack (6.1.5) lib/action_controller/metal.rb:190:in `dispatch'
+actionpack (6.1.5) lib/action_controller/metal.rb:254:in `dispatch'
+actionpack (6.1.5) lib/action_dispatch/routing/route_set.rb:50:in `dispatch'
+actionpack (6.1.5) lib/action_dispatch/routing/route_set.rb:33:in `serve'
+actionpack (6.1.5) lib/action_dispatch/journey/router.rb:50:in `block in serve'
+actionpack (6.1.5) lib/action_dispatch/journey/router.rb:32:in `each'
+actionpack (6.1.5) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (6.1.5) lib/action_dispatch/routing/route_set.rb:842:in `call'
+rack (2.2.3) lib/rack/session/abstract/id.rb:266:in `context'
+rack (2.2.3) lib/rack/session/abstract/id.rb:260:in `call'
+actionpack (6.1.5) lib/action_dispatch/middleware/cookies.rb:689:in `call'
+rack (2.2.3) lib/rack/session/abstract/id.rb:266:in `context'
+rack (2.2.3) lib/rack/session/abstract/id.rb:260:in `call'
+actionpack (6.1.5) lib/action_dispatch/middleware/cookies.rb:689:in `call'
+rack (2.2.3) lib/rack/etag.rb:27:in `call'
+rack (2.2.3) lib/rack/conditional_get.rb:27:in `call'
+rack (2.2.3) lib/rack/head.rb:12:in `call'
+activerecord (6.1.5) lib/active_record/migration.rb:601:in `call'
+actionpack (6.1.5) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (6.1.5) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (6.1.5) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (6.1.5) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.1.5) lib/action_dispatch/middleware/actionable_exceptions.rb:18:in `call'
+actionpack (6.1.5) lib/action_dispatch/middleware/debug_exceptions.rb:29:in `call'
+actionpack (6.1.5) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.1.5) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.1.5) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.1.5) lib/active_support/tagged_logging.rb:99:in `block in tagged'
+activesupport (6.1.5) lib/active_support/tagged_logging.rb:37:in `tagged'
+activesupport (6.1.5) lib/active_support/tagged_logging.rb:99:in `tagged'
+railties (6.1.5) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.1.5) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.1.5) lib/action_dispatch/middleware/request_id.rb:26:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.1.5) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.1.5) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.1.5) lib/action_dispatch/middleware/static.rb:24:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.1.5) lib/action_dispatch/middleware/host_authorization.rb:148:in `call'
+rack-cors (1.1.1) lib/rack/cors.rb:100:in `call'
+railties (6.1.5) lib/rails/engine.rb:539:in `call'
+puma (5.6.2) lib/puma/configuration.rb:252:in `call'
+puma (5.6.2) lib/puma/request.rb:77:in `block in handle_request'
+puma (5.6.2) lib/puma/thread_pool.rb:340:in `with_force_shutdown'
+puma (5.6.2) lib/puma/request.rb:76:in `handle_request'
+puma (5.6.2) lib/puma/server.rb:441:in `process_client'
+puma (5.6.2) lib/puma/thread_pool.rb:147:in `block in spawn_thread'
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2022-03-18 09:31:29 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2022-03-18 09:31:29 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2022-03-18 09:31:29 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2022-03-18 09:31:29 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2022-03-18 09:31:30 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2022-03-18 09:31:30 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2022-03-18 09:31:30 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2022-03-18 09:31:30 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2022-03-18 09:31:30 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2022-03-18 09:31:30 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2022-03-18 09:31:30 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2022-03-18 09:31:30 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2022-03-18 09:31:30 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/players" for 127.0.0.1 at 2022-03-18 09:31:30 -0700
+  
+AbstractController::ActionNotFound (The action 'index' could not be found for PlayersController):
+  
+actionpack (6.1.5) lib/abstract_controller/base.rb:160:in `process'
+actionpack (6.1.5) lib/action_controller/metal.rb:190:in `dispatch'
+actionpack (6.1.5) lib/action_controller/metal.rb:254:in `dispatch'
+actionpack (6.1.5) lib/action_dispatch/routing/route_set.rb:50:in `dispatch'
+actionpack (6.1.5) lib/action_dispatch/routing/route_set.rb:33:in `serve'
+actionpack (6.1.5) lib/action_dispatch/journey/router.rb:50:in `block in serve'
+actionpack (6.1.5) lib/action_dispatch/journey/router.rb:32:in `each'
+actionpack (6.1.5) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (6.1.5) lib/action_dispatch/routing/route_set.rb:842:in `call'
+rack (2.2.3) lib/rack/session/abstract/id.rb:266:in `context'
+rack (2.2.3) lib/rack/session/abstract/id.rb:260:in `call'
+actionpack (6.1.5) lib/action_dispatch/middleware/cookies.rb:689:in `call'
+rack (2.2.3) lib/rack/session/abstract/id.rb:266:in `context'
+rack (2.2.3) lib/rack/session/abstract/id.rb:260:in `call'
+actionpack (6.1.5) lib/action_dispatch/middleware/cookies.rb:689:in `call'
+rack (2.2.3) lib/rack/etag.rb:27:in `call'
+rack (2.2.3) lib/rack/conditional_get.rb:27:in `call'
+rack (2.2.3) lib/rack/head.rb:12:in `call'
+activerecord (6.1.5) lib/active_record/migration.rb:601:in `call'
+actionpack (6.1.5) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (6.1.5) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (6.1.5) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (6.1.5) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.1.5) lib/action_dispatch/middleware/actionable_exceptions.rb:18:in `call'
+actionpack (6.1.5) lib/action_dispatch/middleware/debug_exceptions.rb:29:in `call'
+actionpack (6.1.5) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.1.5) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.1.5) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.1.5) lib/active_support/tagged_logging.rb:99:in `block in tagged'
+activesupport (6.1.5) lib/active_support/tagged_logging.rb:37:in `tagged'
+activesupport (6.1.5) lib/active_support/tagged_logging.rb:99:in `tagged'
+railties (6.1.5) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.1.5) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.1.5) lib/action_dispatch/middleware/request_id.rb:26:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.1.5) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.1.5) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.1.5) lib/action_dispatch/middleware/static.rb:24:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.1.5) lib/action_dispatch/middleware/host_authorization.rb:148:in `call'
+rack-cors (1.1.1) lib/rack/cors.rb:100:in `call'
+railties (6.1.5) lib/rails/engine.rb:539:in `call'
+puma (5.6.2) lib/puma/configuration.rb:252:in `call'
+puma (5.6.2) lib/puma/request.rb:77:in `block in handle_request'
+puma (5.6.2) lib/puma/thread_pool.rb:340:in `with_force_shutdown'
+puma (5.6.2) lib/puma/request.rb:76:in `handle_request'
+puma (5.6.2) lib/puma/server.rb:441:in `process_client'
+puma (5.6.2) lib/puma/thread_pool.rb:147:in `block in spawn_thread'
+Started GET "/players" for 127.0.0.1 at 2022-03-18 09:32:07 -0700
+  
+AbstractController::ActionNotFound (The action 'index' could not be found for PlayersController):
+  
+actionpack (6.1.5) lib/abstract_controller/base.rb:160:in `process'
+actionpack (6.1.5) lib/action_controller/metal.rb:190:in `dispatch'
+actionpack (6.1.5) lib/action_controller/metal.rb:254:in `dispatch'
+actionpack (6.1.5) lib/action_dispatch/routing/route_set.rb:50:in `dispatch'
+actionpack (6.1.5) lib/action_dispatch/routing/route_set.rb:33:in `serve'
+actionpack (6.1.5) lib/action_dispatch/journey/router.rb:50:in `block in serve'
+actionpack (6.1.5) lib/action_dispatch/journey/router.rb:32:in `each'
+actionpack (6.1.5) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (6.1.5) lib/action_dispatch/routing/route_set.rb:842:in `call'
+rack (2.2.3) lib/rack/session/abstract/id.rb:266:in `context'
+rack (2.2.3) lib/rack/session/abstract/id.rb:260:in `call'
+actionpack (6.1.5) lib/action_dispatch/middleware/cookies.rb:689:in `call'
+rack (2.2.3) lib/rack/session/abstract/id.rb:266:in `context'
+rack (2.2.3) lib/rack/session/abstract/id.rb:260:in `call'
+actionpack (6.1.5) lib/action_dispatch/middleware/cookies.rb:689:in `call'
+rack (2.2.3) lib/rack/etag.rb:27:in `call'
+rack (2.2.3) lib/rack/conditional_get.rb:27:in `call'
+rack (2.2.3) lib/rack/head.rb:12:in `call'
+activerecord (6.1.5) lib/active_record/migration.rb:601:in `call'
+actionpack (6.1.5) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (6.1.5) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (6.1.5) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (6.1.5) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.1.5) lib/action_dispatch/middleware/actionable_exceptions.rb:18:in `call'
+actionpack (6.1.5) lib/action_dispatch/middleware/debug_exceptions.rb:29:in `call'
+actionpack (6.1.5) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.1.5) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.1.5) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.1.5) lib/active_support/tagged_logging.rb:99:in `block in tagged'
+activesupport (6.1.5) lib/active_support/tagged_logging.rb:37:in `tagged'
+activesupport (6.1.5) lib/active_support/tagged_logging.rb:99:in `tagged'
+railties (6.1.5) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.1.5) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.1.5) lib/action_dispatch/middleware/request_id.rb:26:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.1.5) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.1.5) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.1.5) lib/action_dispatch/middleware/static.rb:24:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.1.5) lib/action_dispatch/middleware/host_authorization.rb:148:in `call'
+rack-cors (1.1.1) lib/rack/cors.rb:100:in `call'
+railties (6.1.5) lib/rails/engine.rb:539:in `call'
+puma (5.6.2) lib/puma/configuration.rb:252:in `call'
+puma (5.6.2) lib/puma/request.rb:77:in `block in handle_request'
+puma (5.6.2) lib/puma/thread_pool.rb:340:in `with_force_shutdown'
+puma (5.6.2) lib/puma/request.rb:76:in `handle_request'
+puma (5.6.2) lib/puma/server.rb:441:in `process_client'
+puma (5.6.2) lib/puma/thread_pool.rb:147:in `block in spawn_thread'
+Started GET "/players" for 127.0.0.1 at 2022-03-18 09:32:08 -0700
+  
+AbstractController::ActionNotFound (The action 'index' could not be found for PlayersController):
+  
+actionpack (6.1.5) lib/abstract_controller/base.rb:160:in `process'
+actionpack (6.1.5) lib/action_controller/metal.rb:190:in `dispatch'
+actionpack (6.1.5) lib/action_controller/metal.rb:254:in `dispatch'
+actionpack (6.1.5) lib/action_dispatch/routing/route_set.rb:50:in `dispatch'
+actionpack (6.1.5) lib/action_dispatch/routing/route_set.rb:33:in `serve'
+actionpack (6.1.5) lib/action_dispatch/journey/router.rb:50:in `block in serve'
+actionpack (6.1.5) lib/action_dispatch/journey/router.rb:32:in `each'
+actionpack (6.1.5) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (6.1.5) lib/action_dispatch/routing/route_set.rb:842:in `call'
+rack (2.2.3) lib/rack/session/abstract/id.rb:266:in `context'
+rack (2.2.3) lib/rack/session/abstract/id.rb:260:in `call'
+actionpack (6.1.5) lib/action_dispatch/middleware/cookies.rb:689:in `call'
+rack (2.2.3) lib/rack/session/abstract/id.rb:266:in `context'
+rack (2.2.3) lib/rack/session/abstract/id.rb:260:in `call'
+actionpack (6.1.5) lib/action_dispatch/middleware/cookies.rb:689:in `call'
+rack (2.2.3) lib/rack/etag.rb:27:in `call'
+rack (2.2.3) lib/rack/conditional_get.rb:27:in `call'
+rack (2.2.3) lib/rack/head.rb:12:in `call'
+activerecord (6.1.5) lib/active_record/migration.rb:601:in `call'
+actionpack (6.1.5) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (6.1.5) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (6.1.5) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (6.1.5) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.1.5) lib/action_dispatch/middleware/actionable_exceptions.rb:18:in `call'
+actionpack (6.1.5) lib/action_dispatch/middleware/debug_exceptions.rb:29:in `call'
+actionpack (6.1.5) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.1.5) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.1.5) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.1.5) lib/active_support/tagged_logging.rb:99:in `block in tagged'
+activesupport (6.1.5) lib/active_support/tagged_logging.rb:37:in `tagged'
+activesupport (6.1.5) lib/active_support/tagged_logging.rb:99:in `tagged'
+railties (6.1.5) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.1.5) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.1.5) lib/action_dispatch/middleware/request_id.rb:26:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.1.5) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.1.5) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.1.5) lib/action_dispatch/middleware/static.rb:24:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.1.5) lib/action_dispatch/middleware/host_authorization.rb:148:in `call'
+rack-cors (1.1.1) lib/rack/cors.rb:100:in `call'
+railties (6.1.5) lib/rails/engine.rb:539:in `call'
+puma (5.6.2) lib/puma/configuration.rb:252:in `call'
+puma (5.6.2) lib/puma/request.rb:77:in `block in handle_request'
+puma (5.6.2) lib/puma/thread_pool.rb:340:in `with_force_shutdown'
+puma (5.6.2) lib/puma/request.rb:76:in `handle_request'
+puma (5.6.2) lib/puma/server.rb:441:in `process_client'
+puma (5.6.2) lib/puma/thread_pool.rb:147:in `block in spawn_thread'
+Started GET "/players" for 127.0.0.1 at 2022-03-18 09:32:13 -0700
+  
+AbstractController::ActionNotFound (The action 'index' could not be found for PlayersController):
+  
+actionpack (6.1.5) lib/abstract_controller/base.rb:160:in `process'
+actionpack (6.1.5) lib/action_controller/metal.rb:190:in `dispatch'
+actionpack (6.1.5) lib/action_controller/metal.rb:254:in `dispatch'
+actionpack (6.1.5) lib/action_dispatch/routing/route_set.rb:50:in `dispatch'
+actionpack (6.1.5) lib/action_dispatch/routing/route_set.rb:33:in `serve'
+actionpack (6.1.5) lib/action_dispatch/journey/router.rb:50:in `block in serve'
+actionpack (6.1.5) lib/action_dispatch/journey/router.rb:32:in `each'
+actionpack (6.1.5) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (6.1.5) lib/action_dispatch/routing/route_set.rb:842:in `call'
+rack (2.2.3) lib/rack/session/abstract/id.rb:266:in `context'
+rack (2.2.3) lib/rack/session/abstract/id.rb:260:in `call'
+actionpack (6.1.5) lib/action_dispatch/middleware/cookies.rb:689:in `call'
+rack (2.2.3) lib/rack/session/abstract/id.rb:266:in `context'
+rack (2.2.3) lib/rack/session/abstract/id.rb:260:in `call'
+actionpack (6.1.5) lib/action_dispatch/middleware/cookies.rb:689:in `call'
+rack (2.2.3) lib/rack/etag.rb:27:in `call'
+rack (2.2.3) lib/rack/conditional_get.rb:27:in `call'
+rack (2.2.3) lib/rack/head.rb:12:in `call'
+activerecord (6.1.5) lib/active_record/migration.rb:601:in `call'
+actionpack (6.1.5) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (6.1.5) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (6.1.5) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (6.1.5) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.1.5) lib/action_dispatch/middleware/actionable_exceptions.rb:18:in `call'
+actionpack (6.1.5) lib/action_dispatch/middleware/debug_exceptions.rb:29:in `call'
+actionpack (6.1.5) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.1.5) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.1.5) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.1.5) lib/active_support/tagged_logging.rb:99:in `block in tagged'
+activesupport (6.1.5) lib/active_support/tagged_logging.rb:37:in `tagged'
+activesupport (6.1.5) lib/active_support/tagged_logging.rb:99:in `tagged'
+railties (6.1.5) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.1.5) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.1.5) lib/action_dispatch/middleware/request_id.rb:26:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.1.5) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.1.5) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.1.5) lib/action_dispatch/middleware/static.rb:24:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.1.5) lib/action_dispatch/middleware/host_authorization.rb:148:in `call'
+rack-cors (1.1.1) lib/rack/cors.rb:100:in `call'
+railties (6.1.5) lib/rails/engine.rb:539:in `call'
+puma (5.6.2) lib/puma/configuration.rb:252:in `call'
+puma (5.6.2) lib/puma/request.rb:77:in `block in handle_request'
+puma (5.6.2) lib/puma/thread_pool.rb:340:in `with_force_shutdown'
+puma (5.6.2) lib/puma/request.rb:76:in `handle_request'
+puma (5.6.2) lib/puma/server.rb:441:in `process_client'
+puma (5.6.2) lib/puma/thread_pool.rb:147:in `block in spawn_thread'
+Started GET "/players" for 127.0.0.1 at 2022-03-18 09:32:15 -0700
+  
+AbstractController::ActionNotFound (The action 'index' could not be found for PlayersController):
+  
+actionpack (6.1.5) lib/abstract_controller/base.rb:160:in `process'
+actionpack (6.1.5) lib/action_controller/metal.rb:190:in `dispatch'
+actionpack (6.1.5) lib/action_controller/metal.rb:254:in `dispatch'
+actionpack (6.1.5) lib/action_dispatch/routing/route_set.rb:50:in `dispatch'
+actionpack (6.1.5) lib/action_dispatch/routing/route_set.rb:33:in `serve'
+actionpack (6.1.5) lib/action_dispatch/journey/router.rb:50:in `block in serve'
+actionpack (6.1.5) lib/action_dispatch/journey/router.rb:32:in `each'
+actionpack (6.1.5) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (6.1.5) lib/action_dispatch/routing/route_set.rb:842:in `call'
+rack (2.2.3) lib/rack/session/abstract/id.rb:266:in `context'
+rack (2.2.3) lib/rack/session/abstract/id.rb:260:in `call'
+actionpack (6.1.5) lib/action_dispatch/middleware/cookies.rb:689:in `call'
+rack (2.2.3) lib/rack/session/abstract/id.rb:266:in `context'
+rack (2.2.3) lib/rack/session/abstract/id.rb:260:in `call'
+actionpack (6.1.5) lib/action_dispatch/middleware/cookies.rb:689:in `call'
+rack (2.2.3) lib/rack/etag.rb:27:in `call'
+rack (2.2.3) lib/rack/conditional_get.rb:27:in `call'
+rack (2.2.3) lib/rack/head.rb:12:in `call'
+activerecord (6.1.5) lib/active_record/migration.rb:601:in `call'
+actionpack (6.1.5) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (6.1.5) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (6.1.5) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (6.1.5) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.1.5) lib/action_dispatch/middleware/actionable_exceptions.rb:18:in `call'
+actionpack (6.1.5) lib/action_dispatch/middleware/debug_exceptions.rb:29:in `call'
+actionpack (6.1.5) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.1.5) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.1.5) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.1.5) lib/active_support/tagged_logging.rb:99:in `block in tagged'
+activesupport (6.1.5) lib/active_support/tagged_logging.rb:37:in `tagged'
+activesupport (6.1.5) lib/active_support/tagged_logging.rb:99:in `tagged'
+railties (6.1.5) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.1.5) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.1.5) lib/action_dispatch/middleware/request_id.rb:26:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.1.5) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.1.5) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.1.5) lib/action_dispatch/middleware/static.rb:24:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.1.5) lib/action_dispatch/middleware/host_authorization.rb:148:in `call'
+rack-cors (1.1.1) lib/rack/cors.rb:100:in `call'
+railties (6.1.5) lib/rails/engine.rb:539:in `call'
+puma (5.6.2) lib/puma/configuration.rb:252:in `call'
+puma (5.6.2) lib/puma/request.rb:77:in `block in handle_request'
+puma (5.6.2) lib/puma/thread_pool.rb:340:in `with_force_shutdown'
+puma (5.6.2) lib/puma/request.rb:76:in `handle_request'
+puma (5.6.2) lib/puma/server.rb:441:in `process_client'
+puma (5.6.2) lib/puma/thread_pool.rb:147:in `block in spawn_thread'
+Started GET "/players" for 127.0.0.1 at 2022-03-18 09:32:55 -0700
+  
+AbstractController::ActionNotFound (The action 'index' could not be found for PlayersController):
+  
+actionpack (6.1.5) lib/abstract_controller/base.rb:160:in `process'
+actionpack (6.1.5) lib/action_controller/metal.rb:190:in `dispatch'
+actionpack (6.1.5) lib/action_controller/metal.rb:254:in `dispatch'
+actionpack (6.1.5) lib/action_dispatch/routing/route_set.rb:50:in `dispatch'
+actionpack (6.1.5) lib/action_dispatch/routing/route_set.rb:33:in `serve'
+actionpack (6.1.5) lib/action_dispatch/journey/router.rb:50:in `block in serve'
+actionpack (6.1.5) lib/action_dispatch/journey/router.rb:32:in `each'
+actionpack (6.1.5) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (6.1.5) lib/action_dispatch/routing/route_set.rb:842:in `call'
+rack (2.2.3) lib/rack/session/abstract/id.rb:266:in `context'
+rack (2.2.3) lib/rack/session/abstract/id.rb:260:in `call'
+actionpack (6.1.5) lib/action_dispatch/middleware/cookies.rb:689:in `call'
+rack (2.2.3) lib/rack/session/abstract/id.rb:266:in `context'
+rack (2.2.3) lib/rack/session/abstract/id.rb:260:in `call'
+actionpack (6.1.5) lib/action_dispatch/middleware/cookies.rb:689:in `call'
+rack (2.2.3) lib/rack/etag.rb:27:in `call'
+rack (2.2.3) lib/rack/conditional_get.rb:27:in `call'
+rack (2.2.3) lib/rack/head.rb:12:in `call'
+activerecord (6.1.5) lib/active_record/migration.rb:601:in `call'
+actionpack (6.1.5) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (6.1.5) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (6.1.5) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (6.1.5) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.1.5) lib/action_dispatch/middleware/actionable_exceptions.rb:18:in `call'
+actionpack (6.1.5) lib/action_dispatch/middleware/debug_exceptions.rb:29:in `call'
+actionpack (6.1.5) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.1.5) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.1.5) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.1.5) lib/active_support/tagged_logging.rb:99:in `block in tagged'
+activesupport (6.1.5) lib/active_support/tagged_logging.rb:37:in `tagged'
+activesupport (6.1.5) lib/active_support/tagged_logging.rb:99:in `tagged'
+railties (6.1.5) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.1.5) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.1.5) lib/action_dispatch/middleware/request_id.rb:26:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.1.5) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.1.5) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.1.5) lib/action_dispatch/middleware/static.rb:24:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.1.5) lib/action_dispatch/middleware/host_authorization.rb:148:in `call'
+rack-cors (1.1.1) lib/rack/cors.rb:100:in `call'
+railties (6.1.5) lib/rails/engine.rb:539:in `call'
+puma (5.6.2) lib/puma/configuration.rb:252:in `call'
+puma (5.6.2) lib/puma/request.rb:77:in `block in handle_request'
+puma (5.6.2) lib/puma/thread_pool.rb:340:in `with_force_shutdown'
+puma (5.6.2) lib/puma/request.rb:76:in `handle_request'
+puma (5.6.2) lib/puma/server.rb:441:in `process_client'
+puma (5.6.2) lib/puma/thread_pool.rb:147:in `block in spawn_thread'
+Started GET "/players" for 127.0.0.1 at 2022-03-18 09:32:58 -0700
+  
+AbstractController::ActionNotFound (The action 'index' could not be found for PlayersController):
+  
+actionpack (6.1.5) lib/abstract_controller/base.rb:160:in `process'
+actionpack (6.1.5) lib/action_controller/metal.rb:190:in `dispatch'
+actionpack (6.1.5) lib/action_controller/metal.rb:254:in `dispatch'
+actionpack (6.1.5) lib/action_dispatch/routing/route_set.rb:50:in `dispatch'
+actionpack (6.1.5) lib/action_dispatch/routing/route_set.rb:33:in `serve'
+actionpack (6.1.5) lib/action_dispatch/journey/router.rb:50:in `block in serve'
+actionpack (6.1.5) lib/action_dispatch/journey/router.rb:32:in `each'
+actionpack (6.1.5) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (6.1.5) lib/action_dispatch/routing/route_set.rb:842:in `call'
+rack (2.2.3) lib/rack/session/abstract/id.rb:266:in `context'
+rack (2.2.3) lib/rack/session/abstract/id.rb:260:in `call'
+actionpack (6.1.5) lib/action_dispatch/middleware/cookies.rb:689:in `call'
+rack (2.2.3) lib/rack/session/abstract/id.rb:266:in `context'
+rack (2.2.3) lib/rack/session/abstract/id.rb:260:in `call'
+actionpack (6.1.5) lib/action_dispatch/middleware/cookies.rb:689:in `call'
+rack (2.2.3) lib/rack/etag.rb:27:in `call'
+rack (2.2.3) lib/rack/conditional_get.rb:27:in `call'
+rack (2.2.3) lib/rack/head.rb:12:in `call'
+activerecord (6.1.5) lib/active_record/migration.rb:601:in `call'
+actionpack (6.1.5) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (6.1.5) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (6.1.5) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (6.1.5) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.1.5) lib/action_dispatch/middleware/actionable_exceptions.rb:18:in `call'
+actionpack (6.1.5) lib/action_dispatch/middleware/debug_exceptions.rb:29:in `call'
+actionpack (6.1.5) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.1.5) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.1.5) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.1.5) lib/active_support/tagged_logging.rb:99:in `block in tagged'
+activesupport (6.1.5) lib/active_support/tagged_logging.rb:37:in `tagged'
+activesupport (6.1.5) lib/active_support/tagged_logging.rb:99:in `tagged'
+railties (6.1.5) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.1.5) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.1.5) lib/action_dispatch/middleware/request_id.rb:26:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.1.5) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.1.5) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.1.5) lib/action_dispatch/middleware/static.rb:24:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.1.5) lib/action_dispatch/middleware/host_authorization.rb:148:in `call'
+rack-cors (1.1.1) lib/rack/cors.rb:100:in `call'
+railties (6.1.5) lib/rails/engine.rb:539:in `call'
+puma (5.6.2) lib/puma/configuration.rb:252:in `call'
+puma (5.6.2) lib/puma/request.rb:77:in `block in handle_request'
+puma (5.6.2) lib/puma/thread_pool.rb:340:in `with_force_shutdown'
+puma (5.6.2) lib/puma/request.rb:76:in `handle_request'
+puma (5.6.2) lib/puma/server.rb:441:in `process_client'
+puma (5.6.2) lib/puma/thread_pool.rb:147:in `block in spawn_thread'
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2022-03-18 09:34:11 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2022-03-18 09:34:11 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2022-03-18 09:34:11 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2022-03-18 09:34:11 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2022-03-18 09:34:11 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2022-03-18 09:34:11 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2022-03-18 09:34:11 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2022-03-18 09:34:11 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2022-03-18 09:34:11 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2022-03-18 09:34:11 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2022-03-18 09:34:39 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2022-03-18 09:34:39 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2022-03-18 09:34:39 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2022-03-18 09:34:39 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2022-03-18 09:34:39 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2022-03-18 09:34:45 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started POST "/login" for 127.0.0.1 at 2022-03-18 09:34:47 -0700
+Processing by SessionsController#create as */*
+  Parameters: {"username"=>"1a", "password"=>"[FILTERED]", "session"=>{"username"=>"1a", "password"=>"[FILTERED]"}}
+[31mUnpermitted parameter: :session[0m
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "1a"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:5:in `create'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.04ms)
+Completed 200 OK in 24ms (Views: 0.3ms | ActiveRecord: 12.6ms | Allocations: 3912)
+
+
+Started GET "/players" for 127.0.0.1 at 2022-03-18 09:34:47 -0700
+  
+AbstractController::ActionNotFound (The action 'index' could not be found for PlayersController):
+  
+actionpack (6.1.5) lib/abstract_controller/base.rb:160:in `process'
+actionpack (6.1.5) lib/action_controller/metal.rb:190:in `dispatch'
+actionpack (6.1.5) lib/action_controller/metal.rb:254:in `dispatch'
+actionpack (6.1.5) lib/action_dispatch/routing/route_set.rb:50:in `dispatch'
+actionpack (6.1.5) lib/action_dispatch/routing/route_set.rb:33:in `serve'
+actionpack (6.1.5) lib/action_dispatch/journey/router.rb:50:in `block in serve'
+actionpack (6.1.5) lib/action_dispatch/journey/router.rb:32:in `each'
+actionpack (6.1.5) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (6.1.5) lib/action_dispatch/routing/route_set.rb:842:in `call'
+rack (2.2.3) lib/rack/session/abstract/id.rb:266:in `context'
+rack (2.2.3) lib/rack/session/abstract/id.rb:260:in `call'
+actionpack (6.1.5) lib/action_dispatch/middleware/cookies.rb:689:in `call'
+rack (2.2.3) lib/rack/session/abstract/id.rb:266:in `context'
+rack (2.2.3) lib/rack/session/abstract/id.rb:260:in `call'
+actionpack (6.1.5) lib/action_dispatch/middleware/cookies.rb:689:in `call'
+rack (2.2.3) lib/rack/etag.rb:27:in `call'
+rack (2.2.3) lib/rack/conditional_get.rb:27:in `call'
+rack (2.2.3) lib/rack/head.rb:12:in `call'
+activerecord (6.1.5) lib/active_record/migration.rb:601:in `call'
+actionpack (6.1.5) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (6.1.5) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (6.1.5) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (6.1.5) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.1.5) lib/action_dispatch/middleware/actionable_exceptions.rb:18:in `call'
+actionpack (6.1.5) lib/action_dispatch/middleware/debug_exceptions.rb:29:in `call'
+actionpack (6.1.5) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.1.5) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.1.5) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.1.5) lib/active_support/tagged_logging.rb:99:in `block in tagged'
+activesupport (6.1.5) lib/active_support/tagged_logging.rb:37:in `tagged'
+activesupport (6.1.5) lib/active_support/tagged_logging.rb:99:in `tagged'
+railties (6.1.5) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.1.5) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.1.5) lib/action_dispatch/middleware/request_id.rb:26:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.1.5) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.1.5) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.1.5) lib/action_dispatch/middleware/static.rb:24:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.1.5) lib/action_dispatch/middleware/host_authorization.rb:148:in `call'
+rack-cors (1.1.1) lib/rack/cors.rb:100:in `call'
+railties (6.1.5) lib/rails/engine.rb:539:in `call'
+puma (5.6.2) lib/puma/configuration.rb:252:in `call'
+puma (5.6.2) lib/puma/request.rb:77:in `block in handle_request'
+puma (5.6.2) lib/puma/thread_pool.rb:340:in `with_force_shutdown'
+puma (5.6.2) lib/puma/request.rb:76:in `handle_request'
+puma (5.6.2) lib/puma/server.rb:441:in `process_client'
+puma (5.6.2) lib/puma/thread_pool.rb:147:in `block in spawn_thread'
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2022-03-18 09:35:12 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started POST "/login" for 127.0.0.1 at 2022-03-18 09:35:47 -0700
+Processing by SessionsController#create as */*
+  Parameters: {"username"=>"1a", "password"=>"[FILTERED]", "session"=>{"username"=>"1a", "password"=>"[FILTERED]"}}
+[31mUnpermitted parameter: :session[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "1a"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:5:in `create'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.03ms)
+Completed 200 OK in 1ms (Views: 0.2ms | ActiveRecord: 0.2ms | Allocations: 659)
+
+
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2022-03-18 09:36:46 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2022-03-18 09:36:46 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started POST "/login" for 127.0.0.1 at 2022-03-18 09:37:19 -0700
+Processing by SessionsController#create as */*
+  Parameters: {"username"=>"1a", "password"=>"[FILTERED]", "session"=>{"username"=>"1a", "password"=>"[FILTERED]"}}
+[31mUnpermitted parameter: :session[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "1a"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:5:in `create'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.03ms)
+Completed 200 OK in 1ms (Views: 0.2ms | ActiveRecord: 0.2ms | Allocations: 659)
+
+
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2022-03-18 09:38:31 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started POST "/login" for 127.0.0.1 at 2022-03-18 09:42:37 -0700
+Processing by SessionsController#create as */*
+  Parameters: {"username"=>"1a", "password"=>"[FILTERED]", "session"=>{"username"=>"1a", "password"=>"[FILTERED]"}}
+[31mUnpermitted parameter: :session[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "1a"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:5:in `create'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.04ms)
+Completed 200 OK in 1ms (Views: 0.2ms | ActiveRecord: 0.2ms | Allocations: 659)
+
+
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2022-03-18 09:43:56 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2022-03-18 09:43:58 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started POST "/login" for 127.0.0.1 at 2022-03-18 09:44:11 -0700
+Processing by SessionsController#create as */*
+  Parameters: {"username"=>"1a", "password"=>"[FILTERED]", "session"=>{"username"=>"1a", "password"=>"[FILTERED]"}}
+[31mUnpermitted parameter: :session[0m
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "1a"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:5:in `create'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.1ms)
+Completed 200 OK in 4ms (Views: 1.0ms | ActiveRecord: 0.3ms | Allocations: 659)
+
+
+Started POST "/login" for 127.0.0.1 at 2022-03-18 09:46:16 -0700
+Processing by SessionsController#create as */*
+  Parameters: {"username"=>"1a", "password"=>"[FILTERED]", "session"=>{"username"=>"1a", "password"=>"[FILTERED]"}}
+[31mUnpermitted parameter: :session[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "1a"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:5:in `create'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.04ms)
+Completed 200 OK in 1ms (Views: 0.2ms | ActiveRecord: 0.2ms | Allocations: 660)
+
+
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2022-03-18 09:47:45 -0700
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2022-03-18 09:47:45 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2022-03-18 09:47:56 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2022-03-18 09:48:04 -0700
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2022-03-18 09:48:04 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started POST "/login" for 127.0.0.1 at 2022-03-18 09:48:09 -0700
+Processing by SessionsController#create as */*
+  Parameters: {"username"=>"1a", "password"=>"[FILTERED]", "session"=>{"username"=>"1a", "password"=>"[FILTERED]"}}
+[31mUnpermitted parameter: :session[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "1a"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:5:in `create'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.16ms)
+Completed 200 OK in 4ms (Views: 0.9ms | ActiveRecord: 0.2ms | Allocations: 659)
+
+
+Started POST "/login" for 127.0.0.1 at 2022-03-18 10:02:46 -0700
+Processing by SessionsController#create as */*
+  Parameters: {"username"=>"1a", "password"=>"[FILTERED]", "session"=>{"username"=>"1a", "password"=>"[FILTERED]"}}
+[31mUnpermitted parameter: :session[0m
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "1a"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:5:in `create'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.08ms)
+Completed 200 OK in 29ms (Views: 0.5ms | ActiveRecord: 13.7ms | Allocations: 3867)
+
+
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2022-03-18 10:03:20 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2022-03-18 10:03:32 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2022-03-18 10:03:36 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2022-03-18 10:03:36 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2022-03-18 10:04:19 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2022-03-18 10:04:19 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2022-03-18 10:04:19 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started POST "/login" for 127.0.0.1 at 2022-03-18 10:04:28 -0700
+Processing by SessionsController#create as */*
+  Parameters: {"username"=>"1a", "password"=>"[FILTERED]", "session"=>{"username"=>"1a", "password"=>"[FILTERED]"}}
+[31mUnpermitted parameter: :session[0m
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "1a"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:5:in `create'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.13ms)
+Completed 200 OK in 7ms (Views: 0.8ms | ActiveRecord: 0.7ms | Allocations: 659)
+
+
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2022-03-18 10:06:54 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2022-03-18 10:06:54 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2022-03-18 10:07:57 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2022-03-18 10:07:57 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2022-03-18 10:07:57 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2022-03-18 10:07:57 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2022-03-18 10:07:57 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2022-03-18 10:07:57 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started POST "/login" for 127.0.0.1 at 2022-03-18 10:07:59 -0700
+Processing by SessionsController#create as */*
+  Parameters: {"username"=>"1a", "password"=>"[FILTERED]", "session"=>{"username"=>"1a", "password"=>"[FILTERED]"}}
+[31mUnpermitted parameter: :session[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "1a"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:5:in `create'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.03ms)
+Completed 200 OK in 2ms (Views: 0.2ms | ActiveRecord: 0.2ms | Allocations: 659)
+
+
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2022-03-18 10:08:23 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started POST "/login" for 127.0.0.1 at 2022-03-18 10:08:25 -0700
+Processing by SessionsController#create as */*
+  Parameters: {"username"=>"1a", "password"=>"[FILTERED]", "session"=>{"username"=>"1a", "password"=>"[FILTERED]"}}
+[31mUnpermitted parameter: :session[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "1a"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:5:in `create'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.05ms)
+Completed 200 OK in 2ms (Views: 0.4ms | ActiveRecord: 0.2ms | Allocations: 659)
+
+
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2022-03-18 10:09:04 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2022-03-18 10:09:04 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2022-03-18 10:09:04 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2022-03-18 10:09:04 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2022-03-18 10:09:04 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2022-03-18 10:09:04 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started POST "/login" for 127.0.0.1 at 2022-03-18 10:10:39 -0700
+Processing by SessionsController#create as */*
+  Parameters: {"username"=>"1a", "password"=>"[FILTERED]", "session"=>{"username"=>"1a", "password"=>"[FILTERED]"}}
+[31mUnpermitted parameter: :session[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "1a"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:5:in `create'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.07ms)
+Completed 200 OK in 3ms (Views: 0.5ms | ActiveRecord: 0.2ms | Allocations: 659)
+
+
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2022-03-18 10:14:55 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2022-03-18 10:14:55 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2022-03-18 10:15:13 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2022-03-18 10:15:46 -0700
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2022-03-18 10:15:46 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2022-03-18 10:16:16 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2022-03-18 10:17:01 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2022-03-18 10:17:01 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2022-03-18 10:17:01 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2022-03-18 10:17:01 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2022-03-18 10:17:01 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2022-03-18 10:17:01 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2022-03-18 10:17:16 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started POST "/players" for 127.0.0.1 at 2022-03-18 10:17:24 -0700
+  
+AbstractController::ActionNotFound (The action 'create' could not be found for PlayersController):
+  
+actionpack (6.1.5) lib/abstract_controller/base.rb:160:in `process'
+actionpack (6.1.5) lib/action_controller/metal.rb:190:in `dispatch'
+actionpack (6.1.5) lib/action_controller/metal.rb:254:in `dispatch'
+actionpack (6.1.5) lib/action_dispatch/routing/route_set.rb:50:in `dispatch'
+actionpack (6.1.5) lib/action_dispatch/routing/route_set.rb:33:in `serve'
+actionpack (6.1.5) lib/action_dispatch/journey/router.rb:50:in `block in serve'
+actionpack (6.1.5) lib/action_dispatch/journey/router.rb:32:in `each'
+actionpack (6.1.5) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (6.1.5) lib/action_dispatch/routing/route_set.rb:842:in `call'
+rack (2.2.3) lib/rack/session/abstract/id.rb:266:in `context'
+rack (2.2.3) lib/rack/session/abstract/id.rb:260:in `call'
+actionpack (6.1.5) lib/action_dispatch/middleware/cookies.rb:689:in `call'
+rack (2.2.3) lib/rack/session/abstract/id.rb:266:in `context'
+rack (2.2.3) lib/rack/session/abstract/id.rb:260:in `call'
+actionpack (6.1.5) lib/action_dispatch/middleware/cookies.rb:689:in `call'
+rack (2.2.3) lib/rack/etag.rb:27:in `call'
+rack (2.2.3) lib/rack/conditional_get.rb:40:in `call'
+rack (2.2.3) lib/rack/head.rb:12:in `call'
+activerecord (6.1.5) lib/active_record/migration.rb:601:in `call'
+actionpack (6.1.5) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (6.1.5) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (6.1.5) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (6.1.5) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.1.5) lib/action_dispatch/middleware/actionable_exceptions.rb:18:in `call'
+actionpack (6.1.5) lib/action_dispatch/middleware/debug_exceptions.rb:29:in `call'
+actionpack (6.1.5) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.1.5) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.1.5) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.1.5) lib/active_support/tagged_logging.rb:99:in `block in tagged'
+activesupport (6.1.5) lib/active_support/tagged_logging.rb:37:in `tagged'
+activesupport (6.1.5) lib/active_support/tagged_logging.rb:99:in `tagged'
+railties (6.1.5) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.1.5) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.1.5) lib/action_dispatch/middleware/request_id.rb:26:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.1.5) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.1.5) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.1.5) lib/action_dispatch/middleware/static.rb:24:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.1.5) lib/action_dispatch/middleware/host_authorization.rb:148:in `call'
+rack-cors (1.1.1) lib/rack/cors.rb:100:in `call'
+railties (6.1.5) lib/rails/engine.rb:539:in `call'
+puma (5.6.2) lib/puma/configuration.rb:252:in `call'
+puma (5.6.2) lib/puma/request.rb:77:in `block in handle_request'
+puma (5.6.2) lib/puma/thread_pool.rb:340:in `with_force_shutdown'
+puma (5.6.2) lib/puma/request.rb:76:in `handle_request'
+puma (5.6.2) lib/puma/server.rb:441:in `process_client'
+puma (5.6.2) lib/puma/thread_pool.rb:147:in `block in spawn_thread'
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2022-03-18 10:17:37 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2022-03-18 10:17:49 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2022-03-18 10:17:49 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2022-03-18 10:17:49 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started POST "/login" for 127.0.0.1 at 2022-03-18 10:17:55 -0700
+Processing by SessionsController#create as */*
+  Parameters: {"username"=>"1a", "password"=>"[FILTERED]", "session"=>{"username"=>"1a", "password"=>"[FILTERED]"}}
+[31mUnpermitted parameter: :session[0m
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "1a"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:5:in `create'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.04ms)
+Completed 200 OK in 23ms (Views: 0.3ms | ActiveRecord: 8.4ms | Allocations: 3894)
+
+
+Started POST "/login" for 127.0.0.1 at 2022-03-18 10:18:27 -0700
+Processing by SessionsController#create as */*
+  Parameters: {"username"=>"1a", "password"=>"[FILTERED]", "session"=>{"username"=>"1a", "password"=>"[FILTERED]"}}
+[31mUnpermitted parameter: :session[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "1a"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:5:in `create'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.03ms)
+Completed 200 OK in 1ms (Views: 0.2ms | ActiveRecord: 0.2ms | Allocations: 660)
+
+
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2022-03-18 10:19:36 -0700
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2022-03-18 10:19:36 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2022-03-18 10:19:36 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2022-03-18 10:19:36 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2022-03-18 10:19:36 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2022-03-18 10:19:49 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started POST "/login" for 127.0.0.1 at 2022-03-18 10:19:50 -0700
+Processing by SessionsController#create as */*
+  Parameters: {"username"=>"1a", "password"=>"[FILTERED]", "session"=>{"username"=>"1a", "password"=>"[FILTERED]"}}
+[31mUnpermitted parameter: :session[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "1a"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:5:in `create'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.04ms)
+Completed 200 OK in 1ms (Views: 0.2ms | ActiveRecord: 0.2ms | Allocations: 659)
+
+
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2022-03-18 10:20:17 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2022-03-18 10:20:51 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2022-03-18 10:20:51 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2022-03-18 10:21:36 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2022-03-18 10:25:01 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2022-03-18 10:25:26 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2022-03-18 10:25:26 -0700
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2022-03-18 10:25:26 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started POST "/login" for 127.0.0.1 at 2022-03-18 10:25:30 -0700
+Processing by SessionsController#create as */*
+  Parameters: {"username"=>"1a", "password"=>"[FILTERED]", "session"=>{"username"=>"1a", "password"=>"[FILTERED]"}}
+[31mUnpermitted parameter: :session[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "1a"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:5:in `create'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.03ms)
+Completed 200 OK in 1ms (Views: 0.2ms | ActiveRecord: 0.2ms | Allocations: 659)
+
+
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2022-03-18 10:25:47 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2022-03-18 10:26:01 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2022-03-18 10:27:28 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2022-03-18 10:27:29 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2022-03-18 10:27:41 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started POST "/login" for 127.0.0.1 at 2022-03-18 10:28:15 -0700
+Processing by SessionsController#create as */*
+  Parameters: {"username"=>"1a", "password"=>"[FILTERED]", "session"=>{"username"=>"1a", "password"=>"[FILTERED]"}}
+[31mUnpermitted parameter: :session[0m
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "1a"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:5:in `create'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.07ms)
+Completed 200 OK in 5ms (Views: 0.7ms | ActiveRecord: 0.3ms | Allocations: 659)
+
+
+Started POST "/login" for 127.0.0.1 at 2022-03-18 10:29:46 -0700
+Processing by SessionsController#create as */*
+  Parameters: {"username"=>"1a", "password"=>"[FILTERED]", "session"=>{"username"=>"1a", "password"=>"[FILTERED]"}}
+[31mUnpermitted parameter: :session[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "1a"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:5:in `create'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.04ms)
+Completed 200 OK in 2ms (Views: 0.3ms | ActiveRecord: 0.2ms | Allocations: 661)
+
+
+Started POST "/login" for 127.0.0.1 at 2022-03-18 10:30:00 -0700
+Processing by SessionsController#create as */*
+  Parameters: {"username"=>"1a", "password"=>"[FILTERED]", "session"=>{"username"=>"1a", "password"=>"[FILTERED]"}}
+[31mUnpermitted parameter: :session[0m
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "1a"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:5:in `create'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.11ms)
+Completed 200 OK in 6ms (Views: 0.6ms | ActiveRecord: 0.3ms | Allocations: 660)
+
+
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2022-03-18 10:30:15 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started POST "/login" for 127.0.0.1 at 2022-03-18 10:30:21 -0700
+Processing by SessionsController#create as */*
+  Parameters: {"username"=>"1a", "password"=>"[FILTERED]", "session"=>{"username"=>"1a", "password"=>"[FILTERED]"}}
+[31mUnpermitted parameter: :session[0m
+  [1m[36mUser Load (2.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "1a"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:5:in `create'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.08ms)
+Completed 200 OK in 9ms (Views: 0.5ms | ActiveRecord: 2.0ms | Allocations: 659)
+
+
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2022-03-18 10:32:05 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2022-03-18 10:32:05 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2022-03-18 10:32:05 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2022-03-18 10:33:16 -0700
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2022-03-18 10:33:16 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2022-03-18 10:33:16 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2022-03-18 10:33:17 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started POST "/login" for 127.0.0.1 at 2022-03-18 10:34:00 -0700
+Processing by SessionsController#create as */*
+  Parameters: {"username"=>"1a", "password"=>"[FILTERED]", "session"=>{"username"=>"1a", "password"=>"[FILTERED]"}}
+[31mUnpermitted parameter: :session[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "1a"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:5:in `create'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.03ms)
+Completed 200 OK in 1ms (Views: 0.2ms | ActiveRecord: 0.1ms | Allocations: 659)
+
+
+Started POST "/login" for 127.0.0.1 at 2022-03-18 10:34:28 -0700
+Processing by SessionsController#create as */*
+  Parameters: {"username"=>"1a", "password"=>"[FILTERED]", "session"=>{"username"=>"1a", "password"=>"[FILTERED]"}}
+[31mUnpermitted parameter: :session[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "1a"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:5:in `create'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.03ms)
+Completed 200 OK in 1ms (Views: 0.2ms | ActiveRecord: 0.1ms | Allocations: 660)
+
+
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2022-03-18 10:35:15 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started POST "/login" for 127.0.0.1 at 2022-03-18 10:35:44 -0700
+Processing by SessionsController#create as */*
+  Parameters: {"username"=>"1a", "password"=>"[FILTERED]", "session"=>{"username"=>"1a", "password"=>"[FILTERED]"}}
+[31mUnpermitted parameter: :session[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "1a"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:5:in `create'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.06ms)
+Completed 200 OK in 1ms (Views: 0.3ms | ActiveRecord: 0.2ms | Allocations: 659)
+
+
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2022-03-18 10:40:12 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2022-03-18 10:40:12 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2022-03-18 10:40:12 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2022-03-18 10:40:12 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2022-03-18 10:40:12 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2022-03-18 10:40:12 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2022-03-18 10:40:12 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2022-03-18 10:40:12 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2022-03-18 10:40:12 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2022-03-18 10:41:59 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2022-03-18 10:41:59 -0700
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2022-03-18 10:41:59 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2022-03-18 10:42:08 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2022-03-18 10:42:17 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2022-03-18 10:42:17 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2022-03-18 10:42:17 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2022-03-18 10:44:43 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2022-03-18 10:44:43 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started POST "/login" for 127.0.0.1 at 2022-03-18 10:44:52 -0700
+Processing by SessionsController#create as */*
+  Parameters: {"username"=>"1a", "password"=>"[FILTERED]", "session"=>{"username"=>"1a", "password"=>"[FILTERED]"}}
+[31mUnpermitted parameter: :session[0m
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "1a"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:5:in `create'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.08ms)
+Completed 200 OK in 40ms (Views: 0.7ms | ActiveRecord: 9.7ms | Allocations: 3894)
+
+
+Started POST "/login" for 127.0.0.1 at 2022-03-18 10:46:19 -0700
+Processing by SessionsController#create as */*
+  Parameters: {"username"=>"1a", "password"=>"[FILTERED]", "session"=>{"username"=>"1a", "password"=>"[FILTERED]"}}
+[31mUnpermitted parameter: :session[0m
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "1a"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:5:in `create'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.1ms)
+Completed 200 OK in 5ms (Views: 0.4ms | ActiveRecord: 0.5ms | Allocations: 660)
+
+
+Started POST "/login" for 127.0.0.1 at 2022-03-18 10:46:51 -0700
+Processing by SessionsController#create as */*
+  Parameters: {"username"=>"1a", "password"=>"[FILTERED]", "session"=>{"username"=>"1a", "password"=>"[FILTERED]"}}
+[31mUnpermitted parameter: :session[0m
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "1a"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:5:in `create'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.08ms)
+Completed 200 OK in 3ms (Views: 0.5ms | ActiveRecord: 0.3ms | Allocations: 660)
+
+
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2022-03-18 10:47:23 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started POST "/login" for 127.0.0.1 at 2022-03-18 10:47:42 -0700
+Processing by SessionsController#create as */*
+  Parameters: {"username"=>"1a", "password"=>"[FILTERED]", "session"=>{"username"=>"1a", "password"=>"[FILTERED]"}}
+[31mUnpermitted parameter: :session[0m
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "1a"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:5:in `create'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.07ms)
+Completed 200 OK in 8ms (Views: 0.8ms | ActiveRecord: 1.0ms | Allocations: 664)
+
+
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2022-03-18 10:51:25 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2022-03-18 10:51:26 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2022-03-18 10:51:37 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2022-03-18 10:52:38 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2022-03-18 10:52:38 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2022-03-18 10:52:46 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2022-03-18 10:52:46 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started POST "/login" for 127.0.0.1 at 2022-03-18 10:52:48 -0700
+Processing by SessionsController#create as */*
+  Parameters: {"username"=>"1a", "password"=>"[FILTERED]", "session"=>{"username"=>"1a", "password"=>"[FILTERED]"}}
+[31mUnpermitted parameter: :session[0m
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "1a"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:5:in `create'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.04ms)
+Completed 200 OK in 27ms (Views: 0.3ms | ActiveRecord: 15.2ms | Allocations: 3839)
+
+
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2022-03-18 10:53:19 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2022-03-18 10:53:19 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2022-03-18 10:53:55 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2022-03-18 10:53:55 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2022-03-18 10:53:55 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started POST "/login" for 127.0.0.1 at 2022-03-18 10:54:21 -0700
+Processing by SessionsController#create as */*
+  Parameters: {"username"=>"1a", "password"=>"[FILTERED]", "session"=>{"username"=>"1a", "password"=>"[FILTERED]"}}
+[31mUnpermitted parameter: :session[0m
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "1a"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:5:in `create'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.05ms)
+Completed 200 OK in 2ms (Views: 0.3ms | ActiveRecord: 0.3ms | Allocations: 659)
+
+
+Started POST "/login" for 127.0.0.1 at 2022-03-18 10:55:02 -0700
+Processing by SessionsController#create as */*
+  Parameters: {"username"=>"1a", "password"=>"[FILTERED]", "session"=>{"username"=>"1a", "password"=>"[FILTERED]"}}
+[31mUnpermitted parameter: :session[0m
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "1a"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:5:in `create'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.08ms)
+Completed 200 OK in 4ms (Views: 0.6ms | ActiveRecord: 0.3ms | Allocations: 660)
+
+
+Started POST "/login" for 127.0.0.1 at 2022-03-18 10:55:25 -0700
+Processing by SessionsController#create as */*
+  Parameters: {"username"=>"1a", "password"=>"[FILTERED]", "session"=>{"username"=>"1a", "password"=>"[FILTERED]"}}
+[31mUnpermitted parameter: :session[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "1a"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:5:in `create'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.08ms)
+Completed 200 OK in 8ms (Views: 0.5ms | ActiveRecord: 0.2ms | Allocations: 660)
+
+
+Started POST "/login" for 127.0.0.1 at 2022-03-18 10:55:49 -0700
+Processing by SessionsController#create as */*
+  Parameters: {"username"=>"1a", "password"=>"[FILTERED]", "session"=>{"username"=>"1a", "password"=>"[FILTERED]"}}
+[31mUnpermitted parameter: :session[0m
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "1a"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:5:in `create'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.08ms)
+Completed 200 OK in 10ms (Views: 0.5ms | ActiveRecord: 1.3ms | Allocations: 660)
+
+
+Started POST "/login" for 127.0.0.1 at 2022-03-18 10:56:39 -0700
+Processing by SessionsController#create as */*
+  Parameters: {"username"=>"1a", "password"=>"[FILTERED]", "session"=>{"username"=>"1a", "password"=>"[FILTERED]"}}
+[31mUnpermitted parameter: :session[0m
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "1a"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:5:in `create'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.19ms)
+Completed 200 OK in 4ms (Views: 0.7ms | ActiveRecord: 0.3ms | Allocations: 660)
+
+
+Started POST "/login" for 127.0.0.1 at 2022-03-18 10:57:26 -0700
+Processing by SessionsController#create as */*
+  Parameters: {"username"=>"1a", "password"=>"[FILTERED]", "session"=>{"username"=>"1a", "password"=>"[FILTERED]"}}
+[31mUnpermitted parameter: :session[0m
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "1a"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:5:in `create'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.04ms)
+Completed 200 OK in 2ms (Views: 0.2ms | ActiveRecord: 0.6ms | Allocations: 660)
+
+
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2022-03-18 10:57:46 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2022-03-18 10:57:46 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started POST "/login" for 127.0.0.1 at 2022-03-18 10:57:48 -0700
+Processing by SessionsController#create as */*
+  Parameters: {"username"=>"1a", "password"=>"[FILTERED]", "session"=>{"username"=>"1a", "password"=>"[FILTERED]"}}
+[31mUnpermitted parameter: :session[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "1a"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:5:in `create'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.09ms)
+Completed 200 OK in 1ms (Views: 0.3ms | ActiveRecord: 0.2ms | Allocations: 659)
+
+
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2022-03-18 11:00:15 -0700
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2022-03-18 11:00:15 -0700
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2022-03-18 11:00:15 -0700
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2022-03-18 11:00:15 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2022-03-18 11:00:15 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2022-03-18 11:00:15 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2022-03-18 11:00:15 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2022-03-18 11:00:15 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2022-03-18 11:00:15 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2022-03-18 11:00:15 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2022-03-18 11:01:38 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2022-03-18 11:01:38 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2022-03-18 11:01:38 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2022-03-18 11:01:38 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2022-03-18 11:01:38 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2022-03-18 11:01:38 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2022-03-18 11:01:38 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2022-03-18 11:01:38 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2022-03-18 11:02:06 -0700
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2022-03-18 11:02:06 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2022-03-18 11:12:26 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started POST "/login" for 127.0.0.1 at 2022-03-18 11:12:30 -0700
+Processing by SessionsController#create as */*
+  Parameters: {"username"=>"1a", "password"=>"[FILTERED]", "session"=>{"username"=>"1a", "password"=>"[FILTERED]"}}
+[31mUnpermitted parameter: :session[0m
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "1a"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:5:in `create'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.04ms)
+Completed 200 OK in 26ms (Views: 2.6ms | ActiveRecord: 13.6ms | Allocations: 3894)
+
+
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2022-03-18 11:12:44 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started POST "/login" for 127.0.0.1 at 2022-03-18 11:12:49 -0700
+Processing by SessionsController#create as */*
+  Parameters: {"username"=>"1a", "password"=>"[FILTERED]", "session"=>{"username"=>"1a", "password"=>"[FILTERED]"}}
+[31mUnpermitted parameter: :session[0m
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "1a"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:5:in `create'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.14ms)
+Completed 200 OK in 11ms (Views: 1.3ms | ActiveRecord: 0.5ms | Allocations: 660)
+
+
+Started POST "/login" for 127.0.0.1 at 2022-03-18 11:13:14 -0700
+Processing by SessionsController#create as */*
+  Parameters: {"username"=>"1a", "password"=>"[FILTERED]", "session"=>{"username"=>"1a", "password"=>"[FILTERED]"}}
+[31mUnpermitted parameter: :session[0m
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "1a"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:5:in `create'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.07ms)
+Completed 200 OK in 12ms (Views: 0.5ms | ActiveRecord: 0.4ms | Allocations: 660)
+
+
+Started POST "/login" for 127.0.0.1 at 2022-03-18 11:13:18 -0700
+Processing by SessionsController#create as */*
+  Parameters: {"username"=>"1a", "password"=>"[FILTERED]", "session"=>{"username"=>"1a", "password"=>"[FILTERED]"}}
+[31mUnpermitted parameter: :session[0m
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "1a"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:5:in `create'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.11ms)
+Completed 200 OK in 9ms (Views: 0.6ms | ActiveRecord: 0.9ms | Allocations: 661)
+
+
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2022-03-18 11:14:56 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2022-03-18 11:16:20 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2022-03-18 11:16:20 -0700
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2022-03-18 11:16:20 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2022-03-18 11:16:20 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2022-03-18 11:16:20 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2022-03-18 11:16:20 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2022-03-18 11:16:20 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2022-03-18 11:16:55 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2022-03-18 11:16:55 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2022-03-18 11:16:55 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2022-03-18 11:16:55 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2022-03-18 11:17:10 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2022-03-18 11:17:29 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2022-03-18 11:17:55 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started POST "/login" for 127.0.0.1 at 2022-03-18 11:17:58 -0700
+Processing by SessionsController#create as */*
+  Parameters: {"username"=>"1a", "password"=>"[FILTERED]", "session"=>{"username"=>"1a", "password"=>"[FILTERED]"}}
+[31mUnpermitted parameter: :session[0m
+  [1m[36mUser Load (2.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "1a"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:5:in `create'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.03ms)
+Completed 200 OK in 4ms (Views: 0.3ms | ActiveRecord: 2.0ms | Allocations: 659)
+
+
+Started POST "/login" for 127.0.0.1 at 2022-03-18 11:20:49 -0700
+Processing by SessionsController#create as */*
+  Parameters: {"username"=>"1a", "password"=>"[FILTERED]", "session"=>{"username"=>"1a", "password"=>"[FILTERED]"}}
+[31mUnpermitted parameter: :session[0m
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "1a"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:5:in `create'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.09ms)
+Completed 200 OK in 9ms (Views: 0.6ms | ActiveRecord: 0.4ms | Allocations: 660)
+
+
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2022-03-18 11:22:12 -0700
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2022-03-18 11:22:12 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started POST "/login" for 127.0.0.1 at 2022-03-18 11:23:08 -0700
+Processing by SessionsController#create as */*
+  Parameters: {"username"=>"1a", "password"=>"[FILTERED]", "session"=>{"username"=>"1a", "password"=>"[FILTERED]"}}
+[31mUnpermitted parameter: :session[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "1a"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:5:in `create'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.04ms)
+Completed 200 OK in 2ms (Views: 0.3ms | ActiveRecord: 0.2ms | Allocations: 659)
+
+
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2022-03-18 11:24:35 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2022-03-18 11:24:35 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2022-03-18 11:24:35 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2022-03-18 11:24:35 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2022-03-18 11:24:35 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2022-03-18 11:24:35 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2022-03-18 11:24:35 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2022-03-18 11:24:35 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2022-03-18 11:24:35 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2022-03-18 11:24:35 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2022-03-18 11:26:12 -0700
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2022-03-18 11:26:12 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2022-03-18 11:26:12 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2022-03-18 11:26:12 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2022-03-18 11:26:12 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2022-03-18 11:26:12 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2022-03-18 11:26:12 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2022-03-18 11:26:12 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  

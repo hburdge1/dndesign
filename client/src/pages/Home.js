@@ -8,11 +8,11 @@ import { CharacterSheet } from "./CharacterSheet"
 function Home() {
   const [recipes, setRecipes] = useState([]);
 
-  useEffect(() => {
-    fetch("/me")
-      .then((r) => r.json())
-      .then(setRecipes);
-  }, []);
+  // useEffect(() => {
+  //   fetch(baseUrl + "classes")
+  //   .then(r=>r.json())
+  //   .then(ra => console.log(ra))
+  // }, [])
 
   return (
     <Wrapper>
@@ -27,21 +27,10 @@ function Home() {
             </Box>
           </Recipe>
         ))
-      ) : (
-        <>
-          <Button as={Link} to="/players">
-            see my characters
-          </Button>
-          <span> </span>
-          <Button as={Link} to="/games">
-            see my campaigns
-          </Button>
-          <Button as={Link} to="/players/new">
-            Create a new character
-          </Button>
-        </>
+      ) : (<p></p>
+
       )}
-  <CharacterSheet/>
+
     </Wrapper>
   );
 }
