@@ -6,30 +6,32 @@ import { Box, Button } from "../styles";
 import { CharacterSheet } from "./CharacterSheet"
 
 function Home() {
-  const [recipes, setRecipes] = useState([]);
+    const [allClasses, setAllClasses] = useState([]);
+    const baseUrl = "https://www.dnd5eapi.co/api"
+    let arr =[allClasses]
+    useEffect(() => {
+    fetch(baseUrl + "/classes/")
+    .then(r=>r.json())
+    .then(c => setAllClasses(c.results[0])
+    )}, [])
 
-  // useEffect(() => {
-  //   fetch(baseUrl + "classes")
-  //   .then(r=>r.json())
-  //   .then(ra => console.log(ra))
-  // }, [])
-
+    //   for (var i=0; i < 12; i++) {
+    //   arr.push(allClasses[i])
+    // }
+   console.log(allClasses)
   return (
     <Wrapper>
-      {recipes.length > 0 ? (
-        recipes.map((recipe) => (
-          <Recipe key={recipe.id}>
             <Box>
-              <h2>{recipe.title}</h2>
+              <h2></h2>
               <p>
               </p>
-              <ReactMarkdown>{recipe.instructions}</ReactMarkdown>
+              <ReactMarkdown></ReactMarkdown>
             </Box>
-          </Recipe>
+
         ))
       ) : (<p></p>
 
-      )}
+      )
 
     </Wrapper>
   );

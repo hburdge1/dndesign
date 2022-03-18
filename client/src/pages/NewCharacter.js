@@ -20,6 +20,13 @@ function NewCharacter({ user }) {
   const history = useHistory();
   const baseUrl = "https://www.dnd5eapi.co/api"
 
+    useEffect(() => {
+    fetch(baseUrl + "/classes/")
+    .then(r=>r.json())
+    .then(c => setAllClasses(c.results))
+   }, [])
+
+
   function handleSubmit(e) {
     e.preventDefault();
     setIsLoading(true);
@@ -40,17 +47,12 @@ function NewCharacter({ user }) {
       }
     });
   }
-    useEffect(() => {
-    fetch(baseUrl + "/classes/")
-    .then(r=>r.json())
-    .then(c => setAllClasses(c.results))
-   }, [])
+
   return (
     <>
     <Tabs allClasses={allClasses}/>
      <Wrapper>
       <WrapperChild>
-        <Tabs allClasses={allClasses}/>
         <form onSubmit={handleSubmit}>
           <FormField>
             {/* <Label htmlFor="title">Title</Label>

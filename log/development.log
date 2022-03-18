@@ -6091,3 +6091,702 @@ Processing by SessionsController#create as */*
 Completed 200 OK in 8ms (Views: 1.3ms | ActiveRecord: 0.6ms | Allocations: 678)
 
 
+Started POST "/login" for 127.0.0.1 at 2022-03-18 14:59:37 -0700
+  [1m[35m (1.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by SessionsController#create as */*
+  Parameters: {"username"=>"1a", "password"=>"[FILTERED]", "session"=>{"username"=>"1a", "password"=>"[FILTERED]"}}
+[31mUnpermitted parameter: :session[0m
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "1a"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:5:in `create'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.06ms)
+Completed 200 OK in 11ms (Views: 1.0ms | ActiveRecord: 2.7ms | Allocations: 6713)
+
+
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2022-03-18 14:59:53 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2022-03-18 15:00:19 -0700
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2022-03-18 15:00:19 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2022-03-18 15:00:19 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2022-03-18 15:00:19 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2022-03-18 15:00:19 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2022-03-18 15:00:19 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2022-03-18 15:00:19 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2022-03-18 15:00:20 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2022-03-18 15:00:29 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2022-03-18 15:00:29 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started POST "/login" for 127.0.0.1 at 2022-03-18 15:00:35 -0700
+Processing by SessionsController#create as */*
+  Parameters: {"username"=>"1a", "password"=>"[FILTERED]", "session"=>{"username"=>"1a", "password"=>"[FILTERED]"}}
+[31mUnpermitted parameter: :session[0m
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "1a"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:5:in `create'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.06ms)
+Completed 200 OK in 27ms (Views: 1.5ms | ActiveRecord: 0.4ms | Allocations: 679)
+
+
+Started POST "/login" for 127.0.0.1 at 2022-03-18 15:00:45 -0700
+Processing by SessionsController#create as */*
+  Parameters: {"username"=>"1a", "password"=>"[FILTERED]", "session"=>{"username"=>"1a", "password"=>"[FILTERED]"}}
+[31mUnpermitted parameter: :session[0m
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "1a"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:5:in `create'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.08ms)
+Completed 200 OK in 15ms (Views: 0.5ms | ActiveRecord: 0.4ms | Allocations: 680)
+
+
+Started POST "/login" for 127.0.0.1 at 2022-03-18 15:01:57 -0700
+Processing by SessionsController#create as */*
+  Parameters: {"username"=>"1a", "password"=>"[FILTERED]", "session"=>{"username"=>"1a", "password"=>"[FILTERED]"}}
+[31mUnpermitted parameter: :session[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "1a"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:5:in `create'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.04ms)
+Completed 200 OK in 1ms (Views: 0.3ms | ActiveRecord: 0.2ms | Allocations: 681)
+
+
+Started POST "/login" for 127.0.0.1 at 2022-03-18 15:02:13 -0700
+Processing by SessionsController#create as */*
+  Parameters: {"username"=>"1a", "password"=>"[FILTERED]", "session"=>{"username"=>"1a", "password"=>"[FILTERED]"}}
+[31mUnpermitted parameter: :session[0m
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "1a"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:5:in `create'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.1ms)
+Completed 200 OK in 12ms (Views: 0.7ms | ActiveRecord: 0.4ms | Allocations: 660)
+
+
+Started POST "/login" for 127.0.0.1 at 2022-03-18 15:02:44 -0700
+Processing by SessionsController#create as */*
+  Parameters: {"username"=>"1a", "password"=>"[FILTERED]", "session"=>{"username"=>"1a", "password"=>"[FILTERED]"}}
+[31mUnpermitted parameter: :session[0m
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "1a"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:5:in `create'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.06ms)
+Completed 200 OK in 5ms (Views: 0.4ms | ActiveRecord: 0.3ms | Allocations: 678)
+
+
+Started POST "/login" for 127.0.0.1 at 2022-03-18 15:03:30 -0700
+Processing by SessionsController#create as */*
+  Parameters: {"username"=>"1a", "password"=>"[FILTERED]", "session"=>{"username"=>"1a", "password"=>"[FILTERED]"}}
+[31mUnpermitted parameter: :session[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "1a"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:5:in `create'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.04ms)
+Completed 200 OK in 1ms (Views: 0.2ms | ActiveRecord: 0.1ms | Allocations: 660)
+
+
+Started POST "/login" for 127.0.0.1 at 2022-03-18 15:03:56 -0700
+Processing by SessionsController#create as */*
+  Parameters: {"username"=>"1a", "password"=>"[FILTERED]", "session"=>{"username"=>"1a", "password"=>"[FILTERED]"}}
+[31mUnpermitted parameter: :session[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "1a"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:5:in `create'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.03ms)
+Completed 200 OK in 2ms (Views: 0.2ms | ActiveRecord: 0.1ms | Allocations: 660)
+
+
+Started POST "/login" for 127.0.0.1 at 2022-03-18 15:04:07 -0700
+Processing by SessionsController#create as */*
+  Parameters: {"username"=>"1a", "password"=>"[FILTERED]", "session"=>{"username"=>"1a", "password"=>"[FILTERED]"}}
+[31mUnpermitted parameter: :session[0m
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "1a"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:5:in `create'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.16ms)
+Completed 200 OK in 13ms (Views: 3.5ms | ActiveRecord: 0.4ms | Allocations: 660)
+
+
+Started POST "/login" for 127.0.0.1 at 2022-03-18 15:04:29 -0700
+Processing by SessionsController#create as */*
+  Parameters: {"username"=>"1a", "password"=>"[FILTERED]", "session"=>{"username"=>"1a", "password"=>"[FILTERED]"}}
+[31mUnpermitted parameter: :session[0m
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "1a"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:5:in `create'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.08ms)
+Completed 200 OK in 6ms (Views: 0.7ms | ActiveRecord: 0.3ms | Allocations: 660)
+
+
+Started POST "/login" for 127.0.0.1 at 2022-03-18 15:05:16 -0700
+Processing by SessionsController#create as */*
+  Parameters: {"username"=>"1a", "password"=>"[FILTERED]", "session"=>{"username"=>"1a", "password"=>"[FILTERED]"}}
+[31mUnpermitted parameter: :session[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "1a"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:5:in `create'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.03ms)
+Completed 200 OK in 1ms (Views: 0.2ms | ActiveRecord: 0.2ms | Allocations: 660)
+
+
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2022-03-18 15:06:10 -0700
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2022-03-18 15:06:10 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2022-03-18 15:07:42 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2022-03-18 15:07:42 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started POST "/login" for 127.0.0.1 at 2022-03-18 15:07:47 -0700
+Processing by SessionsController#create as */*
+  Parameters: {"username"=>"1a", "password"=>"[FILTERED]", "session"=>{"username"=>"1a", "password"=>"[FILTERED]"}}
+[31mUnpermitted parameter: :session[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "1a"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:5:in `create'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.06ms)
+Completed 200 OK in 3ms (Views: 0.4ms | ActiveRecord: 0.2ms | Allocations: 659)
+
+
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2022-03-18 15:08:21 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2022-03-18 15:08:21 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2022-03-18 15:08:21 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2022-03-18 15:08:21 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started POST "/login" for 127.0.0.1 at 2022-03-18 15:08:24 -0700
+Processing by SessionsController#create as */*
+  Parameters: {"username"=>"1a", "password"=>"[FILTERED]", "session"=>{"username"=>"1a", "password"=>"[FILTERED]"}}
+[31mUnpermitted parameter: :session[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "1a"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:5:in `create'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.03ms)
+Completed 200 OK in 1ms (Views: 0.2ms | ActiveRecord: 0.1ms | Allocations: 659)
+
+
+Started POST "/login" for 127.0.0.1 at 2022-03-18 15:08:52 -0700
+Processing by SessionsController#create as */*
+  Parameters: {"username"=>"1a", "password"=>"[FILTERED]", "session"=>{"username"=>"1a", "password"=>"[FILTERED]"}}
+[31mUnpermitted parameter: :session[0m
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "1a"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:5:in `create'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.11ms)
+Completed 200 OK in 5ms (Views: 0.7ms | ActiveRecord: 0.3ms | Allocations: 660)
+
+
+Started POST "/login" for 127.0.0.1 at 2022-03-18 15:09:07 -0700
+Processing by SessionsController#create as */*
+  Parameters: {"username"=>"1a", "password"=>"[FILTERED]", "session"=>{"username"=>"1a", "password"=>"[FILTERED]"}}
+[31mUnpermitted parameter: :session[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "1a"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:5:in `create'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.04ms)
+Completed 200 OK in 1ms (Views: 0.2ms | ActiveRecord: 0.2ms | Allocations: 660)
+
+
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2022-03-18 15:09:38 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started POST "/login" for 127.0.0.1 at 2022-03-18 15:09:50 -0700
+Processing by SessionsController#create as */*
+  Parameters: {"username"=>"1a", "password"=>"[FILTERED]", "session"=>{"username"=>"1a", "password"=>"[FILTERED]"}}
+[31mUnpermitted parameter: :session[0m
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "1a"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:5:in `create'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.13ms)
+Completed 200 OK in 7ms (Views: 0.8ms | ActiveRecord: 0.3ms | Allocations: 659)
+
+
+Started POST "/login" for 127.0.0.1 at 2022-03-18 15:09:58 -0700
+Processing by SessionsController#create as */*
+  Parameters: {"username"=>"1a", "password"=>"[FILTERED]", "session"=>{"username"=>"1a", "password"=>"[FILTERED]"}}
+[31mUnpermitted parameter: :session[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "1a"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:5:in `create'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.03ms)
+Completed 200 OK in 1ms (Views: 0.2ms | ActiveRecord: 0.1ms | Allocations: 660)
+
+
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2022-03-18 15:10:51 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2022-03-18 15:10:51 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2022-03-18 15:10:52 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2022-03-18 15:10:58 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2022-03-18 15:11:25 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started POST "/login" for 127.0.0.1 at 2022-03-18 15:11:33 -0700
+Processing by SessionsController#create as */*
+  Parameters: {"username"=>"1a", "password"=>"[FILTERED]", "session"=>{"username"=>"1a", "password"=>"[FILTERED]"}}
+[31mUnpermitted parameter: :session[0m
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "1a"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:5:in `create'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.13ms)
+Completed 200 OK in 5ms (Views: 1.2ms | ActiveRecord: 0.6ms | Allocations: 659)
+
+
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2022-03-18 15:13:09 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2022-03-18 15:13:17 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started POST "/login" for 127.0.0.1 at 2022-03-18 15:14:01 -0700
+Processing by SessionsController#create as */*
+  Parameters: {"username"=>"1a", "password"=>"[FILTERED]", "session"=>{"username"=>"1a", "password"=>"[FILTERED]"}}
+[31mUnpermitted parameter: :session[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "1a"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:5:in `create'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.03ms)
+Completed 200 OK in 1ms (Views: 0.2ms | ActiveRecord: 0.1ms | Allocations: 659)
+
+
+Started GET "/api/classes/monk" for 127.0.0.1 at 2022-03-18 15:14:20 -0700
+Started GET "/api/classes/druid" for 127.0.0.1 at 2022-03-18 15:14:20 -0700
+Started GET "/api/classes/cleric" for 127.0.0.1 at 2022-03-18 15:14:20 -0700
+Started GET "/api/classes/bard" for 127.0.0.1 at 2022-03-18 15:14:20 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/api/classes/monk"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/api/classes/druid"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/api/classes/bard"):
+  
+Started GET "/api/classes/barbarian" for 127.0.0.1 at 2022-03-18 15:14:20 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/api/classes/cleric"):
+  
+Started GET "/api/classes/fighter" for 127.0.0.1 at 2022-03-18 15:14:20 -0700
+Started GET "/api/classes/paladin" for 127.0.0.1 at 2022-03-18 15:14:20 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/api/classes/barbarian"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/api/classes/fighter"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/api/classes/paladin"):
+  
+Started GET "/api/classes/warlock" for 127.0.0.1 at 2022-03-18 15:14:20 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/api/classes/warlock"):
+  
+Started GET "/api/classes/ranger" for 127.0.0.1 at 2022-03-18 15:14:20 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/api/classes/ranger"):
+  
+Started GET "/api/classes/rogue" for 127.0.0.1 at 2022-03-18 15:14:20 -0700
+Started GET "/api/classes/wizard" for 127.0.0.1 at 2022-03-18 15:14:20 -0700
+Started GET "/api/classes/sorcerer" for 127.0.0.1 at 2022-03-18 15:14:20 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/api/classes/sorcerer"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/api/classes/wizard"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/api/classes/rogue"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2022-03-18 15:16:51 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2022-03-18 15:16:51 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2022-03-18 15:18:40 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2022-03-18 15:18:40 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2022-03-18 15:18:40 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2022-03-18 15:18:40 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2022-03-18 15:18:40 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started POST "/login" for 127.0.0.1 at 2022-03-18 15:18:58 -0700
+Processing by SessionsController#create as */*
+  Parameters: {"username"=>"1a", "password"=>"[FILTERED]", "session"=>{"username"=>"1a", "password"=>"[FILTERED]"}}
+[31mUnpermitted parameter: :session[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "1a"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:5:in `create'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.03ms)
+Completed 200 OK in 1ms (Views: 0.2ms | ActiveRecord: 0.1ms | Allocations: 659)
+
+
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2022-03-18 15:20:30 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2022-03-18 15:20:30 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2022-03-18 15:20:30 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2022-03-18 15:20:30 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2022-03-18 15:20:30 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2022-03-18 15:20:30 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2022-03-18 15:20:30 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2022-03-18 15:20:30 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2022-03-18 15:20:30 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2022-03-18 15:20:30 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2022-03-18 15:20:30 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2022-03-18 15:20:30 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2022-03-18 15:20:30 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started POST "/login" for 127.0.0.1 at 2022-03-18 15:20:39 -0700
+Processing by SessionsController#create as */*
+  Parameters: {"username"=>"1a", "password"=>"[FILTERED]", "session"=>{"username"=>"1a", "password"=>"[FILTERED]"}}
+[31mUnpermitted parameter: :session[0m
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "1a"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:5:in `create'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.18ms)
+Completed 200 OK in 7ms (Views: 1.5ms | ActiveRecord: 0.3ms | Allocations: 659)
+
+
+Started POST "/login" for 127.0.0.1 at 2022-03-18 15:20:56 -0700
+Processing by SessionsController#create as */*
+  Parameters: {"username"=>"1a", "password"=>"[FILTERED]", "session"=>{"username"=>"1a", "password"=>"[FILTERED]"}}
+[31mUnpermitted parameter: :session[0m
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "1a"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:5:in `create'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.2ms)
+Completed 200 OK in 11ms (Views: 1.8ms | ActiveRecord: 0.4ms | Allocations: 660)
+
+
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2022-03-18 15:21:39 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2022-03-18 15:21:59 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started DELETE "/logout" for 127.0.0.1 at 2022-03-18 15:22:06 -0700
+Processing by SessionsController#destroy as */*
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:12:in `authorize'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.16ms)
+Filter chain halted as :authorize rendered or redirected
+Completed 401 Unauthorized in 7ms (Views: 1.1ms | ActiveRecord: 0.4ms | Allocations: 755)
+
+
+Started DELETE "/logout" for 127.0.0.1 at 2022-03-18 15:22:09 -0700
+Processing by SessionsController#destroy as */*
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:12:in `authorize'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.15ms)
+Filter chain halted as :authorize rendered or redirected
+Completed 401 Unauthorized in 7ms (Views: 1.1ms | ActiveRecord: 1.1ms | Allocations: 738)
+
+
+Started POST "/login" for 127.0.0.1 at 2022-03-18 15:22:14 -0700
+Processing by SessionsController#create as */*
+  Parameters: {"username"=>"1a", "password"=>"[FILTERED]", "session"=>{"username"=>"1a", "password"=>"[FILTERED]"}}
+[31mUnpermitted parameter: :session[0m
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "1a"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:5:in `create'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.16ms)
+Completed 200 OK in 11ms (Views: 1.4ms | ActiveRecord: 0.8ms | Allocations: 660)
+
+
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2022-03-18 15:23:22 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2022-03-18 15:23:22 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2022-03-18 15:23:22 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2022-03-18 15:23:22 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2022-03-18 15:23:22 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2022-03-18 15:23:35 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2022-03-18 15:24:48 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2022-03-18 15:24:48 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2022-03-18 15:24:48 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2022-03-18 15:24:48 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2022-03-18 15:24:48 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2022-03-18 15:24:48 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2022-03-18 15:24:48 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2022-03-18 15:24:48 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2022-03-18 15:25:30 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2022-03-18 15:25:30 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started POST "/login" for 127.0.0.1 at 2022-03-18 15:25:48 -0700
+Processing by SessionsController#create as */*
+  Parameters: {"username"=>"1a", "password"=>"[FILTERED]", "session"=>{"username"=>"1a", "password"=>"[FILTERED]"}}
+[31mUnpermitted parameter: :session[0m
+  [1m[36mUser Load (4.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "1a"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:5:in `create'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.16ms)
+Completed 200 OK in 11ms (Views: 1.0ms | ActiveRecord: 4.4ms | Allocations: 659)
+
+
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2022-03-18 15:26:25 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started POST "/login" for 127.0.0.1 at 2022-03-18 15:27:54 -0700
+Processing by SessionsController#create as */*
+  Parameters: {"username"=>"1a", "password"=>"[FILTERED]", "session"=>{"username"=>"1a", "password"=>"[FILTERED]"}}
+[31mUnpermitted parameter: :session[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "1a"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:5:in `create'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.04ms)
+Completed 200 OK in 2ms (Views: 0.3ms | ActiveRecord: 0.2ms | Allocations: 660)
+
+
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2022-03-18 15:28:42 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2022-03-18 15:28:42 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2022-03-18 15:28:42 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2022-03-18 15:32:18 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2022-03-18 15:32:18 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2022-03-18 15:32:18 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2022-03-18 15:32:18 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2022-03-18 15:32:18 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2022-03-18 15:32:18 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2022-03-18 15:32:18 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2022-03-18 15:32:18 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2022-03-18 15:32:19 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2022-03-18 15:32:19 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2022-03-18 15:32:19 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2022-03-18 15:32:19 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2022-03-18 15:32:19 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2022-03-18 15:32:19 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2022-03-18 15:32:19 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2022-03-18 15:32:19 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2022-03-18 15:32:19 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2022-03-18 15:32:19 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2022-03-18 15:32:19 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2022-03-18 15:32:19 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2022-03-18 15:32:19 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2022-03-18 15:32:19 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2022-03-18 15:32:19 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2022-03-18 15:32:19 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started POST "/login" for 127.0.0.1 at 2022-03-18 15:34:38 -0700
+Processing by SessionsController#create as */*
+  Parameters: {"username"=>"1a", "password"=>"[FILTERED]", "session"=>{"username"=>"1a", "password"=>"[FILTERED]"}}
+[31mUnpermitted parameter: :session[0m
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "1a"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:5:in `create'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.03ms)
+Completed 200 OK in 17ms (Views: 0.2ms | ActiveRecord: 9.4ms | Allocations: 3920)
+
+
