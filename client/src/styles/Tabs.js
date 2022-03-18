@@ -5,14 +5,16 @@ import { Accordion, Col, Row, Nav } from 'react-bootstrap'
 
 
 export default function Tabs({ allClasses }) {
-  const baseUrl = "https://www.dnd5eapi.co/api/classes/"
+  const baseUrl = "https://www.dnd5eapi.co"
 const [classDetails, setClassDetail] = useState([])
-//    {allClasses.map((c) => (    {
-//         fetch(baseUrl + c.index)
-//         .then(r => r.json())
-//         .then(c => console.log(c))    
-    
-// })}
+
+   useEffect(() => {allClasses.map((c) => (    
+        fetch(`${baseUrl}${c.url}`)
+        .then(r => r.json())
+        .then(c => console.log(c))    
+   ))}, [allClasses]
+)
+   
 
   return (
     <p></p>
