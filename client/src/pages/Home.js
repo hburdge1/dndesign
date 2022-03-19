@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import ReactMarkdown from "react-markdown";
 import { Link } from "react-router-dom";
+import Tabs from '../styles/Tabs'
 import styled from "styled-components";
 import { Box, Button } from "../styles";
 import { CharacterSheet } from "./CharacterSheet"
@@ -15,13 +16,10 @@ function Home() {
     .then(c => setAllClasses(c.results[0])
     )}, [])
 
-    //   for (var i=0; i < 12; i++) {
-    //   arr.push(allClasses[i])
-    // }
-   console.log(allClasses)
   return (
     <Wrapper>
             <Box>
+              <Tabs allClasses={allClasses} arr={arr} setAllClasses={setAllClasses}/>
               <h2></h2>
               <p>
               </p>
