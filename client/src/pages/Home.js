@@ -7,19 +7,19 @@ import { Box, Button } from "../styles";
 import { CharacterSheet } from "./CharacterSheet"
 
 function Home() {
-    const [allClasses, setAllClasses] = useState([]);
-    const baseUrl = "https://www.dnd5eapi.co/api"
-    let arr =[allClasses]
-    useEffect(() => {
-    fetch(baseUrl + "/classes/")
-    .then(r=>r.json())
-    .then(c => setAllClasses(c.results[0])
-    )}, [])
+    // const [allClasses, setAllClasses] = useState([]);
+    // const baseUrl = "https://www.dnd5eapi.co/api"
+    // let arr =[allClasses]
+    // useEffect(() => {
+    // fetch(baseUrl + "/classes/")
+    // .then(r=>r.json())
+    // .then(c => setAllClasses(c.results[0])
+    // )}, [])
 
   return (
     <Wrapper>
             <Box>
-              <Tabs allClasses={allClasses} arr={arr} setAllClasses={setAllClasses}/>
+          
               <h2></h2>
               <p>
               </p>

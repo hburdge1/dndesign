@@ -5,7 +5,8 @@ import styled from "styled-components";
 import Tabs from '../styles/Tabs'
 import ReactMarkdown from "react-markdown";
 import { Error, FormField, Input, Button, Label, Textarea } from "../styles";
-import { render } from "react-dom";
+import { Classes } from 'dnd-api'
+import { createAsyncThunk } from "@reduxjs/toolkit";
 
 
 function NewCharacter({ user }) {
@@ -19,14 +20,17 @@ function NewCharacter({ user }) {
   const [isLoading, setIsLoading] = useState(false);
   const history = useHistory();
   const baseUrl = "https://www.dnd5eapi.co/api"
+  let urlArr=[]
+
 
     useEffect(() => {
     fetch(baseUrl + "/classes/")
     .then(r=>r.json())
     .then(c => setAllClasses(c.results))
    }, [])
-
-
+   console.log(allClasses)
+   urlArr = allClasses.map(r=>r.url)
+   console.log(urlArr)
   function handleSubmit(e) {
     e.preventDefault();
     setIsLoading(true);
@@ -50,7 +54,7 @@ function NewCharacter({ user }) {
 
   return (
     <>
-    <Tabs allClasses={allClasses}/>
+    <Tabs allClasses={allClasses} setAllClasses={setAllClasses} urlArr={urlArr}/>
      <Wrapper>
       <WrapperChild>
         <form onSubmit={handleSubmit}>

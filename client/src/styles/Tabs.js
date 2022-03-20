@@ -7,23 +7,23 @@ import AccordionSet from '../styles/AccordionSet'
 
 
 
-export default function Tabs({ allClasses, setAllClasses, }) {
+export default function Tabs({ allClasses, setAllClasses, urlArr}) {
   const baseUrl = "https://www.dnd5eapi.co"
   const [classDetails, setClassDetail] = useState([])
-  let c = Array.from(allClasses).map((a)=> a.url)
+    console.log(urlArr)
    let arr = []
    useEffect(()=> {
-    c.forEach((e) => (
+     urlArr.forEach((e) => (
         fetch(`https://www.dnd5eapi.co${e}`)
         .then(r => r.json())
         .then(c => arr.push(c))
      ))
     
   }, [allClasses])
-
+  console.log(arr)
   return (
     <Box>
-        <AccordionSet classDetails={classDetails} setClassDetail={setClassDetail} arr={arr}/>
+        <AccordionSet arr={arr}/>
     </Box>
   )
 }
