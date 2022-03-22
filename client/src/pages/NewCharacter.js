@@ -1,12 +1,22 @@
 
 import { useHistory } from "react-router";
 import styled from "styled-components";
-import { Tabs, Tab, Form } from "react-bootstrap";
+import { Tabs, Tab } from "react-bootstrap";
 import ReactMarkdown from "react-markdown";
-import { Error, FormField, Input, Button, Label, Textarea } from "../styles";
+import { Error, FormField, Button, Label, Textarea } from "../styles";
 import * as React from 'react';
 import { useState, useEffect } from "react";
 import CheckboxesGroup from "../styles/checkboxesGroup";
+import Box from '@mui/material/Box';
+import { Link } from "react-router-dom";
+import RaceSelector from "./RaceSelector";
+import FormLabel from '@mui/material/FormLabel';
+import FormControl from '@mui/material/FormControl';
+import FormGroup from '@mui/material/FormGroup';
+import FormControlLabel from '@mui/material/FormControlLabel';
+import FormHelperText from '@mui/material/FormHelperText';
+import Checkbox from '@mui/material/Checkbox';
+
 function NewCharacter({ user }) {
   console.log('loaded this')
   const [race, setRace] = useState("");
@@ -15,8 +25,8 @@ function NewCharacter({ user }) {
   const [allClassDetails, setAllClassDetails] = useState([]);
   const [playerName, setPlayerName] = useState("");
   const [playerBackground, setPlayerBackground]= useState('');
-  const [errors, setErrors] = useState([]);
-  const [isLoading, setIsLoading] = useState(false);
+  const [activeTab, setActiveTab] = useState("");
+  const [proficiencyState, setProficiencyState]=([])
   const history = useHistory();
   const baseUrl = "https://www.dnd5eapi.co/api"
   let urlArr=[]
@@ -29,6 +39,7 @@ function NewCharacter({ user }) {
    }, [indices])
   
    urlArr = allClasses.map(r=>r.url)
+   if (urlArr){
      urlArr.forEach((e) => (
         fetch(`https://www.dnd5eapi.co${e}`)
         .then(r => r.json())
@@ -39,9 +50,10 @@ function NewCharacter({ user }) {
         })
              
      ))
+      }
       let profArr=[]
-     allClassDetails.forEach((a, i)=> profArr.push(<CheckboxesGroup proficiencies={a.proficiencies.map(a=>a.name)}/>))
-     console.log(profArr)
+     allClassDetails.forEach((a, i)=> profArr.push(<CheckboxesGroup proficiencyState={proficiencyState} setProficiencyState={setProficiencyState}/>))
+     
     let saveArr=[]
      allClassDetails.forEach((a, i)=> saveArr.push(<ul>{a.saving_throws.map(a=><li>{a.name}</li>)}</ul>))
      let levelArr=[]
@@ -60,8 +72,8 @@ function NewCharacter({ user }) {
 
         console.log(levelArr)
     allClassDetails.forEach((a, i)=> indices.push(
-    <Tab eventKey={a.index} title={a.index}>
-      hit die = {a.hit_die}
+    <Tab eventKey={a.index} title={a.index} onClick={() => setActiveTab(a.index)}
+      hit die = {a.hit_die}>
       <br/>
       {profArr[i]}
       <br />
@@ -70,11 +82,13 @@ function NewCharacter({ user }) {
 
     </Tab>)
     )
-
+    function handleChange(e){
+      setPlayerClass(e.target.checked)
+      console.log(e.target.checked)
+    }
   
   function handleSubmit(e) {
     e.preventDefault();
-    setIsLoading(true);
     fetch("/players", {
       method: "POST",
       headers: {
@@ -84,22 +98,32 @@ function NewCharacter({ user }) {
         "player class": {playerClass}
       }),
     }).then((r) => {
-      setIsLoading(false);
       if (r.ok) {
         history.push("/");
       } else {
-        r.json().then((err) => setErrors(err.errors));
+        
       }
     });
   }
   return (
     <>
-  <Tabs defaultActiveKey="0" id="uncontrolled-tab-example" className="mb-3">
+  <Tabs defaultActiveKey="0" id="uncontrolled-tab-example" className="mb-3" >
     {indices}
  </Tabs>
-  {/* <Form onSubmit={handleSubmit}>
+  <Box sx={{ display: 'flex' }}>
+      <FormControl
+        required
+        onSubmit={handleSubmit}
+        component="fieldset"
+        sx={{ m: 3 }}
+        variant="standard"
+      >
+        <Button type="submit">Choose</Button>
+      </FormControl>
+        </Box>
 
-  </Form> */}
+        <Button as={Link} to="/character_creator">select a race</Button>
+
   </>
   );
   // eslint-disable-next-line no-unreachable

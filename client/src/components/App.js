@@ -3,8 +3,9 @@ import { Switch, Route } from "react-router-dom";
 import NavBar from "./NavBar";
 import Login from "../pages/Login";
 import Home from "../pages/Home";
-import NewRecipe from "../pages/NewCharacter";
+import RaceSelector from "../pages/RaceSelector";
 import NewCharacter from "../pages/NewCharacter";
+
 
 function App() {
   const [user, setUser] = useState(null);
@@ -28,6 +29,9 @@ function App() {
         <Switch>
           <Route path="/new">
             <NewCharacter user={user} />
+          </Route>
+          <Route path="/character_creator">
+            <RaceSelector user={user} />
           </Route>
           <Route path="/">
             <Home/>
