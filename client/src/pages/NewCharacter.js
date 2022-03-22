@@ -70,7 +70,6 @@ function NewCharacter({ user }) {
       // })
 
 
-        console.log(levelArr)
     allClassDetails.forEach((a, i)=> indices.push(
     <Tab eventKey={a.index} title={a.index} onClick={() => setActiveTab(a.index)}
       hit die = {a.hit_die}>
@@ -79,7 +78,7 @@ function NewCharacter({ user }) {
       <br />
       {saveArr}
 
-      
+
       <br/>
 
     </Tab>)
