@@ -36,7 +36,7 @@ function NewCharacter({ user }) {
     fetch(baseUrl + "/classes/")
     .then(r=>r.json())
     .then(c => setAllClasses(c.results))
-   }, [indices])
+   }, [])
   
    urlArr = allClasses.map(r=>r.url)
    if (urlArr){
@@ -78,6 +78,8 @@ function NewCharacter({ user }) {
       {profArr[i]}
       <br />
       {saveArr}
+
+      
       <br/>
 
     </Tab>)

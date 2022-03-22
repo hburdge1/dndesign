@@ -5,6 +5,7 @@ import styled from "styled-components";
 import { Box, Button } from "../styles";
 import { CharacterSheet } from "./CharacterSheet"
 
+
 function Home() {
     // const [allClasses, setAllClasses] = useState([]);
     // const baseUrl = "https://www.dnd5eapi.co/api"
@@ -18,7 +19,7 @@ function Home() {
   return (
     <Wrapper>
             <Box>
-          
+  
               <h2></h2>
               <p>
               </p>

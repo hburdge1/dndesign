@@ -1,44 +1,36 @@
 
 import React from 'react'
+import { render } from 'react-dom'
 import { useEffect, useState } from 'react'
 import { Carousel, Card} from 'react-bootstrap'
 import Button from '../styles/Button'
+import RaceCard from '../styles/RaceCard'
 export default function RaceSelector({race, setRace}) {
     const [allRace, setAllRace]=useState([])
     const [raceDescription, setRaceDescription]= useState([])
     const [highlightRace, setHighlightRace]=useState('')
     let raceArr=[]
-    let [displayRace, setDisplayRace] = useState(false)
+    const [relRace, setRelRace]= useState([])
+    let result=[]
+    useEffect(()=> {
         fetch('https://www.dnd5eapi.co/api/races/')
         .then(r=>r.json())
         .then(a=>setAllRace(a.results))
-    let buttonArr=[]
-        
+        }, [])
+    console.log(allRace)  
     allRace.forEach((r)=>{
-        return buttonArr.push(<Button value={r.name} onClick={() => setRace(r.name)}>{r.name}</Button>)
-    },
-    allRace.forEach((r)=>(
-         fetch(`https://www.dnd5eapi.co/api/races/${r.index}`)
+        raceArr.push(r.index)
+    })
+ let thisNew = raceArr.map((r)=>(
+         fetch(`https://www.dnd5eapi.co/api/races/${r}`)
             .then(r=> r.json())
-            .then(a=>
-         setRaceDescription([...raceDescription,
-            <Card  key={a.index} name={a.name} >
-            <img
-             key={a.index}
-             className="d-block w-100"
-             src={`../public/race_images/${a.index}.png`}
-             alt="First slide" />
-  
-            </Card>])
-    ))))
-        
-return (
-
-<>
-
-{buttonArr}
-<p>did this get written</p>
-{raceDescription}
-</>
-  )
+            .then(a=> {
+                console.log(
+               <RaceCard obj={a}/>)
+                
+            })))
+ return(
+    <p>result</p>
+ )
 }
+
