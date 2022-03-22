@@ -20391,3 +20391,2560 @@ Started GET "/race_images/Elf.png" for 127.0.0.1 at 2022-03-22 13:37:57 -0700
   
 ActionController::RoutingError (No route matches [GET] "/race_images/Elf.png"):
   
+Started POST "/login" for 127.0.0.1 at 2022-03-22 13:42:17 -0700
+Processing by SessionsController#create as */*
+  Parameters: {"username"=>"1a", "password"=>"[FILTERED]", "session"=>{"username"=>"1a", "password"=>"[FILTERED]"}}
+[31mUnpermitted parameter: :session[0m
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "1a"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:5:in `create'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.16ms)
+Completed 200 OK in 28ms (Views: 0.9ms | ActiveRecord: 10.3ms | Allocations: 3893)
+
+
+Started GET "/holder.js/800x400?text=Second%20slide&bg=282c34" for 127.0.0.1 at 2022-03-22 13:42:17 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/holder.js/800x400"):
+  
+Started GET "/holder.js/800x400?text=Third%20slide&bg=20232a" for 127.0.0.1 at 2022-03-22 13:42:17 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/holder.js/800x400"):
+  
+Started GET "/holder.js/800x400?text=Second%20slide&bg=282c34" for 127.0.0.1 at 2022-03-22 13:42:23 -0700
+Started GET "/holder.js/800x400?text=Third%20slide&bg=20232a" for 127.0.0.1 at 2022-03-22 13:42:23 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/holder.js/800x400"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/holder.js/800x400"):
+  
+Started POST "/login" for 127.0.0.1 at 2022-03-22 13:42:58 -0700
+  [1m[35m (1.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by SessionsController#create as */*
+  Parameters: {"username"=>"1a", "password"=>"[FILTERED]", "session"=>{"username"=>"1a", "password"=>"[FILTERED]"}}
+[31mUnpermitted parameter: :session[0m
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "1a"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:5:in `create'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.05ms)
+Completed 200 OK in 11ms (Views: 0.9ms | ActiveRecord: 2.0ms | Allocations: 6713)
+
+
+Started GET "/holder.js/800x400?text=Third%20slide&bg=20232a" for 127.0.0.1 at 2022-03-22 13:42:58 -0700
+Started GET "/holder.js/800x400?text=Second%20slide&bg=282c34" for 127.0.0.1 at 2022-03-22 13:42:58 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/holder.js/800x400"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/holder.js/800x400"):
+  
+Started GET "/holder.js/800x400?text=Third%20slide&bg=20232a" for 127.0.0.1 at 2022-03-22 13:43:06 -0700
+Started GET "/holder.js/800x400?text=Second%20slide&bg=282c34" for 127.0.0.1 at 2022-03-22 13:43:06 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/holder.js/800x400"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/holder.js/800x400"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2022-03-22 13:43:46 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2022-03-22 13:43:46 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2022-03-22 13:43:46 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2022-03-22 13:43:46 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/race_images/Elf.png" for 127.0.0.1 at 2022-03-22 13:43:46 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/race_images/Elf.png"):
+  
+Started GET "/race_images/Elf.png" for 127.0.0.1 at 2022-03-22 13:43:47 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/race_images/Elf.png"):
+  
+Started GET "/race_images/Elf.png" for 127.0.0.1 at 2022-03-22 13:43:50 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/race_images/Elf.png"):
+  
+Started GET "/race_images/Elf.png" for 127.0.0.1 at 2022-03-22 13:43:50 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/race_images/Elf.png"):
+  
+Started GET "/race_images/Elf.png" for 127.0.0.1 at 2022-03-22 13:44:27 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/race_images/Elf.png"):
+  
+Started GET "/race_images/Elf.png" for 127.0.0.1 at 2022-03-22 13:44:27 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/race_images/Elf.png"):
+  
+Started GET "/race_images/Elf.png" for 127.0.0.1 at 2022-03-22 13:44:30 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/race_images/Elf.png"):
+  
+Started GET "/race_images/Elf.png" for 127.0.0.1 at 2022-03-22 13:44:30 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/race_images/Elf.png"):
+  
+Started GET "/race_images/Elf.png" for 127.0.0.1 at 2022-03-22 13:44:32 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/race_images/Elf.png"):
+  
+Started GET "/race_images/Elf.png" for 127.0.0.1 at 2022-03-22 13:44:32 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/race_images/Elf.png"):
+  
+Started GET "/race_images/Elf.png" for 127.0.0.1 at 2022-03-22 13:50:48 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/race_images/Elf.png"):
+  
+Started GET "/race_images/Elf.png" for 127.0.0.1 at 2022-03-22 13:50:48 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/race_images/Elf.png"):
+  
+Started GET "/race_images/Elf.png" for 127.0.0.1 at 2022-03-22 13:50:48 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/race_images/Elf.png"):
+  
+Started GET "/race_images/Elf.png" for 127.0.0.1 at 2022-03-22 13:52:43 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/race_images/Elf.png"):
+  
+Started GET "/race_images/Elf.png" for 127.0.0.1 at 2022-03-22 13:52:43 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/race_images/Elf.png"):
+  
+Started GET "/race_images/Elf.png" for 127.0.0.1 at 2022-03-22 13:52:49 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/race_images/Elf.png"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2022-03-22 13:53:04 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2022-03-22 13:53:04 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/race_images/Elf.png" for 127.0.0.1 at 2022-03-22 13:53:05 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/race_images/Elf.png"):
+  
+Started GET "/race_images/Elf.png" for 127.0.0.1 at 2022-03-22 13:53:05 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/race_images/Elf.png"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2022-03-22 13:54:26 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started POST "/login" for 127.0.0.1 at 2022-03-22 13:54:55 -0700
+Processing by SessionsController#create as */*
+  Parameters: {"username"=>"1a", "password"=>"[FILTERED]", "session"=>{"username"=>"1a", "password"=>"[FILTERED]"}}
+[31mUnpermitted parameter: :session[0m
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "1a"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:5:in `create'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.04ms)
+Completed 200 OK in 52ms (Views: 0.4ms | ActiveRecord: 20.1ms | Allocations: 6081)
+
+
+Started GET "/holder.js/800x400?text=Second%20slide&bg=282c34" for 127.0.0.1 at 2022-03-22 13:54:55 -0700
+Started GET "/holder.js/800x400?text=Third%20slide&bg=20232a" for 127.0.0.1 at 2022-03-22 13:54:55 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/holder.js/800x400"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/holder.js/800x400"):
+  
+Started POST "/login" for 127.0.0.1 at 2022-03-22 13:55:03 -0700
+Processing by SessionsController#create as */*
+  Parameters: {"username"=>"1a", "password"=>"[FILTERED]", "session"=>{"username"=>"1a", "password"=>"[FILTERED]"}}
+[31mUnpermitted parameter: :session[0m
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "1a"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:5:in `create'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.08ms)
+Completed 200 OK in 7ms (Views: 0.6ms | ActiveRecord: 0.3ms | Allocations: 675)
+
+
+Started GET "/holder.js/800x400?text=Second%20slide&bg=282c34" for 127.0.0.1 at 2022-03-22 13:55:07 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/holder.js/800x400"):
+  
+Started GET "/holder.js/800x400?text=Third%20slide&bg=20232a" for 127.0.0.1 at 2022-03-22 13:55:07 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/holder.js/800x400"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2022-03-22 13:55:56 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2022-03-22 13:55:56 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2022-03-22 13:56:00 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started POST "/login" for 127.0.0.1 at 2022-03-22 13:56:04 -0700
+Processing by SessionsController#create as */*
+  Parameters: {"username"=>"1a", "password"=>"[FILTERED]", "session"=>{"username"=>"1a", "password"=>"[FILTERED]"}}
+[31mUnpermitted parameter: :session[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "1a"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:5:in `create'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.03ms)
+Completed 200 OK in 1ms (Views: 0.2ms | ActiveRecord: 0.2ms | Allocations: 675)
+
+
+Started GET "/holder.js/800x400?text=Third%20slide&bg=20232a" for 127.0.0.1 at 2022-03-22 13:56:04 -0700
+Started GET "/holder.js/800x400?text=Second%20slide&bg=282c34" for 127.0.0.1 at 2022-03-22 13:56:04 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/holder.js/800x400"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/holder.js/800x400"):
+  
+Started GET "/holder.js/800x400?text=Second%20slide&bg=282c34" for 127.0.0.1 at 2022-03-22 13:56:08 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/holder.js/800x400"):
+  
+Started GET "/holder.js/800x400?text=Third%20slide&bg=20232a" for 127.0.0.1 at 2022-03-22 13:56:08 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/holder.js/800x400"):
+  
+Started POST "/login" for 127.0.0.1 at 2022-03-22 13:57:10 -0700
+Processing by SessionsController#create as */*
+  Parameters: {"username"=>"1a", "password"=>"[FILTERED]", "session"=>{"username"=>"1a", "password"=>"[FILTERED]"}}
+[31mUnpermitted parameter: :session[0m
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "1a"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:5:in `create'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.1ms)
+Completed 200 OK in 14ms (Views: 2.6ms | ActiveRecord: 0.8ms | Allocations: 659)
+
+
+Started GET "/holder.js/800x400?text=Second%20slide&bg=282c34" for 127.0.0.1 at 2022-03-22 13:57:10 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/holder.js/800x400"):
+  
+Started GET "/holder.js/800x400?text=Third%20slide&bg=20232a" for 127.0.0.1 at 2022-03-22 13:57:10 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/holder.js/800x400"):
+  
+Started POST "/login" for 127.0.0.1 at 2022-03-22 13:57:47 -0700
+Processing by SessionsController#create as */*
+  Parameters: {"username"=>"1a", "password"=>"[FILTERED]", "session"=>{"username"=>"1a", "password"=>"[FILTERED]"}}
+[31mUnpermitted parameter: :session[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "1a"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:5:in `create'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.03ms)
+Completed 200 OK in 1ms (Views: 0.2ms | ActiveRecord: 0.2ms | Allocations: 673)
+
+
+Started GET "/holder.js/800x400?text=Third%20slide&bg=20232a" for 127.0.0.1 at 2022-03-22 13:57:49 -0700
+Started GET "/holder.js/800x400?text=Second%20slide&bg=282c34" for 127.0.0.1 at 2022-03-22 13:57:49 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/holder.js/800x400"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/holder.js/800x400"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2022-03-22 13:58:40 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started POST "/login" for 127.0.0.1 at 2022-03-22 13:58:56 -0700
+Processing by SessionsController#create as */*
+  Parameters: {"username"=>"1a", "password"=>"[FILTERED]", "session"=>{"username"=>"1a", "password"=>"[FILTERED]"}}
+[31mUnpermitted parameter: :session[0m
+  [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "1a"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:5:in `create'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.1ms)
+Completed 200 OK in 8ms (Views: 0.6ms | ActiveRecord: 1.4ms | Allocations: 659)
+
+
+Started GET "/holder.js/800x400?text=Third%20slide&bg=20232a" for 127.0.0.1 at 2022-03-22 13:58:59 -0700
+Started GET "/holder.js/800x400?text=Second%20slide&bg=282c34" for 127.0.0.1 at 2022-03-22 13:58:59 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/holder.js/800x400"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/holder.js/800x400"):
+  
+Started GET "/holder.js/800x400?text=Second%20slide&bg=282c34" for 127.0.0.1 at 2022-03-22 13:59:08 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/holder.js/800x400"):
+  
+Started GET "/holder.js/800x400?text=Third%20slide&bg=20232a" for 127.0.0.1 at 2022-03-22 13:59:08 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/holder.js/800x400"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2022-03-22 14:02:27 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2022-03-22 14:02:27 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2022-03-22 14:02:27 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2022-03-22 14:02:27 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2022-03-22 14:02:27 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2022-03-22 14:02:27 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started POST "/login" for 127.0.0.1 at 2022-03-22 14:02:28 -0700
+Processing by SessionsController#create as */*
+  Parameters: {"username"=>"1a", "password"=>"[FILTERED]", "session"=>{"username"=>"1a", "password"=>"[FILTERED]"}}
+[31mUnpermitted parameter: :session[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "1a"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:5:in `create'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.03ms)
+Completed 200 OK in 2ms (Views: 0.2ms | ActiveRecord: 0.2ms | Allocations: 659)
+
+
+Started GET "/holder.js/800x400?text=Second%20slide&bg=282c34" for 127.0.0.1 at 2022-03-22 14:02:31 -0700
+Started GET "/holder.js/800x400?text=Third%20slide&bg=20232a" for 127.0.0.1 at 2022-03-22 14:02:31 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/holder.js/800x400"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/holder.js/800x400"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2022-03-22 14:03:13 -0700
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2022-03-22 14:03:13 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2022-03-22 14:03:13 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2022-03-22 14:03:13 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2022-03-22 14:03:13 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/race_images/Elf.png" for 127.0.0.1 at 2022-03-22 14:03:13 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/race_images/Elf.png"):
+  
+Started GET "/race_images/Elf.png" for 127.0.0.1 at 2022-03-22 14:03:13 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/race_images/Elf.png"):
+  
+Started GET "/race_images/Elf.png" for 127.0.0.1 at 2022-03-22 14:03:13 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/race_images/Elf.png"):
+  
+Started GET "/race_images/Elf.png" for 127.0.0.1 at 2022-03-22 14:03:14 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/race_images/Elf.png"):
+  
+Started GET "/race_images/Elf.png" for 127.0.0.1 at 2022-03-22 14:03:14 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/race_images/Elf.png"):
+  
+Started GET "/race_images/Elf.png" for 127.0.0.1 at 2022-03-22 14:03:14 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/race_images/Elf.png"):
+  
+Started GET "/race_images/Elf.png" for 127.0.0.1 at 2022-03-22 14:03:14 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/race_images/Elf.png"):
+  
+Started GET "/race_images/Elf.png" for 127.0.0.1 at 2022-03-22 14:03:14 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/race_images/Elf.png"):
+  
+Started GET "/race_images/Elf.png" for 127.0.0.1 at 2022-03-22 14:03:15 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/race_images/Elf.png"):
+  
+Started GET "/race_images/Elf.png" for 127.0.0.1 at 2022-03-22 14:03:15 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/race_images/Elf.png"):
+  
+Started GET "/race_images/Elf.png" for 127.0.0.1 at 2022-03-22 14:03:15 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/race_images/Elf.png"):
+  
+Started GET "/race_images/Elf.png" for 127.0.0.1 at 2022-03-22 14:03:15 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/race_images/Elf.png"):
+  
+Started GET "/race_images/Elf.png" for 127.0.0.1 at 2022-03-22 14:03:16 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/race_images/Elf.png"):
+  
+Started GET "/race_images/Elf.png" for 127.0.0.1 at 2022-03-22 14:03:16 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/race_images/Elf.png"):
+  
+Started GET "/race_images/Elf.png" for 127.0.0.1 at 2022-03-22 14:03:16 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/race_images/Elf.png"):
+  
+Started GET "/race_images/Elf.png" for 127.0.0.1 at 2022-03-22 14:03:17 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/race_images/Elf.png"):
+  
+Started GET "/race_images/Elf.png" for 127.0.0.1 at 2022-03-22 14:03:17 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/race_images/Elf.png"):
+  
+Started GET "/race_images/Elf.png" for 127.0.0.1 at 2022-03-22 14:03:17 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/race_images/Elf.png"):
+  
+Started GET "/race_images/Elf.png" for 127.0.0.1 at 2022-03-22 14:03:17 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/race_images/Elf.png"):
+  
+Started GET "/race_images/Elf.png" for 127.0.0.1 at 2022-03-22 14:03:17 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/race_images/Elf.png"):
+  
+Started GET "/race_images/Elf.png" for 127.0.0.1 at 2022-03-22 14:03:18 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/race_images/Elf.png"):
+  
+Started GET "/race_images/Elf.png" for 127.0.0.1 at 2022-03-22 14:03:18 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/race_images/Elf.png"):
+  
+Started GET "/race_images/Elf.png" for 127.0.0.1 at 2022-03-22 14:03:18 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/race_images/Elf.png"):
+  
+Started GET "/race_images/Elf.png" for 127.0.0.1 at 2022-03-22 14:03:19 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/race_images/Elf.png"):
+  
+Started GET "/race_images/Elf.png" for 127.0.0.1 at 2022-03-22 14:03:19 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/race_images/Elf.png"):
+  
+Started GET "/race_images/Elf.png" for 127.0.0.1 at 2022-03-22 14:03:19 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/race_images/Elf.png"):
+  
+Started GET "/race_images/Elf.png" for 127.0.0.1 at 2022-03-22 14:03:19 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/race_images/Elf.png"):
+  
+Started GET "/race_images/Elf.png" for 127.0.0.1 at 2022-03-22 14:03:20 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/race_images/Elf.png"):
+  
+Started GET "/race_images/Elf.png" for 127.0.0.1 at 2022-03-22 14:03:20 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/race_images/Elf.png"):
+  
+Started GET "/race_images/Elf.png" for 127.0.0.1 at 2022-03-22 14:03:20 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/race_images/Elf.png"):
+  
+Started GET "/race_images/Elf.png" for 127.0.0.1 at 2022-03-22 14:03:20 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/race_images/Elf.png"):
+  
+Started GET "/race_images/Elf.png" for 127.0.0.1 at 2022-03-22 14:03:21 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/race_images/Elf.png"):
+  
+Started GET "/race_images/Elf.png" for 127.0.0.1 at 2022-03-22 14:03:21 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/race_images/Elf.png"):
+  
+Started GET "/race_images/Elf.png" for 127.0.0.1 at 2022-03-22 14:03:21 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/race_images/Elf.png"):
+  
+Started GET "/race_images/Elf.png" for 127.0.0.1 at 2022-03-22 14:03:21 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/race_images/Elf.png"):
+  
+Started GET "/race_images/Elf.png" for 127.0.0.1 at 2022-03-22 14:03:21 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/race_images/Elf.png"):
+  
+Started GET "/race_images/Elf.png" for 127.0.0.1 at 2022-03-22 14:03:22 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/race_images/Elf.png"):
+  
+Started GET "/race_images/Elf.png" for 127.0.0.1 at 2022-03-22 14:03:22 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/race_images/Elf.png"):
+  
+Started GET "/race_images/Elf.png" for 127.0.0.1 at 2022-03-22 14:03:22 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/race_images/Elf.png"):
+  
+Started GET "/race_images/Elf.png" for 127.0.0.1 at 2022-03-22 14:03:22 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/race_images/Elf.png"):
+  
+Started GET "/race_images/Elf.png" for 127.0.0.1 at 2022-03-22 14:03:23 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/race_images/Elf.png"):
+  
+Started GET "/race_images/Elf.png" for 127.0.0.1 at 2022-03-22 14:03:23 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/race_images/Elf.png"):
+  
+Started GET "/race_images/Elf.png" for 127.0.0.1 at 2022-03-22 14:03:23 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/race_images/Elf.png"):
+  
+Started GET "/race_images/Elf.png" for 127.0.0.1 at 2022-03-22 14:03:23 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/race_images/Elf.png"):
+  
+Started GET "/race_images/Elf.png" for 127.0.0.1 at 2022-03-22 14:03:24 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/race_images/Elf.png"):
+  
+Started GET "/race_images/Elf.png" for 127.0.0.1 at 2022-03-22 14:03:24 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/race_images/Elf.png"):
+  
+Started GET "/race_images/Elf.png" for 127.0.0.1 at 2022-03-22 14:03:24 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/race_images/Elf.png"):
+  
+Started GET "/race_images/Elf.png" for 127.0.0.1 at 2022-03-22 14:03:24 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/race_images/Elf.png"):
+  
+Started GET "/race_images/Elf.png" for 127.0.0.1 at 2022-03-22 14:03:24 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/race_images/Elf.png"):
+  
+Started GET "/race_images/Elf.png" for 127.0.0.1 at 2022-03-22 14:03:24 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/race_images/Elf.png"):
+  
+Started GET "/race_images/Elf.png" for 127.0.0.1 at 2022-03-22 14:03:25 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/race_images/Elf.png"):
+  
+Started GET "/race_images/Elf.png" for 127.0.0.1 at 2022-03-22 14:03:25 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/race_images/Elf.png"):
+  
+Started GET "/race_images/Elf.png" for 127.0.0.1 at 2022-03-22 14:03:25 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/race_images/Elf.png"):
+  
+Started GET "/race_images/Elf.png" for 127.0.0.1 at 2022-03-22 14:03:25 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/race_images/Elf.png"):
+  
+Started POST "/login" for 127.0.0.1 at 2022-03-22 14:03:27 -0700
+Processing by SessionsController#create as */*
+  Parameters: {"username"=>"1a", "password"=>"[FILTERED]", "session"=>{"username"=>"1a", "password"=>"[FILTERED]"}}
+[31mUnpermitted parameter: :session[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "1a"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:5:in `create'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.03ms)
+Completed 200 OK in 1ms (Views: 0.2ms | ActiveRecord: 0.1ms | Allocations: 659)
+
+
+Started GET "/holder.js/800x400?text=Second%20slide&bg=282c34" for 127.0.0.1 at 2022-03-22 14:03:27 -0700
+Started GET "/holder.js/800x400?text=Third%20slide&bg=20232a" for 127.0.0.1 at 2022-03-22 14:03:27 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/holder.js/800x400"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/holder.js/800x400"):
+  
+Started GET "/race_images/Elf.png" for 127.0.0.1 at 2022-03-22 14:03:27 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/race_images/Elf.png"):
+  
+Started GET "/race_images/Elf.png" for 127.0.0.1 at 2022-03-22 14:03:27 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/race_images/Elf.png"):
+  
+Started GET "/race_images/Elf.png" for 127.0.0.1 at 2022-03-22 14:03:27 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/race_images/Elf.png"):
+  
+Started GET "/race_images/Elf.png" for 127.0.0.1 at 2022-03-22 14:03:28 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/race_images/Elf.png"):
+  
+Started GET "/race_images/Elf.png" for 127.0.0.1 at 2022-03-22 14:03:28 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/race_images/Elf.png"):
+  
+Started GET "/race_images/Elf.png" for 127.0.0.1 at 2022-03-22 14:03:28 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/race_images/Elf.png"):
+  
+Started GET "/race_images/Elf.png" for 127.0.0.1 at 2022-03-22 14:03:28 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/race_images/Elf.png"):
+  
+Started GET "/race_images/Elf.png" for 127.0.0.1 at 2022-03-22 14:03:29 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/race_images/Elf.png"):
+  
+Started GET "/race_images/Elf.png" for 127.0.0.1 at 2022-03-22 14:03:29 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/race_images/Elf.png"):
+  
+Started GET "/race_images/Elf.png" for 127.0.0.1 at 2022-03-22 14:03:29 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/race_images/Elf.png"):
+  
+Started GET "/race_images/Elf.png" for 127.0.0.1 at 2022-03-22 14:03:29 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/race_images/Elf.png"):
+  
+Started GET "/race_images/Elf.png" for 127.0.0.1 at 2022-03-22 14:03:30 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/race_images/Elf.png"):
+  
+Started GET "/race_images/Elf.png" for 127.0.0.1 at 2022-03-22 14:03:30 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/race_images/Elf.png"):
+  
+Started GET "/race_images/Elf.png" for 127.0.0.1 at 2022-03-22 14:03:30 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/race_images/Elf.png"):
+  
+Started GET "/race_images/Elf.png" for 127.0.0.1 at 2022-03-22 14:03:30 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/race_images/Elf.png"):
+  
+Started GET "/race_images/Elf.png" for 127.0.0.1 at 2022-03-22 14:03:30 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/race_images/Elf.png"):
+  
+Started GET "/race_images/Elf.png" for 127.0.0.1 at 2022-03-22 14:03:31 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/race_images/Elf.png"):
+  
+Started GET "/race_images/Elf.png" for 127.0.0.1 at 2022-03-22 14:03:31 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/race_images/Elf.png"):
+  
+Started GET "/race_images/Elf.png" for 127.0.0.1 at 2022-03-22 14:03:31 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/race_images/Elf.png"):
+  
+Started GET "/race_images/Elf.png" for 127.0.0.1 at 2022-03-22 14:03:31 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/race_images/Elf.png"):
+  
+Started GET "/race_images/Elf.png" for 127.0.0.1 at 2022-03-22 14:03:31 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/race_images/Elf.png"):
+  
+Started GET "/race_images/Elf.png" for 127.0.0.1 at 2022-03-22 14:03:32 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/race_images/Elf.png"):
+  
+Started GET "/race_images/Elf.png" for 127.0.0.1 at 2022-03-22 14:03:32 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/race_images/Elf.png"):
+  
+Started GET "/race_images/Elf.png" for 127.0.0.1 at 2022-03-22 14:03:32 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/race_images/Elf.png"):
+  
+Started GET "/race_images/Elf.png" for 127.0.0.1 at 2022-03-22 14:03:32 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/race_images/Elf.png"):
+  
+Started GET "/race_images/Elf.png" for 127.0.0.1 at 2022-03-22 14:03:32 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/race_images/Elf.png"):
+  
+Started GET "/race_images/Elf.png" for 127.0.0.1 at 2022-03-22 14:03:33 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/race_images/Elf.png"):
+  
+Started GET "/race_images/Elf.png" for 127.0.0.1 at 2022-03-22 14:03:33 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/race_images/Elf.png"):
+  
+Started GET "/race_images/Elf.png" for 127.0.0.1 at 2022-03-22 14:03:33 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/race_images/Elf.png"):
+  
+Started GET "/race_images/Elf.png" for 127.0.0.1 at 2022-03-22 14:03:33 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/race_images/Elf.png"):
+  
+Started GET "/race_images/Elf.png" for 127.0.0.1 at 2022-03-22 14:03:34 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/race_images/Elf.png"):
+  
+Started POST "/login" for 127.0.0.1 at 2022-03-22 14:04:00 -0700
+Processing by SessionsController#create as */*
+  Parameters: {"username"=>"1a", "password"=>"[FILTERED]", "session"=>{"username"=>"1a", "password"=>"[FILTERED]"}}
+[31mUnpermitted parameter: :session[0m
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "1a"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:5:in `create'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.1ms)
+Completed 200 OK in 7ms (Views: 0.6ms | ActiveRecord: 0.3ms | Allocations: 659)
+
+
+Started GET "/holder.js/800x400?text=Second%20slide&bg=282c34" for 127.0.0.1 at 2022-03-22 14:04:00 -0700
+Started GET "/holder.js/800x400?text=Third%20slide&bg=20232a" for 127.0.0.1 at 2022-03-22 14:04:00 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/holder.js/800x400"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/holder.js/800x400"):
+  
+Started GET "/race_images/Elf.png" for 127.0.0.1 at 2022-03-22 14:04:00 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/race_images/Elf.png"):
+  
+Started GET "/race_images/Elf.png" for 127.0.0.1 at 2022-03-22 14:04:01 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/race_images/Elf.png"):
+  
+Started GET "/race_images/Elf.png" for 127.0.0.1 at 2022-03-22 14:04:01 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/race_images/Elf.png"):
+  
+Started GET "/race_images/Elf.png" for 127.0.0.1 at 2022-03-22 14:04:01 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/race_images/Elf.png"):
+  
+Started GET "/race_images/Elf.png" for 127.0.0.1 at 2022-03-22 14:04:01 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/race_images/Elf.png"):
+  
+Started GET "/race_images/Elf.png" for 127.0.0.1 at 2022-03-22 14:04:02 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/race_images/Elf.png"):
+  
+Started GET "/race_images/Elf.png" for 127.0.0.1 at 2022-03-22 14:04:02 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/race_images/Elf.png"):
+  
+Started GET "/race_images/Elf.png" for 127.0.0.1 at 2022-03-22 14:04:02 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/race_images/Elf.png"):
+  
+Started GET "/race_images/Elf.png" for 127.0.0.1 at 2022-03-22 14:04:02 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/race_images/Elf.png"):
+  
+Started GET "/race_images/Elf.png" for 127.0.0.1 at 2022-03-22 14:04:02 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/race_images/Elf.png"):
+  
+Started GET "/race_images/Elf.png" for 127.0.0.1 at 2022-03-22 14:04:03 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/race_images/Elf.png"):
+  
+Started GET "/race_images/Elf.png" for 127.0.0.1 at 2022-03-22 14:04:03 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/race_images/Elf.png"):
+  
+Started GET "/race_images/Elf.png" for 127.0.0.1 at 2022-03-22 14:04:03 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/race_images/Elf.png"):
+  
+Started GET "/race_images/Elf.png" for 127.0.0.1 at 2022-03-22 14:04:03 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/race_images/Elf.png"):
+  
+Started GET "/race_images/Elf.png" for 127.0.0.1 at 2022-03-22 14:04:03 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/race_images/Elf.png"):
+  
+Started GET "/race_images/Elf.png" for 127.0.0.1 at 2022-03-22 14:04:03 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/race_images/Elf.png"):
+  
+Started GET "/race_images/Elf.png" for 127.0.0.1 at 2022-03-22 14:04:04 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/race_images/Elf.png"):
+  
+Started GET "/race_images/Elf.png" for 127.0.0.1 at 2022-03-22 14:04:04 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/race_images/Elf.png"):
+  
+Started GET "/race_images/Elf.png" for 127.0.0.1 at 2022-03-22 14:04:04 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/race_images/Elf.png"):
+  
+Started GET "/race_images/Elf.png" for 127.0.0.1 at 2022-03-22 14:04:04 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/race_images/Elf.png"):
+  
+Started GET "/race_images/Elf.png" for 127.0.0.1 at 2022-03-22 14:04:04 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/race_images/Elf.png"):
+  
+Started GET "/race_images/Elf.png" for 127.0.0.1 at 2022-03-22 14:04:05 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/race_images/Elf.png"):
+  
+Started GET "/race_images/Elf.png" for 127.0.0.1 at 2022-03-22 14:04:05 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/race_images/Elf.png"):
+  
+Started GET "/race_images/Elf.png" for 127.0.0.1 at 2022-03-22 14:04:05 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/race_images/Elf.png"):
+  
+Started GET "/race_images/Elf.png" for 127.0.0.1 at 2022-03-22 14:04:05 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/race_images/Elf.png"):
+  
+Started GET "/race_images/Elf.png" for 127.0.0.1 at 2022-03-22 14:04:05 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/race_images/Elf.png"):
+  
+Started GET "/race_images/Elf.png" for 127.0.0.1 at 2022-03-22 14:04:06 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/race_images/Elf.png"):
+  
+Started GET "/race_images/Elf.png" for 127.0.0.1 at 2022-03-22 14:04:06 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/race_images/Elf.png"):
+  
+Started GET "/race_images/Elf.png" for 127.0.0.1 at 2022-03-22 14:04:06 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/race_images/Elf.png"):
+  
+Started GET "/race_images/Elf.png" for 127.0.0.1 at 2022-03-22 14:04:06 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/race_images/Elf.png"):
+  
+Started GET "/race_images/Elf.png" for 127.0.0.1 at 2022-03-22 14:04:06 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/race_images/Elf.png"):
+  
+Started GET "/race_images/Elf.png" for 127.0.0.1 at 2022-03-22 14:04:07 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/race_images/Elf.png"):
+  
+Started GET "/race_images/Elf.png" for 127.0.0.1 at 2022-03-22 14:04:07 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/race_images/Elf.png"):
+  
+Started GET "/race_images/Elf.png" for 127.0.0.1 at 2022-03-22 14:04:07 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/race_images/Elf.png"):
+  
+Started GET "/race_images/Elf.png" for 127.0.0.1 at 2022-03-22 14:04:07 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/race_images/Elf.png"):
+  
+Started GET "/race_images/Elf.png" for 127.0.0.1 at 2022-03-22 14:04:07 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/race_images/Elf.png"):
+  
+Started GET "/race_images/Elf.png" for 127.0.0.1 at 2022-03-22 14:04:08 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/race_images/Elf.png"):
+  
+Started GET "/race_images/Elf.png" for 127.0.0.1 at 2022-03-22 14:04:08 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/race_images/Elf.png"):
+  
+Started GET "/race_images/Elf.png" for 127.0.0.1 at 2022-03-22 14:04:08 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/race_images/Elf.png"):
+  
+Started GET "/race_images/Elf.png" for 127.0.0.1 at 2022-03-22 14:04:08 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/race_images/Elf.png"):
+  
+Started GET "/race_images/Elf.png" for 127.0.0.1 at 2022-03-22 14:04:08 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/race_images/Elf.png"):
+  
+Started GET "/race_images/Elf.png" for 127.0.0.1 at 2022-03-22 14:04:09 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/race_images/Elf.png"):
+  
+Started GET "/race_images/Elf.png" for 127.0.0.1 at 2022-03-22 14:04:09 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/race_images/Elf.png"):
+  
+Started GET "/race_images/Elf.png" for 127.0.0.1 at 2022-03-22 14:04:09 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/race_images/Elf.png"):
+  
+Started GET "/race_images/Elf.png" for 127.0.0.1 at 2022-03-22 14:04:09 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/race_images/Elf.png"):
+  
+Started GET "/race_images/Elf.png" for 127.0.0.1 at 2022-03-22 14:04:09 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/race_images/Elf.png"):
+  
+Started GET "/race_images/Elf.png" for 127.0.0.1 at 2022-03-22 14:04:10 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/race_images/Elf.png"):
+  
+Started GET "/race_images/Elf.png" for 127.0.0.1 at 2022-03-22 14:04:10 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/race_images/Elf.png"):
+  
+Started GET "/race_images/Elf.png" for 127.0.0.1 at 2022-03-22 14:04:10 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/race_images/Elf.png"):
+  
+Started GET "/race_images/Elf.png" for 127.0.0.1 at 2022-03-22 14:04:10 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/race_images/Elf.png"):
+  
+Started GET "/race_images/Elf.png" for 127.0.0.1 at 2022-03-22 14:04:10 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/race_images/Elf.png"):
+  
+Started GET "/race_images/Elf.png" for 127.0.0.1 at 2022-03-22 14:04:11 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/race_images/Elf.png"):
+  
+Started GET "/race_images/Elf.png" for 127.0.0.1 at 2022-03-22 14:04:11 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/race_images/Elf.png"):
+  
+Started GET "/race_images/Elf.png" for 127.0.0.1 at 2022-03-22 14:04:11 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/race_images/Elf.png"):
+  
+Started GET "/race_images/Elf.png" for 127.0.0.1 at 2022-03-22 14:04:11 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/race_images/Elf.png"):
+  
+Started GET "/race_images/Elf.png" for 127.0.0.1 at 2022-03-22 14:04:11 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/race_images/Elf.png"):
+  
+Started GET "/race_images/Elf.png" for 127.0.0.1 at 2022-03-22 14:04:12 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/race_images/Elf.png"):
+  
+Started GET "/race_images/Elf.png" for 127.0.0.1 at 2022-03-22 14:04:12 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/race_images/Elf.png"):
+  
+Started GET "/race_images/Elf.png" for 127.0.0.1 at 2022-03-22 14:04:12 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/race_images/Elf.png"):
+  
+Started GET "/race_images/Elf.png" for 127.0.0.1 at 2022-03-22 14:04:12 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/race_images/Elf.png"):
+  
+Started GET "/race_images/Elf.png" for 127.0.0.1 at 2022-03-22 14:04:12 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/race_images/Elf.png"):
+  
+Started GET "/race_images/Elf.png" for 127.0.0.1 at 2022-03-22 14:04:13 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/race_images/Elf.png"):
+  
+Started GET "/race_images/Elf.png" for 127.0.0.1 at 2022-03-22 14:04:13 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/race_images/Elf.png"):
+  
+Started GET "/race_images/Elf.png" for 127.0.0.1 at 2022-03-22 14:04:13 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/race_images/Elf.png"):
+  
+Started GET "/race_images/Elf.png" for 127.0.0.1 at 2022-03-22 14:04:13 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/race_images/Elf.png"):
+  
+Started GET "/race_images/Elf.png" for 127.0.0.1 at 2022-03-22 14:04:13 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/race_images/Elf.png"):
+  
+Started GET "/race_images/Elf.png" for 127.0.0.1 at 2022-03-22 14:04:14 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/race_images/Elf.png"):
+  
+Started GET "/race_images/Elf.png" for 127.0.0.1 at 2022-03-22 14:04:14 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/race_images/Elf.png"):
+  
+Started GET "/race_images/Elf.png" for 127.0.0.1 at 2022-03-22 14:04:14 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/race_images/Elf.png"):
+  
+Started GET "/race_images/Elf.png" for 127.0.0.1 at 2022-03-22 14:04:14 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/race_images/Elf.png"):
+  
+Started GET "/race_images/Elf.png" for 127.0.0.1 at 2022-03-22 14:04:14 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/race_images/Elf.png"):
+  
+Started GET "/race_images/Elf.png" for 127.0.0.1 at 2022-03-22 14:04:15 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/race_images/Elf.png"):
+  
+Started GET "/race_images/Elf.png" for 127.0.0.1 at 2022-03-22 14:04:15 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/race_images/Elf.png"):
+  
+Started GET "/race_images/Elf.png" for 127.0.0.1 at 2022-03-22 14:04:15 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/race_images/Elf.png"):
+  
+Started GET "/race_images/Elf.png" for 127.0.0.1 at 2022-03-22 14:04:15 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/race_images/Elf.png"):
+  
+Started GET "/race_images/Elf.png" for 127.0.0.1 at 2022-03-22 14:04:15 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/race_images/Elf.png"):
+  
+Started GET "/race_images/Elf.png" for 127.0.0.1 at 2022-03-22 14:04:16 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/race_images/Elf.png"):
+  
+Started GET "/race_images/Elf.png" for 127.0.0.1 at 2022-03-22 14:04:16 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/race_images/Elf.png"):
+  
+Started GET "/race_images/Elf.png" for 127.0.0.1 at 2022-03-22 14:04:16 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/race_images/Elf.png"):
+  
+Started GET "/race_images/Elf.png" for 127.0.0.1 at 2022-03-22 14:04:16 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/race_images/Elf.png"):
+  
+Started GET "/race_images/Elf.png" for 127.0.0.1 at 2022-03-22 14:04:16 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/race_images/Elf.png"):
+  
+Started GET "/race_images/Elf.png" for 127.0.0.1 at 2022-03-22 14:04:16 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/race_images/Elf.png"):
+  
+Started GET "/race_images/Elf.png" for 127.0.0.1 at 2022-03-22 14:04:17 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/race_images/Elf.png"):
+  
+Started GET "/race_images/Elf.png" for 127.0.0.1 at 2022-03-22 14:04:17 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/race_images/Elf.png"):
+  
+Started GET "/race_images/Elf.png" for 127.0.0.1 at 2022-03-22 14:04:17 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/race_images/Elf.png"):
+  
+Started GET "/race_images/Elf.png" for 127.0.0.1 at 2022-03-22 14:04:17 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/race_images/Elf.png"):
+  
+Started GET "/race_images/Elf.png" for 127.0.0.1 at 2022-03-22 14:04:17 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/race_images/Elf.png"):
+  
+Started GET "/race_images/Elf.png" for 127.0.0.1 at 2022-03-22 14:04:18 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/race_images/Elf.png"):
+  
+Started GET "/race_images/Elf.png" for 127.0.0.1 at 2022-03-22 14:04:18 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/race_images/Elf.png"):
+  
+Started GET "/race_images/Elf.png" for 127.0.0.1 at 2022-03-22 14:04:18 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/race_images/Elf.png"):
+  
+Started GET "/race_images/Elf.png" for 127.0.0.1 at 2022-03-22 14:04:18 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/race_images/Elf.png"):
+  
+Started GET "/race_images/Elf.png" for 127.0.0.1 at 2022-03-22 14:04:18 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/race_images/Elf.png"):
+  
+Started GET "/race_images/Elf.png" for 127.0.0.1 at 2022-03-22 14:04:19 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/race_images/Elf.png"):
+  
+Started GET "/race_images/Elf.png" for 127.0.0.1 at 2022-03-22 14:04:19 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/race_images/Elf.png"):
+  
+Started GET "/race_images/Elf.png" for 127.0.0.1 at 2022-03-22 14:04:19 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/race_images/Elf.png"):
+  
+Started GET "/race_images/Elf.png" for 127.0.0.1 at 2022-03-22 14:04:19 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/race_images/Elf.png"):
+  
+Started GET "/race_images/Elf.png" for 127.0.0.1 at 2022-03-22 14:04:19 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/race_images/Elf.png"):
+  
+Started GET "/race_images/Elf.png" for 127.0.0.1 at 2022-03-22 14:04:19 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/race_images/Elf.png"):
+  
+Started GET "/race_images/Elf.png" for 127.0.0.1 at 2022-03-22 14:04:20 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/race_images/Elf.png"):
+  
+Started GET "/race_images/Elf.png" for 127.0.0.1 at 2022-03-22 14:04:20 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/race_images/Elf.png"):
+  
+Started GET "/race_images/Elf.png" for 127.0.0.1 at 2022-03-22 14:04:20 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/race_images/Elf.png"):
+  
+Started GET "/race_images/Elf.png" for 127.0.0.1 at 2022-03-22 14:04:20 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/race_images/Elf.png"):
+  
+Started GET "/race_images/Elf.png" for 127.0.0.1 at 2022-03-22 14:04:20 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/race_images/Elf.png"):
+  
+Started GET "/race_images/Elf.png" for 127.0.0.1 at 2022-03-22 14:04:21 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/race_images/Elf.png"):
+  
+Started GET "/race_images/Elf.png" for 127.0.0.1 at 2022-03-22 14:04:21 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/race_images/Elf.png"):
+  
+Started GET "/race_images/Elf.png" for 127.0.0.1 at 2022-03-22 14:04:21 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/race_images/Elf.png"):
+  
+Started GET "/race_images/Elf.png" for 127.0.0.1 at 2022-03-22 14:04:21 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/race_images/Elf.png"):
+  
+Started GET "/race_images/Elf.png" for 127.0.0.1 at 2022-03-22 14:04:21 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/race_images/Elf.png"):
+  
+Started GET "/race_images/Elf.png" for 127.0.0.1 at 2022-03-22 14:04:22 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/race_images/Elf.png"):
+  
+Started GET "/race_images/Elf.png" for 127.0.0.1 at 2022-03-22 14:04:22 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/race_images/Elf.png"):
+  
+Started GET "/race_images/Elf.png" for 127.0.0.1 at 2022-03-22 14:04:22 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/race_images/Elf.png"):
+  
+Started GET "/race_images/Elf.png" for 127.0.0.1 at 2022-03-22 14:04:22 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/race_images/Elf.png"):
+  
+Started GET "/race_images/Elf.png" for 127.0.0.1 at 2022-03-22 14:04:22 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/race_images/Elf.png"):
+  
+Started GET "/race_images/Elf.png" for 127.0.0.1 at 2022-03-22 14:04:23 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/race_images/Elf.png"):
+  
+Started GET "/race_images/Elf.png" for 127.0.0.1 at 2022-03-22 14:04:23 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/race_images/Elf.png"):
+  
+Started GET "/race_images/Elf.png" for 127.0.0.1 at 2022-03-22 14:04:23 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/race_images/Elf.png"):
+  
+Started GET "/race_images/Elf.png" for 127.0.0.1 at 2022-03-22 14:04:23 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/race_images/Elf.png"):
+  
+Started GET "/race_images/Elf.png" for 127.0.0.1 at 2022-03-22 14:04:23 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/race_images/Elf.png"):
+  
+Started GET "/race_images/Elf.png" for 127.0.0.1 at 2022-03-22 14:04:24 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/race_images/Elf.png"):
+  
+Started GET "/race_images/Elf.png" for 127.0.0.1 at 2022-03-22 14:04:24 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/race_images/Elf.png"):
+  
+Started GET "/race_images/Elf.png" for 127.0.0.1 at 2022-03-22 14:04:24 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/race_images/Elf.png"):
+  
+Started GET "/race_images/Elf.png" for 127.0.0.1 at 2022-03-22 14:04:24 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/race_images/Elf.png"):
+  
+Started GET "/race_images/Elf.png" for 127.0.0.1 at 2022-03-22 14:04:25 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/race_images/Elf.png"):
+  
+Started GET "/race_images/Elf.png" for 127.0.0.1 at 2022-03-22 14:04:25 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/race_images/Elf.png"):
+  
+Started GET "/race_images/Elf.png" for 127.0.0.1 at 2022-03-22 14:04:25 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/race_images/Elf.png"):
+  
+Started GET "/race_images/Elf.png" for 127.0.0.1 at 2022-03-22 14:04:25 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/race_images/Elf.png"):
+  
+Started GET "/race_images/Elf.png" for 127.0.0.1 at 2022-03-22 14:04:25 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/race_images/Elf.png"):
+  
+Started GET "/race_images/Elf.png" for 127.0.0.1 at 2022-03-22 14:04:26 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/race_images/Elf.png"):
+  
+Started GET "/race_images/Elf.png" for 127.0.0.1 at 2022-03-22 14:04:26 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/race_images/Elf.png"):
+  
+Started GET "/race_images/Elf.png" for 127.0.0.1 at 2022-03-22 14:04:26 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/race_images/Elf.png"):
+  
+Started GET "/race_images/Elf.png" for 127.0.0.1 at 2022-03-22 14:04:26 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/race_images/Elf.png"):
+  
+Started GET "/race_images/Elf.png" for 127.0.0.1 at 2022-03-22 14:04:26 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/race_images/Elf.png"):
+  
+Started GET "/race_images/Elf.png" for 127.0.0.1 at 2022-03-22 14:04:27 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/race_images/Elf.png"):
+  
+Started GET "/race_images/Elf.png" for 127.0.0.1 at 2022-03-22 14:04:27 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/race_images/Elf.png"):
+  
+Started GET "/race_images/Elf.png" for 127.0.0.1 at 2022-03-22 14:04:27 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/race_images/Elf.png"):
+  
+Started GET "/race_images/Elf.png" for 127.0.0.1 at 2022-03-22 14:04:27 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/race_images/Elf.png"):
+  
+Started GET "/race_images/Elf.png" for 127.0.0.1 at 2022-03-22 14:04:27 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/race_images/Elf.png"):
+  
+Started GET "/race_images/Elf.png" for 127.0.0.1 at 2022-03-22 14:04:28 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/race_images/Elf.png"):
+  
+Started GET "/race_images/Elf.png" for 127.0.0.1 at 2022-03-22 14:04:28 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/race_images/Elf.png"):
+  
+Started GET "/race_images/Elf.png" for 127.0.0.1 at 2022-03-22 14:04:28 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/race_images/Elf.png"):
+  
+Started GET "/race_images/Elf.png" for 127.0.0.1 at 2022-03-22 14:04:28 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/race_images/Elf.png"):
+  
+Started GET "/race_images/Elf.png" for 127.0.0.1 at 2022-03-22 14:04:28 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/race_images/Elf.png"):
+  
+Started GET "/race_images/Elf.png" for 127.0.0.1 at 2022-03-22 14:04:29 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/race_images/Elf.png"):
+  
+Started GET "/race_images/Elf.png" for 127.0.0.1 at 2022-03-22 14:04:29 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/race_images/Elf.png"):
+  
+Started GET "/race_images/Elf.png" for 127.0.0.1 at 2022-03-22 14:04:29 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/race_images/Elf.png"):
+  
+Started GET "/race_images/Elf.png" for 127.0.0.1 at 2022-03-22 14:04:29 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/race_images/Elf.png"):
+  
+Started GET "/race_images/Elf.png" for 127.0.0.1 at 2022-03-22 14:04:29 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/race_images/Elf.png"):
+  
+Started GET "/race_images/Elf.png" for 127.0.0.1 at 2022-03-22 14:04:30 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/race_images/Elf.png"):
+  
+Started GET "/race_images/Elf.png" for 127.0.0.1 at 2022-03-22 14:04:30 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/race_images/Elf.png"):
+  
+Started GET "/race_images/Elf.png" for 127.0.0.1 at 2022-03-22 14:04:30 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/race_images/Elf.png"):
+  
+Started GET "/race_images/Elf.png" for 127.0.0.1 at 2022-03-22 14:04:30 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/race_images/Elf.png"):
+  
+Started GET "/race_images/Elf.png" for 127.0.0.1 at 2022-03-22 14:04:30 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/race_images/Elf.png"):
+  
+Started GET "/race_images/Elf.png" for 127.0.0.1 at 2022-03-22 14:04:31 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/race_images/Elf.png"):
+  
+Started GET "/race_images/Elf.png" for 127.0.0.1 at 2022-03-22 14:04:31 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/race_images/Elf.png"):
+  
+Started GET "/race_images/Elf.png" for 127.0.0.1 at 2022-03-22 14:04:31 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/race_images/Elf.png"):
+  
+Started GET "/race_images/Elf.png" for 127.0.0.1 at 2022-03-22 14:04:31 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/race_images/Elf.png"):
+  
+Started GET "/race_images/Elf.png" for 127.0.0.1 at 2022-03-22 14:04:31 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/race_images/Elf.png"):
+  
+Started GET "/race_images/Elf.png" for 127.0.0.1 at 2022-03-22 14:04:32 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/race_images/Elf.png"):
+  
+Started GET "/race_images/Elf.png" for 127.0.0.1 at 2022-03-22 14:04:32 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/race_images/Elf.png"):
+  
+Started GET "/race_images/Elf.png" for 127.0.0.1 at 2022-03-22 14:04:32 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/race_images/Elf.png"):
+  
+Started GET "/race_images/Elf.png" for 127.0.0.1 at 2022-03-22 14:04:32 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/race_images/Elf.png"):
+  
+Started GET "/race_images/Elf.png" for 127.0.0.1 at 2022-03-22 14:04:32 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/race_images/Elf.png"):
+  
+Started GET "/race_images/Elf.png" for 127.0.0.1 at 2022-03-22 14:04:33 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/race_images/Elf.png"):
+  
+Started GET "/race_images/Elf.png" for 127.0.0.1 at 2022-03-22 14:04:33 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/race_images/Elf.png"):
+  
+Started GET "/race_images/Elf.png" for 127.0.0.1 at 2022-03-22 14:04:33 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/race_images/Elf.png"):
+  
+Started GET "/race_images/Elf.png" for 127.0.0.1 at 2022-03-22 14:04:33 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/race_images/Elf.png"):
+  
+Started GET "/race_images/Elf.png" for 127.0.0.1 at 2022-03-22 14:04:33 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/race_images/Elf.png"):
+  
+Started GET "/race_images/Elf.png" for 127.0.0.1 at 2022-03-22 14:04:34 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/race_images/Elf.png"):
+  
+Started GET "/race_images/Elf.png" for 127.0.0.1 at 2022-03-22 14:04:34 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/race_images/Elf.png"):
+  
+Started GET "/race_images/Elf.png" for 127.0.0.1 at 2022-03-22 14:04:34 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/race_images/Elf.png"):
+  
+Started GET "/race_images/Elf.png" for 127.0.0.1 at 2022-03-22 14:04:34 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/race_images/Elf.png"):
+  
+Started GET "/race_images/Elf.png" for 127.0.0.1 at 2022-03-22 14:04:34 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/race_images/Elf.png"):
+  
+Started GET "/race_images/Elf.png" for 127.0.0.1 at 2022-03-22 14:04:35 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/race_images/Elf.png"):
+  
+Started GET "/race_images/Elf.png" for 127.0.0.1 at 2022-03-22 14:04:35 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/race_images/Elf.png"):
+  
+Started GET "/race_images/Elf.png" for 127.0.0.1 at 2022-03-22 14:04:35 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/race_images/Elf.png"):
+  
+Started GET "/race_images/Elf.png" for 127.0.0.1 at 2022-03-22 14:04:35 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/race_images/Elf.png"):
+  
+Started GET "/race_images/Elf.png" for 127.0.0.1 at 2022-03-22 14:04:35 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/race_images/Elf.png"):
+  
+Started GET "/race_images/Elf.png" for 127.0.0.1 at 2022-03-22 14:04:36 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/race_images/Elf.png"):
+  
+Started POST "/login" for 127.0.0.1 at 2022-03-22 14:05:57 -0700
+Processing by SessionsController#create as */*
+  Parameters: {"username"=>"1a", "password"=>"[FILTERED]", "session"=>{"username"=>"1a", "password"=>"[FILTERED]"}}
+[31mUnpermitted parameter: :session[0m
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "1a"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:5:in `create'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.25ms)
+Completed 200 OK in 8ms (Views: 1.4ms | ActiveRecord: 0.5ms | Allocations: 659)
+
+
+Started GET "/holder.js/800x400?text=Third%20slide&bg=20232a" for 127.0.0.1 at 2022-03-22 14:06:02 -0700
+Started GET "/holder.js/800x400?text=Second%20slide&bg=282c34" for 127.0.0.1 at 2022-03-22 14:06:02 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/holder.js/800x400"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/holder.js/800x400"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2022-03-22 14:06:26 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2022-03-22 14:09:03 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2022-03-22 14:09:05 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started POST "/login" for 127.0.0.1 at 2022-03-22 14:09:31 -0700
+Processing by SessionsController#create as */*
+  Parameters: {"username"=>"1a", "password"=>"[FILTERED]", "session"=>{"username"=>"1a", "password"=>"[FILTERED]"}}
+[31mUnpermitted parameter: :session[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "1a"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:5:in `create'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.04ms)
+Completed 200 OK in 2ms (Views: 0.3ms | ActiveRecord: 0.2ms | Allocations: 659)
+
+
+Started GET "/holder.js/800x400?text=Third%20slide&bg=20232a" for 127.0.0.1 at 2022-03-22 14:09:31 -0700
+Started GET "/holder.js/800x400?text=Second%20slide&bg=282c34" for 127.0.0.1 at 2022-03-22 14:09:31 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/holder.js/800x400"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/holder.js/800x400"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2022-03-22 14:11:32 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2022-03-22 14:11:46 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started POST "/login" for 127.0.0.1 at 2022-03-22 14:11:53 -0700
+Processing by SessionsController#create as */*
+  Parameters: {"username"=>"1a", "password"=>"[FILTERED]", "session"=>{"username"=>"1a", "password"=>"[FILTERED]"}}
+[31mUnpermitted parameter: :session[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "1a"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:5:in `create'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.03ms)
+Completed 200 OK in 1ms (Views: 0.2ms | ActiveRecord: 0.2ms | Allocations: 659)
+
+
+Started GET "/holder.js/800x400?text=Third%20slide&bg=20232a" for 127.0.0.1 at 2022-03-22 14:11:53 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/holder.js/800x400"):
+  
+Started GET "/holder.js/800x400?text=Second%20slide&bg=282c34" for 127.0.0.1 at 2022-03-22 14:11:53 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/holder.js/800x400"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2022-03-22 14:12:52 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2022-03-22 14:12:53 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2022-03-22 14:12:53 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2022-03-22 14:12:53 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/holder.js/800x400?text=Second%20slide&bg=282c34" for 127.0.0.1 at 2022-03-22 14:12:55 -0700
+Started GET "/holder.js/800x400?text=Third%20slide&bg=20232a" for 127.0.0.1 at 2022-03-22 14:12:55 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/holder.js/800x400"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/holder.js/800x400"):
+  
+Started POST "/login" for 127.0.0.1 at 2022-03-22 14:13:10 -0700
+Processing by SessionsController#create as */*
+  Parameters: {"username"=>"1a", "password"=>"[FILTERED]", "session"=>{"username"=>"1a", "password"=>"[FILTERED]"}}
+[31mUnpermitted parameter: :session[0m
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "1a"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:5:in `create'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.1ms)
+Completed 200 OK in 7ms (Views: 0.6ms | ActiveRecord: 0.3ms | Allocations: 659)
+
+
+Started GET "/holder.js/800x400?text=Third%20slide&bg=20232a" for 127.0.0.1 at 2022-03-22 14:13:10 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/holder.js/800x400"):
+  
+Started GET "/holder.js/800x400?text=Second%20slide&bg=282c34" for 127.0.0.1 at 2022-03-22 14:13:10 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/holder.js/800x400"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2022-03-22 14:16:21 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2022-03-22 14:16:23 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2022-03-22 14:16:35 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2022-03-22 14:16:40 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started POST "/login" for 127.0.0.1 at 2022-03-22 14:16:54 -0700
+Processing by SessionsController#create as */*
+  Parameters: {"username"=>"1a", "password"=>"[FILTERED]", "session"=>{"username"=>"1a", "password"=>"[FILTERED]"}}
+[31mUnpermitted parameter: :session[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "1a"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:5:in `create'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.09ms)
+Completed 200 OK in 3ms (Views: 0.6ms | ActiveRecord: 0.2ms | Allocations: 659)
+
+
+Started GET "/holder.js/800x400?text=Third%20slide&bg=20232a" for 127.0.0.1 at 2022-03-22 14:16:54 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/holder.js/800x400"):
+  
+Started GET "/holder.js/800x400?text=Second%20slide&bg=282c34" for 127.0.0.1 at 2022-03-22 14:16:54 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/holder.js/800x400"):
+  
+Started POST "/login" for 127.0.0.1 at 2022-03-22 14:17:00 -0700
+Processing by SessionsController#create as */*
+  Parameters: {"username"=>"1a", "password"=>"[FILTERED]", "session"=>{"username"=>"1a", "password"=>"[FILTERED]"}}
+[31mUnpermitted parameter: :session[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "1a"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:5:in `create'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.13ms)
+Completed 200 OK in 10ms (Views: 0.9ms | ActiveRecord: 0.2ms | Allocations: 659)
+
+
+Started GET "/holder.js/800x400?text=Second%20slide&bg=282c34" for 127.0.0.1 at 2022-03-22 14:17:06 -0700
+Started GET "/holder.js/800x400?text=Third%20slide&bg=20232a" for 127.0.0.1 at 2022-03-22 14:17:06 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/holder.js/800x400"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/holder.js/800x400"):
+  
+Started POST "/login" for 127.0.0.1 at 2022-03-22 14:21:01 -0700
+Processing by SessionsController#create as */*
+  Parameters: {"username"=>"1a", "password"=>"[FILTERED]", "session"=>{"username"=>"1a", "password"=>"[FILTERED]"}}
+[31mUnpermitted parameter: :session[0m
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "1a"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:5:in `create'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.26ms)
+Completed 200 OK in 8ms (Views: 1.1ms | ActiveRecord: 0.6ms | Allocations: 659)
+
+
+Started GET "/holder.js/800x400?text=Second%20slide&bg=282c34" for 127.0.0.1 at 2022-03-22 14:21:01 -0700
+Started GET "/holder.js/800x400?text=Third%20slide&bg=20232a" for 127.0.0.1 at 2022-03-22 14:21:01 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/holder.js/800x400"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/holder.js/800x400"):
+  
+Started GET "/holder.js/800x400?text=Second%20slide&bg=282c34" for 127.0.0.1 at 2022-03-22 14:21:48 -0700
+Started GET "/holder.js/800x400?text=Third%20slide&bg=20232a" for 127.0.0.1 at 2022-03-22 14:21:48 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/holder.js/800x400"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/holder.js/800x400"):
+  
+Started POST "/login" for 127.0.0.1 at 2022-03-22 14:21:52 -0700
+Processing by SessionsController#create as */*
+  Parameters: {"username"=>"1a", "password"=>"[FILTERED]", "session"=>{"username"=>"1a", "password"=>"[FILTERED]"}}
+[31mUnpermitted parameter: :session[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "1a"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:5:in `create'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.05ms)
+Completed 200 OK in 2ms (Views: 0.3ms | ActiveRecord: 0.2ms | Allocations: 659)
+
+
+Started GET "/holder.js/800x400?text=Second%20slide&bg=282c34" for 127.0.0.1 at 2022-03-22 14:21:53 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/holder.js/800x400"):
+  
+Started GET "/holder.js/800x400?text=Third%20slide&bg=20232a" for 127.0.0.1 at 2022-03-22 14:21:53 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/holder.js/800x400"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2022-03-22 14:24:15 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started POST "/login" for 127.0.0.1 at 2022-03-22 14:25:16 -0700
+Processing by SessionsController#create as */*
+  Parameters: {"username"=>"1a", "password"=>"[FILTERED]", "session"=>{"username"=>"1a", "password"=>"[FILTERED]"}}
+[31mUnpermitted parameter: :session[0m
+  [1m[36mUser Load (2.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "1a"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:5:in `create'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.05ms)
+Completed 200 OK in 5ms (Views: 0.3ms | ActiveRecord: 2.0ms | Allocations: 659)
+
+
+Started GET "/holder.js/800x400?text=Second%20slide&bg=282c34" for 127.0.0.1 at 2022-03-22 14:25:17 -0700
+Started GET "/holder.js/800x400?text=Third%20slide&bg=20232a" for 127.0.0.1 at 2022-03-22 14:25:17 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/holder.js/800x400"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/holder.js/800x400"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2022-03-22 14:27:08 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started POST "/login" for 127.0.0.1 at 2022-03-22 14:27:15 -0700
+Processing by SessionsController#create as */*
+  Parameters: {"username"=>"1a", "password"=>"[FILTERED]", "session"=>{"username"=>"1a", "password"=>"[FILTERED]"}}
+[31mUnpermitted parameter: :session[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "1a"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:5:in `create'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.03ms)
+Completed 200 OK in 1ms (Views: 0.2ms | ActiveRecord: 0.2ms | Allocations: 659)
+
+
+Started GET "/holder.js/800x400?text=Second%20slide&bg=282c34" for 127.0.0.1 at 2022-03-22 14:27:15 -0700
+Started GET "/holder.js/800x400?text=Third%20slide&bg=20232a" for 127.0.0.1 at 2022-03-22 14:27:15 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/holder.js/800x400"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/holder.js/800x400"):
+  
+Started POST "/login" for 127.0.0.1 at 2022-03-22 14:27:25 -0700
+Processing by SessionsController#create as */*
+  Parameters: {"username"=>"1a", "password"=>"[FILTERED]", "session"=>{"username"=>"1a", "password"=>"[FILTERED]"}}
+[31mUnpermitted parameter: :session[0m
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "1a"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:5:in `create'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.09ms)
+Completed 200 OK in 9ms (Views: 0.6ms | ActiveRecord: 0.8ms | Allocations: 659)
+
+
+Started GET "/holder.js/800x400?text=Third%20slide&bg=20232a" for 127.0.0.1 at 2022-03-22 14:27:25 -0700
+Started GET "/holder.js/800x400?text=Second%20slide&bg=282c34" for 127.0.0.1 at 2022-03-22 14:27:25 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/holder.js/800x400"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/holder.js/800x400"):
+  
+Started POST "/login" for 127.0.0.1 at 2022-03-22 14:27:53 -0700
+Processing by SessionsController#create as */*
+  Parameters: {"username"=>"1a", "password"=>"[FILTERED]", "session"=>{"username"=>"1a", "password"=>"[FILTERED]"}}
+[31mUnpermitted parameter: :session[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "1a"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:5:in `create'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.03ms)
+Completed 200 OK in 1ms (Views: 0.2ms | ActiveRecord: 0.1ms | Allocations: 659)
+
+
+Started GET "/holder.js/800x400?text=Third%20slide&bg=20232a" for 127.0.0.1 at 2022-03-22 14:27:53 -0700
+Started GET "/holder.js/800x400?text=Second%20slide&bg=282c34" for 127.0.0.1 at 2022-03-22 14:27:53 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/holder.js/800x400"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/holder.js/800x400"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2022-03-22 14:28:52 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2022-03-22 14:31:05 -0700
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2022-03-22 14:31:05 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started POST "/login" for 127.0.0.1 at 2022-03-22 14:31:57 -0700
+Processing by SessionsController#create as */*
+  Parameters: {"username"=>"1a", "password"=>"[FILTERED]", "session"=>{"username"=>"1a", "password"=>"[FILTERED]"}}
+[31mUnpermitted parameter: :session[0m
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "1a"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:5:in `create'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.49ms)
+Completed 200 OK in 7ms (Views: 1.3ms | ActiveRecord: 0.6ms | Allocations: 659)
+
+
+Started POST "/login" for 127.0.0.1 at 2022-03-22 14:32:13 -0700
+Processing by SessionsController#create as */*
+  Parameters: {"username"=>"1a", "password"=>"[FILTERED]", "session"=>{"username"=>"1a", "password"=>"[FILTERED]"}}
+[31mUnpermitted parameter: :session[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "1a"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:5:in `create'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.04ms)
+Completed 200 OK in 1ms (Views: 0.2ms | ActiveRecord: 0.2ms | Allocations: 660)
+
+
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2022-03-22 14:32:38 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started POST "/login" for 127.0.0.1 at 2022-03-22 14:32:42 -0700
+Processing by SessionsController#create as */*
+  Parameters: {"username"=>"1a", "password"=>"[FILTERED]", "session"=>{"username"=>"1a", "password"=>"[FILTERED]"}}
+[31mUnpermitted parameter: :session[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "1a"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:5:in `create'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.03ms)
+Completed 200 OK in 1ms (Views: 0.2ms | ActiveRecord: 0.1ms | Allocations: 659)
+
+
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2022-03-22 14:33:01 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started POST "/login" for 127.0.0.1 at 2022-03-22 14:33:04 -0700
+Processing by SessionsController#create as */*
+  Parameters: {"username"=>"1a", "password"=>"[FILTERED]", "session"=>{"username"=>"1a", "password"=>"[FILTERED]"}}
+[31mUnpermitted parameter: :session[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "1a"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:5:in `create'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.04ms)
+Completed 200 OK in 1ms (Views: 0.2ms | ActiveRecord: 0.1ms | Allocations: 659)
+
+
+Started POST "/login" for 127.0.0.1 at 2022-03-22 14:33:37 -0700
+Processing by SessionsController#create as */*
+  Parameters: {"username"=>"1a", "password"=>"[FILTERED]", "session"=>{"username"=>"1a", "password"=>"[FILTERED]"}}
+[31mUnpermitted parameter: :session[0m
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "1a"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:5:in `create'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.05ms)
+Completed 200 OK in 5ms (Views: 0.4ms | ActiveRecord: 0.7ms | Allocations: 660)
+
+
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2022-03-22 14:35:25 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started POST "/login" for 127.0.0.1 at 2022-03-22 14:35:31 -0700
+Processing by SessionsController#create as */*
+  Parameters: {"username"=>"1a", "password"=>"[FILTERED]", "session"=>{"username"=>"1a", "password"=>"[FILTERED]"}}
+[31mUnpermitted parameter: :session[0m
+  [1m[36mUser Load (1.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "1a"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:5:in `create'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.19ms)
+Completed 200 OK in 12ms (Views: 1.4ms | ActiveRecord: 1.8ms | Allocations: 659)
+
+
+Started POST "/login" for 127.0.0.1 at 2022-03-22 14:36:04 -0700
+Processing by SessionsController#create as */*
+  Parameters: {"username"=>"1a", "password"=>"[FILTERED]", "session"=>{"username"=>"1a", "password"=>"[FILTERED]"}}
+[31mUnpermitted parameter: :session[0m
+  [1m[36mUser Load (2.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "1a"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:5:in `create'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.11ms)
+Completed 200 OK in 8ms (Views: 1.2ms | ActiveRecord: 2.1ms | Allocations: 660)
+
+
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2022-03-22 14:36:45 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2022-03-22 14:36:45 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2022-03-22 14:36:45 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2022-03-22 14:36:45 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started POST "/login" for 127.0.0.1 at 2022-03-22 14:36:55 -0700
+Processing by SessionsController#create as */*
+  Parameters: {"username"=>"1a", "password"=>"[FILTERED]", "session"=>{"username"=>"1a", "password"=>"[FILTERED]"}}
+[31mUnpermitted parameter: :session[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "1a"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:5:in `create'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.03ms)
+Completed 200 OK in 1ms (Views: 0.2ms | ActiveRecord: 0.2ms | Allocations: 659)
+
+
+Started GET "/holder.js/800x400?text=Second%20slide&bg=282c34" for 127.0.0.1 at 2022-03-22 14:36:57 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/holder.js/800x400"):
+  
+Started GET "/holder.js/800x400?text=Third%20slide&bg=20232a" for 127.0.0.1 at 2022-03-22 14:36:57 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/holder.js/800x400"):
+  
+Started POST "/login" for 127.0.0.1 at 2022-03-22 14:37:12 -0700
+Processing by SessionsController#create as */*
+  Parameters: {"username"=>"1a", "password"=>"[FILTERED]", "session"=>{"username"=>"1a", "password"=>"[FILTERED]"}}
+[31mUnpermitted parameter: :session[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "1a"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:5:in `create'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.04ms)
+Completed 200 OK in 1ms (Views: 0.2ms | ActiveRecord: 0.1ms | Allocations: 659)
+
+
+Started GET "/holder.js/800x400?text=Second%20slide&bg=282c34" for 127.0.0.1 at 2022-03-22 14:37:12 -0700
+Started GET "/holder.js/800x400?text=Third%20slide&bg=20232a" for 127.0.0.1 at 2022-03-22 14:37:12 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/holder.js/800x400"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/holder.js/800x400"):
+  
+Started POST "/login" for 127.0.0.1 at 2022-03-22 14:37:34 -0700
+Processing by SessionsController#create as */*
+  Parameters: {"username"=>"1a", "password"=>"[FILTERED]", "session"=>{"username"=>"1a", "password"=>"[FILTERED]"}}
+[31mUnpermitted parameter: :session[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "1a"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:5:in `create'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.11ms)
+Completed 200 OK in 4ms (Views: 0.7ms | ActiveRecord: 0.2ms | Allocations: 659)
+
+
+Started GET "/holder.js/800x400?text=Third%20slide&bg=20232a" for 127.0.0.1 at 2022-03-22 14:37:36 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/holder.js/800x400"):
+  
+Started GET "/holder.js/800x400?text=Second%20slide&bg=282c34" for 127.0.0.1 at 2022-03-22 14:37:36 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/holder.js/800x400"):
+  
+Started POST "/login" for 127.0.0.1 at 2022-03-22 14:37:52 -0700
+Processing by SessionsController#create as */*
+  Parameters: {"username"=>"1a", "password"=>"[FILTERED]", "session"=>{"username"=>"1a", "password"=>"[FILTERED]"}}
+[31mUnpermitted parameter: :session[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "1a"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:5:in `create'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.03ms)
+Completed 200 OK in 2ms (Views: 0.2ms | ActiveRecord: 0.1ms | Allocations: 659)
+
+
+Started GET "/holder.js/800x400?text=Second%20slide&bg=282c34" for 127.0.0.1 at 2022-03-22 14:37:53 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/holder.js/800x400"):
+  
+Started GET "/holder.js/800x400?text=Third%20slide&bg=20232a" for 127.0.0.1 at 2022-03-22 14:37:53 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/holder.js/800x400"):
+  
+Started GET "/holder.js/800x400?text=Second%20slide&bg=282c34" for 127.0.0.1 at 2022-03-22 14:37:55 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/holder.js/800x400"):
+  
+Started GET "/holder.js/800x400?text=Third%20slide&bg=20232a" for 127.0.0.1 at 2022-03-22 14:37:55 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/holder.js/800x400"):
+  
+Started GET "/holder.js/800x400?text=Third%20slide&bg=20232a" for 127.0.0.1 at 2022-03-22 14:38:16 -0700
+Started GET "/holder.js/800x400?text=Second%20slide&bg=282c34" for 127.0.0.1 at 2022-03-22 14:38:16 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/holder.js/800x400"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/holder.js/800x400"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2022-03-22 14:39:31 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2022-03-22 14:39:31 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2022-03-22 14:39:31 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2022-03-22 14:39:32 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2022-03-22 14:39:32 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2022-03-22 14:39:32 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2022-03-22 14:39:32 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2022-03-22 14:39:32 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/holder.js/800x400?text=Second%20slide&bg=282c34" for 127.0.0.1 at 2022-03-22 14:39:33 -0700
+Started GET "/holder.js/800x400?text=Third%20slide&bg=20232a" for 127.0.0.1 at 2022-03-22 14:39:33 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/holder.js/800x400"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/holder.js/800x400"):
+  
+Started GET "/holder.js/800x400?text=Second%20slide&bg=282c34" for 127.0.0.1 at 2022-03-22 14:39:39 -0700
+Started GET "/holder.js/800x400?text=Third%20slide&bg=20232a" for 127.0.0.1 at 2022-03-22 14:39:39 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/holder.js/800x400"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/holder.js/800x400"):
+  
+  [1m[35m (1.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (19.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[35m (49.7ms)[0m  [1m[35mDROP DATABASE IF EXISTS "react_rails_api_project_template_development"[0m
+  [1m[35m (66.5ms)[0m  [1m[35mDROP DATABASE IF EXISTS "react_rails_api_project_template_test"[0m
+  [1m[35m (188.6ms)[0m  [1m[35mCREATE DATABASE "react_rails_api_project_template_development" ENCODING = 'unicode'[0m
+  [1m[35m (149.5ms)[0m  [1m[35mCREATE DATABASE "react_rails_api_project_template_test" ENCODING = 'unicode'[0m
+  [1m[35m (9.4ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  [1m[35m (5.0ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT pg_try_advisory_lock(1087325618115650655)[0m
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateUsers (20220304225702)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (8.0ms)[0m  [1m[35mCREATE TABLE "users" ("id" bigserial primary key, "username" character varying, "password_digest" character varying, "game_id" integer, "player_id" integer, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[36mActiveRecord::SchemaMigration Create (2.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20220304225702"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreateGames (20220315170253)
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (8.2ms)[0m  [1m[35mCREATE TABLE "games" ("id" bigserial primary key, "title" character varying, "party_name" character varying, "user_id" integer, "player_id" integer, "map_id" integer, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20220315170253"]]
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreateCombats (20220315170308)
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (8.2ms)[0m  [1m[35mCREATE TABLE "combats" ("id" bigserial primary key, "description" character varying, "npcs" character varying[], "turn_order" character varying[], "map_id" integer, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20220315170308"]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreatePlayers (20220315170334)
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (3.0ms)[0m  [1m[35mCREATE TABLE "players" ("id" bigserial primary key, "user_id" integer, "token_image" character varying, "character_name" character varying, "character_class" character varying, "character_second_class" character varying, "character_race" character varying, "character_second_race" character varying, "ability_scores" integer[], "skills" character varying[], "proficiencies" character varying[], "languages" character varying[], "alignment" character varying, "background" character varying, "equipment" character varying[], "spells" character varying[], "feats" character varying[], "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20220315170334"]]
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreateMaps (20220315170404)
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (2.9ms)[0m  [1m[35mCREATE TABLE "maps" ("id" bigserial primary key, "game_id" integer, "combat_id" integer, "npcs" character varying[], "image" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20220315170404"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.4ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.7ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2022-03-22 21:44:03.128284"], ["updated_at", "2022-03-22 21:44:03.128284"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT pg_advisory_unlock(1087325618115650655)[0m
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2022-03-22 14:46:08 -0700
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2022-03-22 14:46:08 -0700
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started POST "/login" for 127.0.0.1 at 2022-03-22 14:46:17 -0700
+Processing by SessionsController#create as */*
+  Parameters: {"username"=>"1a", "password"=>"[FILTERED]", "session"=>{"username"=>"1a", "password"=>"[FILTERED]"}}
+[31mUnpermitted parameter: :session[0m
+  [1m[36mUser Load (4.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "1a"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:5:in `create'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.04ms)
+Completed 200 OK in 17ms (Views: 0.9ms | ActiveRecord: 6.1ms | Allocations: 6734)
+
+
+Started GET "/holder.js/800x400?text=Third%20slide&bg=20232a" for 127.0.0.1 at 2022-03-22 14:46:19 -0700
+Started GET "/holder.js/800x400?text=Second%20slide&bg=282c34" for 127.0.0.1 at 2022-03-22 14:46:19 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/holder.js/800x400"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/holder.js/800x400"):
+  
+Started POST "/players" for 127.0.0.1 at 2022-03-22 14:46:21 -0700
+  
+AbstractController::ActionNotFound (The action 'create' could not be found for PlayersController):
+  
+actionpack (6.1.5) lib/abstract_controller/base.rb:160:in `process'
+actionpack (6.1.5) lib/action_controller/metal.rb:190:in `dispatch'
+actionpack (6.1.5) lib/action_controller/metal.rb:254:in `dispatch'
+actionpack (6.1.5) lib/action_dispatch/routing/route_set.rb:50:in `dispatch'
+actionpack (6.1.5) lib/action_dispatch/routing/route_set.rb:33:in `serve'
+actionpack (6.1.5) lib/action_dispatch/journey/router.rb:50:in `block in serve'
+actionpack (6.1.5) lib/action_dispatch/journey/router.rb:32:in `each'
+actionpack (6.1.5) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (6.1.5) lib/action_dispatch/routing/route_set.rb:842:in `call'
+rack (2.2.3) lib/rack/session/abstract/id.rb:266:in `context'
+rack (2.2.3) lib/rack/session/abstract/id.rb:260:in `call'
+actionpack (6.1.5) lib/action_dispatch/middleware/cookies.rb:689:in `call'
+rack (2.2.3) lib/rack/session/abstract/id.rb:266:in `context'
+rack (2.2.3) lib/rack/session/abstract/id.rb:260:in `call'
+actionpack (6.1.5) lib/action_dispatch/middleware/cookies.rb:689:in `call'
+rack (2.2.3) lib/rack/etag.rb:27:in `call'
+rack (2.2.3) lib/rack/conditional_get.rb:40:in `call'
+rack (2.2.3) lib/rack/head.rb:12:in `call'
+activerecord (6.1.5) lib/active_record/migration.rb:601:in `call'
+actionpack (6.1.5) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (6.1.5) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (6.1.5) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (6.1.5) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.1.5) lib/action_dispatch/middleware/actionable_exceptions.rb:18:in `call'
+actionpack (6.1.5) lib/action_dispatch/middleware/debug_exceptions.rb:29:in `call'
+actionpack (6.1.5) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.1.5) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.1.5) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.1.5) lib/active_support/tagged_logging.rb:99:in `block in tagged'
+activesupport (6.1.5) lib/active_support/tagged_logging.rb:37:in `tagged'
+activesupport (6.1.5) lib/active_support/tagged_logging.rb:99:in `tagged'
+railties (6.1.5) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.1.5) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.1.5) lib/action_dispatch/middleware/request_id.rb:26:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.1.5) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.1.5) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.1.5) lib/action_dispatch/middleware/static.rb:24:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.1.5) lib/action_dispatch/middleware/host_authorization.rb:148:in `call'
+rack-cors (1.1.1) lib/rack/cors.rb:100:in `call'
+railties (6.1.5) lib/rails/engine.rb:539:in `call'
+puma (5.6.2) lib/puma/configuration.rb:252:in `call'
+puma (5.6.2) lib/puma/request.rb:77:in `block in handle_request'
+puma (5.6.2) lib/puma/thread_pool.rb:340:in `with_force_shutdown'
+puma (5.6.2) lib/puma/request.rb:76:in `handle_request'
+puma (5.6.2) lib/puma/server.rb:441:in `process_client'
+puma (5.6.2) lib/puma/thread_pool.rb:147:in `block in spawn_thread'
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2022-03-22 14:47:16 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2022-03-22 14:48:26 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2022-03-22 14:48:26 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2022-03-22 14:49:00 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2022-03-22 14:49:00 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2022-03-22 14:49:00 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2022-03-22 14:50:39 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2022-03-22 14:51:35 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2022-03-22 14:51:35 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2022-03-22 14:53:05 -0700
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2022-03-22 14:53:05 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2022-03-22 14:59:19 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2022-03-22 14:59:20 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2022-03-22 14:59:20 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2022-03-22 14:59:20 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2022-03-22 14:59:20 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2022-03-22 14:59:20 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2022-03-22 14:59:20 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2022-03-22 14:59:20 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2022-03-22 14:59:20 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2022-03-22 14:59:20 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2022-03-22 14:59:20 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2022-03-22 14:59:20 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2022-03-22 14:59:20 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2022-03-22 14:59:20 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2022-03-22 14:59:20 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2022-03-22 14:59:20 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2022-03-22 14:59:20 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2022-03-22 15:00:16 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2022-03-22 15:00:59 -0700
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2022-03-22 15:00:59 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2022-03-22 15:00:59 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2022-03-22 15:00:59 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2022-03-22 15:00:59 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2022-03-22 15:00:59 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2022-03-22 15:00:59 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2022-03-22 15:00:59 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2022-03-22 15:00:59 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2022-03-22 15:00:59 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started POST "/login" for 127.0.0.1 at 2022-03-22 15:01:59 -0700
+Processing by SessionsController#create as */*
+  Parameters: {"username"=>"1a", "password"=>"[FILTERED]", "session"=>{"username"=>"1a", "password"=>"[FILTERED]"}}
+[31mUnpermitted parameter: :session[0m
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "1a"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:5:in `create'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.08ms)
+Completed 200 OK in 31ms (Views: 0.7ms | ActiveRecord: 9.6ms | Allocations: 4066)
+
+
+Started GET "/holder.js/800x400?text=Third%20slide&bg=20232a" for 127.0.0.1 at 2022-03-22 15:01:59 -0700
+Started GET "/holder.js/800x400?text=Second%20slide&bg=282c34" for 127.0.0.1 at 2022-03-22 15:01:59 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/holder.js/800x400"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/holder.js/800x400"):
+  
+Started POST "/players" for 127.0.0.1 at 2022-03-22 15:02:08 -0700
+  
+AbstractController::ActionNotFound (The action 'create' could not be found for PlayersController):
+  
+actionpack (6.1.5) lib/abstract_controller/base.rb:160:in `process'
+actionpack (6.1.5) lib/action_controller/metal.rb:190:in `dispatch'
+actionpack (6.1.5) lib/action_controller/metal.rb:254:in `dispatch'
+actionpack (6.1.5) lib/action_dispatch/routing/route_set.rb:50:in `dispatch'
+actionpack (6.1.5) lib/action_dispatch/routing/route_set.rb:33:in `serve'
+actionpack (6.1.5) lib/action_dispatch/journey/router.rb:50:in `block in serve'
+actionpack (6.1.5) lib/action_dispatch/journey/router.rb:32:in `each'
+actionpack (6.1.5) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (6.1.5) lib/action_dispatch/routing/route_set.rb:842:in `call'
+rack (2.2.3) lib/rack/session/abstract/id.rb:266:in `context'
+rack (2.2.3) lib/rack/session/abstract/id.rb:260:in `call'
+actionpack (6.1.5) lib/action_dispatch/middleware/cookies.rb:689:in `call'
+rack (2.2.3) lib/rack/session/abstract/id.rb:266:in `context'
+rack (2.2.3) lib/rack/session/abstract/id.rb:260:in `call'
+actionpack (6.1.5) lib/action_dispatch/middleware/cookies.rb:689:in `call'
+rack (2.2.3) lib/rack/etag.rb:27:in `call'
+rack (2.2.3) lib/rack/conditional_get.rb:40:in `call'
+rack (2.2.3) lib/rack/head.rb:12:in `call'
+activerecord (6.1.5) lib/active_record/migration.rb:601:in `call'
+actionpack (6.1.5) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (6.1.5) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (6.1.5) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (6.1.5) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.1.5) lib/action_dispatch/middleware/actionable_exceptions.rb:18:in `call'
+actionpack (6.1.5) lib/action_dispatch/middleware/debug_exceptions.rb:29:in `call'
+actionpack (6.1.5) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.1.5) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.1.5) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.1.5) lib/active_support/tagged_logging.rb:99:in `block in tagged'
+activesupport (6.1.5) lib/active_support/tagged_logging.rb:37:in `tagged'
+activesupport (6.1.5) lib/active_support/tagged_logging.rb:99:in `tagged'
+railties (6.1.5) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.1.5) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.1.5) lib/action_dispatch/middleware/request_id.rb:26:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.1.5) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.1.5) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.1.5) lib/action_dispatch/middleware/static.rb:24:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.1.5) lib/action_dispatch/middleware/host_authorization.rb:148:in `call'
+rack-cors (1.1.1) lib/rack/cors.rb:100:in `call'
+railties (6.1.5) lib/rails/engine.rb:539:in `call'
+puma (5.6.2) lib/puma/configuration.rb:252:in `call'
+puma (5.6.2) lib/puma/request.rb:77:in `block in handle_request'
+puma (5.6.2) lib/puma/thread_pool.rb:340:in `with_force_shutdown'
+puma (5.6.2) lib/puma/request.rb:76:in `handle_request'
+puma (5.6.2) lib/puma/server.rb:441:in `process_client'
+puma (5.6.2) lib/puma/thread_pool.rb:147:in `block in spawn_thread'
+Started POST "/players" for 127.0.0.1 at 2022-03-22 15:02:10 -0700
+  
+AbstractController::ActionNotFound (The action 'create' could not be found for PlayersController):
+  
+actionpack (6.1.5) lib/abstract_controller/base.rb:160:in `process'
+actionpack (6.1.5) lib/action_controller/metal.rb:190:in `dispatch'
+actionpack (6.1.5) lib/action_controller/metal.rb:254:in `dispatch'
+actionpack (6.1.5) lib/action_dispatch/routing/route_set.rb:50:in `dispatch'
+actionpack (6.1.5) lib/action_dispatch/routing/route_set.rb:33:in `serve'
+actionpack (6.1.5) lib/action_dispatch/journey/router.rb:50:in `block in serve'
+actionpack (6.1.5) lib/action_dispatch/journey/router.rb:32:in `each'
+actionpack (6.1.5) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (6.1.5) lib/action_dispatch/routing/route_set.rb:842:in `call'
+rack (2.2.3) lib/rack/session/abstract/id.rb:266:in `context'
+rack (2.2.3) lib/rack/session/abstract/id.rb:260:in `call'
+actionpack (6.1.5) lib/action_dispatch/middleware/cookies.rb:689:in `call'
+rack (2.2.3) lib/rack/session/abstract/id.rb:266:in `context'
+rack (2.2.3) lib/rack/session/abstract/id.rb:260:in `call'
+actionpack (6.1.5) lib/action_dispatch/middleware/cookies.rb:689:in `call'
+rack (2.2.3) lib/rack/etag.rb:27:in `call'
+rack (2.2.3) lib/rack/conditional_get.rb:40:in `call'
+rack (2.2.3) lib/rack/head.rb:12:in `call'
+activerecord (6.1.5) lib/active_record/migration.rb:601:in `call'
+actionpack (6.1.5) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (6.1.5) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (6.1.5) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (6.1.5) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.1.5) lib/action_dispatch/middleware/actionable_exceptions.rb:18:in `call'
+actionpack (6.1.5) lib/action_dispatch/middleware/debug_exceptions.rb:29:in `call'
+actionpack (6.1.5) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.1.5) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.1.5) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.1.5) lib/active_support/tagged_logging.rb:99:in `block in tagged'
+activesupport (6.1.5) lib/active_support/tagged_logging.rb:37:in `tagged'
+activesupport (6.1.5) lib/active_support/tagged_logging.rb:99:in `tagged'
+railties (6.1.5) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.1.5) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.1.5) lib/action_dispatch/middleware/request_id.rb:26:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.1.5) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.1.5) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.1.5) lib/action_dispatch/middleware/static.rb:24:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.1.5) lib/action_dispatch/middleware/host_authorization.rb:148:in `call'
+rack-cors (1.1.1) lib/rack/cors.rb:100:in `call'
+railties (6.1.5) lib/rails/engine.rb:539:in `call'
+puma (5.6.2) lib/puma/configuration.rb:252:in `call'
+puma (5.6.2) lib/puma/request.rb:77:in `block in handle_request'
+puma (5.6.2) lib/puma/thread_pool.rb:340:in `with_force_shutdown'
+puma (5.6.2) lib/puma/request.rb:76:in `handle_request'
+puma (5.6.2) lib/puma/server.rb:441:in `process_client'
+puma (5.6.2) lib/puma/thread_pool.rb:147:in `block in spawn_thread'
+Started POST "/players" for 127.0.0.1 at 2022-03-22 15:02:50 -0700
+  
+AbstractController::ActionNotFound (The action 'create' could not be found for PlayersController):
+  
+actionpack (6.1.5) lib/abstract_controller/base.rb:160:in `process'
+actionpack (6.1.5) lib/action_controller/metal.rb:190:in `dispatch'
+actionpack (6.1.5) lib/action_controller/metal.rb:254:in `dispatch'
+actionpack (6.1.5) lib/action_dispatch/routing/route_set.rb:50:in `dispatch'
+actionpack (6.1.5) lib/action_dispatch/routing/route_set.rb:33:in `serve'
+actionpack (6.1.5) lib/action_dispatch/journey/router.rb:50:in `block in serve'
+actionpack (6.1.5) lib/action_dispatch/journey/router.rb:32:in `each'
+actionpack (6.1.5) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (6.1.5) lib/action_dispatch/routing/route_set.rb:842:in `call'
+rack (2.2.3) lib/rack/session/abstract/id.rb:266:in `context'
+rack (2.2.3) lib/rack/session/abstract/id.rb:260:in `call'
+actionpack (6.1.5) lib/action_dispatch/middleware/cookies.rb:689:in `call'
+rack (2.2.3) lib/rack/session/abstract/id.rb:266:in `context'
+rack (2.2.3) lib/rack/session/abstract/id.rb:260:in `call'
+actionpack (6.1.5) lib/action_dispatch/middleware/cookies.rb:689:in `call'
+rack (2.2.3) lib/rack/etag.rb:27:in `call'
+rack (2.2.3) lib/rack/conditional_get.rb:40:in `call'
+rack (2.2.3) lib/rack/head.rb:12:in `call'
+activerecord (6.1.5) lib/active_record/migration.rb:601:in `call'
+actionpack (6.1.5) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (6.1.5) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (6.1.5) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (6.1.5) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.1.5) lib/action_dispatch/middleware/actionable_exceptions.rb:18:in `call'
+actionpack (6.1.5) lib/action_dispatch/middleware/debug_exceptions.rb:29:in `call'
+actionpack (6.1.5) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.1.5) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.1.5) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.1.5) lib/active_support/tagged_logging.rb:99:in `block in tagged'
+activesupport (6.1.5) lib/active_support/tagged_logging.rb:37:in `tagged'
+activesupport (6.1.5) lib/active_support/tagged_logging.rb:99:in `tagged'
+railties (6.1.5) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.1.5) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.1.5) lib/action_dispatch/middleware/request_id.rb:26:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.1.5) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.1.5) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.1.5) lib/action_dispatch/middleware/static.rb:24:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.1.5) lib/action_dispatch/middleware/host_authorization.rb:148:in `call'
+rack-cors (1.1.1) lib/rack/cors.rb:100:in `call'
+railties (6.1.5) lib/rails/engine.rb:539:in `call'
+puma (5.6.2) lib/puma/configuration.rb:252:in `call'
+puma (5.6.2) lib/puma/request.rb:77:in `block in handle_request'
+puma (5.6.2) lib/puma/thread_pool.rb:340:in `with_force_shutdown'
+puma (5.6.2) lib/puma/request.rb:76:in `handle_request'
+puma (5.6.2) lib/puma/server.rb:441:in `process_client'
+puma (5.6.2) lib/puma/thread_pool.rb:147:in `block in spawn_thread'
+Started POST "/login" for 127.0.0.1 at 2022-03-22 15:02:55 -0700
+Processing by SessionsController#create as */*
+  Parameters: {"username"=>"1a", "password"=>"[FILTERED]", "session"=>{"username"=>"1a", "password"=>"[FILTERED]"}}
+[31mUnpermitted parameter: :session[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "1a"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:5:in `create'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.05ms)
+Completed 200 OK in 31ms (Views: 0.6ms | ActiveRecord: 12.0ms | Allocations: 2990)
+
+
+Started GET "/holder.js/800x400?text=Second%20slide&bg=282c34" for 127.0.0.1 at 2022-03-22 15:02:55 -0700
+Started GET "/holder.js/800x400?text=Third%20slide&bg=20232a" for 127.0.0.1 at 2022-03-22 15:02:55 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/holder.js/800x400"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/holder.js/800x400"):
+  
+Started POST "/players" for 127.0.0.1 at 2022-03-22 15:02:58 -0700
+  
+AbstractController::ActionNotFound (The action 'create' could not be found for PlayersController):
+  
+actionpack (6.1.5) lib/abstract_controller/base.rb:160:in `process'
+actionpack (6.1.5) lib/action_controller/metal.rb:190:in `dispatch'
+actionpack (6.1.5) lib/action_controller/metal.rb:254:in `dispatch'
+actionpack (6.1.5) lib/action_dispatch/routing/route_set.rb:50:in `dispatch'
+actionpack (6.1.5) lib/action_dispatch/routing/route_set.rb:33:in `serve'
+actionpack (6.1.5) lib/action_dispatch/journey/router.rb:50:in `block in serve'
+actionpack (6.1.5) lib/action_dispatch/journey/router.rb:32:in `each'
+actionpack (6.1.5) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (6.1.5) lib/action_dispatch/routing/route_set.rb:842:in `call'
+rack (2.2.3) lib/rack/session/abstract/id.rb:266:in `context'
+rack (2.2.3) lib/rack/session/abstract/id.rb:260:in `call'
+actionpack (6.1.5) lib/action_dispatch/middleware/cookies.rb:689:in `call'
+rack (2.2.3) lib/rack/session/abstract/id.rb:266:in `context'
+rack (2.2.3) lib/rack/session/abstract/id.rb:260:in `call'
+actionpack (6.1.5) lib/action_dispatch/middleware/cookies.rb:689:in `call'
+rack (2.2.3) lib/rack/etag.rb:27:in `call'
+rack (2.2.3) lib/rack/conditional_get.rb:40:in `call'
+rack (2.2.3) lib/rack/head.rb:12:in `call'
+activerecord (6.1.5) lib/active_record/migration.rb:601:in `call'
+actionpack (6.1.5) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (6.1.5) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (6.1.5) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (6.1.5) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.1.5) lib/action_dispatch/middleware/actionable_exceptions.rb:18:in `call'
+actionpack (6.1.5) lib/action_dispatch/middleware/debug_exceptions.rb:29:in `call'
+actionpack (6.1.5) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.1.5) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.1.5) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.1.5) lib/active_support/tagged_logging.rb:99:in `block in tagged'
+activesupport (6.1.5) lib/active_support/tagged_logging.rb:37:in `tagged'
+activesupport (6.1.5) lib/active_support/tagged_logging.rb:99:in `tagged'
+railties (6.1.5) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.1.5) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.1.5) lib/action_dispatch/middleware/request_id.rb:26:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.1.5) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.1.5) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.1.5) lib/action_dispatch/middleware/static.rb:24:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.1.5) lib/action_dispatch/middleware/host_authorization.rb:148:in `call'
+rack-cors (1.1.1) lib/rack/cors.rb:100:in `call'
+railties (6.1.5) lib/rails/engine.rb:539:in `call'
+puma (5.6.2) lib/puma/configuration.rb:252:in `call'
+puma (5.6.2) lib/puma/request.rb:77:in `block in handle_request'
+puma (5.6.2) lib/puma/thread_pool.rb:340:in `with_force_shutdown'
+puma (5.6.2) lib/puma/request.rb:76:in `handle_request'
+puma (5.6.2) lib/puma/server.rb:441:in `process_client'
+puma (5.6.2) lib/puma/thread_pool.rb:147:in `block in spawn_thread'
+Started POST "/players" for 127.0.0.1 at 2022-03-22 15:03:07 -0700
+  
+AbstractController::ActionNotFound (The action 'create' could not be found for PlayersController):
+  
+actionpack (6.1.5) lib/abstract_controller/base.rb:160:in `process'
+actionpack (6.1.5) lib/action_controller/metal.rb:190:in `dispatch'
+actionpack (6.1.5) lib/action_controller/metal.rb:254:in `dispatch'
+actionpack (6.1.5) lib/action_dispatch/routing/route_set.rb:50:in `dispatch'
+actionpack (6.1.5) lib/action_dispatch/routing/route_set.rb:33:in `serve'
+actionpack (6.1.5) lib/action_dispatch/journey/router.rb:50:in `block in serve'
+actionpack (6.1.5) lib/action_dispatch/journey/router.rb:32:in `each'
+actionpack (6.1.5) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (6.1.5) lib/action_dispatch/routing/route_set.rb:842:in `call'
+rack (2.2.3) lib/rack/session/abstract/id.rb:266:in `context'
+rack (2.2.3) lib/rack/session/abstract/id.rb:260:in `call'
+actionpack (6.1.5) lib/action_dispatch/middleware/cookies.rb:689:in `call'
+rack (2.2.3) lib/rack/session/abstract/id.rb:266:in `context'
+rack (2.2.3) lib/rack/session/abstract/id.rb:260:in `call'
+actionpack (6.1.5) lib/action_dispatch/middleware/cookies.rb:689:in `call'
+rack (2.2.3) lib/rack/etag.rb:27:in `call'
+rack (2.2.3) lib/rack/conditional_get.rb:40:in `call'
+rack (2.2.3) lib/rack/head.rb:12:in `call'
+activerecord (6.1.5) lib/active_record/migration.rb:601:in `call'
+actionpack (6.1.5) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (6.1.5) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (6.1.5) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (6.1.5) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.1.5) lib/action_dispatch/middleware/actionable_exceptions.rb:18:in `call'
+actionpack (6.1.5) lib/action_dispatch/middleware/debug_exceptions.rb:29:in `call'
+actionpack (6.1.5) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.1.5) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.1.5) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.1.5) lib/active_support/tagged_logging.rb:99:in `block in tagged'
+activesupport (6.1.5) lib/active_support/tagged_logging.rb:37:in `tagged'
+activesupport (6.1.5) lib/active_support/tagged_logging.rb:99:in `tagged'
+railties (6.1.5) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.1.5) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.1.5) lib/action_dispatch/middleware/request_id.rb:26:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.1.5) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.1.5) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.1.5) lib/action_dispatch/middleware/static.rb:24:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.1.5) lib/action_dispatch/middleware/host_authorization.rb:148:in `call'
+rack-cors (1.1.1) lib/rack/cors.rb:100:in `call'
+railties (6.1.5) lib/rails/engine.rb:539:in `call'
+puma (5.6.2) lib/puma/configuration.rb:252:in `call'
+puma (5.6.2) lib/puma/request.rb:77:in `block in handle_request'
+puma (5.6.2) lib/puma/thread_pool.rb:340:in `with_force_shutdown'
+puma (5.6.2) lib/puma/request.rb:76:in `handle_request'
+puma (5.6.2) lib/puma/server.rb:441:in `process_client'
+puma (5.6.2) lib/puma/thread_pool.rb:147:in `block in spawn_thread'

@@ -18,7 +18,7 @@ import FormHelperText from '@mui/material/FormHelperText';
 import Checkbox from '@mui/material/Checkbox';
 
 function NewCharacter({ user }) {
-  console.log('loaded this')
+  
   const [race, setRace] = useState("");
   const [playerClass, setPlayerClass] = useState("");
   const [allClasses, setAllClasses] = useState([]);
@@ -37,7 +37,7 @@ function NewCharacter({ user }) {
     .then(r=>r.json())
     .then(c => setAllClasses(c.results))
    }, [])
-  
+  console.log({race})
    urlArr = allClasses.map(r=>r.url)
    if (urlArr){
      urlArr.forEach((e) => (
@@ -51,6 +51,7 @@ function NewCharacter({ user }) {
              
      ))
       }
+      
       let profArr=[]
      allClassDetails.forEach((a, i)=> profArr.push(<CheckboxesGroup proficiencyState={proficiencyState} setProficiencyState={setProficiencyState}/>))
      
@@ -88,24 +89,7 @@ function NewCharacter({ user }) {
       console.log(e.target.checked)
     }
   
-  function handleSubmit(e) {
-    e.preventDefault();
-    fetch("/players", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify({
-        "player class": {playerClass}
-      }),
-    }).then((r) => {
-      if (r.ok) {
-        history.push("/");
-      } else {
-        
-      }
-    });
-  }
+
   return (
     <>
   <Tabs defaultActiveKey="0" id="uncontrolled-tab-example" className="mb-3" >
@@ -114,7 +98,7 @@ function NewCharacter({ user }) {
   <Box sx={{ display: 'flex' }}>
       <FormControl
         required
-        onSubmit={handleSubmit}
+      
         component="fieldset"
         sx={{ m: 3 }}
         variant="standard"
@@ -123,7 +107,8 @@ function NewCharacter({ user }) {
       </FormControl>
         </Box>
 
-        <Button as={Link} to="/character_creator">select a race</Button>
+        <Button as={Link} to="/character_creator" onClick={()=>setRace("on")}>select a race</Button>
+       
 
   </>
   );

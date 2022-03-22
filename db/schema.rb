@@ -10,30 +10,10 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_03_15_181354) do
+ActiveRecord::Schema.define(version: 2022_03_15_170404) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
-
-  create_table "character_sheets", force: :cascade do |t|
-    t.integer "user_id"
-    t.string "character_name"
-    t.string "character_class"
-    t.string "character_second_class"
-    t.string "character_race"
-    t.string "character_second_race"
-    t.integer "ability_scores", array: true
-    t.string "skills", array: true
-    t.string "proficiencies", array: true
-    t.string "languages", array: true
-    t.string "alignment"
-    t.string "background"
-    t.string "equipment", array: true
-    t.string "spells", array: true
-    t.string "feats", array: true
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
-  end
 
   create_table "combats", force: :cascade do |t|
     t.string "description"
@@ -66,7 +46,20 @@ ActiveRecord::Schema.define(version: 2022_03_15_181354) do
   create_table "players", force: :cascade do |t|
     t.integer "user_id"
     t.string "token_image"
-    t.integer "char_sheet_id"
+    t.string "character_name"
+    t.string "character_class"
+    t.string "character_second_class"
+    t.string "character_race"
+    t.string "character_second_race"
+    t.integer "ability_scores", array: true
+    t.string "skills", array: true
+    t.string "proficiencies", array: true
+    t.string "languages", array: true
+    t.string "alignment"
+    t.string "background"
+    t.string "equipment", array: true
+    t.string "spells", array: true
+    t.string "feats", array: true
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end

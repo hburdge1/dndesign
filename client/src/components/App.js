@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { Switch, Route } from "react-router-dom";
+import { Switch, Route, withRouter } from "react-router-dom";
 import NavBar from "./NavBar";
 import Login from "../pages/Login";
 import Home from "../pages/Home";
@@ -31,7 +31,7 @@ function App() {
             <NewCharacter user={user} />
           </Route>
           <Route path="/character_creator">
-            <RaceSelector user={user} />
+            <RaceSelector user={user} race/>
           </Route>
           <Route path="/">
             <Home/>
@@ -42,4 +42,4 @@ function App() {
   );
 }
 
-export default App;
+export default withRouter(App);
