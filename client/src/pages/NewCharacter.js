@@ -8,7 +8,7 @@ import * as React from 'react';
 import { useState, useEffect } from "react";
 import CheckboxesGroup from "../styles/checkboxesGroup";
 import Box from '@mui/material/Box';
-import { Link } from "react-router-dom";
+import ClassSelector from "./ClassSelector";
 import RaceSelector from "./RaceSelector";
 import FormLabel from '@mui/material/FormLabel';
 import FormControl from '@mui/material/FormControl';
@@ -45,7 +45,7 @@ function NewCharacter({ user }) {
         fetch(`https://www.dnd5eapi.co${e}`)
         .then(r => r.json())
         .then((c) => {
-          if (allClassDetails.length < 11){
+          if (allClassDetails.length < 12){
           allClassDetails.push(c)
         }
         })
@@ -112,7 +112,7 @@ function NewCharacter({ user }) {
         {toggle? (
           <RaceSelector user={user} setToggle={setToggle} toggle={toggle} race={race} setRace={setRace} characterName={characterName} setCharacterName={setCharacterName}/>) : (<p></p>)}
        
-
+          <ClassSelector allClasses={allClasses} allClassDetails={allClassDetails}/>
   </>
   );
   // eslint-disable-next-line no-unreachable
