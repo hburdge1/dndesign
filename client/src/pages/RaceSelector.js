@@ -19,7 +19,6 @@ export default function RaceSelector({ user, characterName, setCharacterName, se
   
    const handleRaceClick = (e) =>{
         setRace(e.target.value)
-        e.ability_bonuses.forEach((s)=> {{setAbScores({...abScores[s.ability_score.name]=abScores[s.ability_score.name] + s.bonus})}})
         setToggle(!toggle)
    }
 //   const routeChange = () =>{ 
@@ -30,7 +29,7 @@ export default function RaceSelector({ user, characterName, setCharacterName, se
   function handleSubmit(e) {
     e.preventDefault();
     setCharacterName(e.target.value)
-    e.reset()
+    
 
   }
 //     fetch("/players", {

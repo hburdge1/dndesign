@@ -114,7 +114,7 @@ function NewCharacter({ user }) {
           <RaceSelector user={user} setToggle={setToggle} toggle={toggle} race={race} setRace={setRace} characterName={characterName} setCharacterName={setCharacterName} abScores={abScores} setAbScores={setAbScores}/>) : (<p></p>)}
        
           <ClassSelector allClasses={allClasses} allClassDetails={allClassDetails} abScores={abScores} setAbScores={setAbScores} playerClass={playerClass} setPlayerClass={setPlayerClass}/>
-        <AbilityScorer />
+        <AbilityScorer abScores={abScores} setAbScores={setAbScores} />
   </>
   );
   // eslint-disable-next-line no-unreachable
