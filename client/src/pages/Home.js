@@ -19,7 +19,7 @@ function Home() {
   return (
     <Wrapper>
             <Box>
-  
+    <CharacterSheet />
               <h2></h2>
               <p>
               </p>

@@ -6,12 +6,12 @@ import { useEffect, useState } from 'react'
 import { ToggleButton, ToggleButtonGroup } from 'react-bootstrap'
 import { Button, FormField, Label, Input } from '../styles'
 import { Checkbox } from '@mui/material'
-export default function ClassSelector({allClasses, allClassDetails, abScores, setAbScores}) {
+export default function ClassSelector({allClasses, allClassDetails, abScores, setAbScores, playerClass, setPlayerClass}) {
    const [value, setValue] = useState([]);
      const handleChange = val => setValue([...value, val]);
     let indices=[]
     const handleSelectClass = (e) => {
-    
+        setPlayerClass(e.target.value)
     }
   return (
        <Carousel variant="dark">
@@ -57,7 +57,7 @@ export default function ClassSelector({allClasses, allClassDetails, abScores, se
             />
           </FormField>
           <FormField>
-              <Button value={r.index}>Choose this class</Button>
+              <Button onClick={handleSelectClass} value={r.index}>Choose this class</Button>
           </FormField>
                     <FormField>
           </FormField>

@@ -63,14 +63,27 @@ function NewCharacter({ user }) {
      let nameArr=[]
      allClassDetails.forEach((a)=> nameArr.push(a.index))
 
-        // fetch(`https://www.dnd5eapi.co/api/classes/${playerClass}/levels`)
-        // .then(r=>r.json())
-        // .then(a=> levelArr.push(a))
+ const handleSheet=()=>{
+   fetch("/players", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+       user_id: user.id,
+       character_race: race,
+       character_class: playerClass,
+       character_name: characterName
+      }),
+    }).then((r) => {
+      if (r.ok) {
+        history.push("/new");
+      } else {
+        
+      }
+    });
 
-      //   let classProficiencyChoices=
-      //  Object.keys(allClassDetails.proficiencies).map((key)=> {
-      //   return <p>{allClassDetails.proficiencies[key]}</p>
-      // })
+  }
 
 
     allClassDetails.forEach((a, i)=> indices.push(
@@ -115,6 +128,7 @@ function NewCharacter({ user }) {
        
           <ClassSelector allClasses={allClasses} allClassDetails={allClassDetails} abScores={abScores} setAbScores={setAbScores} playerClass={playerClass} setPlayerClass={setPlayerClass}/>
         <AbilityScorer abScores={abScores} setAbScores={setAbScores} />
+        <Button onClick={handleSheet}></Button>
   </>
   );
   // eslint-disable-next-line no-unreachable

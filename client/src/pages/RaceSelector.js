@@ -32,25 +32,7 @@ export default function RaceSelector({ user, characterName, setCharacterName, se
     
 
   }
-//     fetch("/players", {
-//       method: "POST",
-//       headers: {
-//         "Content-Type": "application/json",
-//       },
-//       body: JSON.stringify({
-//        user_id: user.id,
-//        character_race: race,
-//        character_name: characterName
-//       }),
-//     }).then((r) => {
-//       if (r.ok) {
-//         history.push("/new");
-//       } else {
-        
-//       }
-//     });
-//     e.reset()
-//   }
+//     
  useEffect(()=> {
         fetch('https://www.dnd5eapi.co/api/races/')
         .then(r=>r.json())
