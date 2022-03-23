@@ -7,40 +7,48 @@ import { Carousel, Card, Form} from 'react-bootstrap'
 import { Button, FormField, Label, Input } from '../styles'
 import RaceCard from '../styles/RaceCard'
 
-export default function RaceSelector({ user }) {
-    const [race, setRace] = useState("")
+export default function RaceSelector({ user, characterName, setCharacterName, setToggle, toggle, race, setRace }) {
     const [allRace, setAllRace]=useState([])
     const [raceDescription, setRaceDescription]= useState([])
-    const [characterName, setCharacterName] = useState("")
     let raceArr=[]
     const [relRace, setRelRace]= useState([])
     let result=[]
    const history = useHistory();
   
-  const routeChange = () =>{ 
+   const handleRaceClick = (e) =>{
+        setRace(e.target.value)
+        setToggle(!toggle)
+   }
+//   const routeChange = () =>{ 
       
-    let path = `/new`; 
-    history.push(path);
-  }
+//     let path = `/new`; 
+//     history.push(path);
+//   }
   function handleSubmit(e) {
     e.preventDefault();
-    fetch("/players", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify({
-       character_race: race,
-       character_name: characterName
-      }),
-    }).then((r) => {
-      if (r.ok) {
-        history.push("/new");
-      } else {
-        
-      }
-    });
+    setCharacterName(e.target.value)
+    e.reset()
+
   }
+//     fetch("/players", {
+//       method: "POST",
+//       headers: {
+//         "Content-Type": "application/json",
+//       },
+//       body: JSON.stringify({
+//        user_id: user.id,
+//        character_race: race,
+//        character_name: characterName
+//       }),
+//     }).then((r) => {
+//       if (r.ok) {
+//         history.push("/new");
+//       } else {
+        
+//       }
+//     });
+//     e.reset()
+//   }
  useEffect(()=> {
         fetch('https://www.dnd5eapi.co/api/races/')
         .then(r=>r.json())
@@ -71,7 +79,7 @@ export default function RaceSelector({ user }) {
       <p>speed: {r.speed}</p>
       <form onSubmit={handleSubmit}>
            <FormField>
-            <Label htmlFor="character_name">Title</Label>
+            <Label htmlFor="character_name">Name your character</Label>
             <Input
               type="text"
               id="character_name"
@@ -80,12 +88,12 @@ export default function RaceSelector({ user }) {
             />
           </FormField>
           <FormField>
-              <Button onClick={()=>setRace(r.index)}>Choose this race</Button>
+              <Button value={r.index} onClick={handleRaceClick}>Choose this race</Button>
           </FormField>
                     <FormField>
-            <Button color="primary" type="submit">
+            {/* <Button color="primary" type="submit">
              Create this character
-            </Button>
+            </Button> */}
           </FormField>
         </form>
     </Carousel.Caption>

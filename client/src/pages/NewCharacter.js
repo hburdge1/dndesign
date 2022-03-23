@@ -18,7 +18,7 @@ import FormHelperText from '@mui/material/FormHelperText';
 import Checkbox from '@mui/material/Checkbox';
 
 function NewCharacter({ user }) {
-  
+      const [characterName, setCharacterName] = useState("")
   const [race, setRace] = useState("");
   const [playerClass, setPlayerClass] = useState("");
   const [allClasses, setAllClasses] = useState([]);
@@ -27,6 +27,7 @@ function NewCharacter({ user }) {
   const [playerBackground, setPlayerBackground]= useState('');
   const [activeTab, setActiveTab] = useState("");
   const [proficiencyState, setProficiencyState]=([])
+  const [toggle, setToggle] = useState(false)
   const history = useHistory();
   const baseUrl = "https://www.dnd5eapi.co/api"
   let urlArr=[]
@@ -107,7 +108,9 @@ function NewCharacter({ user }) {
       </FormControl>
         </Box>
 
-        <Button as={Link} to="/character_creator" onClick={()=>setRace("on")}>select a race</Button>
+        <Button onClick={()=>setToggle(!toggle)}>select a race</Button>
+        {toggle? (
+          <RaceSelector user={user} setToggle={setToggle} toggle={toggle} race={race} setRace={setRace} characterName={characterName} setCharacterName={setCharacterName}/>) : (<p></p>)}
        
 
   </>
