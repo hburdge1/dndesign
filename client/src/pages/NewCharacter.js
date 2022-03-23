@@ -16,11 +16,11 @@ import FormGroup from '@mui/material/FormGroup';
 import FormControlLabel from '@mui/material/FormControlLabel';
 import FormHelperText from '@mui/material/FormHelperText';
 import Checkbox from '@mui/material/Checkbox';
-
+import AbilityScorer from "./AbilityScorer";
 function NewCharacter({ user }) {
       const [characterName, setCharacterName] = useState("")
   const [race, setRace] = useState("");
-  const [playerClass, setPlayerClass] = useState("");
+  const [playerClass, setPlayerClass] = useState(""); 
   const [allClasses, setAllClasses] = useState([]);
   const [allClassDetails, setAllClassDetails] = useState([]);
   const [playerName, setPlayerName] = useState("");
@@ -29,6 +29,7 @@ function NewCharacter({ user }) {
   const [proficiencyState, setProficiencyState]=([])
   const [toggle, setToggle] = useState(false)
   const history = useHistory();
+  const [abScores, setAbScores]= useState({STR: 0, CON: 0, CHA: 0, WIS: 0, INT: 0, DEX: 0})
   const baseUrl = "https://www.dnd5eapi.co/api"
   let urlArr=[]
 
@@ -110,9 +111,10 @@ function NewCharacter({ user }) {
 
         <Button onClick={()=>setToggle(!toggle)}>select a race</Button>
         {toggle? (
-          <RaceSelector user={user} setToggle={setToggle} toggle={toggle} race={race} setRace={setRace} characterName={characterName} setCharacterName={setCharacterName}/>) : (<p></p>)}
+          <RaceSelector user={user} setToggle={setToggle} toggle={toggle} race={race} setRace={setRace} characterName={characterName} setCharacterName={setCharacterName} abScores={abScores} setAbScores={setAbScores}/>) : (<p></p>)}
        
-          <ClassSelector allClasses={allClasses} allClassDetails={allClassDetails}/>
+          <ClassSelector allClasses={allClasses} allClassDetails={allClassDetails} abScores={abScores} setAbScores={setAbScores} playerClass={playerClass} setPlayerClass={setPlayerClass}/>
+        <AbilityScorer />
   </>
   );
   // eslint-disable-next-line no-unreachable

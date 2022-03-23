@@ -6,8 +6,10 @@ import { useEffect, useState } from 'react'
 import { Carousel, Card, Form} from 'react-bootstrap'
 import { Button, FormField, Label, Input } from '../styles'
 import RaceCard from '../styles/RaceCard'
+import Popup from 'reactjs-popup';
+import 'reactjs-popup/dist/index.css';
 
-export default function RaceSelector({ user, characterName, setCharacterName, setToggle, toggle, race, setRace }) {
+export default function RaceSelector({ user, characterName, setCharacterName, setToggle, toggle, race, setRace, abScores, setAbScores }) {
     const [allRace, setAllRace]=useState([])
     const [raceDescription, setRaceDescription]= useState([])
     let raceArr=[]
@@ -17,6 +19,7 @@ export default function RaceSelector({ user, characterName, setCharacterName, se
   
    const handleRaceClick = (e) =>{
         setRace(e.target.value)
+        e.ability_bonuses.forEach((s)=> {{setAbScores({...abScores[s.ability_score.name]=abScores[s.ability_score.name] + s.bonus})}})
         setToggle(!toggle)
    }
 //   const routeChange = () =>{ 
@@ -77,6 +80,9 @@ export default function RaceSelector({ user, characterName, setCharacterName, se
       <p>{r.age}</p>
       <br/>
       <p>speed: {r.speed}</p>
+      <Popup trigger={<button>learn more</button>}  position="right-center">
+        {(r.ability_bonuses.map((s)=>
+        <span>{s.ability_score.name}: {s.bonus}</span>))}
       <form onSubmit={handleSubmit}>
            <FormField>
             <Label htmlFor="character_name">Name your character</Label>
@@ -96,6 +102,7 @@ export default function RaceSelector({ user, characterName, setCharacterName, se
             </Button> */}
           </FormField>
         </form>
+          </Popup>
     </Carousel.Caption>
   </Carousel.Item>
   ))) : (<p>nothing here</p>)}

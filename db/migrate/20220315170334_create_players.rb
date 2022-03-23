@@ -11,7 +11,7 @@ class CreatePlayers < ActiveRecord::Migration[6.1]
       t.integer :ability_scores, array: true
       t.string :skills, array: true
       t.string  :proficiencies, array: true
-      t.string  :languages, array: true
+      t.string  :languages, object: true
       t.string :alignment
       t.string :background
       t.string :equipment, array: true
