@@ -24,6 +24,7 @@ function NewCharacter({ user }) {
   const [playerClass, setPlayerClass] = useState(""); 
   const [allClasses, setAllClasses] = useState([]);
   const [allClassDetails, setAllClassDetails] = useState([]);
+  const [errors, setErrors] = useState([]);
   const [playerName, setPlayerName] = useState("");
   const [playerBackground, setPlayerBackground]= useState('');
   const [activeTab, setActiveTab] = useState("");
@@ -33,7 +34,7 @@ function NewCharacter({ user }) {
   const [abScores, setAbScores]= useState({STR: 0, CON: 0, CHA: 0, WIS: 0, INT: 0, DEX: 0})
   const baseUrl = "https://www.dnd5eapi.co/api"
   let urlArr=[]
-
+    const [isLoading, setIsLoading] = useState(false);
    let indices = []
   useEffect(() => {
     fetch(baseUrl + "/classes/")
@@ -54,6 +55,7 @@ function NewCharacter({ user }) {
              
      ))
       }
+      console.log(abScores['CON'])
       
       let profArr=[]
      allClassDetails.forEach((a, i)=> profArr.push(<CheckboxesGroup proficiencyState={proficiencyState} setProficiencyState={setProficiencyState}/>))
@@ -65,6 +67,7 @@ function NewCharacter({ user }) {
      allClassDetails.forEach((a)=> nameArr.push(a.index))
 
  const handleSheet=()=>{
+   setIsLoading(true);
    fetch("/players", {
       method: "POST",
       headers: {
@@ -76,14 +79,13 @@ function NewCharacter({ user }) {
        character_class: playerClass,
        character_name: characterName,
        skills: abScores
-
-
       }),
     }).then((r) => {
+         setIsLoading(false);
       if (r.ok) {
         history.push("/")
       } else {
-        
+    
       }
     });
 

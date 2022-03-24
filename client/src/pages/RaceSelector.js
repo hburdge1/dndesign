@@ -11,16 +11,26 @@ import 'reactjs-popup/dist/index.css';
 
 export default function RaceSelector({ user, characterName, setCharacterName, setToggle, toggle, race, setRace, abScores, setAbScores }) {
     const [allRace, setAllRace]=useState([])
-    const [raceDescription, setRaceDescription]= useState([])
+    let [abBonuses, setAbBonuses] = useState({})
     let raceArr=[]
+    const [scoreBonus, setScoreBonus] = useState({})
     const [relRace, setRelRace]= useState([])
-    let result=[]
    const history = useHistory();
   
+
+      const bonusUp = () => {
+      (race ? (
+        race.ability_bonuses.map((s)=> setAbBonuses(
+          (abScores[s.ability_score.name]) ? (abScores[s.ability_score.name]= abScores[s.ability_score.name] + s.bonus) : (abScores[s.ability_score.name]=s.bonus))
+        )) : (<p></p>))
+      }
+   
    const handleRaceClick = (e) =>{
         setRace(e.target.value)
-        setToggle(!toggle)
+        setToggle(!toggle);
+        bonusUp()
    }
+
 //   const routeChange = () =>{ 
       
 //     let path = `/new`; 

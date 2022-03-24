@@ -3,455 +3,6 @@ import React from "react";
 
 function CharacterSheet({ player }){
 
-// var map = new Map(); 
-console.log(player.skills['WIS'])
-      
- // Loop to insert key & value in this object one by one
-//  for(var i = 0; i < player.skills.length; i++){ 
-//     map.set(player.skills[i], player.skills[i].value); 
-// } 
-// console.log(map)
-	// function countPreparedSpells() {
-	// 	const doCalc = (level1IDs, level2IDs, level3IDs, level4IDs, level5IDs, level6IDs, level7IDs, level8IDs, level9IDs) => {
-	// 		const attrs = [
-	// 			...level1IDs.map(id => `repeating_spellbooklevel1_${id}_spellisprepared`),
-	// 			...level2IDs.map(id => `repeating_spellbooklevel2_${id}_spellisprepared`),
-	// 			...level3IDs.map(id => `repeating_spellbooklevel3_${id}_spellisprepared`),
-	// 			...level4IDs.map(id => `repeating_spellbooklevel4_${id}_spellisprepared`),
-	// 			...level5IDs.map(id => `repeating_spellbooklevel5_${id}_spellisprepared`),
-	// 			...level6IDs.map(id => `repeating_spellbooklevel6_${id}_spellisprepared`),
-	// 			...level7IDs.map(id => `repeating_spellbooklevel7_${id}_spellisprepared`),
-	// 			...level8IDs.map(id => `repeating_spellbooklevel8_${id}_spellisprepared`),
-	// 			...level9IDs.map(id => `repeating_spellbooklevel9_${id}_spellisprepared`)
-	// 		];
-	// 	}
-	// 		getAttrs(attrs, v => {
-	// 			values = Object.values(v).map(a => (parseInt(a)));
-	// 			const total = values.reduce((a, b) => a + b, 0);
-	// 			setAttrs({
-	// 				spells_prepared_count: total
-	// 			});
-	// 		});
-	// 	};
-
-	// 	getSectionIDs("repeating_spellbooklevel1", level1IDs => {
-	// 		getSectionIDs("repeating_spellbooklevel2", level2IDs => {
-	// 			getSectionIDs("repeating_spellbooklevel3", level3IDs => {
-	// 				getSectionIDs("repeating_spellbooklevel4", level4IDs => {
-	// 					getSectionIDs("repeating_spellbooklevel5", level5IDs => {
-	// 						getSectionIDs("repeating_spellbooklevel6", level6IDs => {
-	// 							getSectionIDs("repeating_spellbooklevel7", level7IDs => {
-	// 								getSectionIDs("repeating_spellbooklevel8", level8IDs => {
-	// 									getSectionIDs("repeating_spellbooklevel9", level9IDs => doCalc(level1IDs, level2IDs, level3IDs, level4IDs, level5IDs, level6IDs, level7IDs, level8IDs, level9IDs));
-	// 								});
-	// 							});
-	// 						});
-	// 					});
-	// 				});
-	// 			});
-	// 		});
-	// 	});
-	
-
-//     on('sheet:opened',function(){
-//       countPreparedSpells();
-//     });
-
-//     on("change:repeating_spellbooklevel1", function(eventInfo) {
-//       if(eventInfo.sourceAttribute.match(/spellisprepared/)) {
-//         countPreparedSpells();
-//       }
-//    });
-
-//     on("change:repeating_spellbooklevel2", function(eventInfo) {
-//       if(eventInfo.sourceAttribute.match(/spellisprepared/)) {
-//         countPreparedSpells();
-//       }
-//    });
-
-//     on("change:repeating_spellbooklevel3", function(eventInfo) {
-//       if(eventInfo.sourceAttribute.match(/spellisprepared/)) {
-//         countPreparedSpells();
-//       }
-//    });
-
-//     on("change:repeating_spellbooklevel4", function(eventInfo) {
-//       if(eventInfo.sourceAttribute.match(/spellisprepared/)) {
-//         countPreparedSpells();
-//       }
-//    });
-
-//     on("change:repeating_spellbooklevel5", function(eventInfo) {
-//       if(eventInfo.sourceAttribute.match(/spellisprepared/)) {
-//         countPreparedSpells();
-//       }
-//    });
-
-//     on("change:repeating_spellbooklevel6", function(eventInfo) {
-//       if(eventInfo.sourceAttribute.match(/spellisprepared/)) {
-//         countPreparedSpells();
-//       }
-//    });
-
-//     on("change:repeating_spellbooklevel7", function(eventInfo) {
-//       if(eventInfo.sourceAttribute.match(/spellisprepared/)) {
-//         countPreparedSpells();
-//       }
-//    });
-
-//     on("change:repeating_spellbooklevel8", function(eventInfo) {
-//       if(eventInfo.sourceAttribute.match(/spellisprepared/)) {
-//         countPreparedSpells();
-//       }
-//    });
-
-//     on("change:repeating_spellbooklevel9", function(eventInfo) {
-//       if(eventInfo.sourceAttribute.match(/spellisprepared/)) {
-//         countPreparedSpells();
-//       }
-//    });
-
-//     on("change:drop_category", function(eventinfo) {
-//       if(eventinfo.newValue === "Monsters") {
-//         handle_drop_monster(eventinfo.newValue);
-//       }
-//     });
-
-    // var handle_drop_monster = function(category, eventinfo) {
-    //     var callbacks = [];
-    //     var update = {};
-    //     var id = generateRowID();
-
-    //     drop_attrs = ["drop_name","drop_weight","drop_properties",
-    //                   "drop_modifiers","drop_content","drop_itemtype",
-    //                   "drop_damage","drop_damagetype","drop_damage2",
-    //                   "drop_damagetype2","drop_range","drop_ac",
-    //                   "drop_speed", "drop_str", "drop_dex", "drop_con",
-    //                   "drop_int", "drop_wis", "drop_cha",
-    //                   "drop_vulnerabilities", "drop_resistances",
-    //                   "drop_immunities", "drop_condition_immunities",
-    //                   "drop_languages", "drop_challenge_rating", "drop_size",
-    //                   "drop_type", "drop_alignment", "drop_hp",
-    //                   "drop_saving_throws", "drop_senses",
-    //                   "drop_passive_perception", "drop_skills",
-    //                   "drop_token_size", "character_id"]
-    //     getAttrs(drop_attrs, function(v) {
-    //         if(category === "Monsters") {
-    //             update["is_npc"] = "1";
-    //             if(v["drop_name"] && v["drop_name"] != "") {update["character_name"] = v["drop_name"]};
-    //             // core stats
-    //             update["npc_strength"]     = v["drop_str"] ? v["drop_str"] : "";
-    //             update["npc_dexterity"]    = v["drop_dex"] ? v["drop_dex"] : "";
-    //             update["npc_constitution"] = v["drop_con"] ? v["drop_con"] : "";
-    //             update["npc_intelligence"] = v["drop_int"] ? v["drop_int"] : "";
-    //             update["npc_wisdom"]       = v["drop_wis"] ? v["drop_wis"] : "";
-    //             update["npc_charisma"]     = v["drop_cha"] ? v["drop_cha"] : "";
-    //             update["npc_strength_save_mod"] = 0;
-    //             update["npc_dexterity_save_mod"] = 0;
-    //             update["npc_constitution_save_mod"] = 0;
-    //             update["npc_intelligence_save_mod"] = 0;
-    //             update["npc_wisdom_save_mod"] = 0;
-    //             update["npc_charisma_save_mod"] = 0;
-    //             if(v["drop_saving_throws"] && v["drop_saving_throws"] != "") {
-    //                 var savearray = v["drop_saving_throws"].split(", ");
-    //                 _.each(savearray, function(save) {
-    //                     kv = save.indexOf("-") > -1 ? save.split(" ") : save.split(" +");
-    //                     update["npc_" + kv[0].toLowerCase() + "_save_mod"] = parseInt(kv[1], 10);
-    //                 });
-    //             };
-    //             //right side of core stats, top to bottom
-    //             update["npc_size"]      = v["drop_size"] ? v["drop_size"] : "";
-    //             update["npc_type"]      = v["drop_type"] ? v["drop_type"] : "";
-    //             update["npc_alignment"] = v["drop_alignment"] ? v["drop_alignment"] : "";
-    //              //AC handling
-    //             if(v["drop_ac"]) {
-    //                 if(v["drop_ac"].indexOf("(") > -1) {
-    //                     update["npc_ac"] = v["drop_ac"].split(" (")[0];
-    //                     update["npc_AC_note"] = v["drop_ac"].split(" (")[1].slice(0, -1);
-    //                 }
-    //                 else {
-    //                     update["npc_ac"] = v["drop_ac"];
-    //                     update["npc_AC_note"] = "";
-    //                 };
-    //             }
-    //             else {
-    //                 update["npc_ac"] = 10;
-    //                 update["npc_AC_note"] = "";
-    //             };
-    //              //HP handling
-    //             if(v["drop_hp"]) {
-    //                 if(v["drop_hp"].indexOf("(") > -1) {
-    //                     update["npc_HP"] = v["drop_hp"].split(" (")[0];
-    //                     update["npc_HP_max"] = v["drop_hp"].split(" (")[0];
-    //                     //update["npc_HP_max"] = v["drop_hp"].split(" (")[1].slice(0, -1);
-    //                 }
-    //                 else {
-    //                     update["npc_HP"] = v["drop_hp"]
-    //                     update["npc_HP_max"] = v["drop_hp"]
-    //                     //update["npc_hpformula"] = ""
-    //                 };
-    //             }
-    //             else {
-    //                 update["npc_HP"] = 1
-    //                 update["npc_HP_max"] = 1
-    //             };
-    //              //Speed handling
-    //             if(v["drop_speed"]) {
-    //                 speed = /\d+/i
-    //                 fly   = /fly \d+/i
-    //                 climb = /climb \d+/i
-    //                 swim  = /swim \d+/i
-    //                 speed_match = speed.exec(v["drop_speed"])
-    //                 fly_match   = fly.exec(v["drop_speed"])
-    //                 climb_match = climb.exec(v["drop_speed"])
-    //                 swim_match  = swim.exec(v["drop_speed"])
-    //                 if(speed_match) {
-    //                     speed_number = speed_match[0].split(" ")
-    //                     speed_number = parseInt(speed_number[0], 10)
-    //                     update["npc_speed"] = speed_number
-    //                 }
-    //                 if(fly_match) {
-    //                     speed_number = fly_match[0].split(" ")
-    //                     speed_number = parseInt(speed_number[1], 10)
-    //                     update["npc_speed_fly"] = speed_number
-    //                 }
-    //                 if(climb_match) {
-    //                     speed_number = climb_match[0].split(" ")
-    //                     speed_number = parseInt(speed_number[1], 10)
-    //                     update["npc_speed_climb"] = speed_number
-    //                 }
-    //                 if(swim_match) {
-    //                     speed_number = swim_match[0].split(" ")
-    //                     speed_number = parseInt(speed_number[1], 10)
-    //                     update["npc_speed_swim"] = speed_number
-    //                 }
-    //             }
-    //             //Challenge */} Languages
-    //              //Challenge/XP handling
-    //             if(v["drop_challenge_rating"] && v["drop_challenge_rating"] != "") {
-    //               update["npc_challenge"] = v["drop_challenge_rating"];
-    //               var xp = 0;
-    //               var pb = 0;
-    //               switch(v["drop_challenge_rating"]) {
-    //               case "0":
-    //                   xp = "10";
-    //                   pb = 2;
-    //                   break;
-    //               case "1/8":
-    //                   xp = "25";
-    //                   pb = 2;
-    //                   break;
-    //               case "1/4":
-    //                   xp = "50";
-    //                   pb = 2;
-    //                   break;
-    //               case "1/2":
-    //                   xp = "100";
-    //                   pb = 2;
-    //                   break;
-    //               case "1":
-    //                   xp = "200";
-    //                   pb = 2;
-    //                   break;
-    //               case "2":
-    //                   xp = "450";
-    //                   pb = 2;
-    //                   break;
-    //               case "3":
-    //                   xp = "700";
-    //                   pb = 2;
-    //                   break;
-    //               case "4":
-    //                   xp = "1100";
-    //                   pb = 2;
-    //                   break;
-    //               case "5":
-    //                   xp = "1800";
-    //                   pb = 3;
-    //                   break;
-    //               case "6":
-    //                   xp = "2300";
-    //                   pb = 3;
-    //                   break;
-    //               case "7":
-    //                   xp = "2900";
-    //                   pb = 3;
-    //                   break;
-    //               case "8":
-    //                   xp = "3900";
-    //                   pb = 3;
-    //                   break;
-    //               case "9":
-    //                   xp = "5000";
-    //                   pb = 4;
-    //                   break;
-    //               case "10":
-    //                   xp = "5900";
-    //                   pb = 4;
-    //                   break;
-    //               case "11":
-    //                   xp = "7200";
-    //                   pb = 4;
-    //                   break;
-    //               case "12":
-    //                   xp = "8400";
-    //                   pb = 4;
-    //                   break;
-    //               case "13":
-    //                   xp = "10000";
-    //                   pb = 5;
-    //                   break;
-    //               case "14":
-    //                   xp = "11500";
-    //                   pb = 5;
-    //                   break;
-    //               case "15":
-    //                   xp = "13000";
-    //                   pb = 5;
-    //                   break;
-    //               case "16":
-    //                   xp = "15000";
-    //                   pb = 5;
-    //                   break;
-    //               case "17":
-    //                   xp = "18000";
-    //                   pb = 6;
-    //                   break;
-    //               case "18":
-    //                   xp = "20000";
-    //                   pb = 6;
-    //                   break;
-    //               case "19":
-    //                   xp = "22000";
-    //                   pb = 6;
-    //                   break;
-    //               case "20":
-    //                   xp = "25000";
-    //                   pb = 6;
-    //                   break;
-    //               case "21":
-    //                   xp = "33000";
-    //                   pb = 7;
-    //                   break;
-    //               case "22":
-    //                   xp = "41000";
-    //                   pb = 7;
-    //                   break;
-    //               case "23":
-    //                   xp = "50000";
-    //                   pb = 7;
-    //                   break;
-    //               case "24":
-    //                   xp = "62000";
-    //                   pb = 7;
-    //                   break;
-    //               case "25":
-    //                   xp = "75000";
-    //                   pb = 8;
-    //                   break;
-    //               case "26":
-    //                   xp = "90000";
-    //                   pb = 8;
-    //                   break;
-    //               case "27":
-    //                   xp = "105000";
-    //                   pb = 8;
-    //                   break;
-    //               case "28":
-    //                   xp = "120000";
-    //                   pb = 8;
-    //                   break;
-    //               case "29":
-    //                   xp = "";
-    //                   pb = 9;
-    //                   break;
-    //               case "30":
-    //                   xp = "155000";
-    //                   pb = 9;
-    //                   break;
-    //               }
-    //               update["npc_xp"] = xp;
-    //             }
-    //             update["npc_senses"] = v["drop_senses"] ? v["drop_senses"] : "";
-    //             update["npc_languages"] = v["drop_languages"] ? v["drop_languages"] : "";
-    //             //Traits/Background
-    //             update["npc_damage_resistance"] = v["drop_resistances"] ? v["drop_resistances"] : "";
-    //             update["npc_damage_vulnerability"] = v["drop_vulnerabilities"] ? v["drop_vulnerabilities"] : "";
-    //             update["npc_damage_immunity"] = v["drop_immunities"] ? v["drop_immunities"] : "";
-    //             update["npc_condition_immunity"] = v["drop_condition_immunities"] ? v["drop_condition_immunities"] : "";
-    //             update["npc_traits"] = v["drop_content"] ? v["drop_content"] : "";
-    //             //Skills
-    //             update["npc_acrobatics_bonus"] = 0;
-    //             update["npc_animal_handling_bonus"] = 0;
-    //             update["npc_arcana_bonus"] = 0;
-    //             update["npc_athletics_bonus"] = 0;
-    //             update["npc_deception_bonus"] = 0;
-    //             update["npc_history_bonus"] = 0;
-    //             update["npc_insight_bonus"] = 0;
-    //             update["npc_intimidation_bonus"] = 0;
-    //             update["npc_investigation_bonus"] = 0;
-    //             update["npc_medicine_bonus"] = 0;
-    //             update["npc_nature_bonus"] = 0;
-    //             update["npc_perception_bonus"] = 0;
-    //             update["npc_performance_bonus"] = 0;
-    //             update["npc_persuasion_bonus"] = 0;
-    //             update["npc_religion_bonus"] = 0;
-    //             update["npc_sleight_of_hand_bonus"] = 0;
-    //             update["npc_stealth_bonus"] = 0;
-    //             update["npc_survival_bonus"] = 0;
-    //             if(v["drop_skills"] && v["drop_skills"] != "") {
-    //                 skillarray = v["drop_skills"].split(", ");
-    //                 _.each(skillarray, function(skill) {
-    //                     kv = skill.indexOf("-") > -1 ? skill.split(" ") : skill.split(" +");
-    //                     update["npc_" + kv[0].toLowerCase().replace(/ /g, '_') + "_bonus"] = parseInt(kv[1], 10);
-    //                 });
-    //             }
-    //         };
-
-    //         callbacks.push( function() {cleanup_drop_fields();} );
-    //         setAttrs(update, {silent: true}, function() {callbacks.forEach(function(callback) {callback(); })} );
-    //     });
-
-
-    // };
-
-    // var cleanup_drop_fields = function() {
-    //     var update = {};
-    //     update["drop_name"] = "";
-    //     update["drop_weight"] = "";
-    //     update["drop_properties"] = "";
-    //     update["drop_modifiers"] = "";
-    //     update["drop_content"] = "";
-    //     update["drop_itemtype"] = "";
-    //     update["drop_damage"] = "";
-    //     update["drop_damagetype"] = "";
-    //     update["drop_range"] = "";
-    //     update["drop_ac"] = "";
-    //     update["drop_category"] = "";
-    //     update["drop_speed"] = "";
-    //     update["drop_str"] = "";
-    //     update["drop_dex"] = "";
-    //     update["drop_con"] = "";
-    //     update["drop_int"] = "";
-    //     update["drop_wis"] = "";
-    //     update["drop_cha"] = "";
-    //     update["drop_vulnerabilities"] = "";
-    //     update["drop_resistances"] = "";
-    //     update["drop_immunities"] = "";
-    //     update["drop_condition_immunities"] = "";
-    //     update["drop_languages"] = "";
-    //     update["drop_challenge_rating"] = "";
-    //     update["drop_size"] = "";
-    //     update["drop_type"] = "";
-    //     update["drop_alignment"] = "";
-    //     update["drop_hp"] = "";
-    //     update["drop_saving_throws"] = "";
-    //     update["drop_senses"] = "";
-    //     update["drop_passive_perception"] = "";
-    //     update["drop_skills"] = "";
-    //     update["drop_token_size"] = "";
-    //     setAttrs(update, {silent: true});
-    // };
 
     return(
         <>
@@ -498,38 +49,23 @@ console.log(player.skills['WIS'])
 		<div className="sheet-row">
 			<div className="sheet-col-1-3 sheet-margin-top"><img src="http://i.imgur.com/Y8KHPKm.png" alt="Dungeons and Dragons (5th edition)"/></div>
 			<div className="sheet-col-1-8 sheet-small-label sheet-center">
-				<input className="sheet-underlined sheet-center" type="text" name="attr_sheet_version" value="1.1.4" disabled="disabled" />
-				<br/>Sheet Version</div>
+				<label for='sheet-version'>Sheet version:</label>
+				<input className="sheet-underlined sheet-center" type="text" id='sheet-version' name="attr_sheet_version" value="1.1.4" disabled="disabled" />
+			</div>
 			<div className="sheet-col-1-4 sheet-small-label sheet-center">
-				<input className="sheet-underlined sheet-center" type="text" name="attr_character_name"/>
-				<br/>Character Name</div>
+				<label for='char-name'>Character name:</label>
+				<input className="sheet-underlined sheet-center" type="text" id='char-name' name="attr_character_name" value={player.character_name}/>
+			
 			<div className="sheet-col-1-8 sheet-small-label sheet-center">
-				<input className="sheet-underlined sheet-center" type="text" name="attr_race"/>
+				<input className="sheet-underlined sheet-center" type="text" value={player.character_race} name="attr_race"/>
 				<br/>Race</div>
 			<div className="sheet-col-1-6 sheet-small-label sheet-center">
-				<input className="sheet-underlined sheet-center" type="text" name="attr_className"/>
-				<br/>className</div>
+				<input className="sheet-underlined sheet-center" type="text" value={player.character_class} name="attr_className"/>
+				<br/>Class</div>
 		</div>
 	</div>
 	<div className="sheet-player">
-		<input type="radio" name="attr_tab" className="sheet-tab sheet-tab1" value="1" title="Core Stats" checked="checked" />
-		<span className="sheet-tab sheet-tab1">Core Stats</span>
-		<input type="radio" name="attr_tab" className="sheet-tab sheet-tab2" value="2" />
-		<span className="sheet-tab sheet-tab2">Skills</span>
-		<input type="radio" name="attr_tab" className="sheet-tab sheet-tab3" value="3" />
-		<span className="sheet-tab sheet-tab3">Background</span>
-		<input type="radio" name="attr_tab" className="sheet-tab sheet-tab4" value="4" />
-		<span className="sheet-tab sheet-tab4">className</span>
-		<input type="radio" name="attr_tab" className="sheet-tab sheet-tab5" value="5" />
-		<span className="sheet-tab sheet-tab5">Weapons</span>
-		<input type="radio" name="attr_tab" className="sheet-tab sheet-tab6" value="6" />
-		<span className="sheet-tab sheet-tab6">Spellbook</span>
-		<input type="radio" name="attr_tab" className="sheet-tab sheet-tab8" value="8" />
-		<span className="sheet-tab sheet-tab8">Armour</span>
-		<input type="radio" name="attr_tab" className="sheet-tab sheet-tab7" value="7" />
-		<span className="sheet-tab sheet-tab7">Inventory</span>
-		<input type="radio" name="attr_tab" className="sheet-tab sheet-tab99" value="99" />
-		<span className="sheet-tab sheet-tab99">Show All</span>
+
 		<span className="sheet-spacer"></span>
 		<div className="sheet-section-core">
 			<div className="sheet-row">
@@ -546,28 +82,29 @@ console.log(player.skills['WIS'])
 					</div> */}
 					<div className="sheet-row">
 						<div className="sheet-col-1-7">
-							{/* <input type="number" name="attr_strength" min="1" step="1" value="10" /> */}
-							<span>{player.skills['STR']}</span>
+							<input type="number" name="attr_strength" min="1" step="1" value={player.skills['STR']} />
+							{/* <span>{player.skills['STR']}</span>
 							<span>{player.skills['WIS']}</span>
 							<span>{player.skills['INT']}</span>
 							<span>{player.skills['CHA']}</span>
 							<span>{player.skills['CON']}</span>
-							<span>{player.skills['DEX']}</span>
+							<span>{player.skills['DEX']}</span> */}
 						</div>
 						<div className="sheet-col-1-7 sheet-core-stat-label">Str</div>
-						{/* <div className="sheet-col-1-7">
-							<input type="number" name="attr_strength_mod" value={player.skills['str']/10} />
-						</div>
-						<div className="sheet-col-1-7 sheet-vert-middle sheet-checkbox-row">
+						{/* <div className="sheet-col-1-7"> */}
+				
+				{/* <button name="attr_strength_mod">{onClick=(player.skills['STR']/10 > 1) ? (<span>{Math.floor(Math.random() * 20) + player.skills['STR']/10}</span> ):( <span>{Math.floor(Math.random() * 20)}</span>)}</button> */}
+						{/* <div className="sheet-col-1-7 sheet-vert-middle sheet-checkbox-row">
 							<input type="checkbox" name="attr_strength_save_prof" value="@{PB}" />
 						</div>
 						<div className="sheet-col-1-7">
 							<input type="number" name="attr_strength_save_mod" value="@{strength_mod} + @{strength_save_prof}" disabled="disabled"/>
-						</div>
+						</div> */}
 						<div className="sheet-col-1-7 sheet-center">
-							<button type="roll" className="sheet-core-save" name="roll_Strength_Save" value="&{template:5eDefault} {{character_name=@{character_name}}} {{title=STR saving throw}} {{subheader=@{character_name}}} {{save=1}} {{simple=1}} {{rollname=STR save}} {{roll1=[[ 1d20 + [[@{strength_save_mod}]] + [[@{global_saving_bonus}]] ]]}} @{ro_strsave} @{classNameactionstrengthsave}">Save</button>
+
+							
 						</div>
-						<div className="sheet-col-1-7 sheet-align-center"> */}
+						<div className="sheet-col-1-7 sheet-align-center"> 
 							{/* <input type="checkbox" name="attr_str_save_ro" className="sheet-ro-checkbox" value="1" /><span className="sheet-ro-label">y</span> */}
 							{/* <!-- Modal template Should be placed as the first element immediately after the input checkbox to open it --> */}
 							{/* <div className="sheet-ro-modal sheet-save-modal">
@@ -632,22 +169,19 @@ console.log(player.skills['WIS'])
 							<input type="number" name="attr_dexterity" min="1" step="1" value={player.skills['DEX']} />
 						</div>
 						<div className="sheet-col-1-7 sheet-core-stat-label">Dex</div>
-						<div className="sheet-col-1-7">
-							<input type="number" name="attr_dexterity_mod" value="(floor((@{dexterity}-10)/2))" disabled="disabled" />
-						</div>
-						<div className="sheet-col-1-7 sheet-vert-middle sheet-checkbox-row">
-							<input type="checkbox" name="attr_dexterity_save_prof" value="@{PB}" />
-						</div>
-						<div className="sheet-col-1-7">
+						
+							{/* <input type="checkbox" name="attr_dexterity_save_prof" value="@{PB}" /> */}
+						
+						{/* <div className="sheet-col-1-7">
 							<input type="number" name="attr_dexterity_save_mod" value="@{dexterity_mod} + @{dexterity_save_prof}" disabled="disabled"/>
 						</div>
 						<div className="sheet-col-1-7 sheet-center">
 							<button type="roll" className="sheet-core-save" name="roll_Dexterity_Save" value="&{template:5eDefault} {{character_name=@{character_name}}} {{title=DEX saving throw}} {{subheader=@{character_name}}} {{save=1}} {{simple=1}} {{rollname=DEX save}} {{roll1=[[ 1d20 + [[@{dexterity_save_mod}]] + [[@{global_saving_bonus}]] ]]}} @{ro_dexsave} @{classNameactiondexteritysave}">Save</button>
 						</div>
 						<div className="sheet-col-1-7 sheet-align-center">
-							<input type="checkbox" name="attr_dex_save_ro" className="sheet-ro-checkbox" value="1" /><span className="sheet-ro-label">y</span>
+							<input type="checkbox" name="attr_dex_save_ro" className="sheet-ro-checkbox" value="1" /><span className="sheet-ro-label">y</span> */}
 							{/* <!-- Modal template Should be placed as the first element immediately after the input checkbox to open it --> */}
-							<div className="sheet-ro-modal sheet-save-modal">
+							{/* <div className="sheet-ro-modal sheet-save-modal"> */}
 								<div>
 									{/* <!-- Modal Title and close button row --> */}
 									<div className="sheet-row sheet-ro-header sheet-border-bottom sheet-padb">
@@ -658,46 +192,13 @@ console.log(player.skills['WIS'])
 										</div>
 									</div>
 									{/* <!-- define hidden attribute to store summary of all options selected --> */}
-									<input type="hidden" name="attr_ro_dexsave" value="@{ro_dexsave_rolltype}@{ro_dexsave_roll2_closing} @{ro_dexsave_emoteprompt} @{ro_dexsave_showmath}" />
+									
 									{/* <!--Help text and copy of roll button--> */}
-									<div className="sheet-row sheet-padb">
-										<div className="sheet-col-2-3 sheet-small-note">The settings here apply <b>only</b> to the roll specified in the title above. </div>
-										<div className="sheet-col-1-3 sheet-padl">
-											<button type="roll" className="sheet-roll" name="roll_Dexterity_Save_ro" value="&{template:5eDefault} {{character_name=@{character_name}}} {{title=DEX saving throw}} {{subheader=@{character_name}}} {{save=1}} {{simple=1}} {{rollname=DEX save}} {{roll1=[[ 1d20 + [[@{dexterity_save_mod}]] + [[@{global_saving_bonus}]] ]]}} @{ro_dexsave} @{classNameactiondexteritysave}">Roll</button>
-										</div>
+							
 									</div>
+					
 									<hr/>
-									{/* <!-- Define options here --> */}
-									<div className="sheet-row sheet-checkbox-row">
-										<div className="sheet-col-1-3 sheet-ro-optionlabel">Roll type</div>
-										<div className="sheet-col-2-3 sheet-padl sheet-ro-option">
-											<input type="hidden" name="attr_ro_dexsave_roll2_closing" value="+ [[@{dexterity_save_mod}]] + [[@{global_saving_bonus}]] ]] }}" />
-											<select name="attr_ro_dexsave_rolltype">
-												<option value="@{ro_default_rolltype}">Use Default</option>
-												<option value="{{showadvroll=1}} {{roll2=[[ 1d20 ">Roll 2d20</option>
-												<option value="{{noadvroll=1}}">Roll 1d20</option>
-												<option value="?{Roll type?|Normal,&#123&#123noadvroll=1&#125&#125 |Advantage,&#123&#123rollhasadv=1&#125&#125 &#123&#123roll2=[[1d20  |Disadvantage,&#123&#123rollhasdisadv=1&#125&#125 &#123&#123roll2=[[1d20}">Prompt for adv/disadv</option>
-												<option value="{{rollhasadv=1}} {{roll2=[[ 1d20 ">ALWAYS Advantage</option>
-												<option value="{{rollhasdisadv=1}} {{roll2=[[ 1d20 ">ALWAYS Disadvantage</option>
-											</select>
-										</div>
-									</div>
-									<hr/>
-									<div className="sheet-row sheet-checkbox-row">
-										<div className="sheet-col-1-3 sheet-ro-optionlabel">Prompt for emote?</div>
-										<div className="sheet-col-2-3 sheet-padl sheet-ro-option">
-											<input type="checkbox" name="attr_ro_dexsave_emoteprompt" value="{{emote=?{Emote text} }}"/>
-										</div>
-									</div>
-									<hr/>
-									<div className="sheet-row sheet-checkbox-row">
-										<div className="sheet-col-1-3 sheet-ro-optionlabel">Show math?</div>
-										<div className="sheet-col-2-3 sheet-padl sheet-ro-option">
-											<input type="checkbox" name="attr_ro_dexsave_showmath" value="{{math=1d20
-										+ [[@{dexterity_save_mod}]] [Save mod]
-										+ (@{global_saving_bonus}) [Global save bonus]}}"/>
-										</div>
-									</div>
+			
 								</div>
 								{/* <!-- close inner modal div --> */}
 							</div>
@@ -19268,7 +18769,7 @@ actionmeleeweapon}">Attack</button>
 				<div className="sheet-col-7-12 sheet-padr sheet-rt-value"></div>
 			</div> */}
 			{/* {{allprops()}} */}
-			</div></div></div>
+			</div></div>
 </>
 
 )
