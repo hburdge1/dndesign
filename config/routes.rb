@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+    namespace :api do
   resources :character_sheets
   resources :maps
   resources :players
@@ -12,4 +13,6 @@ Rails.application.routes.draw do
       post '/players', to: 'players#create'
       post '/character_sheet', to: 'character_sheets#create'
         post "/signup", to: "users#create"
+  end
+  get "*path", to: "fallback#index", constraints: ->(req) { !req.xhr? && req.format.html? }
 end

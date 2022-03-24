@@ -29147,3 +29147,102 @@ Processing by SessionsController#create as */*
 Completed 200 OK in 308ms (Views: 5.4ms | ActiveRecord: 17.1ms | Allocations: 5223)
 
 
+Started GET "/new" for ::1 at 2022-03-24 11:22:11 -0700
+  [1m[35m (1.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by FallbackController#index as HTML
+  Parameters: {"path"=>"new"}
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.0ms | Allocations: 1902)
+
+
+  
+ArgumentError (`render file:` should be given the absolute path to a file. 'public/index.html' was given instead):
+  
+app/controllers/fallback_controller.rb:3:in `index'
+Started GET "/favicon.ico" for ::1 at 2022-03-24 11:22:11 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
+  
+Started GET "/new" for ::1 at 2022-03-24 11:22:47 -0700
+Processing by FallbackController#index as HTML
+  Parameters: {"path"=>"new"}
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms | Allocations: 360)
+
+
+  
+ArgumentError (`render file:` should be given the absolute path to a file. 'public/index.html' was given instead):
+  
+app/controllers/fallback_controller.rb:3:in `index'
+Started GET "/favicon.ico" for ::1 at 2022-03-24 11:22:47 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
+  
+Started GET "/new" for ::1 at 2022-03-24 11:22:48 -0700
+Processing by FallbackController#index as HTML
+  Parameters: {"path"=>"new"}
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms | Allocations: 185)
+
+
+  
+ArgumentError (`render file:` should be given the absolute path to a file. 'public/index.html' was given instead):
+  
+app/controllers/fallback_controller.rb:3:in `index'
+Started GET "/favicon.ico" for ::1 at 2022-03-24 11:22:48 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
+  
+Started GET "/new" for ::1 at 2022-03-24 11:23:09 -0700
+Processing by FallbackController#index as HTML
+  Parameters: {"path"=>"new"}
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms | Allocations: 296)
+
+
+  
+ArgumentError (`render file:` should be given the absolute path to a file. '../public/index.html' was given instead):
+  
+app/controllers/fallback_controller.rb:3:in `index'
+Started GET "/favicon.ico" for ::1 at 2022-03-24 11:23:09 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
+  
+Started GET "/new" for ::1 at 2022-03-24 11:23:20 -0700
+Processing by FallbackController#index as HTML
+  Parameters: {"path"=>"new"}
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms | Allocations: 296)
+
+
+  
+ArgumentError (`render file:` should be given the absolute path to a file. 'public/index.html' was given instead):
+  
+app/controllers/fallback_controller.rb:3:in `index'
+Started GET "/favicon.ico" for ::1 at 2022-03-24 11:23:20 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
+  
+Started GET "/new" for ::1 at 2022-03-24 11:23:21 -0700
+Processing by FallbackController#index as HTML
+  Parameters: {"path"=>"new"}
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms | Allocations: 183)
+
+
+  
+ArgumentError (`render file:` should be given the absolute path to a file. 'public/index.html' was given instead):
+  
+app/controllers/fallback_controller.rb:3:in `index'
+Started GET "/favicon.ico" for ::1 at 2022-03-24 11:23:21 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
+  
+Started GET "/new" for ::1 at 2022-03-24 11:23:54 -0700
+Processing by FallbackController#index as HTML
+  Parameters: {"path"=>"new"}
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.0ms | Allocations: 183)
+
+
+  
+ArgumentError (`render file:` should be given the absolute path to a file. 'public/index.html' was given instead):
+  
+app/controllers/fallback_controller.rb:3:in `index'
+Started GET "/favicon.ico" for ::1 at 2022-03-24 11:23:54 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
+  
