@@ -23,7 +23,7 @@ export default function CheckboxesGroup({ proficiencyState, setProficiencyState 
 
 
   return (
-    <Box sx={{ display: 'flex' }}>
+    <Box >
       <FormControl
         required
      
@@ -35,7 +35,7 @@ export default function CheckboxesGroup({ proficiencyState, setProficiencyState 
         {/* <FormGroup>
             { proficiencies.map((p)=>
           <FormControlLabel
-            control={
+            control=
               <Checkbox onChange={handleChange} name={p} />
             }
             label={p}

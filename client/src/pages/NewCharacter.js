@@ -28,7 +28,7 @@ function NewCharacter({ user }) {
   const [playerName, setPlayerName] = useState("");
   const [playerBackground, setPlayerBackground]= useState('');
   const [activeTab, setActiveTab] = useState("");
-  const [proficiencyState, setProficiencyState]=([])
+  const [proficiencyState, setProficiencyState]= useState([])
   const [toggle, setToggle] = useState(false)
   const history = useHistory();
   const [abScores, setAbScores]= useState({STR: 0, CON: 0, CHA: 0, WIS: 0, INT: 0, DEX: 0})
@@ -78,7 +78,8 @@ function NewCharacter({ user }) {
        character_race: race,
        character_class: playerClass,
        character_name: characterName,
-       skills: abScores
+       skills: abScores,
+       proficiencies: proficiencyState
       }),
     }).then((r) => {
          setIsLoading(false);
@@ -90,25 +91,10 @@ function NewCharacter({ user }) {
     });
 
   }
-
-
-    allClassDetails.forEach((a, i)=> indices.push(
-    <Tab eventKey={a.index} title={a.index} onClick={() => setActiveTab(a.index)}
-      hit die = {a.hit_die}>
-      <br/>
-      {profArr[i]}
-      <br />
-      {saveArr}
-
-
-      <br/>
-
-    </Tab>)
-    )
-    function handleChange(e){
-      setPlayerClass(e.target.checked)
-      console.log(e.target.checked)
-    }
+    // function handleChange(e){
+    //   setPlayerClass(e.target.checked)
+    //   console.log(e.target.checked)
+    // }
   
 
   return (
@@ -132,7 +118,7 @@ function NewCharacter({ user }) {
         {toggle? (
           <RaceSelector user={user} setToggle={setToggle} toggle={toggle} race={race} setRace={setRace} characterName={characterName} setCharacterName={setCharacterName} abScores={abScores} setAbScores={setAbScores}/>) : (<p></p>)}
        
-          <ClassSelector allClasses={allClasses} allClassDetails={allClassDetails} abScores={abScores} setAbScores={setAbScores} playerClass={playerClass} setPlayerClass={setPlayerClass}/>
+          <ClassSelector allClasses={allClasses} allClassDetails={allClassDetails} proficiencyState={proficiencyState} setProficiencyState={setProficiencyState} abScores={abScores} setAbScores={setAbScores} playerClass={playerClass} setPlayerClass={setPlayerClass}/>
         <AbilityScorer abScores={abScores} setAbScores={setAbScores} />
         <Button onClick={handleSheet}>Create this character</Button>
 

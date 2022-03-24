@@ -6,13 +6,16 @@ import { useEffect, useState } from 'react'
 import { ToggleButton, ToggleButtonGroup } from 'react-bootstrap'
 import { Button, FormField, Label, Input } from '../styles'
 import { Checkbox } from '@mui/material'
-export default function ClassSelector({allClasses, allClassDetails, abScores, setAbScores, playerClass, setPlayerClass}) {
-   const [value, setValue] = useState([]);
-     const handleChange = val => setValue([...value, val]);
+export default function ClassSelector({allClasses, allClassDetails, abScores, proficiencyState, setProficiencyState, setAbScores, playerClass, setPlayerClass}) {
+
+
     let indices=[]
     const handleSelectClass = (e) => {
         e.preventDefault()
         setPlayerClass(e.target.value)
+           if(proficiencyState){
+           console.log(proficiencyState)
+   }
     }
   return (
        <Carousel variant="dark">
@@ -35,11 +38,9 @@ export default function ClassSelector({allClasses, allClassDetails, abScores, se
              <ToggleButtonGroup
       name="value"
       type="checkbox"
-      value={value}
-      onChange={handleChange}
     >{a.from.map((b)=> <>
-        <div class="form-check form-check-inline">
-  <input class="form-check-input" type="checkbox"  value={b.name} />
+        <div class="form-check form-check-inline" >
+  <input class="form-check-input" type="checkbox" onChange={() => { proficiencyState? (setProficiencyState([...proficiencyState, (b.name)])) : (proficiencyState.push(b.name))}} />
   <label class="form-check-label" for="inlineCheckbox1">{b.name}</label>
     </div>
         </>)}</ToggleButtonGroup>
