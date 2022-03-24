@@ -5,6 +5,7 @@ import Login from "../pages/Login";
 import Home from "../pages/Home";
 import RaceSelector from "../pages/RaceSelector";
 import NewCharacter from "../pages/NewCharacter";
+import { CharacterSheet } from "../pages/CharacterSheet";
 
 
 function App() {
@@ -30,11 +31,11 @@ function App() {
           <Route path="/new">
             <NewCharacter user={user} />
           </Route>
-          <Route path="/character_creator">
-            <RaceSelector user={user} race/>
-          </Route>
           <Route path="/">
-            <Home/>
+            <Home user={user}/>
+          </Route>
+          <Route path="/sheet">
+            <CharacterSheet user={user}/>
           </Route>
         </Switch>
       </main>

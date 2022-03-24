@@ -9,7 +9,7 @@ class CreatePlayers < ActiveRecord::Migration[6.1]
       t.string :character_race
       t.string :character_second_race, null: true
       t.integer :ability_scores, array: true
-      t.string :skills, array: true
+      t.string :skills, hash: true
       t.string  :proficiencies, array: true
       t.string  :languages, object: true
       t.string :alignment

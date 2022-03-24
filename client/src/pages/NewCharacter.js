@@ -17,6 +17,7 @@ import FormControlLabel from '@mui/material/FormControlLabel';
 import FormHelperText from '@mui/material/FormHelperText';
 import Checkbox from '@mui/material/Checkbox';
 import AbilityScorer from "./AbilityScorer";
+import { CharacterSheet } from "./CharacterSheet";
 function NewCharacter({ user }) {
       const [characterName, setCharacterName] = useState("")
   const [race, setRace] = useState("");
@@ -73,11 +74,14 @@ function NewCharacter({ user }) {
        user_id: user.id,
        character_race: race,
        character_class: playerClass,
-       character_name: characterName
+       character_name: characterName,
+       skills: abScores
+
+
       }),
     }).then((r) => {
       if (r.ok) {
-        history.push("/new");
+        history.push("/")
       } else {
         
       }
@@ -128,7 +132,9 @@ function NewCharacter({ user }) {
        
           <ClassSelector allClasses={allClasses} allClassDetails={allClassDetails} abScores={abScores} setAbScores={setAbScores} playerClass={playerClass} setPlayerClass={setPlayerClass}/>
         <AbilityScorer abScores={abScores} setAbScores={setAbScores} />
-        <Button onClick={handleSheet}></Button>
+        <Button onClick={handleSheet}>Create this character</Button>
+
+
   </>
   );
   // eslint-disable-next-line no-unreachable

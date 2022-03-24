@@ -11,6 +11,7 @@ export default function ClassSelector({allClasses, allClassDetails, abScores, se
      const handleChange = val => setValue([...value, val]);
     let indices=[]
     const handleSelectClass = (e) => {
+        e.preventDefault()
         setPlayerClass(e.target.value)
     }
   return (

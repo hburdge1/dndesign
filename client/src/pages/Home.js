@@ -6,8 +6,13 @@ import { Box, Button } from "../styles";
 import { CharacterSheet } from "./CharacterSheet"
 
 
-function Home() {
-    // const [allClasses, setAllClasses] = useState([]);
+function Home({ user }) {
+    const [showSheet, setShowSheet]= useState(false)
+    const [player, setPlayer] = useState({})
+    function loadSheet(p) {
+        setShowSheet(!showSheet)
+        setPlayer()
+    }
     // const baseUrl = "https://www.dnd5eapi.co/api"
     // let arr =[allClasses]
     // useEffect(() => {
@@ -19,18 +24,13 @@ function Home() {
   return (
     <Wrapper>
             <Box>
-    <CharacterSheet />
-              <h2></h2>
-              <p>
-              </p>
-              <ReactMarkdown></ReactMarkdown>
-            </Box>
+              {user.players.map((p)=> (
+                // <Button value={p} onClick={loadSheet(p)}>{p.character_name}</Button>
+                <CharacterSheet player={p} />
+              ))}
 
-        ))
-      ) : (<p></p>
-
-      )
-
+        {/* { showSheet ?  (<CharacterSheet player={player} />) : (<p></p> )} */}
+                </Box>
     </Wrapper>
   );
 }

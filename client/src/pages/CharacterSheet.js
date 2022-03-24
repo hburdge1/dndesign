@@ -1,21 +1,30 @@
 import React from "react";
 
 
-function CharacterSheet(){
-	function countPreparedSpells() {
-		const doCalc = (level1IDs, level2IDs, level3IDs, level4IDs, level5IDs, level6IDs, level7IDs, level8IDs, level9IDs) => {
-			const attrs = [
-				...level1IDs.map(id => `repeating_spellbooklevel1_${id}_spellisprepared`),
-				...level2IDs.map(id => `repeating_spellbooklevel2_${id}_spellisprepared`),
-				...level3IDs.map(id => `repeating_spellbooklevel3_${id}_spellisprepared`),
-				...level4IDs.map(id => `repeating_spellbooklevel4_${id}_spellisprepared`),
-				...level5IDs.map(id => `repeating_spellbooklevel5_${id}_spellisprepared`),
-				...level6IDs.map(id => `repeating_spellbooklevel6_${id}_spellisprepared`),
-				...level7IDs.map(id => `repeating_spellbooklevel7_${id}_spellisprepared`),
-				...level8IDs.map(id => `repeating_spellbooklevel8_${id}_spellisprepared`),
-				...level9IDs.map(id => `repeating_spellbooklevel9_${id}_spellisprepared`)
-			];
-		}
+function CharacterSheet({ player }){
+
+// var map = new Map(); 
+console.log(player.skills['WIS'])
+      
+ // Loop to insert key & value in this object one by one
+//  for(var i = 0; i < player.skills.length; i++){ 
+//     map.set(player.skills[i], player.skills[i].value); 
+// } 
+// console.log(map)
+	// function countPreparedSpells() {
+	// 	const doCalc = (level1IDs, level2IDs, level3IDs, level4IDs, level5IDs, level6IDs, level7IDs, level8IDs, level9IDs) => {
+	// 		const attrs = [
+	// 			...level1IDs.map(id => `repeating_spellbooklevel1_${id}_spellisprepared`),
+	// 			...level2IDs.map(id => `repeating_spellbooklevel2_${id}_spellisprepared`),
+	// 			...level3IDs.map(id => `repeating_spellbooklevel3_${id}_spellisprepared`),
+	// 			...level4IDs.map(id => `repeating_spellbooklevel4_${id}_spellisprepared`),
+	// 			...level5IDs.map(id => `repeating_spellbooklevel5_${id}_spellisprepared`),
+	// 			...level6IDs.map(id => `repeating_spellbooklevel6_${id}_spellisprepared`),
+	// 			...level7IDs.map(id => `repeating_spellbooklevel7_${id}_spellisprepared`),
+	// 			...level8IDs.map(id => `repeating_spellbooklevel8_${id}_spellisprepared`),
+	// 			...level9IDs.map(id => `repeating_spellbooklevel9_${id}_spellisprepared`)
+	// 		];
+	// 	}
 	// 		getAttrs(attrs, v => {
 	// 			values = Object.values(v).map(a => (parseInt(a)));
 	// 			const total = values.reduce((a, b) => a + b, 0);
@@ -42,7 +51,7 @@ function CharacterSheet(){
 	// 			});
 	// 		});
 	// 	});
-	}
+	
 
 //     on('sheet:opened',function(){
 //       countPreparedSpells();
@@ -446,29 +455,29 @@ function CharacterSheet(){
 
     return(
         <>
-    <div className="sheet-overall-wrapper">
+    {/* <div className="sheet-overall-wrapper"> */}
 	{/* <!-- PC / NPC toggle */} 
-	<input class="sheet-is-npc" type="checkbox" name="attr_is_npc" value="1"/><span class="sheet-is-npc-tab"/>
+	{/* <input class="sheet-is-npc" type="checkbox" name="attr_is_npc" value="1"/><span class="sheet-is-npc-tab"/>
 	<div style={{float: 'right'}}>
-		<input type="checkbox" name="attr_default_ro" className="sheet-ro-checkbox" value="1" /><span className="sheet-ro-label"></span>
+		<input type="checkbox" name="attr_default_ro" className="sheet-ro-checkbox" value="1" /><span className="sheet-ro-label"></span> */}
 		{/* <!-- Modal template Should be placed as the first element immediately after the input checkbox to open it */} 
-		<div className="sheet-ro-modal sheet-save-modal">
-			<div>
+		{/* <div className="sheet-ro-modal sheet-save-modal">
+			<div> */}
 				{/* <!-- Modal Title and close button row */} 
-				<div className="sheet-row sheet-ro-header sheet-border-bottom sheet-padb">
+				{/* <div className="sheet-row sheet-ro-header sheet-border-bottom sheet-padb">
 					<div className="sheet-col-3-4 sheet-ro-title">Default Roll Options</div>
 					<div className="sheet-col-1-4 sheet-ro-close-wrapper">
 						<input type="checkbox" name="attr_default_ro" className="sheet-ro-close-checkbox" value="1" />
 						<span className="sheet-ro-close-label"></span>
 					</div>
-				</div>
+				</div> */}
 				{/* <!--Help text and copy of roll button*/} 
-				<div className="sheet-row sheet-padb">
+				{/* <div className="sheet-row sheet-padb">
 					<div className="sheet-col-2-3 sheet-small-note">The settings here apply to any rolls set to use the default roll options</div>
 				</div>
-				<hr/>
+				<hr/> */}
 				{/* <!-- Define options here */} 
-				<div className="sheet-row sheet-checkbox-row">
+				{/* <div className="sheet-row sheet-checkbox-row">
 					<div className="sheet-col-1-3 sheet-ro-optionlabel">Roll type</div>
 					<div className="sheet-col-2-3 sheet-padl sheet-ro-option">
 						<select name="attr_ro_default_rolltype">
@@ -480,11 +489,11 @@ function CharacterSheet(){
 						</select>
 					</div>
 				</div>
-			</div>
+			</div> */}
 			{/* <!-- close inner modal div --> */}
-		</div>
+		{/* </div> */}
 		{/* <!-- close outer modal div --> */}
-	</div>
+	{/* </div> */}
 	<div className="sheet-core-header sheet-padb">
 		<div className="sheet-row">
 			<div className="sheet-col-1-3 sheet-margin-top"><img src="http://i.imgur.com/Y8KHPKm.png" alt="Dungeons and Dragons (5th edition)"/></div>
@@ -526,7 +535,7 @@ function CharacterSheet(){
 			<div className="sheet-row">
 				<div className="sheet-col-1-2 sheet-padr">
 					<h4 className="sheet-center">Core Stats</h4>
-					<div className="sheet-row sheet-sub-header">
+					{/* <div className="sheet-row sheet-sub-header">
 						<div className="sheet-col-1-7 sheet-center sheet-small-label">Score</div>
 						<div className="sheet-col-1-7 sheet-center sheet-small-label">&nbsp;</div>
 						<div className="sheet-col-1-7 sheet-center sheet-small-label">Mod</div>
@@ -534,14 +543,20 @@ function CharacterSheet(){
 						<div className="sheet-col-1-7 sheet-center sheet-small-label">Save Mod</div>
 						<div className="sheet-col-1-7 sheet-center sheet-small-label">Save</div>
 						<div className="sheet-col-1-7 sheet-center sheet-small-label">&nbsp;</div>
-					</div>
+					</div> */}
 					<div className="sheet-row">
 						<div className="sheet-col-1-7">
-							<input type="number" name="attr_strength" min="1" step="1" value="10" />
+							{/* <input type="number" name="attr_strength" min="1" step="1" value="10" /> */}
+							<span>{player.skills['STR']}</span>
+							<span>{player.skills['WIS']}</span>
+							<span>{player.skills['INT']}</span>
+							<span>{player.skills['CHA']}</span>
+							<span>{player.skills['CON']}</span>
+							<span>{player.skills['DEX']}</span>
 						</div>
 						<div className="sheet-col-1-7 sheet-core-stat-label">Str</div>
-						<div className="sheet-col-1-7">
-							<input type="number" name="attr_strength_mod" value="(floor((@{strength}-10)/2))" disabled="disabled" />
+						{/* <div className="sheet-col-1-7">
+							<input type="number" name="attr_strength_mod" value={player.skills['str']/10} />
 						</div>
 						<div className="sheet-col-1-7 sheet-vert-middle sheet-checkbox-row">
 							<input type="checkbox" name="attr_strength_save_prof" value="@{PB}" />
@@ -552,31 +567,31 @@ function CharacterSheet(){
 						<div className="sheet-col-1-7 sheet-center">
 							<button type="roll" className="sheet-core-save" name="roll_Strength_Save" value="&{template:5eDefault} {{character_name=@{character_name}}} {{title=STR saving throw}} {{subheader=@{character_name}}} {{save=1}} {{simple=1}} {{rollname=STR save}} {{roll1=[[ 1d20 + [[@{strength_save_mod}]] + [[@{global_saving_bonus}]] ]]}} @{ro_strsave} @{classNameactionstrengthsave}">Save</button>
 						</div>
-						<div className="sheet-col-1-7 sheet-align-center">
-							<input type="checkbox" name="attr_str_save_ro" className="sheet-ro-checkbox" value="1" /><span className="sheet-ro-label">y</span>
+						<div className="sheet-col-1-7 sheet-align-center"> */}
+							{/* <input type="checkbox" name="attr_str_save_ro" className="sheet-ro-checkbox" value="1" /><span className="sheet-ro-label">y</span> */}
 							{/* <!-- Modal template Should be placed as the first element immediately after the input checkbox to open it --> */}
-							<div className="sheet-ro-modal sheet-save-modal">
-								<div>
+							{/* <div className="sheet-ro-modal sheet-save-modal">
+								<div> */}
 									{/* <!-- Modal Title and close button row --> */}
-									<div className="sheet-row sheet-ro-header sheet-border-bottom sheet-padb">
+									{/* <div className="sheet-row sheet-ro-header sheet-border-bottom sheet-padb">
 										<div className="sheet-col-3-4 sheet-ro-title">STR save throw roll options</div>
 										<div className="sheet-col-1-4 sheet-ro-close-wrapper">
 											<input type="checkbox" name="attr_str_save_ro" className="sheet-ro-close-checkbox" value="1" />
 											<span className="sheet-ro-close-label"></span>
 										</div>
-									</div>
+									</div> */}
 									{/* <!-- define hidden attribute to store summary of all options selected --> */}
-									<input type="hidden" name="attr_ro_strsave" value="@{ro_strsave_rolltype}@{ro_strsave_roll2_closing} @{ro_strsave_emoteprompt} @{ro_strsave_showmath}" />
+									{/* <input type="hidden" name="attr_ro_strsave" value="@{ro_strsave_rolltype}@{ro_strsave_roll2_closing} @{ro_strsave_emoteprompt} @{ro_strsave_showmath}" /> */}
 									{/* <!--Help text and copy of roll button--> */}
-									<div className="sheet-row sheet-padb">
-										<div className="sheet-col-2-3 sheet-small-note">The settings here apply <b>only</b> to the roll specified in the title above. </div>
-										<div className="sheet-col-1-3 sheet-padl">
+									{/* <div className="sheet-row sheet-padb">
+										<div className="sheet-col-2-3 sheet-small-note">The settings here apply <b>only</b> to the roll specified in the title above. </div> */}
+										{/* <div className="sheet-col-1-3 sheet-padl">
 											<button type="roll" className="sheet-roll" name="roll_Strength_Save_ro" value="{template:5eDefault} {{character_name=@{character_name}}} {{title=STR saving throw}} {{subheader=@{character_name}}} {{save=1}} {{simple=1}} {{rollname=STR save}} {{roll1=[[ 1d20 + [[@{strength_save_mod}]] + [[@{global_saving_bonus}]] ]]}} @{ro_strsave} @{classNameactionstrengthsave}">Roll</button>
 										</div>
 									</div>
-									<hr/>
+									<hr/> */}
 									{/* <!-- Define options here --> */}
-									<div className="sheet-row sheet-checkbox-row">
+									{/* <div className="sheet-row sheet-checkbox-row">
 										<div className="sheet-col-1-3 sheet-ro-optionlabel">Roll type</div>
 										<div className="sheet-col-2-3 sheet-padl sheet-ro-option">
 											<input type="hidden" name="attr_ro_strsave_roll2_closing" value="+ [[@{strength_save_mod}]] + [[@{global_saving_bonus}]] ]] }}" />
@@ -606,15 +621,15 @@ function CharacterSheet(){
 										+ (@{global_saving_bonus}) [Global save bonus]}}"/>
 										</div>
 									</div>
-								</div>
+								</div> */}
 								{/* <!-- close inner modal div --> */}
 							</div>
 							{/* <!-- close outer modal div --> */}
-						</div>
-					</div>
+						{/* </div>
+					</div> */}
 					<div className="sheet-row">
 						<div className="sheet-col-1-7">
-							<input type="number" name="attr_dexterity" min="1" step="1" value="10" />
+							<input type="number" name="attr_dexterity" min="1" step="1" value={player.skills['DEX']} />
 						</div>
 						<div className="sheet-col-1-7 sheet-core-stat-label">Dex</div>
 						<div className="sheet-col-1-7">
@@ -691,7 +706,7 @@ function CharacterSheet(){
 					</div>
 					<div className="sheet-row">
 						<div className="sheet-col-1-7">
-							<input type="number" name="attr_constitution" min="1" step="1" value="10" />
+							<input type="number" name="attr_constitution" min="1" step="1" value={player.skills["CON"]} />
 						</div>
 						<div className="sheet-col-1-7 sheet-core-stat-label">Con</div>
 						<div className="sheet-col-1-7">
@@ -845,7 +860,7 @@ function CharacterSheet(){
 					</div>
 					<div className="sheet-row">
 						<div className="sheet-col-1-7">
-							<input type="number" name="attr_wisdom" min="1" step="1" value="10" />
+							<input type="number" name="attr_wisdom" min="1" step="1" value={player.skills['WIS']} />
 						</div>
 						<div className="sheet-col-1-7 sheet-core-stat-label">Wis</div>
 						<div className="sheet-col-1-7">
@@ -922,7 +937,7 @@ function CharacterSheet(){
 					</div>
 					<div className="sheet-row">
 						<div className="sheet-col-1-7">
-							<input type="number" name="attr_charisma" min="1" step="1" value="10" />
+							<input type="number" name="attr_charisma" min="1" step="1" value={player.skills['CHA']} />
 						</div>
 						<div className="sheet-col-1-7 sheet-core-stat-label">Cha</div>
 						<div className="sheet-col-1-7">
@@ -17348,7 +17363,7 @@ actionmeleeweapon}">Attack</button>
 				</div>
 				<div className="sheet-row">
 					<div className="sheet-col-1-6">
-						<input type="number" name="attr_npc_intelligence" min="1" step="1" value="10" />
+						<input type="number" name="attr_npc_intelligence" min="1" step="1" value={player.skills['INT']} />
 					</div>
 					<div className="sheet-col-1-6 sheet-core-stat-label">Int</div>
 					<div className="sheet-col-1-6">
@@ -18506,7 +18521,7 @@ actionmeleeweapon}">Attack</button>
 		</div>
 		{/* END npc action row */}
 		{/* BEGIN npc action row */}
-		<div className="sheet-npc-row">
+		{/* <div className="sheet-npc-row">
 			<div className="sheet-row">
 				<div className="sheet-col-1-12 sheet-center sheet-small-label sheet-vert-bottom">Row</div>
 				<div className="sheet-col-1-2 sheet-center sheet-small-label sheet-vert-bottom">Name</div>
@@ -18548,7 +18563,7 @@ actionmeleeweapon}">Attack</button>
 					<textarea className="sheet-medium-textarea" name="attr_npc_action_effect14"></textarea>
 				</div>
 			</div>
-		</div> 
+		</div>  */}
 		{/* END npc action row */}
 		{/* BEGIN npc action row */}
 		{/* <div className="sheet-npc-row">
@@ -19253,11 +19268,7 @@ actionmeleeweapon}">Attack</button>
 				<div className="sheet-col-7-12 sheet-padr sheet-rt-value"></div>
 			</div> */}
 			{/* {{allprops()}} */}
-		</div>
-	</div>
-	</div>
-	</div>
-
+			</div></div></div>
 </>
 
 )

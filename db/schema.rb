@@ -52,9 +52,9 @@ ActiveRecord::Schema.define(version: 2022_03_15_170404) do
     t.string "character_race"
     t.string "character_second_race"
     t.integer "ability_scores", array: true
-    t.string "skills", array: true
+    t.string "skills"
     t.string "proficiencies", array: true
-    t.string "languages", array: true
+    t.string "languages"
     t.string "alignment"
     t.string "background"
     t.string "equipment", array: true

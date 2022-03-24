@@ -11,14 +11,15 @@ function NavBar({ user, setUser }) {
       }
     });
   }
-
+  console.log(user.players)
   return (
     <Wrapper>
       <Logo>
         <Link to="/">DNDesign</Link>
       </Logo>
-      <Nav>
-                 <Button as={Link} to="/players">
+      <Nav> 
+        <Button></Button>
+        <Button as={Link} to="/players">
             see my characters
           </Button>
           <span> </span>

@@ -11,4 +11,5 @@ Rails.application.routes.draw do
       get '/logged_in', to: 'sessions#is_logged_in?'
       post '/players', to: 'players#create'
       post '/character_sheet', to: 'character_sheets#create'
+        post "/signup", to: "users#create"
 end
