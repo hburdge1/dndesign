@@ -1,9 +1,12 @@
 import React from "react";
+import { useState } from "react";
 import { Link } from "react-router-dom";
 import styled from "styled-components";
+import { CharacterSheet } from "../pages/CharacterSheet";
 import { Button } from "../styles";
 
 function NavBar({ user, setUser }) {
+
   function handleLogoutClick() {
     fetch("/logout", { method: "DELETE" }).then((r) => {
       if (r.ok) {
@@ -11,6 +14,7 @@ function NavBar({ user, setUser }) {
       }
     });
   }
+
   console.log(user.players)
   return (
     <Wrapper>
@@ -18,7 +22,7 @@ function NavBar({ user, setUser }) {
         <Link to="/">DNDesign</Link>
       </Logo>
       <Nav> 
-        <Button></Button>
+
         <Button as={Link} to="/players">
             see my characters
           </Button>

@@ -4,18 +4,24 @@ import { useState } from 'react';
 import { Button, Box } from '../styles'
 
 
-export default function AbilityScorer({abScores, setAbScores}) {
+export default function AbilityScorer({abScores, setAbScores, playerClass, allClassDetails, hitPoints, setHitPoints}) {
+let hitDie=0
+  allClassDetails.forEach((r)=>{
+    if (r.index == playerClass){
+      hitDie=r.hit_die
+    }
+  })
 
     function generateScores(){
         setAbScores({
-            'CON': Math.floor(Math.random() * 20),
-            'WIS': Math.floor(Math.random() * 20),
-            'STR': Math.floor(Math.random() * 20),
-            'INT': Math.floor(Math.random() * 20),
-            'DEX': Math.floor(Math.random() * 20),
-            'CHA': Math.floor(Math.random() * 20)
-        }
-        )
+            'CON': Math.floor(Math.random() * (18 - 8 + 1) + 8 ),
+            'WIS': Math.floor(Math.random() * (18 - 8 + 1) + 8 ),
+            'STR': Math.floor(Math.random() * (18 - 8 + 1) + 8 ),
+            'INT': Math.floor(Math.random() * (18 - 8 + 1) + 8 ),
+            'DEX': Math.floor(Math.random() * (18 - 8 + 1) + 8 ),
+            'CHA': Math.floor(Math.random() * (18 - 8 + 1) + 8 ),
+        })
+       setHitPoints(Math.ceil(((Math.random() * hitDie)+ 1) + (abScores['CON'] - 10)/2))
     }
   return (
     <div className="App">
@@ -27,7 +33,8 @@ export default function AbilityScorer({abScores, setAbScores}) {
             <Box><span>INT: {abScores["INT"]}</span>  </Box>
             <Box><span>DEX: {abScores["DEX"]}</span>  </Box>
             <Box><span>STR: {abScores["STR"]}</span>  </Box>
-            
+            <br></br>
+            <Box>HP MAX: {hitPoints}</Box>
         </Box>
         
            <Button onClick={generateScores}> Roll scores</Button>

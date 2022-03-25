@@ -7,30 +7,29 @@ import { CharacterSheet } from "./CharacterSheet"
 
 
 function Home({ user }) {
-    const [showSheet, setShowSheet]= useState(false)
+    const [allPlayers, setAllPlayers]=useState([])
     const [player, setPlayer] = useState({})
+    const [showSheet, setShowSheet]= useState(false)
+
+      useEffect(() => {
+    fetch("/players")
+      .then((r) => r.json())
+      .then(c=>setAllPlayers(c));
+  }, []);
+
     function loadSheet(p) {
         setShowSheet(!showSheet)
-        setPlayer()
+        setPlayer(p)
     }
-    // const baseUrl = "https://www.dnd5eapi.co/api"
-    // let arr =[allClasses]
-    // useEffect(() => {
-    // fetch(baseUrl + "/classes/")
-    // .then(r=>r.json())
-    // .then(c => setAllClasses(c.results[0])
-    // )}, [])
-
   return (
     <Wrapper>
-            <Box>
-              {user.players.map((p)=> (
-                // <Button value={p} onClick={loadSheet(p)}>{p.character_name}</Button>
+      {allPlayers.map((p)=> (
+                <>
+                <Button value={p} onClick={()=>loadSheet(p)}>{p.character_name}</Button>
                 <CharacterSheet player={p} />
+                </>
               ))}
-
         {/* { showSheet ?  (<CharacterSheet player={player} />) : (<p></p> )} */}
-                </Box>
     </Wrapper>
   );
 }

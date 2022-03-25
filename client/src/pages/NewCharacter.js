@@ -32,6 +32,7 @@ function NewCharacter({ user }) {
   const [toggleScorer, setToggleScorer]=useState(false)
   const history = useHistory();
   const [abScores, setAbScores]= useState({STR: 0, CON: 0, CHA: 0, WIS: 0, INT: 0, DEX: 0})
+    const [hitPoints, setHitPoints]=useState(0)
   const baseUrl = "https://www.dnd5eapi.co/api"
   let urlArr=[]
     const [isLoading, setIsLoading] = useState(false);
@@ -119,7 +120,7 @@ function NewCharacter({ user }) {
         <Button onClick={()=>setToggleClass(!toggleClass)}>select a class</Button>
         {toggleClass? (
           <ClassSelector allClasses={allClasses} allClassDetails={allClassDetails} proficiencyState={proficiencyState} setProficiencyState={setProficiencyState} abScores={abScores} setAbScores={setAbScores} playerClass={playerClass} setPlayerClass={setPlayerClass}/>) : (<p></p>)}
-        {toggleScorer? (<AbilityScorer abScores={abScores} setAbScores={setAbScores} />):(<p></p>)}
+        {toggleScorer? (<AbilityScorer abScores={abScores} hitPoints={hitPoints} setHitPoints={setHitPoints} allClassDetails={allClassDetails} setAbScores={setAbScores} playerClass={playerClass}/>):(<p></p>)}
          <Button onClick={()=>setToggleScorer(!toggleScorer)}>Roll your scores</Button>
         <Button onClick={handleSheet}>Create this character</Button>
 
