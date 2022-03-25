@@ -5,7 +5,6 @@ import { render } from 'react-dom'
 import { useEffect, useState } from 'react'
 import { Carousel, Card, Form} from 'react-bootstrap'
 import { Button, FormField, Label, Input } from '../styles'
-import RaceCard from '../styles/RaceCard'
 import Popup from 'reactjs-popup';
 import 'reactjs-popup/dist/index.css';
 

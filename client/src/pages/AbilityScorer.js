@@ -2,7 +2,6 @@
 import React from 'react'
 import { useState } from 'react';
 import { Button, Box } from '../styles'
-import Dice from 'react-dice-roll'
 
 
 export default function AbilityScorer({abScores, setAbScores}) {

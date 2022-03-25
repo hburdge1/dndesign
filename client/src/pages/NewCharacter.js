@@ -6,7 +6,6 @@ import ReactMarkdown from "react-markdown";
 import { Error, FormField, Button, Label, Textarea } from "../styles";
 import * as React from 'react';
 import { useState, useEffect } from "react";
-import CheckboxesGroup from "../styles/checkboxesGroup";
 import Box from '@mui/material/Box';
 import ClassSelector from "./ClassSelector";
 import RaceSelector from "./RaceSelector";
@@ -27,9 +26,10 @@ function NewCharacter({ user }) {
   const [errors, setErrors] = useState([]);
   const [playerName, setPlayerName] = useState("");
   const [playerBackground, setPlayerBackground]= useState('');
-  const [activeTab, setActiveTab] = useState("");
+  const [toggleClass, setToggleClass]=useState(false)
   const [proficiencyState, setProficiencyState]= useState([])
-  const [toggle, setToggle] = useState(false)
+  const [toggle, setToggle] = useState(false);
+  const [toggleScorer, setToggleScorer]=useState(false)
   const history = useHistory();
   const [abScores, setAbScores]= useState({STR: 0, CON: 0, CHA: 0, WIS: 0, INT: 0, DEX: 0})
   const baseUrl = "https://www.dnd5eapi.co/api"
@@ -58,7 +58,7 @@ function NewCharacter({ user }) {
       console.log(abScores['CON'])
       
       let profArr=[]
-     allClassDetails.forEach((a, i)=> profArr.push(<CheckboxesGroup proficiencyState={proficiencyState} setProficiencyState={setProficiencyState}/>))
+    //  allClassDetails.forEach((a, i)=> profArr.push(<CheckboxesGroup proficiencyState={proficiencyState} setProficiencyState={setProficiencyState}/>))
      
     let saveArr=[]
      allClassDetails.forEach((a, i)=> saveArr.push(<ul>{a.saving_throws.map(a=><li>{a.name}</li>)}</ul>))
@@ -110,16 +110,17 @@ function NewCharacter({ user }) {
         sx={{ m: 3 }}
         variant="standard"
       >
-        <Button type="submit">Choose</Button>
       </FormControl>
         </Box>
 
         <Button onClick={()=>setToggle(!toggle)}>select a race</Button>
         {toggle? (
           <RaceSelector user={user} setToggle={setToggle} toggle={toggle} race={race} setRace={setRace} characterName={characterName} setCharacterName={setCharacterName} abScores={abScores} setAbScores={setAbScores}/>) : (<p></p>)}
-       
-          <ClassSelector allClasses={allClasses} allClassDetails={allClassDetails} proficiencyState={proficiencyState} setProficiencyState={setProficiencyState} abScores={abScores} setAbScores={setAbScores} playerClass={playerClass} setPlayerClass={setPlayerClass}/>
-        <AbilityScorer abScores={abScores} setAbScores={setAbScores} />
+        <Button onClick={()=>setToggleClass(!toggleClass)}>select a class</Button>
+        {toggleClass? (
+          <ClassSelector allClasses={allClasses} allClassDetails={allClassDetails} proficiencyState={proficiencyState} setProficiencyState={setProficiencyState} abScores={abScores} setAbScores={setAbScores} playerClass={playerClass} setPlayerClass={setPlayerClass}/>) : (<p></p>)}
+        {toggleScorer? (<AbilityScorer abScores={abScores} setAbScores={setAbScores} />):(<p></p>)}
+         <Button onClick={()=>setToggleScorer(!toggleScorer)}>Roll your scores</Button>
         <Button onClick={handleSheet}>Create this character</Button>
 
 

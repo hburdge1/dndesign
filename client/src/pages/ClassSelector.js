@@ -49,19 +49,10 @@ export default function ClassSelector({allClasses, allClassDetails, abScores, pr
          </>
        </Popup>
       <form >
-           <FormField>
-            <Label htmlFor="character_name">Name your character</Label>
-            <Input
-            //   type="text"
-            //   id="character_name"
-            //   value={characterName}
-            //   onChange={(e) => setCharacterName(e.target.value)}
-            />
-          </FormField>
           <FormField>
               <Button onClick={handleSelectClass} value={r.index}>Choose this class</Button>
           </FormField>
-                    <FormField>
+            <FormField>
           </FormField>
         </form>
     </Carousel.Caption>
