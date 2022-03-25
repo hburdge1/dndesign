@@ -1,8 +1,14 @@
-import React from "react";
+import {React, useState} from "react";
 import {Box} from '../styles'
+import NumericInput from 'react-numeric-input';
 
 function CharacterSheet({ player }){
-
+	const [currentHP, setCurrentHP]=useState(player.hit_points)
+	console.log(player)
+	const submitDamage= (e) =>{
+		e.preventDefault()
+		console.log(currentHP - e.target.value)
+	}
 
     return(
         <>
@@ -76,8 +82,13 @@ function CharacterSheet({ player }){
 						<div className="sheet-col-1-2 sheet-padr sheet-border-right">
 							<div className="sheet-row">
 								<div className="sheet-col-1-2 sheet-small-label sheet-center">
-									<input className="sheet-underlined" type="number" name="attr_HP_max" min="1" step="1"/>
-									<br/>Max</div>
+									<span  id='hp-max'>{player.hit_points}</span><br/>Max HP</div>
+									<span id='hp-current'>{currentHP}</span>
+
+									<form onSubmit={() => submitDamage}>
+								<NumericInput   min={0} max={player.hit_points} value={1} step={1}/>
+									<button type='submit'>inflict damage</button>
+									</form>
 							</div>
 						</div>
 						<div className="sheet-col-1-4 sheet-padl sheet-padr sheet-border-right sheet-small-label sheet-center">

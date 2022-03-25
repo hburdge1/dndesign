@@ -3,18 +3,11 @@ import { useHistory } from "react-router";
 import styled from "styled-components";
 import { Tabs, Tab } from "react-bootstrap";
 import ReactMarkdown from "react-markdown";
-import { Error, FormField, Button, Label, Textarea } from "../styles";
+import { Error, FormField, Button, Label, Box, Textarea } from "../styles";
 import * as React from 'react';
 import { useState, useEffect } from "react";
-import Box from '@mui/material/Box';
 import ClassSelector from "./ClassSelector";
 import RaceSelector from "./RaceSelector";
-import FormLabel from '@mui/material/FormLabel';
-import FormControl from '@mui/material/FormControl';
-import FormGroup from '@mui/material/FormGroup';
-import FormControlLabel from '@mui/material/FormControlLabel';
-import FormHelperText from '@mui/material/FormHelperText';
-import Checkbox from '@mui/material/Checkbox';
 import AbilityScorer from "./AbilityScorer";
 import { CharacterSheet } from "./CharacterSheet";
 function NewCharacter({ user }) {
@@ -104,14 +97,6 @@ function NewCharacter({ user }) {
     {indices}
  </Tabs>
   <Box sx={{ display: 'flex' }}>
-      <FormControl
-        required
-      
-        component="fieldset"
-        sx={{ m: 3 }}
-        variant="standard"
-      >
-      </FormControl>
         </Box>
 
         <Button onClick={()=>setToggle(!toggle)}>select a race</Button>

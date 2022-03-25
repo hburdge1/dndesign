@@ -1,11 +1,9 @@
 import { Carousel } from 'react-bootstrap'
 import React from 'react'
 import Popup from 'reactjs-popup'
-import Select from 'react-select'
 import { useEffect, useState } from 'react'
 import { ToggleButton, ToggleButtonGroup } from 'react-bootstrap'
 import { Button, FormField, Label, Input } from '../styles'
-import { Checkbox } from '@mui/material'
 export default function ClassSelector({allClasses, allClassDetails, abScores, proficiencyState, setProficiencyState, setAbScores, playerClass, setPlayerClass}) {
 
 
