@@ -3,9 +3,10 @@ import {Box, FormField} from '../styles'
 import InputNumber from 'react-input-number';
 import { Button } from "bootstrap";
 
-function CharacterSheet({ player }){
+function CharacterSheet({ player, history }){
 	const [currentHP, setCurrentHP]=useState(player.hit_points)
 	const [damage, setDamage]=useState(0)
+	
 	console.log(currentHP)
 	// const submitDamage= (e) =>{
 	// 	e.preventDefault()
@@ -16,7 +17,23 @@ function CharacterSheet({ player }){
 		let hpNum = parseInt(currentHP) 
 		let damageNum= parseInt(damage)
 		setCurrentHP(hpNum-damageNum)
-	}
+  	 fetch(`/players/${player.id}`, {
+      method: "PATCH",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+		hit_points: currentHP
+      }),
+    }).then((r) => {
+      if (r.ok) {
+        history.push("/")
+      } else {
+    
+      }
+    });
+
+  }
     return(
         <>
 	   <div className="sheet-core-header sheet-padb">

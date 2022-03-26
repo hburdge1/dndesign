@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { useHistory } from 'react-router'
 import ReactMarkdown from "react-markdown";
 import { Link } from "react-router-dom";
 import styled from "styled-components";
@@ -10,6 +11,7 @@ function Home({ user }) {
     const [allPlayers, setAllPlayers]=useState([])
     const [player, setPlayer] = useState({})
     const [showSheet, setShowSheet]= useState(false)
+      const history = useHistory();
 
       useEffect(() => {
     fetch("/players")
@@ -26,7 +28,7 @@ function Home({ user }) {
       {allPlayers.map((p)=> (
                 <>
                 <Button value={p} onClick={()=>loadSheet(p)}>{p.character_name}</Button>
-                <CharacterSheet player={p} />
+                <CharacterSheet history = {history} player={p} />
                 </>
               ))}
         {/* { showSheet ?  (<CharacterSheet player={player} />) : (<p></p> )} */}

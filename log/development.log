@@ -31853,3 +31853,92 @@ Processing by PlayersController#index as */*
 Completed 200 OK in 4ms (Views: 2.2ms | ActiveRecord: 0.5ms | Allocations: 2370)
 
 
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2022-03-25 19:47:31 -0700
+  
+SyntaxError (/Users/hannahburdge/phase-five-app/config/routes.rb:15: syntax error, unexpected local variable or method, expecting `end'
+      patch '/players/:id' to "players#update"
+                           ^~
+/Users/hannahburdge/phase-five-app/config/routes.rb:16: syntax error, unexpected `end', expecting end-of-input):
+  
+config/routes.rb:15: syntax error, unexpected local variable or method, expecting `end'
+config/routes.rb:16: syntax error, unexpected `end', expecting end-of-input
+config/routes.rb:15: syntax error, unexpected local variable or method, expecting `end'
+config/routes.rb:16: syntax error, unexpected `end', expecting end-of-input
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2022-03-25 19:47:31 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started POST "/login" for 127.0.0.1 at 2022-03-25 19:47:34 -0700
+  
+ActionController::RoutingError (No route matches [POST] "/login"):
+  
+Started POST "/login" for 127.0.0.1 at 2022-03-25 19:47:37 -0700
+  
+ActionController::RoutingError (No route matches [POST] "/login"):
+  
+Started POST "/login" for 127.0.0.1 at 2022-03-25 19:47:39 -0700
+  
+ActionController::RoutingError (No route matches [POST] "/login"):
+  
+Started POST "/login" for 127.0.0.1 at 2022-03-25 19:48:28 -0700
+  [1m[35m (2.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by SessionsController#create as */*
+  Parameters: {"username"=>"default", "password"=>"[FILTERED]", "session"=>{"username"=>"default", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "default"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:5:in `create'
+[active_model_serializers]   [1m[36mPlayer Load (0.7ms)[0m  [1m[34mSELECT "players".* FROM "players" WHERE "players"."user_id" = $1[0m  [["user_id", 6]]
+[active_model_serializers]   ↳ app/controllers/sessions_controller.rb:8:in `create'
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::Attributes (34.08ms)
+Completed 200 OK in 321ms (Views: 32.4ms | ActiveRecord: 22.5ms | Allocations: 24755)
+
+
+Started GET "/players" for 127.0.0.1 at 2022-03-25 19:48:29 -0700
+Processing by PlayersController#index as */*
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:12:in `authorize'
+  [1m[36mPlayer Load (0.6ms)[0m  [1m[34mSELECT "players".* FROM "players"[0m
+  ↳ app/controllers/players_controller.rb:4:in `index'
+[active_model_serializers]   [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/players_controller.rb:4:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (1.51ms)
+Completed 200 OK in 7ms (Views: 2.5ms | ActiveRecord: 1.0ms | Allocations: 2753)
+
+
+Started PATCH "/players1" for 127.0.0.1 at 2022-03-25 19:48:35 -0700
+  
+ActionController::RoutingError (No route matches [PATCH] "/players1"):
+  
+Started PATCH "/players/1" for 127.0.0.1 at 2022-03-25 19:48:59 -0700
+Processing by PlayersController#update as */*
+  Parameters: {"hit_points"=>9, "id"=>"1", "player"=>{"hit_points"=>9}}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:12:in `authorize'
+  [1m[36mPlayer Load (0.4ms)[0m  [1m[34mSELECT "players".* FROM "players" WHERE "players"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/players_controller.rb:12:in `update'
+[31mUnpermitted parameters: :hit_points, :id, :player[0m
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/players_controller.rb:13:in `update'
+[active_model_serializers] Rendered PlayerSerializer with ActiveModelSerializers::Adapter::Attributes (0.41ms)
+Completed 200 OK in 20ms (Views: 0.8ms | ActiveRecord: 1.1ms | Allocations: 2731)
+
+
+Started PATCH "/players/1" for 127.0.0.1 at 2022-03-25 19:49:33 -0700
+Processing by PlayersController#update as */*
+  Parameters: {"hit_points"=>6, "id"=>"1", "player"=>{"hit_points"=>6}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:12:in `authorize'
+  [1m[36mPlayer Load (0.4ms)[0m  [1m[34mSELECT "players".* FROM "players" WHERE "players"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/players_controller.rb:12:in `update'
+[31mUnpermitted parameter: :player[0m
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/players_controller.rb:13:in `update'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/players_controller.rb:13:in `update'
+  [1m[36mPlayer Update (0.4ms)[0m  [1m[33mUPDATE "players" SET "hit_points" = $1, "updated_at" = $2 WHERE "players"."id" = $3[0m  [["hit_points", 6], ["updated_at", "2022-03-26 02:49:33.205422"], ["id", 1]]
+  ↳ app/controllers/players_controller.rb:13:in `update'
+  [1m[36mTRANSACTION (1.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/players_controller.rb:13:in `update'
+[active_model_serializers] Rendered PlayerSerializer with ActiveModelSerializers::Adapter::Attributes (0.93ms)
+Completed 200 OK in 23ms (Views: 1.8ms | ActiveRecord: 11.5ms | Allocations: 16399)
+
+
