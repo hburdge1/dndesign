@@ -15,7 +15,7 @@ function NavBar({ user, setUser }) {
     });
   }
 
-  console.log(user.players)
+
   return (
     <Wrapper>
       <Logo>

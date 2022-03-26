@@ -25,13 +25,14 @@ function Home({ user }) {
     }
   return (
     <Wrapper>
-      {allPlayers.map((p)=> (
+      {allPlayers? (
+      allPlayers.map((p)=> (
                 <>
-                <Button value={p} onClick={()=>loadSheet(p)}>{p.character_name}</Button>
-                <CharacterSheet history = {history} player={p} />
+                <Button onClick={()=>loadSheet(p)}>{p.character_name}</Button>
+                
                 </>
-              ))}
-        {/* { showSheet ?  (<CharacterSheet player={player} />) : (<p></p> )} */}
+              ))) : (<p>Create a character to see its details here!</p>)}
+        { showSheet ?  (<CharacterSheet player={player} />) : (<p></p> )}
     </Wrapper>
   );
 }

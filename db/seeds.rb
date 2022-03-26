@@ -4,3 +4,4 @@ default=User.create!(id: 6, username: 'default', password: 'default')
 b=User.create!(username: 'bananabb', password: "acffff")
 
 a=Player.create!(user_id: 6, character_class: 'sorcerer', character_race: 'dragonborn', hit_points: 12, skills: {'CON': 2, WIS: 12, INT: 13, CHA: 17, STR: 8, DEX: 12}, character_name: 'Viola')
+Player.create!(user_id: 6, character_class: 'barbarian', character_race: 'dwarf', hit_points: 12, skills: {'CON': 18, WIS: 12, INT: 13, CHA: 11, STR: 8, DEX: 12}, character_name: 'Smerg')
