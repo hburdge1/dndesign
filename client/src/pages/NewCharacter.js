@@ -11,7 +11,7 @@ import RaceSelector from "./RaceSelector";
 import AbilityScorer from "./AbilityScorer";
 import { CharacterSheet } from "./CharacterSheet";
 function NewCharacter({ user }) {
-      const [characterName, setCharacterName] = useState("")
+  const [characterName, setCharacterName] = useState("")
   const [abBonuses, setAbBonuses] = useState({STR: 0, CON: 0, CHA: 0, WIS: 0, INT: 0, DEX: 0})
   const [race, setRace] = useState("");
   const [playerClass, setPlayerClass] = useState(""); 
@@ -62,6 +62,7 @@ function NewCharacter({ user }) {
      allClassDetails.forEach((a)=> nameArr.push(a.index))
 
  const handleSheet=()=>{
+  
    setIsLoading(true);
    fetch("/players", {
       method: "POST",
@@ -73,19 +74,24 @@ function NewCharacter({ user }) {
        character_race: race,
        character_class: playerClass,
        character_name: characterName,
-       skills: (abScores + abBonuses),
+       skills: {
+         'CON': (abScores['CON'] + abBonuses['CON']),
+         'WIS': (abScores['WIS'] + abBonuses['WIS']),
+         'INT': (abScores['INT'] + abBonuses['INT']),
+         'STR': (abScores['STR'] + abBonuses['STR']),
+         'DEX': (abScores['DEX'] + abBonuses['DEX']),
+         'CHA': (abScores['CHA'] + abBonuses['CHA']),
+      },
        proficiencies: proficiencyState
       }),
     }).then((r) => {
          setIsLoading(false);
       if (r.ok) {
         history.push("/")
-      } else {
     
       }
-    });
-
-  }
+    })
+    } 
     // function handleChange(e){
     //   setPlayerClass(e.target.checked)
     //   console.log(e.target.checked)
@@ -99,15 +105,15 @@ function NewCharacter({ user }) {
  </Tabs>
   <Box sx={{ display: 'flex' }}>
         </Box>
+        {race === ('')? <Button onClick={()=>setToggle(!toggle)}>select a race</Button> : <Button style={{backgroundColor: 'grey'}} onClick={()=>setToggle(!toggle)}>race: {race}</Button>}
 
-        <Button onClick={()=>setToggle(!toggle)}>select a race</Button>
         {toggle? (
           <RaceSelector user={user} setToggle={setToggle} toggle={toggle} race={race} setRace={setRace} setAbBonuses={setAbBonuses} abBonuses={abBonuses} characterName={characterName} setCharacterName={setCharacterName} abScores={abScores} setAbScores={setAbScores}/>) : (<p></p>)}
-        <Button onClick={()=>setToggleClass(!toggleClass)}>select a class</Button>
+        {playerClass === ('')? <Button onClick={()=>setToggleClass(!toggleClass)}>select a class</Button> : <Button style={{backgroundColor: 'grey'}} onClick={()=>setToggle(!toggle)}>class: {playerClass}</Button>}
         {toggleClass? (
           <ClassSelector allClasses={allClasses} allClassDetails={allClassDetails} setToggle={setToggleClass} toggle={toggleClass} proficiencyState={proficiencyState} setProficiencyState={setProficiencyState} abScores={abScores} setAbScores={setAbScores} playerClass={playerClass} setPlayerClass={setPlayerClass}/>) : (<p></p>)}
-        {toggleScorer? (<AbilityScorer abScores={abScores} hitPoints={hitPoints} setHitPoints={setHitPoints} abBonuses={abBonuses} allClassDetails={allClassDetails} setAbScores={setAbScores} playerClass={playerClass}/>):(<p></p>)}
-         <Button onClick={()=>setToggleScorer(!toggleScorer)}>Roll your scores</Button>
+        {toggleScorer? (<AbilityScorer abScores={abScores} hitPoints={hitPoints} setHitPoints={setHitPoints} abBonuses={abBonuses} allClassDetails={allClassDetails} setAbScores={setAbScores} playerClass={playerClass}/>):(         <Button onClick={()=>setToggleScorer(!toggleScorer)}>Roll your scores</Button>)}
+
         <Button onClick={handleSheet}>Create this character</Button>
 
 
@@ -116,16 +122,28 @@ function NewCharacter({ user }) {
   // eslint-disable-next-line no-unreachable
 }
 
-const Wrapper = styled.section`
-  max-width: 1000px;
-  margin: 40px auto;
-  padding: 16px;
+const Wrapper = styled.div`
+  color: red;
+  background-color: mistyrose;
+  border-radius: 6px;
   display: flex;
-  gap: 24px;
+  padding: 8px;
+  align-items: center;
+  gap: 8px;
+  margin: 8px 0;
 `;
 
-const WrapperChild = styled.div`
-  flex: 1;
+const Alert = styled.span`
+  background-color: white;
+  height: 30px;
+  width: 30px;
+  border-radius: 50%;
+  font-weight: bold;
+  display: grid;
+  place-content: center;
 `;
 
+const Message = styled.p`
+  margin: 0;
+`;
 export default NewCharacter;
