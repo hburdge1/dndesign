@@ -8,6 +8,7 @@ function CharacterSheet({ player }){
 	const [currentHP, setCurrentHP]=useState(player.hit_points)
 	const [damage, setDamage]=useState(0)
 	const [healing, setHealing]=useState(0)
+	const [initiative, setInitiative]=useState(0)
 	const history = useHistory();
 	
 	console.log(currentHP)
@@ -59,6 +60,10 @@ function CharacterSheet({ player }){
     
       }
     });
+
+  }
+  function rollInitiative(){
+	 setInitiative(Math.floor((Math.random() * (20 - 1 + 1) + 1) + (((player.skills['DEX']) - 10)/2)))
 
   }
     return(
@@ -154,16 +159,15 @@ function CharacterSheet({ player }){
 					</div>
 					<div className="sheet-row">
 						<div className="sheet-col-1-2">
-							<h4 className="sheet-center">Initiative <span className="sheet-pictos">t</span></h4>
 							<div className="sheet-row sheet-padr">
 								<div className="sheet-col-1-3 sheet-small-label sheet-center" title="Only enter additional bonuses to initiative here. Your Dex mod is already included in the macro button">
 									<input className="sheet-underlined sheet-center" type="number" name="attr_initiative" value="0" step="1"/>
 									<br/>Bonus</div>
 								<div className="sheet-col-1-3 sheet-small-label sheet-center">
-									<input className="sheet-underlined" type="number" name="attr_initiative_overall" value="@{dexterity_mod} + @{initiative}" disabled="disabled"/>
-									<br/>Total</div>
+									<span>initiative: {initiative}</span>
+								</div>
 								<div className="sheet-col-1-3 sheet-center">
-									<button type="roll" className="sheet-initiative sheet-large-button" name="roll_Initiative" value="&{template:5eDefault} {{title=Initiative}} {{subheader=@{character_name}}} {{rollname=Initiative}} {{roll=[[ 1d20 + @{selected|initiative_overall} [Initiative Mod] &{tracker} ]]}} @{classNameactioninitiative}">Initiative</button>
+									<button  onClick={rollInitiative} className="sheet-initiative sheet-large-button" name="roll_Initiative">Roll initiative!</button>
 								</div>
 							</div>
 						</div>
