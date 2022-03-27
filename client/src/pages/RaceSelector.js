@@ -8,26 +8,23 @@ import { Button, FormField, Label, Input } from '../styles'
 import Popup from 'reactjs-popup';
 import 'reactjs-popup/dist/index.css';
 
-export default function RaceSelector({ user, characterName, setCharacterName, setToggle, toggle, race, setRace, abScores, setAbScores }) {
+export default function RaceSelector({ user, characterName, setCharacterName, abBonuses, setAbBonuses, setToggle, toggle, race, setRace, abScores, setAbScores }) {
     const [allRace, setAllRace]=useState([])
-    let [abBonuses, setAbBonuses] = useState({})
+   const [traitDetails, setTraitDetails]=useState('')
     let raceArr=[]
     const [scoreBonus, setScoreBonus] = useState({})
     const [relRace, setRelRace]= useState([])
    const history = useHistory();
-  
+   const [traitToggle, setTraitToggle]=useState(false)
 
-      const bonusUp = () => {
-      (race ? (
-        race.ability_bonuses.map((s)=> setAbBonuses(
-          (abScores[s.ability_score.name]) ? (abScores[s.ability_score.name]= abScores[s.ability_score.name] + s.bonus) : (abScores[s.ability_score.name]=s.bonus))
-        )) : (<p></p>))
-      }
-   
+      const bonusUp = () => { race ? (race.ability_bonuses.map((s) => setAbBonuses(abScores[s.ability_score.name] = abScores[s.ability_score.name] + s.bonus))) : <p></p>
+    
+        }
    const handleRaceClick = (e) =>{
         setRace(e.target.value)
         setToggle(!toggle);
         bonusUp()
+   
    }
 
 //   const routeChange = () =>{ 
@@ -39,7 +36,14 @@ export default function RaceSelector({ user, characterName, setCharacterName, se
     e.preventDefault();
     setCharacterName(e.target.value)
     
+  }
+  function handleTrait(trait){
+        fetch(`https://www.dnd5eapi.co/api/traits/${trait}`)
+        .then(r=>r.json())
+        .then(a=>setTraitDetails(a.desc))
 
+        setTraitToggle(!traitToggle)
+        
   }
 //     
  useEffect(()=> {
@@ -65,14 +69,26 @@ export default function RaceSelector({ user, characterName, setCharacterName, se
       className="d-block w-100"
       src={`/race_images/${r.name}.png`}
     />
-    <Carousel.Caption>
+    <Carousel.Caption style={{backgroundColor: 'grey'}}>
       <h3>{r.name}</h3>
-      <p>{r.age}</p>
+
+      
+      <Popup trigger={<button>learn more</button>} closeOnDocumentClick position="right-center">
       <br/>
-      <p>speed: {r.speed}</p>
-      <Popup trigger={<button>learn more</button>}  position="right-center">
-        {(r.ability_bonuses.map((s)=>
-        <span>{s.ability_score.name}: {s.bonus}</span>))}
+      <text>speed:</text> <text style={{fontWeight: 'bold'}}>{r.speed}</text><br/>
+      <text>alignment:</text> <text style={{fontWeight: 'bold'}}>{r.alignment}</text><br/>
+      <text>aging:</text> <text style={{fontWeight: 'bold'}}>{r.age}</text><br/>
+      <text>size:</text> <text style={{fontWeight: 'bold'}}>{r.size_description}</text><br/>
+       <text>ability score increases:</text> {(r.ability_bonuses.map((s)=>
+        <><span>{s.ability_score.name} :  </span><span> {s.bonus}</span><br/></>))}
+                {(r.languages.map((s)=>
+        <><span>{s.name}</span><br /></>))}
+        <text>{r.language_desc}</text><br/>
+        <text>racial traits: </text>
+        {(r.traits.map((s)=>
+        <><span>{s.name}</span><button onClick={()=>handleTrait(s.index)}></button><br/></>))}
+        <text>{traitToggle? traitDetails : ''}</text>
+        {/* <>{(r.ability_bonuses.map((s)=> setAbBonuses(...abBonuses, (abBonuses[s.ability_score.name]= s.bonus))))}</> */}
       <form onSubmit={handleSubmit}>
            <FormField>
             <Label htmlFor="character_name">Name your character</Label>

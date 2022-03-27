@@ -12,6 +12,7 @@ import AbilityScorer from "./AbilityScorer";
 import { CharacterSheet } from "./CharacterSheet";
 function NewCharacter({ user }) {
       const [characterName, setCharacterName] = useState("")
+  let [abBonuses, setAbBonuses] = useState({STR: 0, CON: 0, CHA: 0, WIS: 0, INT: 0, DEX: 0})
   const [race, setRace] = useState("");
   const [playerClass, setPlayerClass] = useState(""); 
   const [allClasses, setAllClasses] = useState([]);
@@ -72,7 +73,7 @@ function NewCharacter({ user }) {
        character_race: race,
        character_class: playerClass,
        character_name: characterName,
-       skills: abScores,
+       skills: (abScores + abBonuses),
        proficiencies: proficiencyState
       }),
     }).then((r) => {
@@ -89,7 +90,7 @@ function NewCharacter({ user }) {
     //   setPlayerClass(e.target.checked)
     //   console.log(e.target.checked)
     // }
-  
+  console.log(abBonuses)
 
   return (
     <>
@@ -101,7 +102,7 @@ function NewCharacter({ user }) {
 
         <Button onClick={()=>setToggle(!toggle)}>select a race</Button>
         {toggle? (
-          <RaceSelector user={user} setToggle={setToggle} toggle={toggle} race={race} setRace={setRace} characterName={characterName} setCharacterName={setCharacterName} abScores={abScores} setAbScores={setAbScores}/>) : (<p></p>)}
+          <RaceSelector user={user} setToggle={setToggle} toggle={toggle} race={race} setRace={setRace} setAbBonuses={setAbBonuses} abBonuses={abBonuses} characterName={characterName} setCharacterName={setCharacterName} abScores={abScores} setAbScores={setAbScores}/>) : (<p></p>)}
         <Button onClick={()=>setToggleClass(!toggleClass)}>select a class</Button>
         {toggleClass? (
           <ClassSelector allClasses={allClasses} allClassDetails={allClassDetails} proficiencyState={proficiencyState} setProficiencyState={setProficiencyState} abScores={abScores} setAbScores={setAbScores} playerClass={playerClass} setPlayerClass={setPlayerClass}/>) : (<p></p>)}

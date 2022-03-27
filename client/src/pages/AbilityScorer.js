@@ -11,7 +11,7 @@ let hitDie=0
       hitDie=r.hit_die
     }
   })
-
+      
     function generateScores(){
         setAbScores({
             'CON': Math.floor(Math.random() * (18 - 8 + 1) + 8 ),
@@ -21,7 +21,8 @@ let hitDie=0
             'DEX': Math.floor(Math.random() * (18 - 8 + 1) + 8 ),
             'CHA': Math.floor(Math.random() * (18 - 8 + 1) + 8 ),
         })
-       setHitPoints(Math.ceil(((Math.random() * hitDie)+ 1) + (abScores['CON'] - 10)/2))
+       setHitPoints(Math.ceil(((Math.random() * hitDie)+ 1) + ((((abScores['CON']) - 10)/2) > 0? (((abScores['CON']) - 10)/2):0)))
+
     }
   return (
     <div className="App">
