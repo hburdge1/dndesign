@@ -1,18 +1,21 @@
 import {React, useState} from "react";
+import { useHistory } from "react-router-dom";
 import {Box, FormField} from '../styles'
 import InputNumber from 'react-input-number';
 import { Button } from "bootstrap";
 
-function CharacterSheet({ player, history }){
+function CharacterSheet({ player }){
 	const [currentHP, setCurrentHP]=useState(player.hit_points)
 	const [damage, setDamage]=useState(0)
+	const [healing, setHealing]=useState(0)
+	const history = useHistory();
 	
 	console.log(currentHP)
 	// const submitDamage= (e) =>{
 	// 	e.preventDefault()
 	// 	console.log(e.target.value)
 	// }
-	function handleSubmit(e){
+	function handleSubmitDamage(e){
 		e.preventDefault()
 		let hpNum = parseInt(currentHP) 
 		let damageNum= parseInt(damage)
@@ -28,6 +31,30 @@ function CharacterSheet({ player, history }){
     }).then((r) => {
       if (r.ok) {
         history.push("/")
+		setDamage(0)
+      } else {
+    
+      }
+    });
+
+  }
+  	function handleSubmitHealing(e){
+		e.preventDefault()
+		let hpNum = parseInt(currentHP) 
+		let healNum= parseInt(healing)
+		setCurrentHP(hpNum+healNum)
+  	 fetch(`/players/${player.id}`, {
+      method: "PATCH",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+		hit_points: currentHP
+      }),
+    }).then((r) => {
+      if (r.ok) {
+        history.push("/")
+		setHealing(0)
       } else {
     
       }
@@ -108,11 +135,14 @@ function CharacterSheet({ player, history }){
 								<div className="sheet-col-1-2 sheet-small-label sheet-center">
 									<span  id='hp-max'>{player.hit_points}</span><br/>Max HP</div>
 									<span  id='hp-current'>{currentHP}</span><br/>current HP</div>
-							<form onSubmit={handleSubmit}>
+							<form onSubmit={handleSubmitDamage}>
 					       <input type="number" id="name" value={damage} onChange={(e) => setDamage(e.target.value)} />
 						   <button type='submit'>Deal damage</button>
 						   </form>
-						
+						   <form onSubmit={handleSubmitHealing}>
+					       <input type="number"  value={healing} onChange={(e) => setHealing(e.target.value)} />
+						   <button type='submit'>Heal</button>
+						   </form>
 							
 						</div>
 						<div className="sheet-col-1-4 sheet-padl sheet-padr sheet-border-right sheet-small-label sheet-center">

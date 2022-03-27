@@ -33991,3 +33991,335 @@ Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2022-03-27 13:06:46 -0
   
 ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
   
+Started POST "/login" for 127.0.0.1 at 2022-03-27 13:09:58 -0700
+Processing by SessionsController#create as */*
+  Parameters: {"username"=>"default", "password"=>"[FILTERED]", "session"=>{"username"=>"default", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (6.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "default"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:5:in `create'
+[active_model_serializers]   [1m[36mPlayer Load (0.4ms)[0m  [1m[34mSELECT "players".* FROM "players" WHERE "players"."user_id" = $1[0m  [["user_id", 6]]
+[active_model_serializers]   ↳ app/controllers/sessions_controller.rb:8:in `create'
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::Attributes (1.98ms)
+Completed 200 OK in 286ms (Views: 1.9ms | ActiveRecord: 6.6ms | Allocations: 2277)
+
+
+Started GET "/players" for 127.0.0.1 at 2022-03-27 13:09:59 -0700
+Processing by PlayersController#index as */*
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:12:in `authorize'
+  [1m[36mPlayer Load (0.1ms)[0m  [1m[34mSELECT "players".* FROM "players"[0m
+  ↳ app/controllers/players_controller.rb:4:in `index'
+[active_model_serializers]   [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/players_controller.rb:4:in `index'
+[active_model_serializers]   [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/players_controller.rb:4:in `index'
+[active_model_serializers]   [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/players_controller.rb:4:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (2.1ms)
+Completed 200 OK in 5ms (Views: 3.8ms | ActiveRecord: 0.3ms | Allocations: 4594)
+
+
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2022-03-27 13:14:18 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2022-03-27 13:14:18 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2022-03-27 13:14:19 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2022-03-27 13:14:19 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2022-03-27 13:14:19 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2022-03-27 13:14:19 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2022-03-27 13:14:19 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2022-03-27 13:14:19 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2022-03-27 13:14:19 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2022-03-27 13:14:19 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2022-03-27 13:14:19 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started POST "/login" for 127.0.0.1 at 2022-03-27 13:14:20 -0700
+Processing by SessionsController#create as */*
+  Parameters: {"username"=>"default", "password"=>"[FILTERED]", "session"=>{"username"=>"default", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "default"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:5:in `create'
+[active_model_serializers]   [1m[36mPlayer Load (0.3ms)[0m  [1m[34mSELECT "players".* FROM "players" WHERE "players"."user_id" = $1[0m  [["user_id", 6]]
+[active_model_serializers]   ↳ app/controllers/sessions_controller.rb:8:in `create'
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::Attributes (2.05ms)
+Completed 200 OK in 255ms (Views: 2.0ms | ActiveRecord: 0.5ms | Allocations: 2283)
+
+
+Started GET "/players" for 127.0.0.1 at 2022-03-27 13:14:20 -0700
+Processing by PlayersController#index as */*
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:12:in `authorize'
+  [1m[36mPlayer Load (0.2ms)[0m  [1m[34mSELECT "players".* FROM "players"[0m
+  ↳ app/controllers/players_controller.rb:4:in `index'
+[active_model_serializers]   [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/players_controller.rb:4:in `index'
+[active_model_serializers]   [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/players_controller.rb:4:in `index'
+[active_model_serializers]   [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/players_controller.rb:4:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (2.6ms)
+Completed 200 OK in 5ms (Views: 3.5ms | ActiveRecord: 0.4ms | Allocations: 4584)
+
+
+Started PATCH "/players/1" for 127.0.0.1 at 2022-03-27 13:14:38 -0700
+Processing by PlayersController#update as */*
+  Parameters: {"hit_points"=>12, "id"=>"1", "player"=>{"hit_points"=>12}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:12:in `authorize'
+  [1m[36mPlayer Load (0.4ms)[0m  [1m[34mSELECT "players".* FROM "players" WHERE "players"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/players_controller.rb:12:in `update'
+[31mUnpermitted parameter: :player[0m
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/players_controller.rb:13:in `update'
+[active_model_serializers] Rendered PlayerSerializer with ActiveModelSerializers::Adapter::Attributes (0.7ms)
+Completed 200 OK in 16ms (Views: 1.3ms | ActiveRecord: 0.7ms | Allocations: 2758)
+
+
+Started PATCH "/players/1" for 127.0.0.1 at 2022-03-27 13:15:07 -0700
+Processing by PlayersController#update as */*
+  Parameters: {"hit_points"=>8, "id"=>"1", "player"=>{"hit_points"=>8}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:12:in `authorize'
+  [1m[36mPlayer Load (4.3ms)[0m  [1m[34mSELECT "players".* FROM "players" WHERE "players"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/players_controller.rb:12:in `update'
+[31mUnpermitted parameter: :player[0m
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/players_controller.rb:13:in `update'
+  [1m[36mTRANSACTION (0.8ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/players_controller.rb:13:in `update'
+  [1m[36mPlayer Update (1.7ms)[0m  [1m[33mUPDATE "players" SET "hit_points" = $1, "updated_at" = $2 WHERE "players"."id" = $3[0m  [["hit_points", 8], ["updated_at", "2022-03-27 20:15:07.144871"], ["id", 1]]
+  ↳ app/controllers/players_controller.rb:13:in `update'
+  [1m[36mTRANSACTION (3.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/players_controller.rb:13:in `update'
+[active_model_serializers] Rendered PlayerSerializer with ActiveModelSerializers::Adapter::Attributes (0.97ms)
+Completed 200 OK in 24ms (Views: 1.5ms | ActiveRecord: 10.5ms | Allocations: 4015)
+
+
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2022-03-27 13:15:34 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2022-03-27 13:15:34 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2022-03-27 13:15:34 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2022-03-27 13:15:34 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started POST "/login" for 127.0.0.1 at 2022-03-27 13:15:37 -0700
+Processing by SessionsController#create as */*
+  Parameters: {"username"=>"default", "password"=>"[FILTERED]", "session"=>{"username"=>"default", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "default"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:5:in `create'
+[active_model_serializers]   [1m[36mPlayer Load (0.4ms)[0m  [1m[34mSELECT "players".* FROM "players" WHERE "players"."user_id" = $1[0m  [["user_id", 6]]
+[active_model_serializers]   ↳ app/controllers/sessions_controller.rb:8:in `create'
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::Attributes (2.16ms)
+Completed 200 OK in 280ms (Views: 2.0ms | ActiveRecord: 0.7ms | Allocations: 2277)
+
+
+Started GET "/players" for 127.0.0.1 at 2022-03-27 13:15:37 -0700
+Processing by PlayersController#index as */*
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:12:in `authorize'
+  [1m[36mPlayer Load (0.2ms)[0m  [1m[34mSELECT "players".* FROM "players"[0m
+  ↳ app/controllers/players_controller.rb:4:in `index'
+[active_model_serializers]   [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/players_controller.rb:4:in `index'
+[active_model_serializers]   [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/players_controller.rb:4:in `index'
+[active_model_serializers]   [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/players_controller.rb:4:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (2.29ms)
+Completed 200 OK in 5ms (Views: 3.2ms | ActiveRecord: 0.4ms | Allocations: 4584)
+
+
+Started PATCH "/players/1" for 127.0.0.1 at 2022-03-27 13:15:51 -0700
+Processing by PlayersController#update as */*
+  Parameters: {"hit_points"=>8, "id"=>"1", "player"=>{"hit_points"=>8}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:12:in `authorize'
+  [1m[36mPlayer Load (0.6ms)[0m  [1m[34mSELECT "players".* FROM "players" WHERE "players"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/players_controller.rb:12:in `update'
+[31mUnpermitted parameter: :player[0m
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/players_controller.rb:13:in `update'
+[active_model_serializers] Rendered PlayerSerializer with ActiveModelSerializers::Adapter::Attributes (1.11ms)
+Completed 200 OK in 11ms (Views: 1.7ms | ActiveRecord: 0.9ms | Allocations: 2507)
+
+
+Started PATCH "/players/1" for 127.0.0.1 at 2022-03-27 13:16:24 -0700
+Processing by PlayersController#update as */*
+  Parameters: {"hit_points"=>7, "id"=>"1", "player"=>{"hit_points"=>7}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:12:in `authorize'
+  [1m[36mPlayer Load (0.7ms)[0m  [1m[34mSELECT "players".* FROM "players" WHERE "players"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/players_controller.rb:12:in `update'
+[31mUnpermitted parameter: :player[0m
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/players_controller.rb:13:in `update'
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/players_controller.rb:13:in `update'
+  [1m[36mPlayer Update (2.1ms)[0m  [1m[33mUPDATE "players" SET "hit_points" = $1, "updated_at" = $2 WHERE "players"."id" = $3[0m  [["hit_points", 7], ["updated_at", "2022-03-27 20:16:24.830628"], ["id", 1]]
+  ↳ app/controllers/players_controller.rb:13:in `update'
+  [1m[36mTRANSACTION (1.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/players_controller.rb:13:in `update'
+[active_model_serializers] Rendered PlayerSerializer with ActiveModelSerializers::Adapter::Attributes (0.47ms)
+Completed 200 OK in 23ms (Views: 1.0ms | ActiveRecord: 4.7ms | Allocations: 3965)
+
+
+Started POST "/login" for 127.0.0.1 at 2022-03-27 13:16:30 -0700
+Processing by SessionsController#create as */*
+  Parameters: {"username"=>"default", "password"=>"[FILTERED]", "session"=>{"username"=>"default", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "default"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:5:in `create'
+[active_model_serializers]   [1m[36mPlayer Load (0.3ms)[0m  [1m[34mSELECT "players".* FROM "players" WHERE "players"."user_id" = $1[0m  [["user_id", 6]]
+[active_model_serializers]   ↳ app/controllers/sessions_controller.rb:8:in `create'
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::Attributes (1.66ms)
+Completed 200 OK in 271ms (Views: 1.6ms | ActiveRecord: 0.5ms | Allocations: 2281)
+
+
+Started GET "/players" for 127.0.0.1 at 2022-03-27 13:16:30 -0700
+Processing by PlayersController#index as */*
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:12:in `authorize'
+  [1m[36mPlayer Load (0.3ms)[0m  [1m[34mSELECT "players".* FROM "players"[0m
+  ↳ app/controllers/players_controller.rb:4:in `index'
+[active_model_serializers]   [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/players_controller.rb:4:in `index'
+[active_model_serializers]   [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/players_controller.rb:4:in `index'
+[active_model_serializers]   [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/players_controller.rb:4:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (2.01ms)
+Completed 200 OK in 4ms (Views: 2.7ms | ActiveRecord: 0.4ms | Allocations: 4586)
+
+
+Started PATCH "/players/2" for 127.0.0.1 at 2022-03-27 13:16:37 -0700
+Processing by PlayersController#update as */*
+  Parameters: {"hit_points"=>12, "id"=>"2", "player"=>{"hit_points"=>12}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:12:in `authorize'
+  [1m[36mPlayer Load (0.2ms)[0m  [1m[34mSELECT "players".* FROM "players" WHERE "players"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/players_controller.rb:12:in `update'
+[31mUnpermitted parameter: :player[0m
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/players_controller.rb:13:in `update'
+[active_model_serializers] Rendered PlayerSerializer with ActiveModelSerializers::Adapter::Attributes (0.83ms)
+Completed 200 OK in 10ms (Views: 1.4ms | ActiveRecord: 0.4ms | Allocations: 2506)
+
+
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2022-03-27 13:18:56 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started PATCH "/players/2" for 127.0.0.1 at 2022-03-27 13:19:00 -0700
+Processing by PlayersController#update as */*
+  Parameters: {"hit_points"=>12, "id"=>"2", "player"=>{"hit_points"=>12}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:12:in `authorize'
+  [1m[36mPlayer Load (0.6ms)[0m  [1m[34mSELECT "players".* FROM "players" WHERE "players"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/players_controller.rb:12:in `update'
+[31mUnpermitted parameter: :player[0m
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/players_controller.rb:13:in `update'
+[active_model_serializers] Rendered PlayerSerializer with ActiveModelSerializers::Adapter::Attributes (0.98ms)
+Completed 200 OK in 9ms (Views: 1.7ms | ActiveRecord: 0.8ms | Allocations: 2502)
+
+
+Started PATCH "/players/2" for 127.0.0.1 at 2022-03-27 13:19:04 -0700
+Processing by PlayersController#update as */*
+  Parameters: {"hit_points"=>11, "id"=>"2", "player"=>{"hit_points"=>11}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:12:in `authorize'
+  [1m[36mPlayer Load (1.0ms)[0m  [1m[34mSELECT "players".* FROM "players" WHERE "players"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/players_controller.rb:12:in `update'
+[31mUnpermitted parameter: :player[0m
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/players_controller.rb:13:in `update'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/players_controller.rb:13:in `update'
+  [1m[36mPlayer Update (0.4ms)[0m  [1m[33mUPDATE "players" SET "hit_points" = $1, "updated_at" = $2 WHERE "players"."id" = $3[0m  [["hit_points", 11], ["updated_at", "2022-03-27 20:19:04.527512"], ["id", 2]]
+  ↳ app/controllers/players_controller.rb:13:in `update'
+  [1m[36mTRANSACTION (2.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/players_controller.rb:13:in `update'
+[active_model_serializers] Rendered PlayerSerializer with ActiveModelSerializers::Adapter::Attributes (0.45ms)
+Completed 200 OK in 26ms (Views: 0.7ms | ActiveRecord: 3.9ms | Allocations: 3978)
+
+
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2022-03-27 13:19:33 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started PATCH "/players/2" for 127.0.0.1 at 2022-03-27 13:19:49 -0700
+Processing by PlayersController#update as */*
+  Parameters: {"hit_points"=>12, "id"=>"2", "player"=>{"hit_points"=>12}}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:12:in `authorize'
+  [1m[36mPlayer Load (1.6ms)[0m  [1m[34mSELECT "players".* FROM "players" WHERE "players"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/players_controller.rb:12:in `update'
+[31mUnpermitted parameter: :player[0m
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/players_controller.rb:13:in `update'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/players_controller.rb:13:in `update'
+  [1m[36mPlayer Update (0.5ms)[0m  [1m[33mUPDATE "players" SET "hit_points" = $1, "updated_at" = $2 WHERE "players"."id" = $3[0m  [["hit_points", 12], ["updated_at", "2022-03-27 20:19:49.550089"], ["id", 2]]
+  ↳ app/controllers/players_controller.rb:13:in `update'
+  [1m[36mTRANSACTION (1.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/players_controller.rb:13:in `update'
+[active_model_serializers] Rendered PlayerSerializer with ActiveModelSerializers::Adapter::Attributes (0.41ms)
+Completed 200 OK in 20ms (Views: 0.7ms | ActiveRecord: 4.0ms | Allocations: 3963)
+
+
+Started PATCH "/players/2" for 127.0.0.1 at 2022-03-27 13:19:52 -0700
+Processing by PlayersController#update as */*
+  Parameters: {"hit_points"=>11, "id"=>"2", "player"=>{"hit_points"=>11}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:12:in `authorize'
+  [1m[36mPlayer Load (0.6ms)[0m  [1m[34mSELECT "players".* FROM "players" WHERE "players"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/players_controller.rb:12:in `update'
+[31mUnpermitted parameter: :player[0m
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/players_controller.rb:13:in `update'
+  [1m[36mTRANSACTION (2.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/players_controller.rb:13:in `update'
+  [1m[36mPlayer Update (0.8ms)[0m  [1m[33mUPDATE "players" SET "hit_points" = $1, "updated_at" = $2 WHERE "players"."id" = $3[0m  [["hit_points", 11], ["updated_at", "2022-03-27 20:19:52.243550"], ["id", 2]]
+  ↳ app/controllers/players_controller.rb:13:in `update'
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/players_controller.rb:13:in `update'
+[active_model_serializers] Rendered PlayerSerializer with ActiveModelSerializers::Adapter::Attributes (0.4ms)
+Completed 200 OK in 17ms (Views: 0.6ms | ActiveRecord: 4.3ms | Allocations: 3963)
+
+
