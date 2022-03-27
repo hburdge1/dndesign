@@ -69,9 +69,9 @@ export default function RaceSelector({ user, characterName, setCharacterName, ab
     <Carousel.Caption style={{backgroundColor: 'grey'}}>
       <h3>{r.name}</h3>
 
-      
-      <Popup trigger={<button>learn more</button>} closeOnDocumentClick position="right-center">
-      <br/>
+            <div style={{width: 'fit-to-content'}}>
+      <Popup style={{flowing: true}} trigger={<button>learn more</button>} closeOnDocumentClick position="right-center">
+  
       <text>speed:</text> <text style={{fontWeight: 'bold'}}>{r.speed}</text><br/>
       <text>alignment:</text> <text style={{fontWeight: 'bold'}}>{r.alignment}</text><br/>
       <text>aging:</text> <text style={{fontWeight: 'bold'}}>{r.age}</text><br/>
@@ -87,8 +87,9 @@ export default function RaceSelector({ user, characterName, setCharacterName, ab
         <text>{r.language_desc}</text><br/>
         <text>racial traits: </text>
         {(r.traits.map((s)=>
-        <><span>{s.name}</span><button onClick={()=>handleTrait(s.index)}></button><br/></>))}
-        <text>{traitToggle? traitDetails : ''}</text>
+        <><span style={{fontWeight:'bold'}}>{s.name}</span><button onClick={()=>handleTrait(s.index)}></button><br/> <text>{traitToggle? traitDetails : ''}</text><br/></>))}
+
+        
         {/* <>{(r.ability_bonuses.map((s)=> setAbBonuses(...abBonuses, (abBonuses[s.ability_score.name]= s.bonus))))}</> */}
       <form onSubmit={handleSubmit}>
            <FormField>
@@ -109,7 +110,9 @@ export default function RaceSelector({ user, characterName, setCharacterName, ab
             </Button> */}
           </FormField>
         </form>
+
           </Popup>
+                  </div>
     </Carousel.Caption>
   </Carousel.Item>
   ))) : (<p>nothing here</p>)}

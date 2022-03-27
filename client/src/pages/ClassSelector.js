@@ -4,13 +4,14 @@ import Popup from 'reactjs-popup'
 import { useEffect, useState } from 'react'
 import { ToggleButton, ToggleButtonGroup } from 'react-bootstrap'
 import { Button, FormField, Label, Input } from '../styles'
-export default function ClassSelector({allClasses, allClassDetails, abScores, proficiencyState, setProficiencyState, setAbScores, playerClass, setPlayerClass}) {
+export default function ClassSelector({allClasses, allClassDetails, toggle, setToggle, abScores, proficiencyState, setProficiencyState, setAbScores, playerClass, setPlayerClass}) {
 
 
     let indices=[]
     const handleSelectClass = (e) => {
         e.preventDefault()
-        setPlayerClass(e.target.value)
+        setPlayerClass(e.target.value) 
+        setToggle(!toggle);
            if(proficiencyState){
            console.log(proficiencyState)
    }
@@ -28,7 +29,7 @@ export default function ClassSelector({allClasses, allClassDetails, abScores, pr
       <p>{r.age}</p>
       <br/>
       <p>speed: {r.speed}</p>
-       <Popup trigger={<button>learn more</button>}  position="right-center">
+       <Popup trigger={<button>learn more</button>}  style={{width: '100%'}}>
                  <>
          {r.proficiency_choices.map((a)=> ( 
              <>
@@ -57,3 +58,6 @@ export default function ClassSelector({allClasses, allClassDetails, abScores, pr
    </Carousel.Item>))):(<p>nothing here</p>)}
   </Carousel>
   )}
+
+
+  

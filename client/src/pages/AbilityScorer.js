@@ -14,12 +14,12 @@ let hitDie=0
       
     function generateScores(){
         setAbScores({
-            'CON': Math.floor(Math.random() * (18 - 8 + 1) + 8 ),
-            'WIS': Math.floor(Math.random() * (18 - 8 + 1) + 8 ),
-            'STR': Math.floor(Math.random() * (18 - 8 + 1) + 8 ),
-            'INT': Math.floor(Math.random() * (18 - 8 + 1) + 8 ),
-            'DEX': Math.floor(Math.random() * (18 - 8 + 1) + 8 ),
-            'CHA': Math.floor(Math.random() * (18 - 8 + 1) + 8 ),
+            'CON': Math.floor(Math.random() * (17 - 8 + 1) + 8 ),
+            'WIS': Math.floor(Math.random() * (17 - 8 + 1) + 8 ),
+            'STR': Math.floor(Math.random() * (17 - 8 + 1) + 8 ),
+            'INT': Math.floor(Math.random() * (17 - 8 + 1) + 8 ),
+            'DEX': Math.floor(Math.random() * (17 - 8 + 1) + 8 ),
+            'CHA': Math.floor(Math.random() * (17 - 8 + 1) + 8 ),
         })
        setHitPoints(Math.ceil(((Math.random() * hitDie)+ 1) + ((((abScores['CON']) - 10)/2) > 1? (((abScores['CON']) - 10)/2):1)))
 
