@@ -4,7 +4,7 @@ import { useState } from 'react';
 import { Button, Box } from '../styles'
 
 
-export default function AbilityScorer({abScores, setAbScores, playerClass, allClassDetails, hitPoints, setHitPoints}) {
+export default function AbilityScorer({abScores, setAbScores, playerClass, abBonuses, allClassDetails, hitPoints, setHitPoints}) {
 let hitDie=0
   allClassDetails.forEach((r)=>{
     if (r.index == playerClass){
@@ -21,7 +21,7 @@ let hitDie=0
             'DEX': Math.floor(Math.random() * (18 - 8 + 1) + 8 ),
             'CHA': Math.floor(Math.random() * (18 - 8 + 1) + 8 ),
         })
-       setHitPoints(Math.ceil(((Math.random() * hitDie)+ 1) + ((((abScores['CON']) - 10)/2) > 0? (((abScores['CON']) - 10)/2):0)))
+       setHitPoints(Math.ceil(((Math.random() * hitDie)+ 1) + ((((abScores['CON']) - 10)/2) > 1? (((abScores['CON']) - 10)/2):1)))
 
     }
   return (

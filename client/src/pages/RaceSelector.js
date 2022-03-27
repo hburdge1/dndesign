@@ -17,14 +17,11 @@ export default function RaceSelector({ user, characterName, setCharacterName, ab
    const history = useHistory();
    const [traitToggle, setTraitToggle]=useState(false)
 
-      const bonusUp = () => { race ? (race.ability_bonuses.map((s) => setAbBonuses(abScores[s.ability_score.name] = abScores[s.ability_score.name] + s.bonus))) : <p></p>
-    
-        }
    const handleRaceClick = (e) =>{
         setRace(e.target.value)
         setToggle(!toggle);
-        bonusUp()
-   
+        setAbScores(abBonuses)
+        console.log(abScores)
    }
 
 //   const routeChange = () =>{ 
@@ -80,8 +77,12 @@ export default function RaceSelector({ user, characterName, setCharacterName, ab
       <text>aging:</text> <text style={{fontWeight: 'bold'}}>{r.age}</text><br/>
       <text>size:</text> <text style={{fontWeight: 'bold'}}>{r.size_description}</text><br/>
        <text>ability score increases:</text> {(r.ability_bonuses.map((s)=>
-        <><span>{s.ability_score.name} :  </span><span> {s.bonus}</span><br/></>))}
-                {(r.languages.map((s)=>
+        <><span>{s.ability_score.name}:</span><span> {s.bonus}</span><br/></>))}
+        <br/>
+        {r.ability_bonuses.map((s)=> (abBonuses[s.ability_score.name])=(s.bonus))}
+        <br/>
+        <text>languages:</text>
+        {(r.languages.map((s)=>
         <><span>{s.name}</span><br /></>))}
         <text>{r.language_desc}</text><br/>
         <text>racial traits: </text>

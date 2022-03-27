@@ -12,7 +12,7 @@ import AbilityScorer from "./AbilityScorer";
 import { CharacterSheet } from "./CharacterSheet";
 function NewCharacter({ user }) {
       const [characterName, setCharacterName] = useState("")
-  let [abBonuses, setAbBonuses] = useState({STR: 0, CON: 0, CHA: 0, WIS: 0, INT: 0, DEX: 0})
+  const [abBonuses, setAbBonuses] = useState({STR: 0, CON: 0, CHA: 0, WIS: 0, INT: 0, DEX: 0})
   const [race, setRace] = useState("");
   const [playerClass, setPlayerClass] = useState(""); 
   const [allClasses, setAllClasses] = useState([]);
@@ -106,7 +106,7 @@ function NewCharacter({ user }) {
         <Button onClick={()=>setToggleClass(!toggleClass)}>select a class</Button>
         {toggleClass? (
           <ClassSelector allClasses={allClasses} allClassDetails={allClassDetails} proficiencyState={proficiencyState} setProficiencyState={setProficiencyState} abScores={abScores} setAbScores={setAbScores} playerClass={playerClass} setPlayerClass={setPlayerClass}/>) : (<p></p>)}
-        {toggleScorer? (<AbilityScorer abScores={abScores} hitPoints={hitPoints} setHitPoints={setHitPoints} allClassDetails={allClassDetails} setAbScores={setAbScores} playerClass={playerClass}/>):(<p></p>)}
+        {toggleScorer? (<AbilityScorer abScores={abScores} hitPoints={hitPoints} setHitPoints={setHitPoints} abBonuses={abBonuses} allClassDetails={allClassDetails} setAbScores={setAbScores} playerClass={playerClass}/>):(<p></p>)}
          <Button onClick={()=>setToggleScorer(!toggleScorer)}>Roll your scores</Button>
         <Button onClick={handleSheet}>Create this character</Button>
 
