@@ -1,3 +1,4 @@
+
 class UsersController < ApplicationController
   skip_before_action :authorize, only: :create
 
@@ -11,10 +12,10 @@ class UsersController < ApplicationController
     render json: @current_user
   end
 
-private
-      
-    def user_params
-      params.require(:user).permit(:username, :password, :password_confirmation)
-    end
+  private
+
+  def user_params
+    params.permit(:username, :password, :password_confirmation)
+  end
 
 end

@@ -1,7 +1,7 @@
 class PlayersController < ApplicationController
-
   def index
-    render json: Player.all
+    players = Player.where(user_id: @current_user.id)
+    render json: players
   end
 
   def create
