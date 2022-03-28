@@ -1,8 +1,9 @@
 import {React, useState} from "react";
 import { useHistory } from "react-router-dom";
-import {Box, FormField} from '../styles'
-import InputNumber from 'react-input-number';
-import { Button } from "bootstrap";
+import {Box, FormField, Label, Button} from '../styles'
+import { Divider, Grid, Image, Segment } from 'semantic-ui-react'
+import { Container, Row, Col } from 'react-bootstrap'
+
 
 
 function CharacterSheet({ player }){
@@ -69,70 +70,61 @@ function CharacterSheet({ player }){
   }
     return(
         <>
-	   <div className="sheet-core-header sheet-padb">
-		<div className="sheet-row">
-			<div className="sheet-col-1-3 sheet-margin-top"><img src="http://i.imgur.com/Y8KHPKm.png" alt="Dungeons and Dragons (5th edition)"/></div>
+	
 
-			<div className="sheet-col-1-4 sheet-small-label sheet-center">
-				<label for='char-name'>Character name:</label>
-				<span className="sheet-underlined sheet-center" id='char-name' name="attr_character_name" >{player.character_name}</span>
-			
-			<div className="sheet-col-1-8 sheet-small-label sheet-center">
+			<div className="sheet-cl-1-3 sheet-margin-top"><img src="http://i.imgur.com/Y8KHPKm.png" alt="Dungeons and Dragons (5th edition)"/></div>
+
+			<div style={{flexDirection:"row", display:"flex", justifyContent: 'center', width:'100%'}}>
+				<label for='char-name'>Character name:  </label>
+				<span className="sheet-underlined sheet-center" id='char-name' name="attr_character_name" style={{fontWeight: 'bold'}}>  {player.character_name}</span>
+			</div>
+			<div style={{flexDirection:"row", display:"flex", justifyContent: 'center', width:'100%'}}>
 				<label for='char-race'>Character race:</label>
-				<span className="sheet-underlined sheet-center" id='char-race'>{player.character_race}</span>
+				<span className="sheet-underlined sheet-center" id='char-race' style={{fontWeight: 'bold'}}>  {player.character_race}</span>
 			</div>
-			<div className="sheet-col-1-6 sheet-small-label sheet-center">
+			<div style={{flexDirection:"row", display:"flex", justifyContent: 'center', width:'100%'}}>
 				<label for='char-class'>Character class:</label>
-				<span className="sheet-underlined sheet-center" id='char-class'>{player.character_class} </span>
-			</div>
-		</div>
-	</div>
-	<div className="sheet-player">
+				<span className="sheet-underlined sheet-center" id='char-class' style={{fontWeight: 'bold'}}>  {player.character_class} </span>
+			</div>	
+
 		<span className="sheet-spacer"></span>
-		<div className="sheet-section-core">
-			<div className="sheet-row">
-				<div className="sheet-col-1-2 sheet-padr">
-					<h4 className="sheet-center">Core Stats</h4>
+					<h4 style={{flexDirection:"row", display:"flex", justifyContent: 'center', width:'100%'}}>Core Stats</h4>
 		
-					<div className="sheet-row">
-						<div className="sheet-col-1-7 sheet-core-stat-label">Str</div>
-						<div className="sheet-col-1-7">
-							<Box name="attr_strength">{player.skills['STR']}</Box>
-						</div>
-					</div>
-						
-				
-				{/* <button name="attr_strength_mod">{onClick=(player.skills['STR']/10 > 1) ? (<span>{Math.floor(Math.random() * 20) + player.skills['STR']/10}</span> ):( <span>{Math.floor(Math.random() * 20)}</span>)}</button> */}
-					
-					<div className="sheet-row">
-						<div className="sheet-col-1-7">
-							<div className="sheet-col-1-7 sheet-core-stat-label">Dex</div>
+					<Container className="sheet-row" style={{ display:"flex", justifyContent: 'space-around',  position:'relative', width:'100%'}}>
+	
+					<Col>
+						<Label>Str</Label>
+							<Box name="attr_strength" id="attr_strength">{player.skills['STR']}</Box>
+						<Divider vertical></Divider>
+					</Col>
+					<Col>
+						<Label>Dex</Label>
 							<Box name="attr_dex">{player.skills['DEX']}</Box>
-						</div>
-					</div>
-					</div>
-				<hr/>
-					<div className="sheet-row">
-							<div className="sheet-col-1-7 sheet-core-stat-label">Con</div>
+						<Divider vertical></Divider>
+					</Col>
+					<Col>
+						<Label>Con</Label>
 							<Box name="attr_con">{player.skills['CON']}</Box>
-					</div>
-					<hr/>
-						</div>
-					</div>
-					<div className="sheet-row">
-							<div className="sheet-col-1-7 sheet-core-stat-label">Int</div>
+						<Divider vertical></Divider>
+					</Col>
+					<Col>
+						<Label>Int</Label>
 							<Box name="attr_int">{player.skills['INT']}</Box>
-					</div>
-				<hr/>
-					<div className="sheet-row">
-							<div className="sheet-col-1-7 sheet-core-stat-label">Wis</div>
+						<Divider vertical></Divider>
+					</Col>
+					<Col>
+						<Label>Wis</Label>
 							<Box name="attr_wis">{player.skills['WIS']}</Box>
-					</div>
-					<div className="sheet-row">
-							<div className="sheet-col-1-7 sheet-core-stat-label">Con</div>
+					   <Divider vertical></Divider>
+					</Col>
+					<Col>
+						<Label>Cha</Label>
 							<Box name="attr_cha">{player.skills['CHA']}</Box>
-					</div>
-				<hr/>
+					<Divider vertical></Divider>
+					</Col>
+					</Container>
+					<hr/>
+		
 				<div className="sheet-col-1-2 sheet-padr">
 					<h4 className="sheet-center">Hit Points <span className="sheet-pictos"></span> and Speed <span className="sheet-pictos">1</span></h4>
 					<div className="sheet-row sheet-padb">
@@ -183,7 +175,7 @@ function CharacterSheet({ player }){
 									<br/>AC (no armour)</div>
 							</div>
 						</div>
-					</div>
+				
 					<h4 className="sheet-center">Level and Experience<span className="sheet-pictos-three">d</span></h4>
 					<div className="sheet-row">
 						<div className="sheet-col-1-4 sheet-small-label sheet-center" title="This is automatically calculated from your individual className levels listed in the className section">
@@ -192,7 +184,7 @@ function CharacterSheet({ player }){
 						<div className="sheet-col-1-4 sheet-small-label sheet-center" title="This is a bonus for you being proficient in a given task.  This bonus automatically increases as you level up and is used automatically in various rolls">
 							<input className="sheet-underlined" type="number" name="attr_PB" value="(ceil((@{level})/1e10) + ceil((@{level})/4))" disabled="disabled"/>
 							<br/>Prof Bonus</div>
-					</div>
+
 				</div>
 			</div>
 			<div className="sheet-row">
