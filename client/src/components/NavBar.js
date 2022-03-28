@@ -5,7 +5,7 @@ import styled from "styled-components";
 import { CharacterSheet } from "../pages/CharacterSheet";
 import { Button } from "../styles";
 
-function NavBar({ user, setUser }) {
+function NavBar({ user, setUser, players }) {
 
   function handleLogoutClick() {
     fetch("/logout", { method: "DELETE" }).then((r) => {
@@ -15,15 +15,15 @@ function NavBar({ user, setUser }) {
     });
   }
 
-
   return (
     <Wrapper>
       <Logo>
         <Link to="/">DNDesign</Link>
       </Logo>
       <Nav> 
-
-        <Button as={Link} to="/players">
+{/* 
+        <Button as={Link} to="/me"> */}
+           <Button as={Link} to="/me">
             see my characters
           </Button>
           <span> </span>

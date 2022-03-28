@@ -113,8 +113,12 @@ function NewCharacter({ user }) {
         {toggleClass? (
           <ClassSelector allClasses={allClasses} allClassDetails={allClassDetails} setToggle={setToggleClass} toggle={toggleClass} proficiencyState={proficiencyState} setProficiencyState={setProficiencyState} abScores={abScores} setAbScores={setAbScores} playerClass={playerClass} setPlayerClass={setPlayerClass}/>) : (<p></p>)}
         {toggleScorer? (<AbilityScorer abScores={abScores} hitPoints={hitPoints} setHitPoints={setHitPoints} abBonuses={abBonuses} allClassDetails={allClassDetails} setAbScores={setAbScores} playerClass={playerClass}/>):(         <Button onClick={()=>setToggleScorer(!toggleScorer)}>Roll your scores</Button>)}
-
-        <Button onClick={handleSheet}>Create this character</Button>
+          <br/>
+          <br/>
+          { toggleScorer && playerClass && race && characterName?
+                 (<Button onClick={handleSheet}>Create this character</Button>) :(<p></p>)
+          }
+  
 
 
   </>

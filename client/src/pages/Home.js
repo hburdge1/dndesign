@@ -19,12 +19,22 @@ function Home({ user }) {
       .then(c=>setAllPlayers(c));
   }, []);
 
+  function playerFetch(){
+
+  
+      fetch("/players")
+      .then((r) => r.json())
+      .then(c=>setAllPlayers(c));
+
+  }
     function loadSheet(p) {
         setShowSheet(!showSheet)
         setPlayer(p)
     }
   return (
     <Wrapper>
+        <Button onClick={()=>setAllPlayers(allPlayers.filter((p) => user.id === p.user_id))}>Show only my players</Button>
+        <Button onClick={()=>playerFetch()}>Show all players</Button><br/>
       {allPlayers? (
       allPlayers.map((p)=> (
                 <>

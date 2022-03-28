@@ -3,10 +3,8 @@ import { Switch, Route, withRouter } from "react-router-dom";
 import NavBar from "./NavBar";
 import Login from "../pages/Login";
 import Home from "../pages/Home";
-import RaceSelector from "../pages/RaceSelector";
 import NewCharacter from "../pages/NewCharacter";
 import { CharacterSheet } from "../pages/CharacterSheet";
-
 
 function App() {
   const [user, setUser] = useState(null);
@@ -25,7 +23,7 @@ function App() {
 
   return (
     <>
-      <NavBar user={user} setUser={setUser} />
+      <NavBar user={user} setUser={setUser} players={user.players}/>
       <main>
         <Switch>
           <Route path="/new">
@@ -35,7 +33,7 @@ function App() {
             <Home user={user}/>
           </Route>
           <Route path="/sheet">
-            <CharacterSheet user={user}/>
+          <CharacterSheet user={user}/>
           </Route>
         </Switch>
       </main>

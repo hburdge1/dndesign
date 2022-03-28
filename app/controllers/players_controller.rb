@@ -1,7 +1,10 @@
 class PlayersController < ApplicationController
+  # def index
+  #   players = Player.where(user_id: @current_user.id)
+  #   render json: players
+  # end
   def index
-    players = Player.where(user_id: @current_user.id)
-    render json: players
+    render json: Player.all
   end
 
   def create

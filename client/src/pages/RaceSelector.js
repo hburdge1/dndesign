@@ -21,7 +21,6 @@ export default function RaceSelector({ user, characterName, setCharacterName, ab
         setRace(e.target.value)
         setToggle(!toggle);
         setAbScores(abBonuses)
-        console.log(abScores)
    }
 
 //   const routeChange = () =>{ 
