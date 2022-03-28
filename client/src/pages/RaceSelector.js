@@ -5,8 +5,9 @@ import { render } from 'react-dom'
 import { useEffect, useState } from 'react'
 import { Carousel, Card, Form} from 'react-bootstrap'
 import { Button, FormField, Label, Input } from '../styles'
-import Popup from 'reactjs-popup';
-import 'reactjs-popup/dist/index.css';
+
+import {Grid, Container, Col, Row, Alert, Modal} from 'react-bootstrap'
+
 
 export default function RaceSelector({ user, characterName, setCharacterName, abBonuses, setAbBonuses, setToggle, toggle, race, setRace, abScores, setAbScores }) {
     const [allRace, setAllRace]=useState([])
@@ -16,6 +17,9 @@ export default function RaceSelector({ user, characterName, setCharacterName, ab
     const [relRace, setRelRace]= useState([])
    const history = useHistory();
    const [traitToggle, setTraitToggle]=useState(false)
+     const [show, setShow] = useState(false);
+
+
 
    const handleRaceClick = (e) =>{
         setRace(e.target.value)
@@ -65,12 +69,12 @@ export default function RaceSelector({ user, characterName, setCharacterName, ab
       className="d-block w-100"
       src={`/race_images/${r.name}.png`}
     />
-    <Carousel.Caption style={{backgroundColor: 'grey'}}>
+    <Carousel.Caption style={{backgroundColor: 'grey', display:'flex', width:'100%'}}>
       <h3>{r.name}</h3>
 
-            <div style={{width: 'fit-to-content'}}>
-      <Popup style={{flowing: true}} trigger={<button>learn more</button>} closeOnDocumentClick position="right-center">
-  
+     {show? (
+      <Alert onClose={() => setShow(false)} dismissible>
+     
       <text>speed:</text> <text style={{fontWeight: 'bold'}}>{r.speed}</text><br/>
       <text>alignment:</text> <text style={{fontWeight: 'bold'}}>{r.alignment}</text><br/>
       <text>aging:</text> <text style={{fontWeight: 'bold'}}>{r.age}</text><br/>
@@ -84,12 +88,9 @@ export default function RaceSelector({ user, characterName, setCharacterName, ab
         {(r.languages.map((s)=>
         <><span>{s.name}</span><br /></>))}
         <text>{r.language_desc}</text><br/>
-        <text>racial traits: </text>
+        <text>racial traits: </text><br/>
         {(r.traits.map((s)=>
         <><span style={{fontWeight:'bold'}}>{s.name}</span><button onClick={()=>handleTrait(s.index)}></button><br/> <text>{traitToggle? traitDetails : ''}</text><br/></>))}
-
-        
-        {/* <>{(r.ability_bonuses.map((s)=> setAbBonuses(...abBonuses, (abBonuses[s.ability_score.name]= s.bonus))))}</> */}
       <form onSubmit={handleSubmit}>
            <FormField>
             <Label htmlFor="character_name">Name your character</Label>
@@ -104,14 +105,10 @@ export default function RaceSelector({ user, characterName, setCharacterName, ab
               <Button value={r.index} onClick={handleRaceClick}>Choose this race</Button>
           </FormField>
                     <FormField>
-            {/* <Button color="primary" type="submit">
-             Create this character
-            </Button> */}
           </FormField>
         </form>
-
-          </Popup>
-                  </div>
+      </Alert>
+      ): (<Button onClick={()=> setShow(true)}></Button>)}
     </Carousel.Caption>
   </Carousel.Item>
   ))) : (<p>nothing here</p>)}

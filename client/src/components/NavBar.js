@@ -23,13 +23,13 @@ function NavBar({ user, setUser, players }) {
       <Nav> 
 {/* 
         <Button as={Link} to="/me"> */}
-           <Button as={Link} to="/me">
+           {/* <Button as={Link} to="/me">
             see my characters
           </Button>
           <span> </span>
           <Button as={Link} to="/games">
             see my campaigns
-          </Button>
+          </Button> */}
           <Button as={Link} to="/new">
             Create a new character
           </Button>

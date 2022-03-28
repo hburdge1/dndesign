@@ -70,9 +70,6 @@ function CharacterSheet({ player }){
   }
     return(
         <>
-	
-
-			<div className="sheet-cl-1-3 sheet-margin-top"><img src="http://i.imgur.com/Y8KHPKm.png" alt="Dungeons and Dragons (5th edition)"/></div>
 
 			<div style={{flexDirection:"row", display:"flex", justifyContent: 'center', width:'100%'}}>
 				<label for='char-name'>Character name:  </label>
@@ -124,32 +121,47 @@ function CharacterSheet({ player }){
 					</Col>
 					</Container>
 					<hr/>
-		
-				<div className="sheet-col-1-2 sheet-padr">
-					<h4 className="sheet-center">Hit Points <span className="sheet-pictos"></span> and Speed <span className="sheet-pictos">1</span></h4>
-					<div className="sheet-row sheet-padb">
-						<div className="sheet-col-1-2 sheet-padr sheet-border-right">
-							<div className="sheet-row">
-								<div className="sheet-col-1-2 sheet-small-label sheet-center">
-									<span  id='hp-max'>{player.hit_points}</span><br/>Max HP</div>
-									<span  id='hp-current'>{currentHP}</span><br/>current HP</div>
-							<form onSubmit={handleSubmitDamage}>
+					<Container style={{alignContent: 'center', position: 'relative'}}>
+						<Row style={{alignContent: 'center', position: 'relative'}}>
+							<Col>
+							<Box >
+									<span  id='hp-max'>{player.hit_points}</span><hr/>
+									<span>Max HP</span>
+							</Box>
+							</Col>
+							<Col>
+							<Box>
+									<span  id='hp-current'>{currentHP}</span><hr/>
+									<span>Current HP</span>
+							</Box>
+							</Col>
+						</Row>
+						<br/>
+						<Divider></Divider>
+						<Container style={{position:'relative', alignContent: 'center'}}>
+						<Row>
+						<form onSubmit={handleSubmitDamage}>
 					       <input type="number" id="name" value={damage} onChange={(e) => setDamage(e.target.value)} />
 						   <button type='submit'>Deal damage</button>
 						   </form>
+						</Row>
+						<Divider horizontal/>
+						<Row>
 						   <form onSubmit={handleSubmitHealing}>
 					       <input type="number"  value={healing} onChange={(e) => setHealing(e.target.value)} />
 						   <button type='submit'>Heal</button>
 						   </form>
-							
-						</div>
-						<div className="sheet-col-1-4 sheet-padl sheet-padr sheet-border-right sheet-small-label sheet-center">
+						</Row>
+						</Container>
+						<br/>
 							<input className="sheet-underlined" type="number" name="attr_temp_HP" min="0" step="1"/>
-							<br/>Temp HP</div>
+							Temp HP
+					
+					</Container>
 						<div className="sheet-col-1-4 sheet-padl sheet-small-label sheet-center">
 							<input className="sheet-underlined sheet-center" type="text" name="attr_speed"/>
 							<br/>Speed</div>
-					</div>
+				
 					<div className="sheet-row">
 						<div className="sheet-col-1-2">
 							<div className="sheet-row sheet-padr">
@@ -4905,7 +4917,7 @@ function CharacterSheet({ player }){
 				</div>
 				{/* END inventory row */}
 			
-				</div></div></div></div></div>
+				</div></div></div></div>
 		</>
 )
 }

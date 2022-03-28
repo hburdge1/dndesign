@@ -10,6 +10,7 @@ import ClassSelector from "./ClassSelector";
 import RaceSelector from "./RaceSelector";
 import AbilityScorer from "./AbilityScorer";
 import { CharacterSheet } from "./CharacterSheet";
+import {Container, Row, Col }from'react-bootstrap'
 function NewCharacter({ user }) {
   const [characterName, setCharacterName] = useState("")
   const [abBonuses, setAbBonuses] = useState({STR: 0, CON: 0, CHA: 0, WIS: 0, INT: 0, DEX: 0})
@@ -99,12 +100,9 @@ function NewCharacter({ user }) {
   console.log(abBonuses)
 
   return (
-    <>
-  <Tabs defaultActiveKey="0" id="uncontrolled-tab-example" className="mb-3" >
-    {indices}
- </Tabs>
-  <Box sx={{ display: 'flex' }}>
-        </Box>
+  <Container>
+      <Row>
+       
         {race === ('')? <Button onClick={()=>setToggle(!toggle)}>select a race</Button> : <Button style={{backgroundColor: 'grey'}} onClick={()=>setToggle(!toggle)}>race: {race}</Button>}
 
         {toggle? (
@@ -118,10 +116,10 @@ function NewCharacter({ user }) {
           { toggleScorer && playerClass && race && characterName?
                  (<Button onClick={handleSheet}>Create this character</Button>) :(<p></p>)
           }
-  
+   </Row>
 
 
-  </>
+  </Container>
   );
   // eslint-disable-next-line no-unreachable
 }
