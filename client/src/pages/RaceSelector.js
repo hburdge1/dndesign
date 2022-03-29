@@ -18,13 +18,14 @@ export default function RaceSelector({ user, characterName, setCharacterName, ab
    const history = useHistory();
    const [traitToggle, setTraitToggle]=useState(false)
      const [show, setShow] = useState(false);
-
+  const [nameShow, setNameShow]=useState(false)
 
 
    const handleRaceClick = (e) =>{
+     e.preventDefault()
         setRace(e.target.value)
-        setToggle(!toggle);
         setAbScores(abBonuses)
+        setNameShow(!nameShow)
    }
 
 //   const routeChange = () =>{ 
@@ -35,13 +36,14 @@ export default function RaceSelector({ user, characterName, setCharacterName, ab
   function handleSubmit(e) {
     e.preventDefault();
     setCharacterName(e.target.value)
+    setNameShow(false)
+   setToggle(!toggle);
     
   }
   function handleTrait(trait){
         fetch(`https://www.dnd5eapi.co/api/traits/${trait}`)
         .then(r=>r.json())
         .then(a=>setTraitDetails(a.desc))
-
         setTraitToggle(!traitToggle)
         
   }
@@ -62,19 +64,20 @@ export default function RaceSelector({ user, characterName, setCharacterName, ab
                 
             }))), [])
  return(
-   <Carousel variant="dark">
+   <>
+   <Carousel variant="dark" >
        {relRace.length > 0 ? (relRace.map((r)=> (
   <Carousel.Item>
     <img
       className="d-block w-100"
       src={`/race_images/${r.name}.png`}
     />
-    <Carousel.Caption style={{backgroundColor: 'grey', display:'flex', width:'100%'}}>
-      <h3>{r.name}</h3>
-
+    <Container style={{flexDirection:'row'}} className="d-block w-100">
+    <Carousel.Caption style={{backgroundColor: 'grey', width:'100%'}}>
+      <Row ><h3 >{r.name}</h3></Row>
      {show? (
-      <Alert onClose={() => setShow(false)} dismissible>
-     
+       <Row style={{justifyContent:'center'}}>
+      <Alert onClose={() => setShow(false)} style={{width:'100%', alignContent:'center'}} dismissible>
       <text>speed:</text> <text style={{fontWeight: 'bold'}}>{r.speed}</text><br/>
       <text>alignment:</text> <text style={{fontWeight: 'bold'}}>{r.alignment}</text><br/>
       <text>aging:</text> <text style={{fontWeight: 'bold'}}>{r.age}</text><br/>
@@ -89,9 +92,28 @@ export default function RaceSelector({ user, characterName, setCharacterName, ab
         <><span>{s.name}</span><br /></>))}
         <text>{r.language_desc}</text><br/>
         <text>racial traits: </text><br/>
-        {(r.traits.map((s)=>
-        <><span style={{fontWeight:'bold'}}>{s.name}</span><button onClick={()=>handleTrait(s.index)}></button><br/> <text>{traitToggle? traitDetails : ''}</text><br/></>))}
-      <form onSubmit={handleSubmit}>
+        {(r.traits.map((s)=> <button onClick={()=>handleTrait(s.index)}>{s.name}</button>))}
+        <br/>
+        {traitToggle? traitDetails : ''}
+      <form>
+          <FormField>
+              <Button value={r.index} onClick={handleRaceClick}>Choose this race</Button>
+          </FormField>
+                    <FormField>
+          </FormField>
+        </form>
+      </Alert>
+      </Row>
+      ): 
+     <Button onClick={()=> setShow(true)}>learn more about this race</Button>}
+    </Carousel.Caption>
+    </Container>
+  </Carousel.Item>
+  ))) : (<p>nothing here</p>)}
+  </Carousel>
+  {nameShow?
+   <Alert onClose={() => setNameShow(false)} style={{width:'100%', alignContent:'center'}} dismissible>
+   <form onSubmit={handleSubmit}>
            <FormField>
             <Label htmlFor="character_name">Name your character</Label>
             <Input
@@ -101,18 +123,14 @@ export default function RaceSelector({ user, characterName, setCharacterName, ab
               onChange={(e) => setCharacterName(e.target.value)}
             />
           </FormField>
-          <FormField>
-              <Button value={r.index} onClick={handleRaceClick}>Choose this race</Button>
-          </FormField>
-                    <FormField>
+                <FormField>
+              <Button onClick={handleSubmit}>Choose this name</Button>
           </FormField>
         </form>
       </Alert>
-      ): (<Button onClick={()=> setShow(true)}></Button>)}
-    </Carousel.Caption>
-  </Carousel.Item>
-  ))) : (<p>nothing here</p>)}
-</Carousel>
+        :
+ <Button onClick={()=> setNameShow(true)}>learn more about this race</Button>}
+</>
  )
 }
 
