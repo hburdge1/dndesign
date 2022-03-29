@@ -87,12 +87,12 @@ function NewCharacter({ user }) {
       }),
     }).then((r) => {
          setIsLoading(false);
-      if (r.ok) {
-        history.push("/")
-    
+            if (r.ok) {
+        history.push("/");
       }
-    })
-    } 
+    });
+  }
+    
     // function handleChange(e){
     //   setPlayerClass(e.target.checked)
     //   console.log(e.target.checked)

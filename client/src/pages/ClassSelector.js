@@ -28,17 +28,16 @@ export default function ClassSelector({allClasses, allClassDetails, toggle, setT
       <h3>{r.name}</h3>
       <p>{r.age}</p>
       <br/>
-      <p>speed: {r.speed}</p>
-       <Popup trigger={<button>learn more</button>}  style={{width: '100%'}}>
+       <Popup trigger={<button>learn more</button>}  style={{width: '100%', backgroundColor: 'grey'}}>
                  <>
          {r.proficiency_choices.map((a)=> ( 
              <>
-         <span>Choose {a.choose}</span> 
+  <span style={{width: '100%', backgroundColor: 'grey', fontWeight: 'bold'}}>Choose {a.choose}</span> 
              <ToggleButtonGroup
       name="value"
       type="checkbox"
     >{a.from.map((b)=> <>
-        <div class="form-check form-check-inline" >
+        <div class="form-check form-check-inline" style={{width: '100%', backgroundColor: 'grey'}}>
   <input class="form-check-input" type="checkbox" onChange={() => { proficiencyState? (setProficiencyState([...proficiencyState, (b.name)])) : (proficiencyState.push(b.name))}} />
   <label class="form-check-label" for="inlineCheckbox1">{b.name}</label>
     </div>

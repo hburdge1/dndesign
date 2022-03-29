@@ -12,20 +12,23 @@ function Home({ user }) {
     const [player, setPlayer] = useState({})
     const [showSheet, setShowSheet]= useState(false)
       const history = useHistory();
-
-      useEffect(() => {
-    fetch("/players")
+    console.log(allPlayers)
+   useEffect(() => {
+    fetch(`/users/${user.id}`)
       .then((r) => r.json())
-      .then(c=>setAllPlayers(c));
+      .then(c=>setAllPlayers(c.players));
   }, []);
 
   function playerFetch(){
-
-  
-      fetch("/players")
+    fetch("/players")
       .then((r) => r.json())
       .then(c=>setAllPlayers(c));
 
+  }
+  function selfFetch(){
+          fetch(`/users/${user.id}`)
+      .then((r) => r.json())
+      .then(c=>setAllPlayers(c.players));
   }
     function loadSheet(p) {
         setShowSheet(!showSheet)
@@ -33,10 +36,10 @@ function Home({ user }) {
     }
   return (
     <Wrapper>
-        <Button onClick={()=>setAllPlayers(allPlayers.filter((p) => user.id === p.user_id))}>Show only my players</Button>
+        <Button onClick={()=>selfFetch()}>Show only my players</Button>
         <Button onClick={()=>playerFetch()}>Show all players</Button><br/>
       {allPlayers? (
-      allPlayers.map((p)=> (
+        allPlayers.map((p)=> (
                 <>
                 <Button onClick={()=>loadSheet(p)}>{p.character_name}</Button>
                 
