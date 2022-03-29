@@ -101,6 +101,7 @@ function NewCharacter({ user }) {
 
   return (
   <Container>
+      <Row>{(characterName !== '')&&(toggle==false) ? <span>{characterName}</span> : <p></p>}</Row>
       <Row>
        
         {race === ('')? <Button onClick={()=>setToggle(!toggle)}>select a race</Button> : <Button style={{backgroundColor: 'grey'}} onClick={()=>setToggle(!toggle)}>race: {race}</Button>}

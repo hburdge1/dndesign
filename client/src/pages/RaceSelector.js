@@ -34,8 +34,7 @@ export default function RaceSelector({ user, characterName, setCharacterName, ab
 //     history.push(path);
 //   }
   function handleSubmit(e) {
-    e.preventDefault();
-    setCharacterName(e.target.value)
+    e.preventDefault()
     setNameShow(false)
    setToggle(!toggle);
     
@@ -97,7 +96,7 @@ export default function RaceSelector({ user, characterName, setCharacterName, ab
         {traitToggle? traitDetails : ''}
       <form>
           <FormField>
-              <Button value={r.index} onClick={handleRaceClick}>Choose this race</Button>
+              <Button value={r.index} type='submit' onClick={handleRaceClick}>Choose this race</Button>
           </FormField>
                     <FormField>
           </FormField>
