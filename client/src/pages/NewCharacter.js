@@ -100,10 +100,10 @@ function NewCharacter({ user }) {
   console.log(abBonuses)
 
   return (
-  <Container>
-      <Row>{(characterName !== '')&&(toggle==false) ? <span>{characterName}</span> : <p></p>}</Row>
+  <Container style={{alignContent:'center', width:'100%', flexDirection:'column'}} >
+
       <Row>
-       
+       {(characterName !== '')&&(toggle==false) ? <span style={{width:'100%'}}>{characterName}</span> : <p></p>}
         {race === ('')? <Button onClick={()=>setToggle(!toggle)}>select a race</Button> : <Button style={{backgroundColor: 'grey'}} onClick={()=>setToggle(!toggle)}>race: {race}</Button>}
 
         {toggle? (

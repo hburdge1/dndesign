@@ -18,6 +18,7 @@ class CreatePlayers < ActiveRecord::Migration[6.1]
       t.string :spells, array: true, null: true
       t.string :feats, array: true
       t.integer :hit_points
+      t.integer :level
       t.timestamps
     end
   end

@@ -61,6 +61,7 @@ ActiveRecord::Schema.define(version: 2022_03_15_170404) do
     t.string "spells", array: true
     t.string "feats", array: true
     t.integer "hit_points"
+    t.integer "level"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
