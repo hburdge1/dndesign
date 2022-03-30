@@ -4,8 +4,8 @@ import { useState } from 'react';
 import { Button, Box } from '../styles'
 
 
-export default function AbilityScorer({abScores, setAbScores, playerClass, abBonuses, allClassDetails, hitPoints, setHitPoints}) {
-let hitDie=0
+export default function AbilityScorer({abScores, setAbScores, hitDie, playerClass, abBonuses, allClassDetails, hitPoints, setHitPoints}) {
+
   allClassDetails.forEach((r)=>{
     if (r.index == playerClass){
       hitDie=r.hit_die

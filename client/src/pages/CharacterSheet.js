@@ -18,7 +18,6 @@ function CharacterSheet({ player }){
 	const [prof,allProf]=useState([])
 	const history = useHistory();
 	let featArr=[]
-	console.log(proficiencies)
 	// const submitDamage= (e) =>{
 	// 	e.preventDefault()
 	// 	console.log(e.target.value)
@@ -71,22 +70,28 @@ function CharacterSheet({ player }){
   }
   function rollInitiative(){
 	 setInitiative(Math.floor((Math.random() * (20 - 1 + 1) + 1) + (((player.skills['DEX']) - 10)/2)))
-
   }
-  	function handleLevelUp(e){
-		setLevel(level + 1)
+  	function handleLevelUp(){
+	let newHP = parseInt(player.hit_points) + Math.floor(((parseInt(player.hit_die))/2) + 1) 
+	console.log(newHP)
+	 setLevel(level + 1)
   	 fetch(`/players/${player.id}`, {
       method: "PATCH",
       headers: {
         "Content-Type": "application/json",
       },
       body: JSON.stringify({
-		level: level
+		level: level,
+		hit_points: newHP
       }),
     }).then((r) => {
       if (r.ok) {
         history.push("/")
-		console.log(level)
+		fetch(`/players/${player.id}`)
+		.then(r=>r.json())
+		.then(a=> player.hit_points=a.hit_points)
+		.then(setCurrentHP(player.hit_points))
+		.then(console.log(currentHP))
       } else {
     
       }
@@ -204,8 +209,8 @@ useEffect(()=>{
 						</Row>
 						</Container>
 						<br/>
-							<input className="sheet-underlined" type="number" name="attr_temp_HP" min="0" step="1"/>
-							Temp HP
+						<Label>Hit die</Label>
+						<Box>{player.hit_die}</Box>
 					
 					</Container>
 					<ul>

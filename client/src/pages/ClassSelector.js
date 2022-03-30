@@ -6,6 +6,7 @@ import { ToggleButton, ToggleButtonGroup } from 'react-bootstrap'
 import { Button, FormField, Label, Input } from '../styles'
 export default function ClassSelector({allClasses, allClassDetails, toggle, setToggle, abScores, proficiencyState, setProficiencyState, setAbScores, playerClass, setPlayerClass}) {
     let indices=[]
+    
     const handleSelectClass = (e) => {
         e.preventDefault()
         setPlayerClass(e.target.value) 
@@ -25,14 +26,10 @@ export default function ClassSelector({allClasses, allClassDetails, toggle, setT
     <Carousel.Caption>
       <h3>{r.name}</h3>
       <p>{r.age}</p>
-      
       <br/>
 
        <Popup trigger={<button>learn more</button>}  style={{width: '100%', backgroundColor: 'grey'}}>
-                 <>
-     
-        
- 
+      <>
          {r.proficiency_choices.map((a)=> ( 
              <>
   <span style={{width: '100%', backgroundColor: 'grey', fontWeight: 'bold'}}>Choose {a.choose}</span> 

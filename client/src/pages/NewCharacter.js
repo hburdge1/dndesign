@@ -27,6 +27,7 @@ function NewCharacter({ user }) {
   const [proficiencyState, setProficiencyState]= useState([])
   const [toggle, setToggle] = useState(false);
   const [toggleScorer, setToggleScorer]=useState(false)
+let hitDie=0
   const history = useHistory();
   const [abScores, setAbScores]= useState({STR: 0, CON: 0, CHA: 0, WIS: 0, INT: 0, DEX: 0})
     const [hitPoints, setHitPoints]=useState(0)
@@ -67,7 +68,7 @@ function NewCharacter({ user }) {
      let levelArr=[]
      let nameArr=[]
      allClassDetails.forEach((a)=> nameArr.push(a.index))
- 
+    
  const handleSheet=()=>{
   
    setIsLoading(true);
@@ -82,6 +83,7 @@ function NewCharacter({ user }) {
        character_class: playerClass,
        character_name: characterName,
        alignment: alignment,
+       hit_die: hitDie,
        skills: {
          'CON': (abScores['CON'] + abBonuses['CON']),
          'WIS': (abScores['WIS'] + abBonuses['WIS']),
@@ -122,7 +124,7 @@ function NewCharacter({ user }) {
         {playerClass === ('')? <Button onClick={()=>setToggleClass(!toggleClass)}>select a class</Button> : <Button style={{backgroundColor: 'grey'}} onClick={()=>setToggle(!toggle)}>class: {playerClass}</Button>}
         {toggleClass? (
           <ClassSelector allClasses={allClasses} allClassDetails={allClassDetails} setToggle={setToggleClass} toggle={toggleClass} proficiencyState={proficiencyState} setProficiencyState={setProficiencyState} abScores={abScores} setAbScores={setAbScores} playerClass={playerClass} setPlayerClass={setPlayerClass}/>) : (<p></p>)}
-        {toggleScorer? (<AbilityScorer abScores={abScores} hitPoints={hitPoints} setHitPoints={setHitPoints} abBonuses={abBonuses} allClassDetails={allClassDetails} setAbScores={setAbScores} playerClass={playerClass}/>):(         <Button onClick={()=>setToggleScorer(!toggleScorer)}>Roll your scores</Button>)}
+        {toggleScorer? (<AbilityScorer abScores={abScores} hitDie={hitDie} hitPoints={hitPoints} setHitPoints={setHitPoints} abBonuses={abBonuses} allClassDetails={allClassDetails} setAbScores={setAbScores} playerClass={playerClass}/>):(         <Button onClick={()=>setToggleScorer(!toggleScorer)}>Roll your scores</Button>)}
           <br/>
           {toggleScorer && playerClass && race && characterName?
           
