@@ -129,7 +129,11 @@ useEffect(()=>{
 				<label for='char-class'>Character class:</label>
 				<span className="sheet-underlined sheet-center" id='char-class' style={{fontWeight: 'bold'}}>  {player.character_class} </span>
 			</div>	
-
+			<div style={{flexDirection:"row", display:"flex", justifyContent: 'center', width:'100%'}}>
+				<label for='alignment'>Character alignment:  </label>
+				<span className="sheet-underlined sheet-center" id='char-name' name="attr_character_name" style={{fontWeight: 'bold'}}>  {player.alignment}</span>
+			</div>
+			<hr/>
 		<span className="sheet-spacer"></span>
 					<h4 style={{flexDirection:"row", display:"flex", justifyContent: 'center', width:'100%'}}>Core Stats</h4>
 		

@@ -125,7 +125,7 @@ export default function RaceSelector({ user, characterName, setCharacterName, ab
         </form>
       </Alert>
         :
- <Button onClick={()=> setNameShow(true)}>learn more about this race</Button>}
+ <Button onClick={()=> setNameShow(true)}>name your character</Button>}
 </>
  )
 }

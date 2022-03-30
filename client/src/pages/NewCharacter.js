@@ -10,18 +10,19 @@ import ClassSelector from "./ClassSelector";
 import RaceSelector from "./RaceSelector";
 import AbilityScorer from "./AbilityScorer";
 import { CharacterSheet } from "./CharacterSheet";
-import {Container, Row, Col }from'react-bootstrap'
+import {Container, Row, Col, Dropdown, DropdownButton }from'react-bootstrap'
 function NewCharacter({ user }) {
   const [characterName, setCharacterName] = useState("")
-  const [autoProficiency, setAutoProficiency]=useState([])
+  let buttonArr=[]
   const [abBonuses, setAbBonuses] = useState({STR: 0, CON: 0, CHA: 0, WIS: 0, INT: 0, DEX: 0})
   const [race, setRace] = useState("");
   const [playerClass, setPlayerClass] = useState(""); 
   const [allClasses, setAllClasses] = useState([]);
   const [allClassDetails, setAllClassDetails] = useState([]);
+  const [alignment, setAlignment]=useState([])
   const [errors, setErrors] = useState([]);
   const [playerName, setPlayerName] = useState("");
-  const [playerBackground, setPlayerBackground]= useState('');
+  const [showThis, setShowThis] = useState(false)
   const [toggleClass, setToggleClass]=useState(false)
   const [proficiencyState, setProficiencyState]= useState([])
   const [toggle, setToggle] = useState(false);
@@ -32,7 +33,6 @@ function NewCharacter({ user }) {
   const baseUrl = "https://www.dnd5eapi.co/api"
   let urlArr=[]
     const [isLoading, setIsLoading] = useState(false);
-   let indices = []
   useEffect(() => {
     fetch(baseUrl + "/classes/")
     .then(r=>r.json())
@@ -53,7 +53,12 @@ function NewCharacter({ user }) {
      ))
       }
     
-      
+     useEffect(()=>{
+      fetch(`https://www.dnd5eapi.co/api/alignments`)
+      .then(r=>r.json())
+      .then(a => setAlignment(a))
+      buttonArr.push(alignment)
+     },[])
       let profArr=[]
     //  allClassDetails.forEach((a, i)=> profArr.push(<CheckboxesGroup proficiencyState={proficiencyState} setProficiencyState={setProficiencyState}/>))
      
@@ -76,6 +81,7 @@ function NewCharacter({ user }) {
        character_race: race,
        character_class: playerClass,
        character_name: characterName,
+       alignment: alignment,
        skills: {
          'CON': (abScores['CON'] + abBonuses['CON']),
          'WIS': (abScores['WIS'] + abBonuses['WIS']),
@@ -94,7 +100,10 @@ function NewCharacter({ user }) {
       }
     });
   }
-    
+  const handleAlignment=(e)=>{
+    console.log(e);
+    setAlignment(e)
+  }
     // function handleChange(e){
     //   setPlayerClass(e.target.checked)
     //   console.log(e.target.checked)
@@ -115,8 +124,20 @@ function NewCharacter({ user }) {
           <ClassSelector allClasses={allClasses} allClassDetails={allClassDetails} setToggle={setToggleClass} toggle={toggleClass} proficiencyState={proficiencyState} setProficiencyState={setProficiencyState} abScores={abScores} setAbScores={setAbScores} playerClass={playerClass} setPlayerClass={setPlayerClass}/>) : (<p></p>)}
         {toggleScorer? (<AbilityScorer abScores={abScores} hitPoints={hitPoints} setHitPoints={setHitPoints} abBonuses={abBonuses} allClassDetails={allClassDetails} setAbScores={setAbScores} playerClass={playerClass}/>):(         <Button onClick={()=>setToggleScorer(!toggleScorer)}>Roll your scores</Button>)}
           <br/>
-          <br/>
-          { toggleScorer && playerClass && race && characterName?
+          {toggleScorer && playerClass && race && characterName?
+          
+          <DropdownButton title='Choose an alignment' onSelect={handleAlignment}> 
+          <Dropdown.Item eventKey='Lawful good'>Lawful good</Dropdown.Item>
+          <Dropdown.Item eventKey='Lawful neutral'>Lawful neutral</Dropdown.Item>
+          <Dropdown.Item eventKey='Lawful evil'>Lawful evil</Dropdown.Item>
+          <Dropdown.Item eventKey='Neutral good'>Neutral good</Dropdown.Item>
+          <Dropdown.Item eventKey='True Neutral'>True Neutral</Dropdown.Item>
+          <Dropdown.Item eventKey='Neutral evil'>Neutral evil</Dropdown.Item>
+          <Dropdown.Item eventKey='Chaotic good'>Chaotic good</Dropdown.Item>
+          <Dropdown.Item eventKey='Chaotic Neutral'>Chaotic Neutral</Dropdown.Item>
+          <Dropdown.Item eventKey='Chaotic evil'>Chaotic evil</Dropdown.Item>
+          </DropdownButton> : (<p></p>)}
+          { toggleScorer && playerClass && race && characterName && alignment?
                  (<Button onClick={handleSheet}>Create this character</Button>) :(<p></p>)
           }
    </Row>
