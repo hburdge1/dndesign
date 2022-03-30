@@ -2,6 +2,7 @@ import {React, useState, useEffect} from "react"
 import { useHistory } from "react-router-dom";
 import {Box, FormField, Label, Button} from '../styles'
 import { Divider, Grid, Image, Segment } from 'semantic-ui-react'
+import { Popup } from "reactjs-popup";
 import { Container, Row, Col } from 'react-bootstrap'
 
 
@@ -13,7 +14,7 @@ function CharacterSheet({ player }){
 	const [initiative, setInitiative]=useState(0)
 	const [levelFeatures, setLevelFeatures]=useState([])
 	const [features, showFeatures]= useState(false)
-	const [levelButtons, showLevelButtons]=useState([])
+	const [level, setLevel]=useState(parseInt(player.level))
 	const history = useHistory();
 	let featArr=[]
 	console.log(currentHP)
@@ -71,20 +72,35 @@ function CharacterSheet({ player }){
 	 setInitiative(Math.floor((Math.random() * (20 - 1 + 1) + 1) + (((player.skills['DEX']) - 10)/2)))
 
   }
-  function handleLevel(){
-	  	fetch(`https://www.dnd5eapi.co/api/classes/${player.character_class}/levels/${player.level}`)
-		  .then(r=>r.json())
-		  .then(a=> setLevelFeatures(a.features))
+  	function handleLevelUp(e){
+		setLevel(level + 1)
+  	 fetch(`/players/${player.id}`, {
+      method: "PATCH",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+		level: level
+      }),
+    }).then((r) => {
+      if (r.ok) {
+        history.push("/")
+		console.log(level)
+      } else {
+    
+      }
+    });
 
   }
-  useEffect(() => {
-	  levelFeatures.forEach((s) =>
-			fetch(`https://www.dnd5eapi.co/api/features/${s.index}`)
-			.then( r=> r.json())
-			.then(a=> featArr.push(a)))
-  }, [levelFeatures])
-  console.log(featArr)
-//   console.log(featArr)
+// useEffect(()=>{
+// 	  	fetch(`https://www.dnd5eapi.co/api/classes/${player.character_class}/levels/${player.level}`)
+// 		  .then(r=>r.json())
+// 		  .then(a=>setLevelFeatures(a.features))
+
+// 		levelFeatures.forEach((s)=>fetch(`https://www.dnd5eapi.co/api/features/${s.index}`).then(a=>featArr.push(a)).then(featArr.forEach((s)=>showLevelButtons(...levelButtons, <Button>{s.name}</Button>))))
+// 	},[showFeatures])
+// 	showFeatures(!features)
+// console.log(levelButtons)
 //   		(levelButtons? (levelButtons.forEach((s)=>featArr.push(<Button>{s.name}</Button>))) : (''))
     return(
         <>
@@ -193,12 +209,13 @@ function CharacterSheet({ player }){
 									<br/>AC (no armour)</div>
 							</div>
 						</div>
+					
 						<Label>{player.character_class} Level</Label>
-						<Box>{player.level}</Box>
-						<Button onClick={()=>handleLevel()}>Level perks</Button>
-						{featArr.map((s)=> 
-						<div>(<Button>{s.name}</Button>)</div>)}
-
+						<Box>{level}</Box>
+						<Popup trigger={<button>Level up!</button>} closeOnDocumentClick style={{ backgroundColor: 'grey', alignContent:'center'}}>
+							<Box>Are you sure you want to level up {player.character_name}? <text style={{fontWeight:'strong'}}>This cannot be undone!</text></Box>
+							<Button onClick={handleLevelUp}>Yes, level up {player.character_name}!</Button>
+						</Popup>
 				</div>
 		</>
 )

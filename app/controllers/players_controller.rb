@@ -19,7 +19,7 @@ class PlayersController < ApplicationController
     private
 
   def player_params
-    params.permit(:character_name, :skills, :character_class, :character_race, :hit_points, :id, :player)
+    params.permit(:character_name, :skills, :character_class, :character_race, :hit_points, :id, :player, :level)
   end
 
 end
