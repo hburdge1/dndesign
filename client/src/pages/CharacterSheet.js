@@ -16,6 +16,8 @@ function CharacterSheet({ player }){
 	const [features, showFeatures]= useState(false)
 	const [level, setLevel]=useState(parseInt(player.level))
 	const [prof,allProf]=useState([])
+	const[hitDice, setHitDice]=useState(player.level + 1)
+	const [shortRest, setShortRest]=useState(0)
 	const history = useHistory();
 	let featArr=[]
 	// const submitDamage= (e) =>{
@@ -67,6 +69,9 @@ function CharacterSheet({ player }){
       }
     });
 
+  }
+  function handleShortRest(){
+	  console.log(shortRest)
   }
   function rollInitiative(){
 	 setInitiative(Math.floor((Math.random() * (20 - 1 + 1) + 1) + (((player.skills['DEX']) - 10)/2)))
@@ -211,7 +216,14 @@ useEffect(()=>{
 						<br/>
 						<Label>Hit die</Label>
 						<Box>{player.hit_die}</Box>
-					
+						<Label>Remaining hit dice</Label>
+						<Box>{hitDice}</Box>
+						<form onSubmit={handleShortRest}>
+						<Label>How many hit dice would you like to use?</Label>
+						<FormField>
+						<input type="number" value={healing} onChange={(e) =>setShortRest(e.target.value)} />
+						</FormField>
+						</form>
 					</Container>
 					<ul>
 					{newArr.map((r)=> <li>{r}</li>)}
