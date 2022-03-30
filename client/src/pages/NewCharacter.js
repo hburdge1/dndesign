@@ -13,6 +13,7 @@ import { CharacterSheet } from "./CharacterSheet";
 import {Container, Row, Col }from'react-bootstrap'
 function NewCharacter({ user }) {
   const [characterName, setCharacterName] = useState("")
+  const [autoProficiency, setAutoProficiency]=useState([])
   const [abBonuses, setAbBonuses] = useState({STR: 0, CON: 0, CHA: 0, WIS: 0, INT: 0, DEX: 0})
   const [race, setRace] = useState("");
   const [playerClass, setPlayerClass] = useState(""); 
@@ -61,7 +62,7 @@ function NewCharacter({ user }) {
      let levelArr=[]
      let nameArr=[]
      allClassDetails.forEach((a)=> nameArr.push(a.index))
-
+ 
  const handleSheet=()=>{
   
    setIsLoading(true);
@@ -83,7 +84,8 @@ function NewCharacter({ user }) {
          'DEX': (abScores['DEX'] + abBonuses['DEX']),
          'CHA': (abScores['CHA'] + abBonuses['CHA']),
       },
-       proficiencies: proficiencyState
+       proficiencies: proficiencyState,
+       level: 1
       }),
     }).then((r) => {
          setIsLoading(false);

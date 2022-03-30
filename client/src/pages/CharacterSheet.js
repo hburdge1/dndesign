@@ -12,12 +12,13 @@ function CharacterSheet({ player }){
 	const [damage, setDamage]=useState(0)
 	const [healing, setHealing]=useState(0)
 	const [initiative, setInitiative]=useState(0)
-	const [levelFeatures, setLevelFeatures]=useState([])
+	const [proficiencies, setProficiencies]=useState([player.proficiencies])
 	const [features, showFeatures]= useState(false)
 	const [level, setLevel]=useState(parseInt(player.level))
+	const [prof,allProf]=useState([])
 	const history = useHistory();
 	let featArr=[]
-	console.log(currentHP)
+	console.log(proficiencies)
 	// const submitDamage= (e) =>{
 	// 	e.preventDefault()
 	// 	console.log(e.target.value)
@@ -92,6 +93,17 @@ function CharacterSheet({ player }){
     });
 
   }
+let newArr=[]
+useEffect(()=>{
+  fetch(`https://www.dnd5eapi.co/api/classes/${player.character_class}/proficiencies`)
+  .then(r=>r.json())
+  .then(a=>allProf(a.results))
+},[])
+  if (prof !== []){
+  prof.forEach(p=>newArr.push(p.name))
+  proficiencies.forEach((p)=>newArr.push(p))
+  }
+
 // useEffect(()=>{
 // 	  	fetch(`https://www.dnd5eapi.co/api/classes/${player.character_class}/levels/${player.level}`)
 // 		  .then(r=>r.json())
@@ -192,23 +204,24 @@ function CharacterSheet({ player }){
 							Temp HP
 					
 					</Container>
+					<ul>
+					{newArr.map((r)=> <li>{r}</li>)}
 					
+					</ul>
 									<span>initiative: {initiative}</span>
 				
 								<div className="sheet-col-1-3 sheet-center">
 									<button  onClick={rollInitiative} className="sheet-initiative sheet-large-button" name="roll_Initiative">Roll initiative!</button>
 						
-						<div className="sheet-col-1-2 sheet-padl">
-							<h4 className="sheet-center">Armour className <span className="sheet-pictos-three">b</span></h4>
-							<div className="sheet-row sheet-padb">
+							<Label>Armour class</Label>
+							<Box>{10+(parseInt((player.skills['DEX'])/2))}</Box>
 								<div className="sheet-col-1-2 sheet-small-label sheet-center">
 									<input className="sheet-underlined" type="number" name="attr_AC" value="@{AC_calc}" disabled="disabled"/>
-									<br/>AC (worn armour)</div>
+									<br/></div>
 								<div className="sheet-col-1-2 sheet-small-label sheet-center">
 									<input className="sheet-underlined" type="number" name="attr_AC_no_armour" value="@{AC_no_armour_calc}" disabled="disabled"/>
 									<br/>AC (no armour)</div>
-							</div>
-						</div>
+			
 					
 						<Label>{player.character_class} Level</Label>
 						<Box>{level}</Box>

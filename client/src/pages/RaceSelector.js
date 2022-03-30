@@ -67,10 +67,7 @@ export default function RaceSelector({ user, characterName, setCharacterName, ab
    <Carousel variant="dark" >
        {relRace.length > 0 ? (relRace.map((r)=> (
   <Carousel.Item>
-    <img
-      className="d-block w-100"
-      src={`/race_images/${r.name}.png`}
-    />
+    <img className="d-block w-100" alt='class images' src={`/race_images/${r.name}.png`} />
     <Container style={{flexDirection:'row'}} className="d-block w-100">
     <Carousel.Caption style={{backgroundColor: 'grey', width:'100%'}}>
       <Row ><h3 >{r.name}</h3></Row>
