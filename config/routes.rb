@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
   resources :character_sheets
   resources :maps
+  resources :players
   resources :combats
   resources :games
   resources :users
@@ -12,7 +13,4 @@ Rails.application.routes.draw do
       post '/character_sheet', to: 'character_sheets#create'
       post "/signup", to: "users#create"
       patch '/players/:id', to: "players#update"
-      get '/players/:id', to: 'players#index'
-
-resources :players
 end
