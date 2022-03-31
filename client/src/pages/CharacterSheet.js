@@ -1,34 +1,36 @@
 import {React, useState, useEffect} from "react"
 import { useHistory } from "react-router-dom";
-import {Box, FormField, Label, Button} from '../styles'
+import {Box, FormField, Error, Label, Button} from '../styles'
 import { Divider, Grid, Image, Segment } from 'semantic-ui-react'
 import { Popup } from "reactjs-popup";
-import { Container, Row, Col } from 'react-bootstrap'
-
-
-
+import { Container, Row, Col, Alert, Modal } from 'react-bootstrap'
+import DeathSave from "../styles/DeathSave";
 function CharacterSheet({ player }){
 	const [currentHP, setCurrentHP]=useState(player.hit_points)
 	const [damage, setDamage]=useState(0)
 	const [healing, setHealing]=useState(0)
 	const [initiative, setInitiative]=useState(0)
 	const [proficiencies, setProficiencies]=useState([player.proficiencies])
-	const [features, showFeatures]= useState(false)
+	const [deathSave, setDeathSave]= useState(false)
 	const [level, setLevel]=useState(parseInt(player.level))
 	const [prof,allProf]=useState([])
 	const[hitDice, setHitDice]=useState(player.level + 1)
+	const[saved, setSaved]=useState(null)
 	const [shortRest, setShortRest]=useState(0)
+	const [isValid, setIsValid] = useState(true)
+	const [num, setNum]=useState(0)
+	const [profShow, setProfShow]= useState(false)
 	const history = useHistory();
 	let featArr=[]
-	// const submitDamage= (e) =>{
-	// 	e.preventDefault()
-	// 	console.log(e.target.value)
-	// }
+	
 	function handleSubmitDamage(e){
-		e.preventDefault()
+	 e.preventDefault()
 		let hpNum = parseInt(currentHP) 
 		let damageNum= parseInt(damage)
+		if (hpNum-damageNum > 0){
 		setCurrentHP(hpNum-damageNum)
+
+	
   	 fetch(`/players/${player.id}`, {
       method: "PATCH",
       headers: {
@@ -44,14 +46,21 @@ function CharacterSheet({ player }){
       } else {
     
       }
-    });
-
+    })}
+	else{
+		setCurrentHP(0)
+		setDeathSave(true)
+	}
   }
   	function handleSubmitHealing(e){
 		e.preventDefault()
 		let hpNum = parseInt(currentHP) 
 		let healNum= parseInt(healing)
-		setCurrentHP(hpNum+healNum)
+	if (hpNum+healNum <= parseInt(player.hit_points)){
+		setCurrentHP(hpNum+healNum)}
+	else{
+		setCurrentHP(parseInt(player.hit_points))
+	}
   	 fetch(`/players/${player.id}`, {
       method: "PATCH",
       headers: {
@@ -70,8 +79,38 @@ function CharacterSheet({ player }){
     });
 
   }
-  function handleShortRest(){
-	  console.log(shortRest)
+  function handleShortRest(e){
+	  if (shortRest <= hitDice){
+		e.preventDefault()
+		
+		let newNum = parseInt(shortRest) * Math.floor(((parseInt(player.hit_die)))+1)  
+		let hpNum=parseInt(currentHP)
+		if(hpNum+newNum <= parseInt(player.hit_points)){
+		setCurrentHP(hpNum+newNum)}
+		else{
+			setCurrentHP(player.hit_points)
+		}
+		setHitDice(hitDice-shortRest)
+  	 fetch(`/players/${player.id}`, {
+      method: "PATCH",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+		hit_points: currentHP
+      }),
+    }).then((r) => {
+      if (r.ok) {
+        history.push("/")
+		setShortRest(0)
+      } 
+	
+    });
+	} else{
+		e.preventDefault()
+			setIsValid(false)
+		}
+
   }
   function rollInitiative(){
 	 setInitiative(Math.floor((Math.random() * (20 - 1 + 1) + 1) + (((player.skills['DEX']) - 10)/2)))
@@ -97,8 +136,6 @@ function CharacterSheet({ player }){
 		.then(a=> player.hit_points=a.hit_points)
 		.then(setCurrentHP(player.hit_points))
 		.then(console.log(currentHP))
-      } else {
-    
       }
     });
 
@@ -113,23 +150,17 @@ useEffect(()=>{
   prof.forEach(p=>newArr.push(p.name))
   proficiencies.forEach((p)=>newArr.push(p))
   }
-
-// useEffect(()=>{
-// 	  	fetch(`https://www.dnd5eapi.co/api/classes/${player.character_class}/levels/${player.level}`)
-// 		  .then(r=>r.json())
-// 		  .then(a=>setLevelFeatures(a.features))
-
-// 		levelFeatures.forEach((s)=>fetch(`https://www.dnd5eapi.co/api/features/${s.index}`).then(a=>featArr.push(a)).then(featArr.forEach((s)=>showLevelButtons(...levelButtons, <Button>{s.name}</Button>))))
-// 	},[showFeatures])
-// 	showFeatures(!features)
-// console.log(levelButtons)
-//   		(levelButtons? (levelButtons.forEach((s)=>featArr.push(<Button>{s.name}</Button>))) : (''))
     return(
         <>
 
 			<div style={{flexDirection:"row", display:"flex", justifyContent: 'center', width:'100%'}}>
-				<label for='char-name'>Character name:  </label>
-				<span className="sheet-underlined sheet-center" id='char-name' name="attr_character_name" style={{fontWeight: 'bold'}}>  {player.character_name}</span>
+				<Divider/>
+				<span>Character name:</span>
+		<span className="sheet-spacer"></span>
+				<Row>
+				<span id='char-name' name="attr_character_name" style={{fontWeight: 'bold'}}>  {player.character_name}</span>
+				</Row>
+				<br/>
 			</div>
 			<div style={{flexDirection:"row", display:"flex", justifyContent: 'center', width:'100%'}}>
 				<label for='char-race'>Character race:</label>
@@ -141,7 +172,7 @@ useEffect(()=>{
 			</div>	
 			<div style={{flexDirection:"row", display:"flex", justifyContent: 'center', width:'100%'}}>
 				<label for='alignment'>Character alignment:  </label>
-				<span className="sheet-underlined sheet-center" id='char-name' name="attr_character_name" style={{fontWeight: 'bold'}}>  {player.alignment}</span>
+				<span className="sheet-underlined sheet-center" style={{fontWeight: 'bold'}}>  {player.alignment}</span>
 			</div>
 			<hr/>
 		<span className="sheet-spacer"></span>
@@ -194,6 +225,11 @@ useEffect(()=>{
 									<span  id='hp-current'>{currentHP}</span><hr/>
 									<span>Current HP</span>
 							</Box>
+							  {deathSave?
+  					 <Alert onClose={() => setCurrentHP(parseInt(player.hit_points))} style={{width:'100%', alignContent:'center'}} dismissible>
+						   <DeathSave player={player} saved={saved} setSaved={setSaved} history={history} setCurrentHP={setCurrentHP} currentHP={currentHP}/>
+      					</Alert>
+        : <p></p>}
 							</Col>
 						</Row>
 						<br/>
@@ -213,44 +249,49 @@ useEffect(()=>{
 						   </form>
 						</Row>
 						</Container>
-						<br/>
+						<br/><hr/>
 						<Label>Hit die</Label>
 						<Box>{player.hit_die}</Box>
 						<Label>Remaining hit dice</Label>
 						<Box>{hitDice}</Box>
 						<form onSubmit={handleShortRest}>
 						<Label>How many hit dice would you like to use?</Label>
-						<FormField>
-						<input type="number" value={healing} onChange={(e) =>setShortRest(e.target.value)} />
-						</FormField>
+						<input type="number" value={shortRest} onChange={(e) =>setShortRest(e.target.value)} />
+						<button type='submit'>Take a short rest!</button>
 						</form>
+						{ isValid? (''):(
+						   <Alert variant='danger' onClose={() => setIsValid(true)} style={{width:'100%', alignContent:'center'}} dismissible>
+							   Oops! That's too many hit dice!
+     						 </Alert>)}
 					</Container>
+					<hr/><br/>
+					<Container style={{justifyContent:'center'}}>
+					<span style={{fontWeight:'bold'}}>Proficiency bonus: {parseInt(player.level + 1)}</span>
+					<br/>
+					<button onClick={()=> setProfShow(!profShow)}>Show my proficiencies</button>
+					{profShow? 
 					<ul>
 					{newArr.map((r)=> <li>{r}</li>)}
-					
 					</ul>
-									<span>initiative: {initiative}</span>
-				
-								<div className="sheet-col-1-3 sheet-center">
-									<button  onClick={rollInitiative} className="sheet-initiative sheet-large-button" name="roll_Initiative">Roll initiative!</button>
-						
-							<Label>Armour class</Label>
-							<Box>{10+(parseInt((player.skills['DEX'])/2))}</Box>
-								<div className="sheet-col-1-2 sheet-small-label sheet-center">
-									<input className="sheet-underlined" type="number" name="attr_AC" value="@{AC_calc}" disabled="disabled"/>
-									<br/></div>
-								<div className="sheet-col-1-2 sheet-small-label sheet-center">
-									<input className="sheet-underlined" type="number" name="attr_AC_no_armour" value="@{AC_no_armour_calc}" disabled="disabled"/>
-									<br/>AC (no armour)</div>
-			
-					
+					 : ''}
+					 </Container>
+					 <hr/><br/>
+					<Container style={{justifyContent:'center', position:'relative'}}>
+					<Box>
+					<span>initiative: {initiative}</span>
+					</Box>
+						<br/>
+					<button  onClick={rollInitiative} className="sheet-initiative sheet-large-button" name="roll_Initiative">Roll initiative!</button>
+					</Container>
+					<hr/><br/>
+					<Label>Armour class</Label>
+					<Box>{10+(parseInt((player.skills['DEX'])/2))}</Box>
 						<Label>{player.character_class} Level</Label>
 						<Box>{level}</Box>
-						<Popup trigger={<button>Level up!</button>} closeOnDocumentClick style={{ backgroundColor: 'grey', alignContent:'center'}}>
+						<Popup trigger={<button>Level up!</button>} position='right center' style={{backgroundColor:'grey', alignContent:'center'}}>
 							<Box>Are you sure you want to level up {player.character_name}? <text style={{fontWeight:'strong'}}>This cannot be undone!</text></Box>
 							<Button onClick={handleLevelUp}>Yes, level up {player.character_name}!</Button>
 						</Popup>
-				</div>
 		</>
 )
 }

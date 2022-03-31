@@ -13,4 +13,6 @@ Rails.application.routes.draw do
       post "/signup", to: "users#create"
       patch '/players/:id', to: "players#update"
       get '/players/:id', to: 'players#index'
+
+resources :players
 end

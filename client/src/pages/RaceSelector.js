@@ -61,28 +61,26 @@ export default function RaceSelector({ user, characterName, setCharacterName, ab
             .then(a=> {
               relRace.push(a)
                 
-            }))), [])
+ }))), [])
  return(
    <>
-   <Carousel variant="dark" >
+   <Carousel variant="dark" style={{display:'block'}}>
        {relRace.length > 0 ? (relRace.map((r)=> (
   <Carousel.Item>
     <img className="d-block w-100" alt='class images' src={`/race_images/${r.name}.png`} />
-    <Container style={{flexDirection:'row'}} className="d-block w-100">
-    <Carousel.Caption style={{backgroundColor: 'grey', width:'100%'}}>
-      <Row ><h3 >{r.name}</h3></Row>
-     {show? (
-       <Row style={{justifyContent:'center'}}>
-      <Alert onClose={() => setShow(false)} style={{width:'100%', alignContent:'center'}} dismissible>
+    <Carousel.Caption style={{backgroundColor: 'grey'}}>
+   <h3 >{r.name}</h3>
+      {show? (
+
+      <Alert onClose={() => setShow(false)} style={{width:'100%', position:'relative'}} dismissible>
       <text>speed:</text> <text style={{fontWeight: 'bold'}}>{r.speed}</text><br/>
       <text>alignment:</text> <text style={{fontWeight: 'bold'}}>{r.alignment}</text><br/>
       <text>aging:</text> <text style={{fontWeight: 'bold'}}>{r.age}</text><br/>
       <text>size:</text> <text style={{fontWeight: 'bold'}}>{r.size_description}</text><br/>
-       <text>ability score increases:</text> {(r.ability_bonuses.map((s)=>
+       <text>ability score increases:</text> <br/>
+       {(r.ability_bonuses.map((s)=>
         <><span>{s.ability_score.name}:</span><span> {s.bonus}</span><br/></>))}
-        <br/>
-        {r.ability_bonuses.map((s)=> (abBonuses[s.ability_score.name])=(s.bonus))}
-        <br/>
+        <br/>{r.ability_bonuses.map((s)=> (abBonuses[s.ability_score.name])=(s.bonus))}<br/>
         <text>languages:</text>
         {(r.languages.map((s)=>
         <><span>{s.name}</span><br /></>))}
@@ -95,15 +93,13 @@ export default function RaceSelector({ user, characterName, setCharacterName, ab
           <FormField>
               <Button value={r.index} type='submit' onClick={handleRaceClick}>Choose this race</Button>
           </FormField>
-                    <FormField>
+                  <FormField>
           </FormField>
         </form>
       </Alert>
-      </Row>
       ): 
      <Button onClick={()=> setShow(true)}>learn more about this race</Button>}
     </Carousel.Caption>
-    </Container>
   </Carousel.Item>
   ))) : (<p>nothing here</p>)}
   </Carousel>

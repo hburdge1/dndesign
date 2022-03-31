@@ -113,12 +113,11 @@ let hitDie=0
   console.log(abBonuses)
 
   return (
-  <Container style={{alignContent:'center', width:'100%', flexDirection:'column'}} >
+  <Container style={{justifyContent:'center', width:'100%'}} >
 
       <Row>
        {(characterName !== '')&&(toggle==false) ? <span style={{width:'100%'}}>{characterName}</span> : <p></p>}
         {race === ('')? <Button onClick={()=>setToggle(!toggle)}>select a race</Button> : <Button style={{backgroundColor: 'grey'}} onClick={()=>setToggle(!toggle)}>race: {race}</Button>}
-
         {toggle? (
           <RaceSelector user={user} setToggle={setToggle} toggle={toggle} race={race} setRace={setRace} setAbBonuses={setAbBonuses} abBonuses={abBonuses} characterName={characterName} setCharacterName={setCharacterName} abScores={abScores} setAbScores={setAbScores}/>) : (<p></p>)}
         {playerClass === ('')? <Button onClick={()=>setToggleClass(!toggleClass)}>select a class</Button> : <Button style={{backgroundColor: 'grey'}} onClick={()=>setToggle(!toggle)}>class: {playerClass}</Button>}

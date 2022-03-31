@@ -4,6 +4,7 @@ import ReactMarkdown from "react-markdown";
 import { Link } from "react-router-dom";
 import styled from "styled-components";
 import { Box, Button } from "../styles";
+import { Row, Col } from 'react-bootstrap'
 import { CharacterSheet } from "./CharacterSheet"
 
 
@@ -36,14 +37,18 @@ function Home({ user }) {
     }
   return (
     <Wrapper>
+        <Row>
         <Button onClick={()=>selfFetch()}>Show only my players</Button>
-        <Button onClick={()=>playerFetch()}>Show all players</Button><br/>
-      {allPlayers? (
+        <hr/>
+        <Button onClick={()=>playerFetch()}>Show all players</Button>
+        </Row>
+        <hr/>
+      {allPlayers !== [] ? (
         allPlayers.map((p)=> (
-                <>
+                <div style={{position:'relative', display:'flex', flexDirection:'column', justifyContent:'center'}}>
                 <Button onClick={()=>loadSheet(p)}>{p.character_name}</Button>
-                
-                </>
+                <hr/>
+                </div>
               ))) : (<p>Create a character to see its details here!</p>)}
         { showSheet ?  (<CharacterSheet player={player} />) : (<p></p> )}
     </Wrapper>
