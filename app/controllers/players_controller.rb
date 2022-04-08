@@ -6,7 +6,9 @@ class PlayersController < ApplicationController
   def index
     render json: Player.all
   end
-
+  def show
+    render json: Player.all
+  end
   def create
     character = @current_user.players.create!(player_params)
     render json: character, status: :created
@@ -19,7 +21,7 @@ class PlayersController < ApplicationController
     private
 
   def player_params
-    params.permit(:character_name, :skills, :character_class, :character_race, :alignment, :hit_points, :id, :player, :proficiencies, :level)
+    params.permit(:character_name, :STR, :WIS, :CON, :DEX, :INT, :CHA, :character_class, :character_race, :alignment, :hit_die, :hit_points, :id, :player, :proficiencies, :level)
   end
 
 end

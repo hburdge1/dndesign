@@ -6,7 +6,9 @@
   },
   "dependencies": {
     "bootstrap": "^5.1.3",
+    "buildpack": "^0.0.1",
     "dnd-api": "^1.4.2",
+    "heroku": "^7.60.1",
     "json-server": "^0.16.3",
     "rc-input-number": "^7.3.4",
     "react-bootstrap": "^2.2.2",

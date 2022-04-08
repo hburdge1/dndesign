@@ -15,7 +15,12 @@ class CreatePlayers < ActiveRecord::Migration[6.1]
       t.string :alignment
       t.string :background
       t.string :equipment, array: true
-      t.string :spells, array: true, null: true
+      t.integer :STR
+      t.integer :CHA
+      t.integer :WIS
+      t.integer :CON
+      t.integer :DEX
+      t.integer :INT
       t.string :feats, array: true
       t.integer :hit_points
       t.integer :level

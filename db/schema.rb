@@ -58,7 +58,12 @@ ActiveRecord::Schema.define(version: 2022_03_15_170404) do
     t.string "alignment"
     t.string "background"
     t.string "equipment", array: true
-    t.string "spells", array: true
+    t.integer "STR"
+    t.integer "CHA"
+    t.integer "WIS"
+    t.integer "CON"
+    t.integer "DEX"
+    t.integer "INT"
     t.string "feats", array: true
     t.integer "hit_points"
     t.integer "level"
