@@ -45,7 +45,7 @@ function Home({ user }) {
                 
                 </>
               ))) : (<p>Create a character to see its details here!</p>)}
-        { showSheet ?  (<CharacterSheet player={player} />) : (<p></p> )}
+        { showSheet ?  (<CharacterSheet setPlayer={setPlayer} player={player} />) : (<p></p> )}
     </Wrapper>
   );
 }
@@ -55,8 +55,5 @@ const Wrapper = styled.section`
   margin: 40px auto;
 `;
 
-const Recipe = styled.article`
-  margin-bottom: 24px;
-`;
 
 export default Home;

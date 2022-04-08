@@ -67,25 +67,24 @@ export default function RaceSelector({ user, characterName, setCharacterName, ab
    <Carousel variant="dark" style={{display:'block'}}>
        {relRace.length > 0 ? (relRace.map((r)=> (
   <Carousel.Item>
-    <img className="d-block w-100" alt='class images' src={`/race_images/${r.name}.png`} />
+    <img style={{width:'100%'}} alt='class images' src={`/race_images/${r.name}.png`} />
     <Carousel.Caption style={{backgroundColor: 'grey'}}>
    <h3 >{r.name}</h3>
       {show? (
 
       <Alert onClose={() => setShow(false)} style={{width:'100%', position:'relative'}} dismissible>
-      <text>speed:</text> <text style={{fontWeight: 'bold'}}>{r.speed}</text><br/>
-      <text>alignment:</text> <text style={{fontWeight: 'bold'}}>{r.alignment}</text><br/>
-      <text>aging:</text> <text style={{fontWeight: 'bold'}}>{r.age}</text><br/>
-      <text>size:</text> <text style={{fontWeight: 'bold'}}>{r.size_description}</text><br/>
-       <text>ability score increases:</text> <br/>
+      <text style={{fontWeight:'bold'}}>speed:</text> <text style={{fontWeight: 'bold'}}>{r.speed}</text><br/>
+      <text style={{fontWeight:'bold'}}>alignment:</text> <text style={{fontWeight: 'bold'}}>{r.alignment}</text><br/>
+      <text style={{fontWeight:'bold'}}>aging:</text> <text style={{fontWeight: 'bold'}}>{r.age}</text><br/>
+      <text style={{fontWeight:'bold'}}>size:</text> <text style={{fontWeight: 'bold'}}>{r.size_description}</text><br/>
+       <text style={{fontWeight:'bold'}}>ability score increases:</text> <br/>
        {(r.ability_bonuses.map((s)=>
         <><span>{s.ability_score.name}:</span><span> {s.bonus}</span><br/></>))}
-        <br/>{r.ability_bonuses.map((s)=> (abBonuses[s.ability_score.name])=(s.bonus))}<br/>
-        <text>languages:</text>
+        <text style={{fontWeight:'bold'}}>languages:</text><br/>
         {(r.languages.map((s)=>
         <><span>{s.name}</span><br /></>))}
         <text>{r.language_desc}</text><br/>
-        <text>racial traits: </text><br/>
+        <text style={{fontWeight:'bold'}}>racial traits: </text><br/>
         {(r.traits.map((s)=> <button onClick={()=>handleTrait(s.index)}>{s.name}</button>))}
         <br/>
         {traitToggle? traitDetails : ''}

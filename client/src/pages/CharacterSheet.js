@@ -5,7 +5,7 @@ import { Divider, Grid, Image, Segment } from 'semantic-ui-react'
 import { Popup } from "reactjs-popup";
 import { Container, Row, Col, Alert, Modal } from 'react-bootstrap'
 import DeathSave from "../styles/DeathSave";
-function CharacterSheet({ player }){
+function CharacterSheet({ player, setPlayer }){
 	const [currentHP, setCurrentHP]=useState(player.hit_points)
 	const [damage, setDamage]=useState(0)
 	const [healing, setHealing]=useState(0)
@@ -113,10 +113,10 @@ function CharacterSheet({ player }){
 
   }
   function rollInitiative(){
-	 setInitiative(Math.floor((Math.random() * (20 - 1 + 1) + 1) + (((player.skills['DEX']) - 10)/2)))
+	 setInitiative(Math.floor((Math.random() * (20 - 1 + 1) + 1) + (((player.DEX) - 10)/2)))
   }
   	function handleLevelUp(){
-	let newHP = parseInt(player.hit_points) + Math.floor(((parseInt(player.hit_die))/2) + 1) 
+	let newHP = (parseInt(player.hit_points)+5)
 	console.log(newHP)
 	 setLevel(level + 1)
   	 fetch(`/players/${player.id}`, {
@@ -130,12 +130,11 @@ function CharacterSheet({ player }){
       }),
     }).then((r) => {
       if (r.ok) {
-        history.push("/")
+     
 		fetch(`/players/${player.id}`)
 		.then(r=>r.json())
-		.then(a=> player.hit_points=a.hit_points)
-		.then(setCurrentHP(player.hit_points))
-		.then(console.log(currentHP))
+		.then(a=> setPlayer(a))
+		   history.push("/")
       }
     });
 
@@ -182,32 +181,32 @@ useEffect(()=>{
 	
 					<Col>
 						<Label>Str</Label>
-							<Box name="attr_strength" id="attr_strength">{player.skills['STR']}</Box>
+							<Box name="attr_strength" id="attr_strength">{player.STR}</Box>
 						<Divider vertical></Divider>
 					</Col>
 					<Col>
 						<Label>Dex</Label>
-							<Box name="attr_dex">{player.skills['DEX']}</Box>
+							<Box name="attr_dex">{player.DEX}</Box>
 						<Divider vertical></Divider>
 					</Col>
 					<Col>
 						<Label>Con</Label>
-							<Box name="attr_con">{player.skills['CON']}</Box>
+							<Box name="attr_con">{player.CON}</Box>
 						<Divider vertical></Divider>
 					</Col>
 					<Col>
 						<Label>Int</Label>
-							<Box name="attr_int">{player.skills['INT']}</Box>
+							<Box name="attr_int">{player.INT}</Box>
 						<Divider vertical></Divider>
 					</Col>
 					<Col>
 						<Label>Wis</Label>
-							<Box name="attr_wis">{player.skills['WIS']}</Box>
+							<Box name="attr_wis">{player.WIS}</Box>
 					   <Divider vertical></Divider>
 					</Col>
 					<Col>
 						<Label>Cha</Label>
-							<Box name="attr_cha">{player.skills['CHA']}</Box>
+							<Box name="attr_cha">{player.CHA}</Box>
 					<Divider vertical></Divider>
 					</Col>
 					</Container>
@@ -278,14 +277,14 @@ useEffect(()=>{
 					 <hr/><br/>
 					<Container style={{justifyContent:'center', position:'relative'}}>
 					<Box>
-					<span>initiative: {initiative}</span>
+					<span style={{fontWeight:'bold'}}>initiative: {initiative}</span>
 					</Box>
 						<br/>
 					<button  onClick={rollInitiative} className="sheet-initiative sheet-large-button" name="roll_Initiative">Roll initiative!</button>
 					</Container>
 					<hr/><br/>
 					<Label>Armour class</Label>
-					<Box>{10+(parseInt((player.skills['DEX'])/2))}</Box>
+					<Box>{10+(parseInt((player.DEX)/2))}</Box>
 						<Label>{player.character_class} Level</Label>
 						<Box>{level}</Box>
 						<Popup trigger={<button>Level up!</button>} position='right center' style={{backgroundColor:'grey', alignContent:'center'}}>

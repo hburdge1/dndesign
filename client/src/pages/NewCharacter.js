@@ -53,7 +53,7 @@ let hitDie=0
              
      ))
       }
-    
+    console.log(abScores)
      useEffect(()=>{
       fetch(`https://www.dnd5eapi.co/api/alignments`)
       .then(r=>r.json())
@@ -83,15 +83,14 @@ let hitDie=0
        character_class: playerClass,
        character_name: characterName,
        alignment: alignment,
-       hit_die: hitDie,
-       skills: {
-         'CON': (abScores['CON'] + abBonuses['CON']),
-         'WIS': (abScores['WIS'] + abBonuses['WIS']),
-         'INT': (abScores['INT'] + abBonuses['INT']),
-         'STR': (abScores['STR'] + abBonuses['STR']),
-         'DEX': (abScores['DEX'] + abBonuses['DEX']),
-         'CHA': (abScores['CHA'] + abBonuses['CHA']),
-      },
+       hit_die: 6,
+       CON: abScores['CON'],
+       WIS: abScores['WIS'],
+       INT: abScores['INT'],
+       STR: abScores['STR'],
+       DEX: abScores['DEX'],
+       CHA: abScores['CHA'],
+       hit_points: hitPoints,
        proficiencies: proficiencyState,
        level: 1
       }),
@@ -116,14 +115,14 @@ let hitDie=0
   <Container style={{justifyContent:'center', width:'100%'}} >
 
       <Row>
-       {(characterName !== '')&&(toggle==false) ? <span style={{width:'100%'}}>{characterName}</span> : <p></p>}
+       {(characterName !== '')&&(toggle==false) ? <span style={{fontWeight:'bold', alignSelf:'center'}}>{characterName}</span> : <p></p>}
         {race === ('')? <Button onClick={()=>setToggle(!toggle)}>select a race</Button> : <Button style={{backgroundColor: 'grey'}} onClick={()=>setToggle(!toggle)}>race: {race}</Button>}
         {toggle? (
           <RaceSelector user={user} setToggle={setToggle} toggle={toggle} race={race} setRace={setRace} setAbBonuses={setAbBonuses} abBonuses={abBonuses} characterName={characterName} setCharacterName={setCharacterName} abScores={abScores} setAbScores={setAbScores}/>) : (<p></p>)}
         {playerClass === ('')? <Button onClick={()=>setToggleClass(!toggleClass)}>select a class</Button> : <Button style={{backgroundColor: 'grey'}} onClick={()=>setToggle(!toggle)}>class: {playerClass}</Button>}
         {toggleClass? (
           <ClassSelector allClasses={allClasses} allClassDetails={allClassDetails} setToggle={setToggleClass} toggle={toggleClass} proficiencyState={proficiencyState} setProficiencyState={setProficiencyState} abScores={abScores} setAbScores={setAbScores} playerClass={playerClass} setPlayerClass={setPlayerClass}/>) : (<p></p>)}
-        {toggleScorer? (<AbilityScorer abScores={abScores} hitDie={hitDie} hitPoints={hitPoints} setHitPoints={setHitPoints} abBonuses={abBonuses} allClassDetails={allClassDetails} setAbScores={setAbScores} playerClass={playerClass}/>):(         <Button onClick={()=>setToggleScorer(!toggleScorer)}>Roll your scores</Button>)}
+        {toggleScorer? (<AbilityScorer abScores={abScores} hitDie={hitDie} hitPoints={hitPoints} setHitPoints={setHitPoints} abBonuses={abBonuses} allClassDetails={allClassDetails} setAbScores={setAbScores} playerClass={playerClass}/>):(         <Button onClick={()=>setToggleScorer(!toggleScorer)}>roll your scores</Button>)}
           <br/>
           {toggleScorer && playerClass && race && characterName?
           
