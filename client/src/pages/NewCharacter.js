@@ -9,8 +9,7 @@ import { useState, useEffect } from "react";
 import ClassSelector from "./ClassSelector";
 import RaceSelector from "./RaceSelector";
 import AbilityScorer from "./AbilityScorer";
-import { CharacterSheet } from "./CharacterSheet";
-import {Container, Row, Col, Dropdown, DropdownButton }from'react-bootstrap'
+import {Container, Row, Col, Carousel, Dropdown, DropdownButton }from'react-bootstrap'
 function NewCharacter({ user }) {
   const [characterName, setCharacterName] = useState("")
   let buttonArr=[]
