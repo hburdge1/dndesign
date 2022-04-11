@@ -14,6 +14,10 @@ import {Container, Row, Col, Dropdown, DropdownButton }from'react-bootstrap'
 function NewCharacter({ user }) {
   const [characterName, setCharacterName] = useState("")
   let buttonArr=[]
+ const [allRace, setAllRace]=useState([])
+     let raceArr=[]
+    const [scoreBonus, setScoreBonus] = useState({})
+    const [relRace, setRelRace]= useState([])
   const [abBonuses, setAbBonuses] = useState({STR: 0, CON: 0, CHA: 0, WIS: 0, INT: 0, DEX: 0})
   const [race, setRace] = useState("");
   const [playerClass, setPlayerClass] = useState(""); 
@@ -68,7 +72,21 @@ let hitDie=0
      let levelArr=[]
      let nameArr=[]
      allClassDetails.forEach((a)=> nameArr.push(a.index))
-    
+     useEffect(()=> {
+        fetch('https://www.dnd5eapi.co/api/races/')
+        .then(r=>r.json())
+        .then(a=>setAllRace(a.results))
+        }, [])
+    allRace.forEach((r)=>{
+        raceArr.push(r.index)
+     })
+     raceArr.map((r)=>(
+         fetch(`https://www.dnd5eapi.co/api/races/${r}`)
+            .then(r=> r.json())
+            .then(a=> {
+              relRace.push(a)
+                
+ })))
  const handleSheet=()=>{
   
    setIsLoading(true);
@@ -118,7 +136,7 @@ let hitDie=0
        {(characterName !== '')&&(toggle==false) ? <span style={{fontWeight:'bold', alignSelf:'center'}}>{characterName}</span> : <p></p>}
         {race === ('')? <Button onClick={()=>setToggle(!toggle)}>select a race</Button> : <Button style={{backgroundColor: 'grey'}} onClick={()=>setToggle(!toggle)}>race: {race}</Button>}
         {toggle? (
-          <RaceSelector user={user} setToggle={setToggle} toggle={toggle} race={race} setRace={setRace} setAbBonuses={setAbBonuses} abBonuses={abBonuses} characterName={characterName} setCharacterName={setCharacterName} abScores={abScores} setAbScores={setAbScores}/>) : (<p></p>)}
+          <RaceSelector user={user} setToggle={setToggle} toggle={toggle} race={race} setRace={setRace} relRace={relRace} setRelRace={setRelRace} raceArr={raceArr} allRace={allRace} setAllRace={setAllRace} setAbBonuses={setAbBonuses} abBonuses={abBonuses} characterName={characterName} setCharacterName={setCharacterName} abScores={abScores} setAbScores={setAbScores}/>) : (<p></p>)}
         {playerClass === ('')? <Button onClick={()=>setToggleClass(!toggleClass)}>select a class</Button> : <Button style={{backgroundColor: 'grey'}} onClick={()=>setToggle(!toggle)}>class: {playerClass}</Button>}
         {toggleClass? (
           <ClassSelector allClasses={allClasses} allClassDetails={allClassDetails} setToggle={setToggleClass} toggle={toggleClass} proficiencyState={proficiencyState} setProficiencyState={setProficiencyState} abScores={abScores} setAbScores={setAbScores} playerClass={playerClass} setPlayerClass={setPlayerClass}/>) : (<p></p>)}

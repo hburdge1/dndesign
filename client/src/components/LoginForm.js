@@ -1,7 +1,8 @@
 import React, { useState } from "react";
-import { Button, Error, Input, FormField, Label } from "../styles";
+import { Button, Error, Input, FormField, Label} from "../styles";
 import { useHistory } from "react-router-dom";
-
+import { Link } from "react-router-dom";
+import styled from "styled-components";
 
 function LoginForm({ onLogin }) {
 const [username, setUsername] = useState("");
@@ -32,6 +33,10 @@ const [username, setUsername] = useState("");
   }
 
    return (
+     <>
+           <Logo>
+        <Link to="/">DNDesign</Link>
+      </Logo>
     <form onSubmit={handleSubmit}>
       <FormField>
         <Label htmlFor="username">Username</Label>
@@ -64,6 +69,19 @@ const [username, setUsername] = useState("");
         ))} */}
       </FormField>
     </form>
+    </>
   );
 }
 export default LoginForm;
+const Logo = styled.h1`
+  font-family: cursive;
+  font-size: 3rem;
+  color: red;
+  margin: 0;
+  line-height: 1;
+
+  a {
+    color: inherit;
+    text-decoration: none;
+  }
+`;

@@ -1,5 +1,7 @@
 import React, { useState } from "react";
-import { Button, Error, Input, FormField, Label, Textarea } from "../styles";
+import { Button, Error, Input, FormField, Label} from "../styles";
+import { Link } from "react-router-dom";
+import styled from "styled-components";
 
 function SignUpForm({ onLogin }) {
   const [username, setUsername] = useState("");
@@ -35,6 +37,10 @@ function SignUpForm({ onLogin }) {
   }
 
   return (
+    <>
+     <Logo>
+        <Link to="/">DNDesign</Link>
+      </Logo>
     <form onSubmit={handleSubmit}>
       <FormField>
         <Label htmlFor="username">Username</Label>
@@ -71,7 +77,20 @@ function SignUpForm({ onLogin }) {
 
       </FormField>
     </form>
+    </>
   );
 }
 
 export default SignUpForm;
+const Logo = styled.h1`
+  font-family: cursive;
+  font-size: 3rem;
+  color: red;
+  margin: 0;
+  line-height: 1;
+
+  a {
+    color: inherit;
+    text-decoration: none;
+  }
+`;

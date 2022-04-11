@@ -9,12 +9,10 @@ import { Button, FormField, Label, Input } from '../styles'
 import {Grid, Container, Col, Row, Alert, Modal} from 'react-bootstrap'
 
 
-export default function RaceSelector({ user, characterName, setCharacterName, abBonuses, setAbBonuses, setToggle, toggle, race, setRace, abScores, setAbScores }) {
-    const [allRace, setAllRace]=useState([])
+export default function RaceSelector({ user, allRace, setAllRace, raceArr, relRace, setRelRace, characterName, setCharacterName, abBonuses, setAbBonuses, setToggle, toggle, race, setRace, abScores, setAbScores }) {
+  
    const [traitDetails, setTraitDetails]=useState('')
-    let raceArr=[]
-    const [scoreBonus, setScoreBonus] = useState({})
-    const [relRace, setRelRace]= useState([])
+
    const history = useHistory();
    const [traitToggle, setTraitToggle]=useState(false)
      const [show, setShow] = useState(false);
@@ -47,27 +45,13 @@ export default function RaceSelector({ user, characterName, setCharacterName, ab
         
   }
 //     
- useEffect(()=> {
-        fetch('https://www.dnd5eapi.co/api/races/')
-        .then(r=>r.json())
-        .then(a=>setAllRace(a.results))
-        },
-    allRace.forEach((r)=>{
-        raceArr.push(r.index)
-     }),
-     raceArr.map((r)=>(
-         fetch(`https://www.dnd5eapi.co/api/races/${r}`)
-            .then(r=> r.json())
-            .then(a=> {
-              relRace.push(a)
-                
- }))), [])
+
  return(
    <>
    <Carousel variant="dark" style={{display:'block'}}>
        {relRace.length > 0 ? (relRace.map((r)=> (
   <Carousel.Item>
-    <img style={{width:'100%'}} alt='class images' src={`/race_images/${r.name}.png`} />
+    <img style={{alignSelf: 'center'}} alt='class images' src={`/race_images/${r.name}.png`} />
     <Carousel.Caption style={{backgroundColor: 'grey'}}>
    <h3 >{r.name}</h3>
       {show? (
